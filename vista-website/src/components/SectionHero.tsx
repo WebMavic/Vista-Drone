@@ -4,13 +4,13 @@ import Link from "next/link";
 
 function SectionHero() {
   return (
-    <section className="h-screen w-full px-5 sm:px-16  bg-hero bg-cover bg-no-repeat bg-center  bg-blend-overlay bg-black/30">
-      <div className="grid place-items-center h-full ">
-        <div className="text-white text-center space-y-5">
-          <h1 className="sm:text-6xl text-3xl font-bold leading-tight">
+    <section className="sm:h-screen w-full px-5 sm:px-16 bg-cover bg-no-repeat bg-center heroGradient">
+      <div className="h-full py-24">
+        <div className="text-white text-center space-y-5 ">
+          <h1 className="sm:text-6xl text-3xl font-bold leading-tight sm:w-2/3 mx-auto">
             Empowering the future with drone technology
           </h1>
-          <p className="text text-lg font-light w-1/2 mx-auto">
+          <p className="text text-lg font-light sm:w-1/2 mx-auto">
             lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
             imperdiet hendrerit volutpat.
           </p>

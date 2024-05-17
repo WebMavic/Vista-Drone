@@ -4,7 +4,7 @@ import { Doughnut } from 'react-chartjs-2';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 function DoughnutChart() {
   return (
-    <Doughnut data={data} className='h-48 text-white' redraw={false} />
+    <Doughnut data={data} className='h-48 text-white'/>
   )
 }
 

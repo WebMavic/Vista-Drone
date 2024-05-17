@@ -1,6 +1,12 @@
 import SectionHeader from '@/components/SectionHeader'
 import React from 'react'
 import type { Metadata } from "next";
+import {
+  PhoneIcon,
+  EnvelopeIcon,MapPinIcon
+} from "@heroicons/react/24/outline";
+import FAQ from '@/components/FAQ';
+import Chips from '@/components/ui/Chips';
 
 export const metadata: Metadata = {
   title: "Contact Us",
@@ -13,35 +19,62 @@ function page() {
     <>
         <SectionHeader title="Contact us"  />
 
+        <section className='w-full p-5 sm:px-32 sm:py-5 bg-primary'>
+        
+
+          <div className="flex w-full justify-center gap-4 mt-10">
+            <div className='p-3 space-y-3  text-center'>
+                <div className='border-[3px] border-accent w-min p-3 rounded-full dark:text-white shadow-md mx-auto'><PhoneIcon height={50} /></div>
+                <h2 className='text-xl uppercase'>Call Us</h2>
+                <p className='text-subheading'>+123 456 7890</p>
+            </div>
+            <div className='p-3 space-y-3  text-center'>
+                <div className='border-[3px] border-accent w-min p-3 rounded-full dark:text-white shadow-md mx-auto'>< EnvelopeIcon height={50} /></div>
+                <h2 className='text-xl uppercase'>Mail Us</h2>
+                <p className='text-subheading'>vista@uae.com</p>
+            </div>
+            <div className='p-3 space-y-3  text-center'>
+                <div className='border-[3px] border-accent w-min p-3 rounded-full dark:text-white shadow-md mx-auto'>< MapPinIcon height={50} /></div>
+                <h2 className='text-xl uppercase'>Location</h2>
+                <p className='text-subheading'>UAE Street 2</p>
+            </div>
+
+          </div>
+        </section>
+
        
-        <section className="w-full p-5 sm:px-32 sm:py-16 sm:bg-white bg-base">
+        <section className="w-full p-5 sm:px-32 sm:py-5 bg-secondary">
           
-        <h2 className='w-1/2 text-heading font-semibold mx-auto text-center'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo perspiciatis, dolore sapiente aut magnam laboriosam, animi, recusandae nihil provident iusto fugit minus. Eveniet, dolorem! Necessitatibus.</h2>
             <div className="flex flex-col-reverse sm:flex-row mt-20 gap-10 w-full h-full">
                 <div className="right space-y-3 sm:w-1/2">
-                    <h1 className="text-4xl font-bold text-heading">Contact us</h1>
-                    <p className="text-[#555] font-light sm:w-2/3 text-left leading-relaxed">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus perspiciatis suscipit repudiandae accusamus, rem numquam voluptatibus necessitatibus ullam distinctio? Culpa, reprehenderit unde assumenda aut possimus provident omnis architecto? Quo magni dolore unde facere esse dolorum enim? Dolorem, incidunt, cupiditate voluptatem impedit deserunt maxime est sequi voluptates, autem culpa vel alias consequuntur magnam obcaecati natus dolor.
+                    <h1 className="text-4xl font-bold text-primary">Contact us</h1>
+                    <p className="text-darksubheading font-light sm:w-2/3 text-left leading-relaxed">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus perspiciatis suscipit repudiandae accusamus, rem numquam voluptatibus necessitatibus ullam distinctio? Culpa, reprehenderit unde assumenda aut possimus provident omnis architecto.
                     </p>
-                </div>
-                <div className='w-2/4'>
-                    <form action="" method="post" className="flex flex-col gap-5">
+                <div className=''>
+                    <form action='/' method="post" className="flex flex-col gap-5 items-center">
                     <input type="text" placeholder='Your name' className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
                     <input type="email" placeholder='email' className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
                     <textarea id="message" rows={4} className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Leave a message..."></textarea>
-                    <button className="bg-[#555] text-white p-3 rounded-md">Send</button>
+                    <button className="bg-accent text-white drop-shadow px-4 py-2 w-52  rounded-full inline-flex self-start justify-center">Send</button>
                     </form>
+                </div>
+                </div>
+
+                <div className="left w-1/2">
+                <img src='https://images.unsplash.com/photo-1555009306-9e3c5b6a66e3?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' alt="image" className="object-cover h-[30rem] rounded-2xl shadow-md"  />
+
                 </div>
             </div>
 
         </section>
 
-        <section className='w-full p-5 sm:px-32 sm:py-16 sm:bg-white bg-base'>
+        <section className='w-full p-5 sm:px-32 sm:py-16 bg-primary'>
          
 
           <div className="flex flex-col sm:flex-row gap-10 mt-10">
             <div className="w-1/2 space-y-3">
-              <h2 className="text-2xl font-semibold text-heading">Our Office</h2>
+              <h2 className="text-4xl font-bold text-heading">Our Office</h2>
               <p className="text-[#555] font-light text-left leading-relaxed">
                 1234 Street Name, City Name, United States
               </p>
@@ -51,6 +84,21 @@ function page() {
               <p className="text-[#555] font-light text-left leading-relaxed"></p>
               </div>
               </div>
+        </section>
+
+        <section className='w-full p-5 sm:px-32 sm:py-16 bg-white'>
+          <div className="flex justify-between flex-col sm:flex-row">
+            <div className="content space-y-4  ">
+            <Chips title='FAQ' />
+            <h2 className="text-4xl font-bold text-heading ">
+            Frequenty Asked Questions
+            </h2>
+            <p className='font-light text-subheading sm:w-1/2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa numquam suscipit, aliquam provident quisquam hic corrupti laudantium debitis pariatur illum laboriosam nostrum veniam deserunt cupiditate ut fugiat commodi amet architecto.</p>
+          </div>
+            <FAQ/>
+
+
+          </div>
         </section>
 
     </>

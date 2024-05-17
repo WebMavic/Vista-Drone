@@ -26,16 +26,16 @@ function Navbar() {
     <nav
       className={
         isTop
-          ? "w-full sm:px-32 px-5 fixed top-0 left-0 z-10"
-          : "bg-white/10  sm:px-32 z-50 dark:bg-[#202020]/90 px-5 backdrop-blur-2xl fixed top-0 left-0 transition-all duration-300 ease-in-out w-full shadow-sm"
+          ? "w-full sm:px-32 px-5 fixed top-0 left-0 z-10 text-white"
+          : "bg-white  sm:px-32 z-50 dark:bg-[#202020]/90 px-5 fixed top-0 left-0 transition-all duration-300 ease-in-out w-full shadow-sm"
       }
     >
       <div className="lg:container min-h-20 flex justify-between items-center">
         <Link href='/'>
-        <span className="text-xl font-bold text-white uppercase tracking-[5px]">Vista</span>
+        <span className="text-xl font-bold dark:text-white uppercase tracking-[5px]">Vista</span>
         </Link>
 
-        <div className="hidden md:flex flex-shrink-0 justify-end items-center flex-1 lg:flex-none gap-3 text-neutral-700 dark:text-neutral-100">
+        <div className="hidden md:flex flex-shrink-0 justify-end items-center flex-1 lg:flex-none gap-3  dark:text-white">
           <Navigation />
           <SwitchDarkMode />
         </div>

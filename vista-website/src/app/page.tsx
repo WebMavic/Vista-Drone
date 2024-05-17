@@ -1,3 +1,4 @@
+import React from 'react';
 import MarketOverView from '@/components/MarketInsight/MarketOverView';
 import SectionAbout from '@/components/SectionAbout';
 import SectionClient from '@/components/SectionClient';
@@ -6,9 +7,10 @@ import SectionExpertise from '@/components/SectionExpertise';
 import SectionFeaturedServices from '@/components/SectionFeaturedServices';
 import SectionHero from '@/components/SectionHero';
 import SectionProjects from '@/components/SectionProjects';
-import React from 'react';
+
 
 export default function Home() {
+  
   return (
     <>
       <SectionHero/>
