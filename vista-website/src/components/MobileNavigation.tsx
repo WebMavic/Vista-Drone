@@ -14,9 +14,10 @@ function MobileNavigation() {
             </div> 
         <ul className="flex flex-col justify-center items-center gap-5 *:text-xl *:dark:text-white ">
             <li><Link href="/" >Home</Link></li>
-            <li> <Link href="/">About</Link></li>
-            <li><Link href="/">Contact</Link></li>
-            <li> <Link href="/">Market</Link></li>
+            <li><Link href="/services" >Services</Link></li>
+            <li> <Link href="/about">About</Link></li>
+            <li><Link href="/contact">Contact</Link></li>
+            <li> <Link href="/market">Market</Link></li>
         </ul>
         
         </div>

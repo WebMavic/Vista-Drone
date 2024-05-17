@@ -1,5 +1,6 @@
 import React from "react";
 import { ChevronRightIcon } from "@heroicons/react/24/outline";
+import Link from "next/link";
 
 function SectionHero() {
   return (
@@ -14,9 +15,9 @@ function SectionHero() {
             imperdiet hendrerit volutpat.
           </p>
           <div className="inline-flex gap-2 items-center">
-          <button className="rounded-full overflow-hidden border-2 p-2 hover:bg-accent hover:border-transparent transition duration-75 ease-linear">
+          <Link href='/services' className="rounded-full overflow-hidden border-2 p-2 hover:bg-accent hover:border-transparent transition duration-75 ease-linear">
             <ChevronRightIcon className="h-6 text-white mx-auto "/>
-          </button>
+          </Link>
             <span className="text-white uppercase tracking-wider">Discover</span>
 
           </div>

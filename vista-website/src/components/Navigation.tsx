@@ -7,17 +7,20 @@ function Navigation() {
       <li>
         <Link href="/" >Home</Link>
       </li>
+      <li>
+        <Link href="/services" >Services</Link>
+      </li>
 
       <li>
-        <Link href="/">About</Link>
+        <Link href="/about">About</Link>
 
       </li>
      
       <li>
-        <Link href="/">Contact</Link>
+        <Link href="/contact">Contact</Link>
       </li>
       <li>
-        <Link href="/">Market</Link>
+        <Link href="/market">Market</Link>
       </li>
 
     </ul>

@@ -11,9 +11,9 @@ function Footer() {
             className="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse"
           >
             <img
-              src="https://flowbite.com/docs/images/logo.svg"
+              src="https://placehold.co/10X10"
               className="h-8"
-              alt="Flowbite Logo"
+              alt="Logo"
             />
             <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
               Vista
@@ -21,22 +21,22 @@ function Footer() {
           </Link>
           <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
             <li>
-              <Link href="#" className="hover:underline me-4 md:me-6">
+              <Link href="/about" className="hover:underline me-4 md:me-6">
                 About
               </Link>
             </li>
             <li>
-              <Link href="#" className="hover:underline me-4 md:me-6">
+              <Link href="/" className="hover:underline me-4 md:me-6">
                 Privacy Policy
               </Link>
             </li>
             <li>
-              <Link href="#" className="hover:underline me-4 md:me-6">
+              <Link href="/" className="hover:underline me-4 md:me-6">
                 Licensing
               </Link>
             </li>
             <li>
-              <Link href="#" className="hover:underline">
+              <Link href="/contact" className="hover:underline">
                 Contact
               </Link>
             </li>
