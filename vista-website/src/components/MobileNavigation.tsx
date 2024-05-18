@@ -16,7 +16,7 @@ function MobileNavigation() {
 
   return (
     <aside className="fixed right-0  w-full top-20  bg-white dark:bg-neutral-900 z-50 ">
-      <ul className="flex flex-col p-5 divide-y items-center  *:text-xl *:dark:text-white *:py-2">
+      <ul className="flex flex-col p-5 divide-y items-center  *:text-xl *:dark:text-white text-neutral-900 *:py-2">
         {navlinks.map((link, index) => (
           <li key={index} className="nav-item">
             <Link

@@ -1,4 +1,5 @@
 import { url } from "inspector";
+import { transform } from "next/dist/build/swc";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -23,10 +24,38 @@ const config: Config = {
         darksubheading : "#c6c6c6",
       },
 
-      
+      animation:{
+        wobble  : 'wobble 1s infinite',
+      },
+      keyframes:{
+        wobble:{
+          '0%, 100%': { transform: 'translateY(-2%)' },
+          '50%': { transform: 'translateY(0%)' },
+        }
+      },
 
     },
   },
   plugins: [],
 };
 export default config;
+
+
+// .wobble {
+//   animation: wobble 1s ease-in-out infinite;
+// }
+
+// @keyframes wobble {
+//   0% {
+//     transform: translateY(0%);
+//   }
+//   25% {
+//     transform: translateY(-10%);
+//   }
+//   35% {
+//     transform: translateY(-5%);
+//   }
+//   100% {
+//     transform: translateY(0%);
+//   }
+// }

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import SwitchDarkMode from "./SwitchDarkMode";
 
 function Footer() {
   return (
@@ -39,6 +40,9 @@ function Footer() {
               <Link href="/contact" className="hover:underline">
                 Contact
               </Link>
+            </li>
+            <li>
+              <SwitchDarkMode/>
             </li>
           </ul>
         </div>

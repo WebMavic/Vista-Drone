@@ -39,7 +39,7 @@ function Navbar() {
 
         <div className="hidden md:flex flex-shrink-0 justify-end items-center flex-1 lg:flex-none gap-3  dark:text-white">
           <Navigation />
-          <SwitchDarkMode />
+          {/* <SwitchDarkMode /> */}
         </div>
 
         <div className="lg:hidden ">

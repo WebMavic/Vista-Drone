@@ -6,6 +6,7 @@ import {
     CubeTransparentIcon
   } from "@heroicons/react/24/outline";
 import Chips from '../ui/Chips';
+import MagneticHover from '../ui/MagneticHover';
 
 function DroneTech() {
   return (
@@ -31,9 +32,13 @@ function DroneTech() {
                   </div>
               </div>
 
-              <div className="image max-w-96">
-                <img src="https://templatekit.tokomoo.com/dronekit/wp-content/uploads/sites/27/2021/08/img_drone_featured.png" alt="ico" className="object-cover "  />
-              </div>
+                    <div className="image max-w-96">
+                   
+
+                        <img src="https://templatekit.tokomoo.com/dronekit/wp-content/uploads/sites/27/2021/08/img_drone_featured.png" alt="ico" className="object-cover animate-wobble"  />
+                   
+                      
+                    </div>
 
          
               <div className="right sm:text-left  text-center flex flex-col gap-4">

@@ -5,9 +5,9 @@ import LocomotiveScroll from 'locomotive-scroll';
 import Button from './ui/Button';
 function SectionAbout() {
   
-  if (typeof window !== "undefined") {
-    const locomotiveScroll = new LocomotiveScroll();
-  }
+  // if (typeof window !== "undefined") {
+  //   const locomotiveScroll = new LocomotiveScroll();
+  // }
   return (
     <section className="w-full sm:px-32 px-5 sm:py-16 py-5 bg-primary">
       <div className="flex flex-col  sm:flex-row h-full w-full sm:justify-between sm:items-start justify-center items-center ">
