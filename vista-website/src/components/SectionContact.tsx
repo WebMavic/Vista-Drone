@@ -1,8 +1,9 @@
 import React from 'react'
+import SectionLayout from './ui/SectionLayout'
 
 function SectionContact() {
   return (
-    <section className="w-full h-full sm:px-32 px-5 py-16">
+    <SectionLayout>
     <div className="bg-secondary rounded-lg py-5"> 
       <div className="text-center space-y-3">
         <h2 className="text-2xl font-bold text-white">Need to know something more?</h2>
@@ -15,7 +16,7 @@ function SectionContact() {
         </form>
       </div>
     </div>
-  </section>
+  </SectionLayout>
 
   )
 }

@@ -2,12 +2,13 @@ import React from 'react'
 import DoughnutChart from './DoughnutChart';
 import MarketInNumbers from './MarketInNumbers';
 import Button from '../ui/Button';
+import SectionLayout from '../ui/SectionLayout';
 
 
 
 function MarketOverView() {
   return (
-    <section className="w-full bg-primary2  sm:p-16 p-5">
+    <SectionLayout className="bg-primary2 ">
     <div className="flex sm:items-center sm:justify-between flex-col sm:flex-row gap-4 sm:gap-0">
           <div>
           <MarketInNumbers/>
@@ -19,7 +20,7 @@ function MarketOverView() {
 
     </div>
    
-   </section>
+   </SectionLayout>
   )
 }
 

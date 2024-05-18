@@ -8,7 +8,6 @@ import SectionFeaturedServices from '@/components/SectionFeaturedServices';
 import SectionHero from '@/components/SectionHero';
 import SectionProjects from '@/components/SectionProjects';
 
-
 export default function Home() {
   
   return (

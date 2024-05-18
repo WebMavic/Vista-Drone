@@ -2,9 +2,10 @@ import React from "react";
 import dummy from "@/assets/images/dummy.jpg";
 import Image from "next/image";
 import Chips from "./ui/Chips";
+import SectionLayout from "./ui/SectionLayout";
 function SectionExpertise() {
   return (
-    <section className="w-full sm:px-32 px-5 sm:py-16 py-5 sm:bg-base bg-white ">
+    <SectionLayout className="bg-white ">
       <div className="text-center space-y-3">
         <Chips title="Our expertise"/>
         <h2 className="text-4xl font-bold text-heading ">Why Choose Us</h2>
@@ -13,7 +14,7 @@ function SectionExpertise() {
         </p>
       </div>
 
-      <div className="flex gap-5 my-10 flex-col sm:flex-row w-full sm:justify-around items-center ">
+      <div className="flex gap-5 my-10 flex-col sm:flex-row w-full sm:justify-between items-center ">
         {expertises.map((expertise, index) => (
           <div  key={index} className="relative">
            
@@ -31,7 +32,7 @@ function SectionExpertise() {
           </div>
         ))}
       </div>
-    </section>
+    </SectionLayout>
   );
 }
 

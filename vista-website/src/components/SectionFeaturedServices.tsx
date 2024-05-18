@@ -3,14 +3,15 @@ import Chips from './ui/Chips';
 import Button from './ui/Button';
 import FeauturedServiceCardItem from './Services/FeauturedServiceCardItem';
 import FeauturedList from './Services/FeauturedList';
+import SectionLayout from './ui/SectionLayout';
 
 
 
 
 function SectionFeaturedServices() {
   return (
-    
-    <section className="w-full sm:px-32 px-5 py-16  bg-primary">
+    <SectionLayout className="bg-primary">
+
     <div className="flex w-full h-full sm:flex-row sm:items-start sm:justify-between flex-col-reverse " >      
       <FeauturedList/>
       <div className="content space-y-4 sm:w-1/2 ">
@@ -23,7 +24,7 @@ function SectionFeaturedServices() {
           </div>
       </div>
     </div>
- </section>
+ </SectionLayout>
   )
 }
 

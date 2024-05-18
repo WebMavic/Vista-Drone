@@ -6,11 +6,12 @@ import {
     CubeTransparentIcon
   } from "@heroicons/react/24/outline";
 import Chips from '../ui/Chips';
-import MagneticHover from '../ui/MagneticHover';
+import SectionLayout from '../ui/SectionLayout';
+
 
 function DroneTech() {
   return (
-    <section className="w-full p-5 sm:px-32 sm:py-16 bg-white">
+    <SectionLayout className="bg-white">
     <div className="content space-y-4  ">
         <Chips title='Technology' />
         <h2 className="text-4xl font-bold text-heading ">
@@ -57,7 +58,7 @@ function DroneTech() {
          
       
       </div>
-    </section>
+    </SectionLayout>
   )
 }
 

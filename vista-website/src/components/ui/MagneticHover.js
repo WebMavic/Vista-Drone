@@ -27,7 +27,7 @@ function MagneticHover({ children }) {
       onMouseMove={handleMouse}
       onMouseLeave={reset}
       animate={{ x, y }}
-      transition={{stiffness: 200, damping: 5,type}}
+      transition={{stiffness: 200, damping: 5,type:'just'}}
       // transition={{ type: "spring" }}
     >
       {children}

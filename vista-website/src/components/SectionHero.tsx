@@ -4,25 +4,28 @@ import Link from "next/link";
 
 function SectionHero() {
   return (
-    <section className="sm:h-screen w-full px-5 sm:px-16 bg-cover bg-no-repeat bg-center heroGradient">
+    <section className="heroGradient w-full bg-cover bg-center bg-no-repeat px-5 sm:h-screen sm:px-16">
       <div className="h-full py-24">
-        <div className="text-white text-center space-y-5 ">
-          <h1 className="sm:text-6xl text-3xl font-bold leading-tight sm:w-2/3 mx-auto">
+        <div className="space-y-5 text-center text-white ">
+          <h1 className="mx-auto text-3xl font-bold leading-tight sm:w-2/3 sm:text-6xl">
             Empowering the future with drone technology
           </h1>
-          <p className="text text-lg font-light sm:w-1/2 mx-auto">
+          <p className="text mx-auto text-lg font-light sm:w-1/2">
             lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
             imperdiet hendrerit volutpat.
           </p>
-          <div className="inline-flex gap-2 items-center">
-          <Link href='/services' className="rounded-full overflow-hidden border-2 p-2 hover:bg-accent hover:border-transparent transition duration-75 ease-linear">
-            <ChevronRightIcon className="h-6 text-white mx-auto "/>
-          </Link>
-            <span className="text-white uppercase tracking-wider">Discover</span>
-
+          <div className="inline-flex items-center gap-2">
+            <Link
+              href="/services"
+              className="overflow-hidden rounded-full border-2 p-2 transition duration-75 ease-linear hover:border-transparent hover:bg-accent"
+            >
+              <ChevronRightIcon className="mx-auto h-6 text-white " />
+            </Link>
+            <span className="uppercase tracking-wider text-white">
+              Discover
+            </span>
           </div>
-            </div>
-     
+        </div>
       </div>
     </section>
   );

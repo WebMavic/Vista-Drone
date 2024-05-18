@@ -1,4 +1,7 @@
+"use client";
 import React, { ReactNode } from "react";
+import CountUp from "react-countup";
+
 import {
   CurrencyDollarIcon,
   SpeakerWaveIcon,
@@ -7,13 +10,28 @@ import {
 
 function MarketInNumbers() {
   return (
-    <div className="grid sm:grid-cols-3 gap-5 sm:gap-3 w-full h-full place-items-center select-none">
+    <div className="grid h-full w-full select-none place-items-center gap-5 sm:grid-cols-3 sm:gap-3">
       {MarketInNumbersCode.map((item, index) => (
-        <div className="dark:text-white text-heading flex justify-between items-center gap-5" key={index}>
+        <div
+          className="flex items-center justify-between gap-5 text-heading dark:text-white"
+          key={index}
+        >
           <div>{item.icon}</div>
           <div className="inline-flex flex-col">
-            <h3 className="text-2xl">{item.value.trim()}</h3>
-            <span className="font-light text-subheading sm:w-2/3 ">{item.description.trim()}</span>
+            <h3 className="text-2xl">
+              <CountUp end={item.value} 
+                    start={0} 
+                    duration={5} 
+                    decimals={2}  
+                    prefix={item.tag === "million" ? "$" : ""}
+                    />{' '}
+                    
+              {item.tag}
+            </h3>
+
+            <span className="font-light text-subheading sm:w-2/3 ">
+              {item.description.trim()}
+            </span>
           </div>
         </div>
       ))}
@@ -24,84 +42,49 @@ function MarketInNumbers() {
 export default MarketInNumbers;
 
 type MarketInNumbers = {
-  value: string;
+  value: number;
+  tag: string;
   description: string;
   icon: ReactNode;
 };
 
-interface MarketInNumbersCodeType {
-  global: MarketInNumbers[];
-  uae: MarketInNumbers[];
-}
-
-// export const MarketInNumbersCode: MarketInNumbersCodeType = {
-//     global: [
-//         {
-//             value: '23.7 million',
-//             description: 'In 2024, the projected revenue in the Drones market in GCC',
-//             icon: <CurrencyDollarIcon className='h-10'/>,
-//         },
-//         {
-//             value: '4.49% growth',
-//             description: 'Increased focus in oil and gas, construction, and security (GCC)',
-//             icon: <SignalIcon className='h-10'/>
-//         },
-//         {
-//             value: '3 sectors',
-//             description: 'Annual growth rate from 2024 to 2028 (GCC)',
-//             icon: <SpeakerWaveIcon className='h-10'/>
-//         }
-//     ],
-//     uae: [
-//         {
-//             value: '$4.37m',
-//             description: 'In 2024, the projected revenue in  the Drones market in UAE',
-//             icon: <CurrencyDollarIcon className='h-10'/>,
-//         },
-//         {
-//             value: '1.29% growth',
-//             description: 'Annual growth rate from  2024 to 2028 (UAE)',
-//             icon: <CurrencyDollarIcon className='h-10'/>,
-//         },
-//         {
-//             value: '2 areas',
-//             description: 'Increased focus in aerial  photography and videography  purposes (UAE)',
-//             icon: <CurrencyDollarIcon className='h-10'/>,
-//         }
-//     ]
-// }
-
 const MarketInNumbersCode: MarketInNumbers[] = [
   {
-    value: "23.7 million",
+    value: 23.7,
+    tag: "million",
     description: "In 2024, the projected revenue in the Drones market in GCC",
-    icon: <CurrencyDollarIcon className="h-10  text-accent"  />,
+    icon: <CurrencyDollarIcon className="h-10  text-accent" />,
   },
   {
-    value: "4.49% growth",
+    value: 4.49,
+    tag: "% growth",
     description:
       "Increased focus in oil and gas, construction, and security (GCC)",
     icon: <SignalIcon className="h-10 text-accent" />,
   },
   {
-    value: "3 sectors",
+    value: 3,
+    tag: "sectors",
     description: "Annual growth rate from 2024 to 2028 (GCC)",
     icon: <SpeakerWaveIcon className="h-10 text-accent" />,
   },
   {
-    value: "$4.37m",
+    value: 4.37,
+    tag: "million",
     description: "In 2024, the projected revenue in  the Drones market in UAE",
     icon: <CurrencyDollarIcon className="h-10 text-accent" />,
   },
   {
-    value: "1.29% growth",
+    value: 1.29,
+    tag: "% growth",
     description: "Annual growth rate from  2024 to 2028 (UAE)",
     icon: <SignalIcon className="h-10 text-accent" />,
   },
   {
-    value: "2 areas",
+    value: 2,
+    tag: "areas",
     description:
       "Increased focus in aerial  photography and videography  purposes (UAE)",
-    icon:  <SpeakerWaveIcon className="h-10 text-accent" />,
+    icon: <SpeakerWaveIcon className="h-10 text-accent" />,
   },
 ];
