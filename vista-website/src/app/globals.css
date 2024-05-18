@@ -8,6 +8,20 @@
     -moz-osx-font-smoothing: grayscale;
 } */
 
+::-webkit-scrollbar {
+  width: 0.5em;
+}
+ 
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.315);
+  background: #181818;
+}
+ 
+::-webkit-scrollbar-thumb {
+  background-color: rgb(140, 139, 139);
+  outline: 1px solid slategrey;
+}
+
 nav ul li {
   display: inline-block;
 }

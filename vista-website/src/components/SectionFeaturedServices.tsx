@@ -1,8 +1,7 @@
 import React from 'react'
-import dummy from '@/assets/images/dummy.jpg'
-import Image from "next/image";
 import Chips from './ui/Chips';
 import Button from './ui/Button';
+import { CubeTransparentIcon } from '@heroicons/react/24/outline';
 
 function SectionFeaturedServices() {
   return (
@@ -12,8 +11,8 @@ function SectionFeaturedServices() {
         <div className="flex flex-wrap gap-5 items-center justify-center">
         {services.map((service,index) => (
           <div className="flex flex-col p-5 w-[274px] h-[300px] rounded-md shadow-md gap-2 bg-white justify-center items-center " key={index}>
-            <div className="image-container">
-              <Image src={service.avatar} alt="image" className="object-cover rounded-full"  height={100}  />
+            <div className="image-container rounded-full bg-primary p-2">
+              <CubeTransparentIcon className="w-14 h-14 text-accent" />
             </div>
             <h3 className="text-2xl">{service.title}</h3>
             <p className="text-subheading  text-sm text-center">{service.description}</p>
@@ -27,7 +26,7 @@ function SectionFeaturedServices() {
           <h2 className="text-4xl font-bold text-heading ">Elevating Industries with Next Gen UAV Solutions</h2>
           <p className="text-subheading font-light w-[80%]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor nam minus assumenda corrupti dignissimos doloremque perspiciatis voluptas! Debitis nisi maiores earum quas voluptatum necessitatibus exercitationem ut velit aut odio harum, ex nesciunt assumenda, iure hic ea voluptas commodi saepe quia repudiandae! Tempore similique, facere vero omnis officiis ipsam architecto quo.</p>
           <div className='my-5'>
-          <Button href='/about' icon title="Explore services" className="hover:bg-accent border border-accent text-accent  hover:text-white "/>
+          <Button href='/services' icon title="Explore services" className="hover:bg-accent border border-accent text-accent  hover:text-white "/>
 
           </div>
       </div>
@@ -42,22 +41,18 @@ export default SectionFeaturedServices
 const services = [
     {
       title : 'Construction',
-      avatar : dummy,
       description : 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet hendrerit volutpat.'
     },
     {
       title : 'AgriTech',
-      avatar : dummy,
       description : 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet hendrerit volutpat.'
     },
     {
       title : 'Mining',
-      avatar : dummy,
       description : 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet hendrerit volutpat.'
     },
     {
       title : 'Oil & Gas',
-      avatar : dummy,
       description : 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet hendrerit volutpat.'
     },
   ]

@@ -5,7 +5,7 @@ import Chips from './ui/Chips';
 function SectionProjects() {
   return (
     
-   <section className="w-full sm:px-32 px-5 h-full py-16  bg-primary ">
+   <section className="w-full sm:px-32 px-5 h-full pt-16  bg-primary ">
     <div className="space-y-4">
     <Chips title='Vista Projects'/>
     <h2 className="text-4xl font-bold w-2/3 text-heading">Project Delivered in Market</h2>

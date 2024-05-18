@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { use, useEffect, useState } from "react";
 import Navigation from "./Navigation";
 import SwitchDarkMode from "./SwitchDarkMode";
 import { Bars3Icon } from "@heroicons/react/24/outline";
@@ -17,10 +17,12 @@ function Navbar() {
       setIsTop(false);
     }
   };
+
+  useEffect(() => {
     if (typeof window !== "undefined") {
       window.addEventListener("scroll",scrollHandler);
-      
     }
+  }, []);
 
   return (
     <nav
