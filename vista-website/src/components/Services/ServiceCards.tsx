@@ -20,12 +20,11 @@ function ServiceCards() {
           {services.map((service, index) => (
             <div
               className="flex flex-col p-5 w-80 sm:w-96 gap-2 relative  justify-center items-center "
-              key={index}
-            >
+              key={index}>
               <div className="image-container">
                 {service.avatar}
               </div>
-              <h2 className="text-2xl text-white">{service.title}</h2>
+              <h2 className="text-2xl text-white capitalize">{service.title}</h2>
               <p className="text-darksubheading text-sm text-center w-3/4">
                 {service.description}
               </p>
@@ -43,18 +42,24 @@ export default ServiceCards;
 
 const services = [
     {
-      title: "Construction",
+      title: "construction and progress monitoring",
       avatar: <CubeTransparentIcon height={100} className="text-accent" />,
       description:"lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet ",
     },
     {
-      title: "AgriTech",
+      title: "planning and survey",
       avatar:<CubeTransparentIcon height={100} className="text-accent" />,
       description:
         "lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet ",
     },
     {
-      title: "Mining",
+      title: "Agriculture",
+      avatar:<CubeTransparentIcon height={100} className="text-accent" />,
+      description:
+        "lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet",
+    },
+    {
+      title: "mining and petroleum",
       avatar:<CubeTransparentIcon height={100} className="text-accent" />,
       description:
         "lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet",

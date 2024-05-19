@@ -12,7 +12,7 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage :{
-        'hero': "url('/hero-bg.jpg')",
+        'hero-texture': "url('/vista-website/src/assets/images/hero-bg.jpg')"
       },
       colors : {
         accent: '#3F72AF',
@@ -29,7 +29,7 @@ const config: Config = {
       },
 
       animation:{
-        wobble  : 'wobble 1s infinite',
+        wobble  : 'wobble 3s infinite',
       },
       keyframes:{
         wobble:{

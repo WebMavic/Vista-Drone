@@ -27,8 +27,6 @@ body {
   outline: 1px solid slategrey;
 }
 
-
-
 nav ul li {
   display: inline-block;
 }
@@ -71,8 +69,14 @@ nav ul li a:hover:after {
   .heroGradient {
     background:radial-gradient(circle, rgba(255,255,255,0) 20%, rgba(0,0,0,1) 100%),url('https://images.unsplash.com/photo-1548430842-2de69aaf6bc8?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
     background-blend-mode: darken;
-    
   }
 
+  .heropattern{
+    background: url('../assets/images/gridbg.png');
+  }
+
+  
 }
+
+
 

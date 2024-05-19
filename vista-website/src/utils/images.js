@@ -15,3 +15,12 @@ export const clientsLogos = {
     client14: require('../assets/images/clients-logo/img25.jpg'),
     client15: require('../assets/images/clients-logo/img26.jpg')
 };
+
+export const droneImage = [
+    require('../assets/images/drone1.png'),
+    require('../assets/images/drone2.png'),
+    require('../assets/images/drone4.png'),
+    require('../assets/images/drone5.png'),
+    
+
+]
