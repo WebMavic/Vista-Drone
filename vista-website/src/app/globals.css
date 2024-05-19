@@ -3,9 +3,12 @@
 @tailwind utilities; 
 
 
+
+html,
 body {
  -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 
@@ -52,7 +55,7 @@ nav ul li a:after {
   width: 0%;
   content: '.';
   color: transparent;
-  background: #aaa;
+  background: #222;
   height: 2px;
 }
 nav ul li a:hover:after {

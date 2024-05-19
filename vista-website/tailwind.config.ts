@@ -23,6 +23,10 @@ const config: Config = {
         subheading : "#555555",
         darksubheading : "#c6c6c6",
       },
+      dropShadow:{
+        drone : '-30px 60px 5px rgba(0, 0, 0, 0.09)',
+
+      },
 
       animation:{
         wobble  : 'wobble 1s infinite',

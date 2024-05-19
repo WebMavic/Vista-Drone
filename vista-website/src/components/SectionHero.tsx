@@ -1,31 +1,33 @@
 import React from "react";
 import { ChevronRightIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
+import HeroImage from "./HeroImage";
+
 
 function SectionHero() {
   return (
-    <section className="heroGradient w-full bg-cover bg-center bg-no-repeat px-5 sm:h-screen sm:px-16">
-      <div className="h-full py-24">
-        <div className="space-y-5 text-center text-white ">
-          <h1 className="mx-auto text-3xl font-bold leading-tight sm:w-2/3 sm:text-6xl">
+    <section className="w-full  px-5 sm:h-screen sm:px-32">
+      <div className="flex h-full w-full flex-wrap items-center gap-4 py-24 sm:flex-nowrap sm:justify-between  ">
+        <div className="space-y-5">
+          <h1 className="text-3xl font-bold leading-tight text-heading  sm:max:w-3/4 sm:text-6xl">
             Empowering the future with drone technology
           </h1>
-          <p className="text mx-auto text-lg font-light sm:w-1/2">
-            lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
-            imperdiet hendrerit volutpat.
+          <p className="text text-lg text-subheading sm:w-1/2">
+            lorem ipsum dolor sit amet consectetur adipiscing elit Curabitur
+            imperdiet.
           </p>
-          <div className="inline-flex items-center gap-2">
-            <Link
-              href="/services"
-              className="overflow-hidden rounded-full border-2 p-2 transition duration-75 ease-linear hover:border-transparent hover:bg-accent"
-            >
-              <ChevronRightIcon className="mx-auto h-6 text-white " />
-            </Link>
-            <span className="uppercase tracking-wider text-white">
-              Discover
-            </span>
-          </div>
+
+          <Link
+            href="/services"
+            className="inline-flex flex-row-reverse overflow-hidden rounded-full bg-accent  px-4 py-2 text-white"
+          >
+            <ChevronRightIcon className="h-6" />
+            <span className="uppercase tracking-wider">Discover</span>
+          </Link>
         </div>
+       
+        <HeroImage/>
+
       </div>
     </section>
   );
