@@ -12,18 +12,21 @@ function ClientCaurosal() {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset:['start end','end end']
+    // offset:['start end','end end']
   });
 
   const x1 = useTransform(scrollYProgress, [0, 1], ["1%", "-95%"]);
   const x2 = useTransform(scrollYProgress, [0, 1], ["-95%", "1%"]);
+
+
+5
   return (
     <SectionLayout className="bg-secondary relative" ref = {ref} >
         <div className="space-y-4">
           <Chips title="Who we have worked with"/>
           <h2 className="text-4xl font-bold text-primary capitalize ">Our Clients</h2>
         </div>
-        <div className="sticky top-0 flex-col space-y-5 overflow-hidden mt-10">
+        <div className="sticky hidden sm:block top-0 flex-col space-y-5 overflow-hidden mt-10">
         <div className="grid grid-cols-7 gap-10">
             {clients.slice(0,7).map((client, index) => (
               <motion.div
@@ -54,6 +57,14 @@ function ClientCaurosal() {
             ))}
          </div>
 
+        </div>
+
+        <div className="flex flex-wrap gap-5 justify-center  items-center sm:hidden">
+          {clients.slice(8,clients.length).map((client, index) => (
+            <div key={index} className="client h-32 w-32">
+              <Image src={client.logo} alt={client.name} className='h-full object-contain'/>
+            </div>
+          ))}
         </div>
     
       </SectionLayout>
