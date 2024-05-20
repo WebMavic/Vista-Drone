@@ -1,45 +1,51 @@
-'use client'
-
+"use client";
 
 import React, { useRef } from "react";
 import dummy from "@/assets/images/dummy.jpg";
 import Chips from "./ui/Chips";
 import SectionLayout from "./ui/SectionLayout";
+import { expertiseImage } from "@/utils/images";
 
-import {motion,useScroll,useTransform} from 'framer-motion'
+import { motion, useScroll, useTransform } from "framer-motion";
 function SectionExpertise() {
-
-    const ref = useRef<HTMLDivElement>(null)
-    const {scrollYProgress} = useScroll({
-      target: ref,
-      offset:['0 1','center center']
-    })
-    // const scale = useTransform(scrollYProgress,[0,1],['0%','100%'])
+  const ref = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["0 1", "center center"],
+  });
+  // const scale = useTransform(scrollYProgress,[0,1],['0%','100%'])
   return (
-    <SectionLayout className="bg-white" >
-      <div className="h-full w-full" ref={ref} >
-        <div className="text-center space-y-3">
-          <Chips title="Our expertise"/>
+    <SectionLayout className="bg-white">
+      <div className="h-full w-full" ref={ref}>
+        <div className="space-y-3 text-center">
+          <Chips title="Our expertise" />
           <h2 className="text-4xl font-bold text-heading ">Why Choose Us</h2>
-          <p className="text-subheading  sm:w-2/6 mx-auto ">
+          <p className="mx-auto  text-subheading sm:w-2/6 ">
             Lorem ipsum dolor sit amet consectetur adipisicing elit Minus dolor{" "}
           </p>
         </div>
 
-        <div className="flex gap-5 my-10 flex-col sm:flex-row w-full items-center justify-center ">
+        <div className="my-10 flex w-full flex-col items-center justify-center gap-5 sm:flex-row ">
           {expertises.map((expertise, index) => (
-            <motion.div  key={index}  style={{scale:scrollYProgress,opacity:scrollYProgress}}>
-            
+            <motion.div
+              key={index}
+              style={{ scale: scrollYProgress, opacity: scrollYProgress }}
+            >
               <img
                 src="https://placehold.co/300x450"
                 alt="logo"
-                className="object-cover rounded-lg"
+                className="rounded-lg object-cover"
               />
-              <span className="absolute z-[5]  -left-5 -top-5 font-bold text-6xl textStroke opacity-50">0{index+1}</span>
-              <div className="space-y-5 z-10 text-left w-[300px] mt-3 relative">
-                
-                <h3 className="text-lg text-heading font-medium">{expertise.title}</h3>
-                <p className="text-sm text-subheading">{expertise.description}</p>
+              <span className="textStroke absolute  -left-5 -top-5 z-[5] text-6xl font-bold opacity-50">
+                0{index + 1}
+              </span>
+              <div className="relative z-10 mt-3 w-[300px] space-y-5 text-left">
+                <h3 className="text-lg font-medium text-heading">
+                  {expertise.title}
+                </h3>
+                <p className="text-sm text-subheading">
+                  {expertise.description}
+                </p>
               </div>
             </motion.div>
           ))}
