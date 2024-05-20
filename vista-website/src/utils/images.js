@@ -16,11 +16,12 @@ export const clientsLogos = {
     client15: require('../assets/images/clients-logo/img26.jpg')
 };
 
+
+//if you want to add image make sure it is 500x500px
 export const droneImage = [
     require('../assets/images/drone1.png'),
     require('../assets/images/drone2.png'),
-    require('../assets/images/drone4.png'),
-    require('../assets/images/drone5.png'),
+    
     
 
 ]
