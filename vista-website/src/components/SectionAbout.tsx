@@ -5,9 +5,9 @@ import LocomotiveScroll from "locomotive-scroll";
 import Button from "./ui/Button";
 import SectionLayout from "./ui/SectionLayout";
 function SectionAbout() {
-  // if (typeof window !== "undefined") {
-  //   const locomotiveScroll = new LocomotiveScroll();
-  // }
+  if (typeof window !== "undefined") {
+   const locomotiveScroll = new LocomotiveScroll();
+   }
   return (
     <SectionLayout className="bg-primary">
       <div className="flex h-full  w-full flex-col items-center justify-center sm:flex-row sm:items-start sm:justify-between ">
@@ -24,13 +24,20 @@ function SectionAbout() {
             About Us
           </h1>
           <p className="my-5 text-left font-light text-subheading sm:w-4/5 ">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste
-            voluptatum unde commodi pariatur ab, tempore voluptate harum odio
-            quaerat debitis ad quos dolores sint blanditiis. Veniam error
-            maiores possimus repellat unde facilis, ipsum illum explicabo, nisi
-            dolore soluta rem amet libero quibusdam eius nesciunt! Nisi
-            doloremque ipsa pariatur blanditiis voluptas reprehenderit obcaecati
-            eius labore qui.
+            After conducting thorough research to identify emerging business
+            opportunities in the region, we leveraged our extensive
+            qualifications and over two decades of industrial experience to
+            strategically enter the Unmanned Aerial Vehicle (Drone) Services
+            sector in the UAE market. Our plans include further expansion
+            throughout the MENA region. The Middle East Unmanned Aerial Vehicle
+            Market was valued at USD 2.84 billion in 2023 and is projected to
+            reach USD 5.88 billion by 2033.<br></br> Our strategic positioning
+            is bolstered by strong support from R&D labs and experts at the
+            Indian Institute of Technology, India, and its Abu Dhabi branch, as
+            well as the Lima College of Engineering, Abu Dhabi. This
+            collaboration enables us to innovate and integrate cutting-edge
+            technologies, supported by reputable international drone
+            manufacturers.
           </p>
           <Button
             href="/about"

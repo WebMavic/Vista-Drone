@@ -1,1 +1,0 @@
-# Vista Drone

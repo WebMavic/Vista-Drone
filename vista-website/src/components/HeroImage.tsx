@@ -3,38 +3,34 @@ import React, { useRef } from "react";
 import Image from "next/image";
 import { droneImage } from "@/utils/images";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay,EffectFade } from "swiper/modules";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/pagination";
-import "swiper/css/navigation";
-import "swiper/css/effect-fade";
 
 interface HeroImageProps {
   className?: string;
 }
 
 function HeroImage({ className }: HeroImageProps) {
+  const paginationRef = useRef(null);
 
   return (
     <div className={`${className} relative`}>
-      <Swiper className="swiper-container"
-        slidesPerView={1} 
-        effect="fade"
+      <Swiper
+        slidesPerView={1}
         centeredSlides={true}
         loop={true}
-        fadeEffect={{crossFade: true}}
         autoplay={{
           delay: 5000,
           pauseOnMouseEnter: true,
         }}
         
         pagination={{
+          dynamicBullets: true,
           type: "bullets",
-          el: '.swiper-pagination',
-          clickable: true,
         }}
-        modules={[Navigation, Pagination, Autoplay,EffectFade]}
+        modules={[Navigation, Pagination, Autoplay]}
       >
         {droneImage.map((image, index) => (
           <SwiperSlide key={index}>
@@ -42,17 +38,12 @@ function HeroImage({ className }: HeroImageProps) {
               <Image
                 src={image}
                 alt={index + "drone"}
-                className="w-[500px]  drop-shadow-drone animate-wobble object-contain"
+                className="max-w-full h-full drop-shadow-drone animate-wobble object-contain"
               />
             </div>
           </SwiperSlide>
         ))}
       </Swiper>
-        <div className="navigation-container absolute top-[50%] right-0">
-          <div className="swiper-pagination flex flex-col gap-10 items-center justify-center"> 
-            
-          </div>
-        </div>
     </div>
   );
 }

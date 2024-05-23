@@ -6,7 +6,7 @@ import HeroImage from "./HeroImage";
 
 function SectionHero() {
   return (
-    <section className="w-full  px-5 sm:h-screen sm:px-32 heropattern bg-opacity-[10%] sm:bg-center sm:bg-contain bg-cover bg-no-repeat">
+    <section className="w-full  px-5 sm:h-screen sm:px-32 heropattern bg-opacity-[10%] bg-center bg-contain bg-no-repeat">
       <div className="flex h-full w-full flex-wrap items-center gap-4 py-24 sm:flex-nowrap sm:justify-between  ">
         <div className="space-y-5">
           <h1 className="text-3xl font-bold leading-tight text-heading  sm:max:w-3/4 sm:text-6xl">
@@ -26,7 +26,7 @@ function SectionHero() {
           </Link>
         </div>
        
-        <HeroImage className="sm:w-1/2 w-full "/>
+        <HeroImage className="w-1/2 h-full"/>
 
       </div>
     </section>
