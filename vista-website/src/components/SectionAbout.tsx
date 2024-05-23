@@ -1,13 +1,13 @@
 "use client";
 import React from "react";
-import LocomotiveScroll from "locomotive-scroll";
+//import LocomotiveScroll from "locomotive-scroll";
 
 import Button from "./ui/Button";
 import SectionLayout from "./ui/SectionLayout";
 function SectionAbout() {
   // if (typeof window !== "undefined") {
-  //  const locomotiveScroll = new LocomotiveScroll();
-  //  }
+  //   const locomotiveScroll = new LocomotiveScroll();
+  // }
   return (
     <SectionLayout className="bg-primary">
       <div className="flex h-full  w-full flex-col items-center justify-center sm:flex-row sm:items-start sm:justify-between ">

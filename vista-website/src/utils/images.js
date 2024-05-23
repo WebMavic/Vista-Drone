@@ -1,10 +1,10 @@
 export const clientsLogos = {
-  client1: require("../assets/images/clients-logo/img8.jpg"),
-  client2: require("../assets/images/clients-logo/img10.jpg"),
-  client3: require("../assets/images/clients-logo/img11.jpg"),
-  client4: require("../assets/images/clients-logo/img13.jpg"),
-  client5: require("../assets/images/clients-logo/img15.jpg"),
-  client6: require("../assets/images/clients-logo/img16.jpg"),
+  client1: require("../assets/images/clients-logo/client1.png"),
+  client2: require("../assets/images/clients-logo/client2.png"),
+  client3: require("../assets/images/clients-logo/client3.png"),
+  client4: require("../assets/images/clients-logo/client4.png"),
+  client5: require("../assets/images/clients-logo/client5.png"),
+  client6: require("../assets/images/clients-logo/client6.png"),
   client7: require("../assets/images/clients-logo/img18.jpg"),
   client8: require("../assets/images/clients-logo/img19.jpg"),
   client9: require("../assets/images/clients-logo/img20.jpg"),
@@ -26,4 +26,10 @@ export const droneImage = [
   require("../assets/images/drone7.png"),
   require("../assets/images/drone8.png"),
   require("../assets/images/drone9.png"),
+];
+
+export const expertiseImage = [
+  require("../assets/images/why-choose-us-1.jpeg"),
+  require("../assets/images/why-choose-us-1.jpeg"),
+  require("../assets/images/why-choose-us-1.jpeg"),
 ];

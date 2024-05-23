@@ -11,8 +11,11 @@ function SectionClient() {
           our major clients who trust us to deliver exceptional results.{" "}
         </p>
       </div>
-      <div className="clients my-10 grid  grid-cols-2 place-items-center  gap-2 sm:grid-cols-8 sm:gap-5">
-        <div className="h-32 w-32 bg-gray-300 "></div>
+      <div
+        className="clients my-10 grid  grid-cols-2 place-items-center  gap-2 sm:grid-cols-8 sm:gap-5 "
+       
+      >
+        <div className="h-32 w-32 bg-gray-300 "> </div>
         <div className="h-32 w-32 bg-gray-300"></div>
         <div className="h-32 w-32 bg-gray-300"></div>
         <div className="h-32 w-32 bg-gray-300"></div>

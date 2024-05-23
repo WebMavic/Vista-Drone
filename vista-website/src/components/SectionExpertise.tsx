@@ -22,7 +22,7 @@ function SectionExpertise() {
           <Chips title="Our expertise" />
           <h2 className="text-4xl font-bold text-heading ">Why Choose Us</h2>
           <p className="mx-auto  text-subheading sm:w-2/6 ">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit Minus dolor{" "}
+            Cultivating Excellence: Our Areas of Mastery{" "}
           </p>
         </div>
 

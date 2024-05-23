@@ -1,14 +1,13 @@
-'use client'
-import React from 'react'
-import Chips from '@/components/ui/Chips'
-import SectionLayout from '@/components/ui/SectionLayout'
+"use client";
+import React from "react";
+import Chips from "@/components/ui/Chips";
+import SectionLayout from "@/components/ui/SectionLayout";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import {clientsLogos} from "@/utils/images";
-import Image from 'next/image'
+import { clientsLogos } from "@/utils/images";
+import Image from "next/image";
 
 function ClientCaurosal() {
-
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -18,61 +17,72 @@ function ClientCaurosal() {
   const x1 = useTransform(scrollYProgress, [0, 1], ["1%", "-95%"]);
   const x2 = useTransform(scrollYProgress, [0, 1], ["-95%", "1%"]);
 
-
-5
+  5;
   return (
-    <SectionLayout className="bg-secondary relative" ref = {ref} >
-        <div className="space-y-4">
-          <Chips title="Who we have worked with"/>
-          <h2 className="text-4xl font-bold text-primary capitalize ">Our Clients</h2>
-        </div>
-        <div className="sticky hidden sm:block top-0 flex-col space-y-5 overflow-hidden mt-10">
+    <SectionLayout className="relative bg-secondary" ref={ref}>
+      <div className="space-y-4">
+        <Chips title="Who we have worked with" />
+        <h2 className="text-4xl font-bold capitalize text-primary ">
+          Our Clients
+        </h2>
+      </div>
+      <div className="sticky top-0 mt-10 hidden flex-col space-y-5 overflow-hidden sm:block">
         <div className="grid grid-cols-7 gap-10">
-            {clients.slice(0,7).map((client, index) => (
-              <motion.div
-                key={index}
-                className="client h-32 w-32 overflow-hidden "
-                style={{ x:x1 }}
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-                
-              >
-                <Image src={client.logo} alt={client.name} className='h-full object-contain opacity-80'/>
-              </motion.div>
-            ))}
-         </div>
-         
-        <div className="grid grid-cols-7 gap-10">
-            {clients.slice(7,clients.length).map((client, index) => (
-              <motion.div
-                key={index}
-                className="client h-32 w-32 overflow-hidden "
-                style={{x:x2}}
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-                
-              >
-                <Image src={client.logo} alt={client.name} className='h-full object-contain opacity-80'/>
-              </motion.div>
-            ))}
-         </div>
-
-        </div>
-
-        <div className="flex flex-wrap gap-5 justify-center  items-center sm:hidden">
-          {clients.slice(8,clients.length).map((client, index) => (
-            <div key={index} className="client h-32 w-32">
-              <Image src={client.logo} alt={client.name} className='h-full object-contain'/>
-            </div>
+          {clients.slice(0, 7).map((client, index) => (
+            <motion.div
+              key={index}
+              className="client h-32 w-32 overflow-hidden "
+              style={{ x: x1 }}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              <Image
+                src={client.logo}
+                alt={client.name}
+                className="h-full object-contain opacity-80"
+              />
+            </motion.div>
           ))}
         </div>
-    
-      </SectionLayout>
-  )
+
+        <div className="grid grid-cols-7 gap-10">
+          {clients.slice(7, clients.length).map((client, index) => (
+            <motion.div
+              key={index}
+              className="client h-32 w-32 overflow-hidden "
+              style={{ x: x2 }}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              <Image
+                src={client.logo}
+                alt={client.name}
+                className="h-full object-contain opacity-80"
+                style={{ objectFit: "contain" }}
+                height={84.3}
+                width={150}
+              />
+            </motion.div>
+          ))}
+        </div>
+      </div>
+
+      <div className="flex flex-wrap items-center justify-center  gap-5 sm:hidden">
+        {clients.slice(8, clients.length).map((client, index) => (
+          <div key={index} className="client h-32 w-32">
+            <Image
+              src={client.logo}
+              alt={client.name}
+              className="h-full object-contain"
+            />
+          </div>
+        ))}
+      </div>
+    </SectionLayout>
+  );
 }
 
 export default ClientCaurosal;
-
 
 const clients = [
   {
@@ -131,6 +141,4 @@ const clients = [
     name: "client14",
     logo: clientsLogos.client14,
   },
-  
-
-]
+];
