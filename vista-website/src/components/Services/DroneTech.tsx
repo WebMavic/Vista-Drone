@@ -1,65 +1,87 @@
-import React from 'react'
+import React from "react";
 import {
-    VideoCameraIcon,
-    CameraIcon,
-    EyeIcon,
-    CubeTransparentIcon
-  } from "@heroicons/react/24/outline";
-import Chips from '../ui/Chips';
-import SectionLayout from '../ui/SectionLayout';
-
+  VideoCameraIcon,
+  CameraIcon,
+  EyeIcon,
+  CubeTransparentIcon,
+} from "@heroicons/react/24/outline";
+import Chips from "../ui/Chips";
+import SectionLayout from "../ui/SectionLayout";
 
 function DroneTech() {
   return (
     <SectionLayout className="bg-white">
-    <div className="content space-y-4  ">
-        <Chips title='Technology' />
+      <div className="content space-y-4  ">
+        <Chips title="Technology" />
         <h2 className="text-4xl font-bold text-heading ">
-        Innovative Tools & Devices which we use
+          Innovative Tools & Devices which we use
         </h2>
       </div>
-      <div className="container py-10 h-full w-full">
-          <div className="flex w-full h-full flex-wrap items-center justify-center sm:justify-between">
-              <div className="left sm:text-right h-full text-center flex flex-col gap-4">
-                  <div className="f1 sm:w-52">
-                      <span className='inline-flex items-end'><CameraIcon height={50}/></span>
-                      <h4 className="text-xl font-semibold text-heading">Thermal Camera</h4>
-                      <p className="text-sm font-light text-subheading my-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, ipsum!</p>
-                  </div>
-                  <div className="f1 sm:w-52">
-                  <span className='inline-flex items-end'><VideoCameraIcon height={50}/></span>
-                      <h4 className="text-xl font-semibold text-heading">Photography</h4>
-                      <p className="text-sm font-light text-subheading  my-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, ipsum!</p>
-                  </div>
-              </div>
-
-                    <div className="image max-w-96">
-                   
-
-                        <img src="https://templatekit.tokomoo.com/dronekit/wp-content/uploads/sites/27/2021/08/img_drone_featured.png" alt="ico" className="object-cover animate-wobble"  />
-                   
-                      
-                    </div>
-
-         
-              <div className="right sm:text-left  text-center flex flex-col gap-4">
-                  <div className="f1 sm:w-52">
-                  <span className='inline-flex items-end'><EyeIcon height={50}/></span>
-                      <h4 className="text-xl font-semibold text-heading">UV Camera</h4>
-                      <p className="text-sm font-light text-subheading  my-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, ipsum!</p>
-                  </div>
-                  <div className="f1 sm:w-52">
-                  <span className='inline-flex items-end'><CubeTransparentIcon height={50}/></span>
-                      <h4 className="text-xl font-semibold text-heading">LiDAR Sensor</h4>
-                      <p className="text-sm font-light text-subheading my-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, ipsum!</p>
-                  </div>
-              </div>
+      <div className="container h-full w-full py-10">
+        <div className="flex h-full w-full flex-wrap items-center justify-center sm:justify-between">
+          <div className="left flex h-full flex-col gap-4 text-center sm:text-right">
+            <div className="f1 sm:w-52">
+              <span className="inline-flex items-end">
+                <CameraIcon height={50} />
+              </span>
+              <h4 className="text-xl font-semibold text-heading">
+                Thermal Camera
+              </h4>
+              {/* <p className="my-2 text-sm font-light text-subheading">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa,
+                ipsum!
+              </p> */}
+            </div>
+            <div className="f1 sm:w-52">
+              <span className="inline-flex items-end">
+                <VideoCameraIcon height={50} />
+              </span>
+              <h4 className="text-xl font-semibold text-heading">
+                Photography
+              </h4>
+              {/* <p className="my-2 text-sm font-light  text-subheading">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa,
+                ipsum!
+              </p> */}
+            </div>
           </div>
-         
-      
+
+          <div className="image max-w-96">
+            <img
+              src="https://templatekit.tokomoo.com/dronekit/wp-content/uploads/sites/27/2021/08/img_drone_featured.png"
+              alt="ico"
+              className="animate-wobble object-cover"
+            />
+          </div>
+
+          <div className="right flex  flex-col gap-4 text-center sm:text-left">
+            <div className="f1 sm:w-52">
+              <span className="inline-flex items-end">
+                <EyeIcon height={50} />
+              </span>
+              <h4 className="text-xl font-semibold text-heading">UV Camera</h4>
+              {/* <p className="my-2 text-sm font-light  text-subheading">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa,
+                ipsum!
+              </p> */}
+            </div>
+            <div className="f1 sm:w-52">
+              <span className="inline-flex items-end">
+                <CubeTransparentIcon height={50} />
+              </span>
+              <h4 className="text-xl font-semibold text-heading">
+                LiDAR Sensor
+              </h4>
+              {/* <p className="my-2 text-sm font-light text-subheading">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa,
+                ipsum!
+              </p> */}
+            </div>
+          </div>
+        </div>
       </div>
     </SectionLayout>
-  )
+  );
 }
 
-export default DroneTech
+export default DroneTech;

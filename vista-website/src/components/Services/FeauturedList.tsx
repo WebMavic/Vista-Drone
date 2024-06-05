@@ -25,26 +25,26 @@ const services = [
   {
     title: "Mining and Petroleum",
     description:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet hendrerit volutpat.",
+      "Our specialized drone solutions provide precise aerial data, helping you streamline exploration, site assessment, and resource management.",
   },
   {
     title: "Planning and Survey",
     description:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet hendrerit volutpat.",
+      "Transform your planning and survey processes with our advanced drone technology. ",
   },
   {
     title: "Agriculture",
     description:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet hendrerit volutpat.",
+      "Our drone solutions provide actionable insights for crop management, irrigation planning, and pest detection, helping you enhance productivity and sustainability.",
   },
   {
     title: "Construction and Progress Monitoring",
     description:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet hendrerit volutpat.",
+      "We offer comprehensive drone solutions for site planning, progress monitoring, and safety inspections.",
   },
   {
     title: "Transportation and Power Industry",
     description:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet hendrerit volutpat.",
+      "Our drones conduct detailed inspections and provide high-quality visual data for proactive maintenance and compliance.",
   },
 ];
