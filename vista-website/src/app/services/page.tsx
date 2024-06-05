@@ -5,8 +5,7 @@ import ServiceCards from "@/components/Services/ServiceCards";
 import DroneApplication from "@/components/Services/DroneApplication";
 import DroneTech from "@/components/Services/DroneTech";
 import { Metadata } from "next";
-import FAQ from "@/components/FAQs/FAQ";
-import SectionLayout from "@/components/ui/SectionLayout";
+
 
 export const metadata: Metadata = {
   title: "Services",
@@ -20,10 +19,7 @@ function page() {
       <DroneApplication />
       <DroneTech />
       <SectionProjects />
-      <SectionLayout>
-      <FAQ/>
-
-      </SectionLayout>
+      
     </>
   );
 }

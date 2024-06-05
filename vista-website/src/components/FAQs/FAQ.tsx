@@ -1,9 +1,8 @@
 "use client";
 import React from "react";
 import { TabGroup, TabList, Tab, TabPanels, TabPanel } from "@headlessui/react";
-import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import FAQITEM from "./FAQITEM";
-import Chips from "../ui/Chips";
+
 
 function FAQ() {
   return (
@@ -14,16 +13,16 @@ function FAQ() {
             {faqs.map(({ title }, index) => (
               <Tab
                 key={index}
-                className="rounded-full px-3 py-1 text-sm/6 font-semibold focus:outline-none data-[hover]:bg-secondary/5 data-[selected]:bg-secondary/10 data-[focus]:outline-1  data-[focus]:outline-white dark:text-white"
+                className="rounded-md px-4 py-3 text-xl font-semibold focus:outline-none data-[hover]:bg-accent/5 data-[selected]:bg-accent/10 data-[focus]:outline-1  data-[focus]:outline-white dark:text-white"
               >
                 {title}
               </Tab>
             ))}
           </TabList>
-          <TabPanels className="mt-3">
+          <TabPanels className="mt-3 border ">
             {faqs.map(({ questions }, index) => (
-              <TabPanel key={index} className="rounded-xl ">
-                <ul>
+              <TabPanel key={index} className="">
+                <ul className="divide-y divide-gray-200">
                   {questions.map((ques) => (
                     
                       <FAQITEM
@@ -38,7 +37,7 @@ function FAQ() {
             ))}
           </TabPanels>
         </TabGroup>
-        <div className="img-container"></div>
+        
       </div>
     </>
   );

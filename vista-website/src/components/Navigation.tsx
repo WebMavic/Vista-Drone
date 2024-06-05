@@ -13,6 +13,7 @@ function Navigation() {
     { name: 'About', path: '/about' },
     { name: 'Contact', path: '/contact' },
     { name: 'Market', path: '/market' },
+    { name: 'FAQs', path: '/faq' },
   ]
 
   return (

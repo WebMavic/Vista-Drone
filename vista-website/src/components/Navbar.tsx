@@ -28,7 +28,7 @@ function Navbar() {
     <nav
       className={
         isTop
-          ? "w-full sm:px-32 px-5 fixed top-0 left-0 z-10"
+          ? "w-full sm:px-32 px-5 fixed top-0 left-0 z-[9999]"
           : "bg-white  sm:px-32 z-50  px-5 fixed top-0 left-0 transition-all duration-300 ease-in-out w-full shadow-sm"
       }
     >
