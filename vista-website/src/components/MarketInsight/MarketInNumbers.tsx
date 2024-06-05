@@ -19,17 +19,17 @@ function MarketInNumbers() {
           <div>{item.icon}</div>
           <div className="inline-flex flex-col">
             <h3 className="text-2xl">
-              <CountUp end={item.value} 
-                    start={0} 
-                    duration={5} 
-                    decimals={2}  
-                    prefix={item.tag === "million" ? "$" : ""}
-                    />{' '}
-                    
+              <CountUp
+                end={item.value}
+                start={0}
+                duration={5}
+                decimals={2}
+                prefix={item.tag === "million" ? "$" : ""}
+              />{" "}
               {item.tag}
             </h3>
 
-            <span className="font-light text-subheading sm:w-2/3 ">
+            <span className="text-justify font-light text-subheading sm:w-2/3 ">
               {item.description.trim()}
             </span>
           </div>

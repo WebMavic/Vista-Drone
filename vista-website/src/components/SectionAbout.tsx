@@ -23,7 +23,7 @@ function SectionAbout() {
           <h1 className="text-4xl font-medium uppercase text-heading dark:text-white sm:text-6xl">
             About Us
           </h1>
-          <p className="my-5 text-left font-light text-subheading sm:w-4/5 ">
+          <p className="my-5 text-justify font-light  text-subheading sm:w-4/5 ">
             After conducting thorough research to identify emerging business
             opportunities in the region, we leveraged our extensive
             qualifications and over two decades of industrial experience to

@@ -26,7 +26,7 @@ function FeauturedServiceCardItem({
         </MagneticHover>
       </div>
       <h3 className="text-2xl">{service.title}</h3>
-      <p className="text-center  text-sm text-subheading">
+      <p className="text-justify text-sm text-subheading">
         {service.description}
       </p>
     </div>

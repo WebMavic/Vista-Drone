@@ -10,11 +10,10 @@ function SectionContact() {
             Need to know something more?
           </h2>
           <p className="mx-auto text-justify font-light text-darksubheading sm:w-1/2">
-            Feel free to explore detailed case studies, client testimonials, and
-            success stories. We’re confident you’ll see why these industry
-            leaders chose us as their trusted partner. If you have any questions
-            or need further information, don't hesitate to reach out. Our team
-            is always here to help.
+            Discover how drones can revolutionize your organization by
+            connecting with our expert drone consultant today. Take this
+            opportunity to get all your questions answered and explore the wide
+            range of applications that drones offer.
           </p>
         </div>
         <div className="my-10 w-full">
