@@ -3,6 +3,7 @@ import { ChevronRightIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import HeroImage from "./HeroImage";
 import GridPattern from "./magicui/animated-grid-pattern";
+import FlipText from "@/components/magicui/flip-text";
 
 function SectionHero() {
   return (
@@ -18,9 +19,13 @@ function SectionHero() {
       />
       <div className="relative z-10 flex h-full w-full flex-wrap items-center gap-4 py-24 sm:flex-nowrap sm:justify-between">
         <div className="space-y-5">
-          <h1 className="sm:max:w-3/4 text-3xl font-bold leading-tight text-heading sm:text-6xl">
+          {/* <h1 className="sm:max:w-3/4 text-3xl font-bold leading-tight text-heading sm:text-6xl">
             Empowering the future with drone technology
-          </h1>
+          </h1> */}
+          <FlipText
+            className="text-4xl font-bold tracking-[-0.1em] text-black dark:text-white md:text-7xl "
+            word="Empowering the future with drone technology"
+          />
           <p className="text text-lg text-subheading sm:w-1/2">
             lorem ipsum dolor sit amet consectetur adipiscing elit Curabitur
             imperdiet.
