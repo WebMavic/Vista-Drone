@@ -3,12 +3,12 @@ import FeauturedServiceCardItem from "./FeauturedServiceCardItem";
 
 function FeauturedList() {
   return (
-    <div className="service-cards content mt-5 space-y-4 text-center sm:mt-0">
-      <h2 className="text-5xl font-bold text-heading ">
+    <div className="h-[28rem] overflow-y-scroll no-scrollbar">
+      {/* <h2 className="text-5xl font-bold text-heading ">
         Elevating Industries with Next Gen UAV Solutions
-      </h2>
+      </h2> */}
       <div
-        className="mx-10 flex flex-wrap items-center justify-center gap-12 space-y-4 text-center
+        className="mx-10 flex flex-wrap items-center justify-center gap-5  text-center
       "
       >
         {services.map((service, index) => (

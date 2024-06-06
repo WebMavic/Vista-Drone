@@ -1,7 +1,7 @@
 import React from 'react'
 import SectionLayout from '@/components/ui/SectionLayout'
 import Chips from '@/components/ui/Chips'
-import FAQ from '@/components/FAQ'
+import FAQ from '@/components/FAQs/FAQ'
 function SectionFaq() {
   return (
     
