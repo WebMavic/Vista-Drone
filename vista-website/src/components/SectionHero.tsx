@@ -17,18 +17,17 @@ function SectionHero() {
         repeatDelay={0.5}
         fillColor="3F72AF/30"
       />
-      <div className="relative z-10 flex h-full w-full flex-wrap items-center gap-4 py-24 sm:flex-nowrap sm:justify-between">
+      <div className="relative z-10 flex h-full w-full flex-wrap items-center justify-center gap-4 py-24 sm:flex-nowrap">
         <div className="space-y-5">
           {/* <h1 className="sm:max:w-3/4 text-3xl font-bold leading-tight text-heading sm:text-6xl">
             Empowering the future with drone technology
           </h1> */}
           <FlipText
             className="text-4xl font-bold tracking-[-0.1em] text-black dark:text-white md:text-7xl "
-            word="Empowering the future with drone technology"
+            word="Elevate Your Vision Cutting-Edge UAV Solutions Await"
           />
-          <p className="text text-lg text-subheading sm:w-1/2">
-            lorem ipsum dolor sit amet consectetur adipiscing elit Curabitur
-            imperdiet.
+          <p className="text text-center text-lg text-subheading">
+            This if going to be the subheading
           </p>
 
           <Link
@@ -40,7 +39,7 @@ function SectionHero() {
           </Link>
         </div>
 
-        <HeroImage className="h-full w-1/2" />
+        {/* <HeroImage className="h-full w-1/2" /> */}
       </div>
     </section>
   );

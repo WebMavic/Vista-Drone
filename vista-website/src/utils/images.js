@@ -34,10 +34,17 @@ export const expertiseImage = [
   require("../assets/images/why-choose-us-1.jpeg"),
 ];
 
-
 export const projectImages = [
   require("../assets/images/projects/project-1.jpg"),
   require("../assets/images/projects/project-2.jpg"),
   require("../assets/images/projects/project-3.jpg"),
   require("../assets/images/projects/project-4.jpg"),
-]
+];
+
+export const serviceIcons = [
+  require("../assets/icons/agriculture.svg"),
+  require("../assets/icons/construction.svg"),
+  require("../assets/icons/petroleum.svg"),
+  require("../assets/icons/pollution.svg"),
+  require("../assets/icons/transport.svg"),
+];
