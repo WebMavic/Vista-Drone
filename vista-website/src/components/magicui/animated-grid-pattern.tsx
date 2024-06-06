@@ -15,19 +15,25 @@ interface GridPatternProps {
   maxOpacity?: number;
   duration?: number;
   repeatDelay?: number;
+  color?: string;
+  fillColor?: string; // Added fillColor prop
+  strokeColor?: string; // Added strokeColor prop
 }
 
 export function GridPattern({
-  width = 40,
-  height = 40,
+  width = 150,
+  height = 150,
   x = -1,
   y = -1,
   strokeDasharray = 0,
-  numSquares = 50,
+  numSquares = 8,
   className,
-  maxOpacity = 0.5,
+  maxOpacity = 0.01,
   duration = 4,
   repeatDelay = 0.5,
+  color = "currentColor",
+  fillColor = "fill-gray-400/30", // Default fill color
+  strokeColor = "stroke-gray-400/30",
   ...props
 }: GridPatternProps) {
   const id = useId();
@@ -98,7 +104,7 @@ export function GridPattern({
       ref={containerRef}
       aria-hidden="true"
       className={cn(
-        "pointer-events-none absolute inset-0 h-full w-full fill-gray-400/30 stroke-gray-400/30",
+        `pointer-events-none absolute inset-0 h-full w-full ${fillColor} ${strokeColor}`,
         className,
       )}
       {...props}

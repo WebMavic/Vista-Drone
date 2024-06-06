@@ -10,10 +10,11 @@ function SectionHero() {
       {/* Add GridPattern as a background */}
       <GridPattern
         className="absolute inset-0 z-0 h-full w-full"
-        numSquares={50}
-        maxOpacity={0.5}
+        numSquares={10}
+        maxOpacity={0.1}
         duration={4}
         repeatDelay={0.5}
+        fillColor="3F72AF/30"
       />
       <div className="relative z-10 flex h-full w-full flex-wrap items-center gap-4 py-24 sm:flex-nowrap sm:justify-between">
         <div className="space-y-5">
