@@ -46,7 +46,6 @@ function AboutUs() {
           </div>
         </div>
 
-<<<<<<< Updated upstream
         <div className="flex flex-col justify-around">
           <div className="vison relative">
             <div className="absolute -left-10 -top-10 z-[5] hidden h-64 w-64 rounded-full bg-accent sm:block"></div>
@@ -57,18 +56,6 @@ function AboutUs() {
                 through innovation, collaboration, and a devotion to excellence.
               </p>
             </div>
-=======
-      <div className="flex flex-col justify-around">
-        <div className="vison relative">
-          <div className="h-64 w-64 hidden sm:block rounded-full bg-accent/50 absolute z-[5] -left-10 -top-10"></div>
-          <div className="z-10 relative">
-            <h3 className="sm:text-white font-semibold text-xl">Mission</h3>
-            <p className="font-light sm:text-black w-4/5">
-              Deliver unmatched UAV services, surpassing client expectations
-              through innovation, collaboration, and a devotion to
-              excellence.
-            </p>
->>>>>>> Stashed changes
           </div>
           <div className="misson relative">
             <div className="absolute -left-10 -top-10 z-[5]  hidden h-64 w-64 rounded-full bg-accent sm:block"></div>
