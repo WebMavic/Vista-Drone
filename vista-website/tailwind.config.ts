@@ -11,39 +11,36 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage :{
-        'hero-texture': "url('/vista-website/src/assets/images/hero-bg.jpg')"
+      backgroundImage: {
+        "hero-texture": "url('/vista-website/src/assets/images/hero-bg.jpg')",
       },
-      colors : {
-        accent: '#3F72AF',
-        primary: '#F9F7F7',
-        primary2: '#DBE2EF',
-        secondary: '#112D4E',
-        heading : "#1e1e2d",
-        subheading : "#555555",
-        darksubheading : "#c6c6c6",
+      colors: {
+        accent: "#3F72AF",
+        primary: "#F9F7F7",
+        primary2: "#DBE2EF",
+        secondary: "#112D4E",
+        heading: "#1e1e2d",
+        subheading: "#555555",
+        darksubheading: "#c6c6c6",
       },
-      dropShadow:{
-        drone : '-30px 60px 5px rgba(0, 0, 0, 0.09)',
-
-      },
-
-      animation:{
-        wobble  : 'wobble 3s infinite',
-      },
-      keyframes:{
-        wobble:{
-          '0%, 100%': { transform: 'translateY(-2%)' },
-          '50%': { transform: 'translateY(0%)' },
-        }
+      dropShadow: {
+        drone: "-30px 60px 5px rgba(0, 0, 0, 0.09)",
       },
 
+      animation: {
+        wobble: "wobble 3s infinite",
+      },
+      keyframes: {
+        wobble: {
+          "0%, 100%": { transform: "translateY(-2%)" },
+          "50%": { transform: "translateY(0%)" },
+        },
+      },
     },
   },
   plugins: [],
 };
 export default config;
-
 
 // .wobble {
 //   animation: wobble 1s ease-in-out infinite;

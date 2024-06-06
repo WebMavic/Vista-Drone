@@ -25,7 +25,6 @@ function HeroImage({ className }: HeroImageProps) {
           delay: 5000,
           pauseOnMouseEnter: true,
         }}
-        
         pagination={{
           dynamicBullets: true,
           type: "bullets",
@@ -34,11 +33,11 @@ function HeroImage({ className }: HeroImageProps) {
       >
         {droneImage.map((image, index) => (
           <SwiperSlide key={index}>
-            <div className="inline-flex items-center justify-center  h-full">
+            <div className="inline-flex h-full items-center  justify-center">
               <Image
                 src={image}
                 alt={index + "drone"}
-                className="max-w-full h-full drop-shadow-drone animate-wobble object-contain"
+                className="h-full max-w-full animate-wobble object-contain drop-shadow-drone"
               />
             </div>
           </SwiperSlide>

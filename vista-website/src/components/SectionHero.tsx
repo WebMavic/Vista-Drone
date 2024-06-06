@@ -2,14 +2,22 @@ import React from "react";
 import { ChevronRightIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import HeroImage from "./HeroImage";
-
+import GridPattern from "./magicui/animated-grid-pattern";
 
 function SectionHero() {
   return (
-    <section className="w-full  px-5 sm:h-screen sm:px-32 heropattern bg-opacity-[10%] bg-center bg-contain bg-no-repeat">
-      <div className="flex h-full w-full flex-wrap items-center gap-4 py-24 sm:flex-nowrap sm:justify-between  ">
+    <section className="relative w-full px-5 sm:h-screen sm:px-32">
+      {/* Add GridPattern as a background */}
+      <GridPattern
+        className="absolute inset-0 z-0 h-full w-full"
+        numSquares={50}
+        maxOpacity={0.5}
+        duration={4}
+        repeatDelay={0.5}
+      />
+      <div className="relative z-10 flex h-full w-full flex-wrap items-center gap-4 py-24 sm:flex-nowrap sm:justify-between">
         <div className="space-y-5">
-          <h1 className="text-3xl font-bold leading-tight text-heading  sm:max:w-3/4 sm:text-6xl">
+          <h1 className="sm:max:w-3/4 text-3xl font-bold leading-tight text-heading sm:text-6xl">
             Empowering the future with drone technology
           </h1>
           <p className="text text-lg text-subheading sm:w-1/2">
@@ -19,15 +27,14 @@ function SectionHero() {
 
           <Link
             href="/services"
-            className="inline-flex flex-row-reverse overflow-hidden rounded-full bg-accent  px-4 py-2 text-white"
+            className="inline-flex flex-row-reverse overflow-hidden rounded-full bg-accent px-4 py-2 text-white"
           >
             <ChevronRightIcon className="h-6" />
             <span className="uppercase tracking-wider">Discover</span>
           </Link>
         </div>
-       
-        <HeroImage className="w-1/2 h-full"/>
 
+        <HeroImage className="h-full w-1/2" />
       </div>
     </section>
   );
