@@ -1,16 +1,21 @@
+"use client"
 import React from "react";
 import FeauturedServiceCardItem from "./FeauturedServiceCardItem";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
+
+import "swiper/css";
+import "swiper/css/pagination";
+
 
 function FeauturedList() {
   return (
-    <div className="h-[28rem] overflow-y-scroll no-scrollbar">
+    <div className="w-full mt-5 sm:mt-0">
       {/* <h2 className="text-5xl font-bold text-heading ">
         Elevating Industries with Next Gen UAV Solutions
       </h2> */}
-      <div
-        className="mx-10 flex flex-wrap items-center justify-center gap-5  text-center
-      "
-      >
+      
+      <div className="grid sm:grid-cols-3  place-items-center gap-5 text-center  ">
         {services.map((service, index) => (
           <FeauturedServiceCardItem service={service} key={index} />
         ))}
@@ -43,7 +48,7 @@ const services = [
       "We offer comprehensive drone solutions for site planning, progress monitoring, and safety inspections.",
   },
   {
-    title: "Transportation and Power Industry",
+    title: "Transportation and Power Industry",
     description:
       "Our drones conduct detailed inspections and provide high-quality visual data for proactive maintenance and compliance.",
   },

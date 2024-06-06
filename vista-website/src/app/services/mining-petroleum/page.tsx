@@ -9,6 +9,7 @@ import SectionInfo from "../(components)/SectionInfo";
 import Benifits from "../(components)/Benifits";
 import SectionFaq from "../(components)/SectionFaq";
 import { StickyScroll } from "@/components/ui/sticky-scroll-reveal";
+import { HorizontalScrollCarousel } from "@/components/ui/HorizontalScroll";
 
 const content = services[0].service_description.map((item) => {
   return {
@@ -24,10 +25,10 @@ const page = () => {
       <SectionHeader title="Mining and Petroleum" />
     <SectionInfo title="Mining and Petroleum" content={services[0].description} image={services[0].image}/>
 
-      <SectionLayout>
-        <StickyScroll content={content} />
-      </SectionLayout>
-
+      
+        {/* <StickyScroll content={content} /> */}
+        <HorizontalScrollCarousel content={services[0].service_description} className="bg-accent"  />
+      
       <Benifits content={services[0].benefits} />
 
       <SectionFaq faqs={services[0].faq}/>

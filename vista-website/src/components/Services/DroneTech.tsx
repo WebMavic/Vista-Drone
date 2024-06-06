@@ -3,6 +3,7 @@ import {
   VideoCameraIcon,
   CameraIcon,
   EyeIcon,
+  MapPinIcon,
   CubeTransparentIcon,
 } from "@heroicons/react/24/outline";
 import Chips from "../ui/Chips";
@@ -46,12 +47,25 @@ function DroneTech() {
             </div>
           </div>
 
-          <div className="image max-w-96">
-            <img
-              src="https://templatekit.tokomoo.com/dronekit/wp-content/uploads/sites/27/2021/08/img_drone_featured.png"
-              alt="ico"
-              className="animate-wobble object-cover"
-            />
+          <div className="image-middle max-w-96 ">
+          <div className="f1 sm:w-52 mx-auto">
+              <span className="flex flex-col items-center justify-center">
+                <MapPinIcon height={50} />
+                <h4 className="text-xl font-semibold text-heading">GIS </h4>
+              </span>
+            </div>
+              <img
+                src="https://templatekit.tokomoo.com/dronekit/wp-content/uploads/sites/27/2021/08/img_drone_featured.png"
+                alt="ico"
+                className="animate-wobble object-cover"
+              />
+
+            <div className="f1 sm:w-52 mx-auto">
+              <span className="flex items-center flex-col justify-center">
+                <EyeIcon height={50} />
+                <h4 className="text-xl font-semibold text-heading">IR Sensor</h4>
+              </span>
+            </div>
           </div>
 
           <div className="right flex  flex-col gap-4 text-center sm:text-left">

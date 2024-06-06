@@ -19,7 +19,7 @@ export const StickyScroll = ({
   const ref = useRef<any>(null);
   const { scrollYProgress } = useScroll({
     // uncomment line 22 and comment line 23 if you DONT want the overflow container and want to have it change on the entire page scroll
-    // target: ref
+    // target: ref,
     container: ref,
     offset: ["start start", "end start"],
   });
@@ -46,11 +46,11 @@ export const StickyScroll = ({
 
   return (
     <motion.div
-      className="h-[30rem] w-full  overflow-y-auto no-scrollbar flex justify-between relative space-x-10 rounded-md p-10"
+      className="h-[35rem] overflow-y-auto  flex justify-center relative space-x-10 rounded-md p-10"
       ref={ref}
     >
-      <div className="div relative flex items-start px-4">
-        <div className="w-full">
+      <div className="relative flex items-start px-4">
+        <div className="max-w-2xl">
           {content.map((item, index) => (
             <div key={item.title + index} className="my-20">
               <motion.h2

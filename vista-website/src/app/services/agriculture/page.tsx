@@ -33,7 +33,22 @@ const page = () => {
       />
 
       <SectionLayout>
-        <StickyScroll content={content} />
+        {/* <StickyScroll content={content} />*/}
+        <div className="flex flex-col gap-5">
+          {services[2].service_description.map((item, index) => (
+            <div key={index} className="flex justify-between items-center gap-5">
+
+              <div>
+              <h2 className="text-2xl font-bold text-slate-900">
+                {item.title}
+              </h2>
+              <p className="text-slate-800 max-w-sm mt-10">{item.content}</p>
+            </div>
+              <img src={item.image} alt={item.title} className="h-full w-96 rounded-md object-cover" />
+              </div>
+          ))}
+        </div>
+
       </SectionLayout>
 
       <Benifits content={services[2].benefits} />

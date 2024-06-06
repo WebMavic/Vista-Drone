@@ -3,7 +3,6 @@ import image1 from "@/assets/images/why-choose-us-1.jpeg";
 import image2 from "@/assets/images/why-choose-us-2.jpeg";
 import image3 from "@/assets/images/why-choose-us-3.jpeg";
 import React, { useRef } from "react";
-import dummy from "@/assets/images/dummy.jpg";
 import Chips from "./ui/Chips";
 import SectionLayout from "./ui/SectionLayout";
 
@@ -12,7 +11,7 @@ function SectionExpertise() {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["0 1", "center center"],
+    offset: ["0 1", "start center"],
   });
   // const scale = useTransform(scrollYProgress,[0,1],['0%','100%'])
   return (
@@ -26,17 +25,17 @@ function SectionExpertise() {
           </p>
         </div>
 
-        <div className="my-10 flex w-full flex-col items-center justify-center gap-5 sm:flex-row ">
+        <div className="my-10  flex w-full flex-col items-center justify-center gap-5 sm:flex-row ">
           {expertises.map((expertise, index) => (
             <motion.div
               key={index}
-              style={{ scale: scrollYProgress, opacity: scrollYProgress }}
+              style={{ scale: scrollYProgress , opacity: scrollYProgress}}
             >
-              <img src={expertise.avatar.src} alt="dwad" />
-              <span className="textStroke absolute  -left-5 -top-5 z-[5] text-6xl font-bold opacity-50">
+              <img src={expertise.avatar.src} alt="dwad" className="aspect-square rounded-lg " />
+              {/* <span className="textStroke absolute  -left-5 -top-5 z-[5] text-6xl font-bold opacity-50">
                 0{index + 1}
-              </span>
-              <div className="z-8 relative mt-3 w-[450px] space-y-5 text-left">
+              </span> */}
+              <div className="z-8 relative mt-3 sm:w-[450px] space-y-5 text-left">
                 <h3 className="text text-center text-lg font-medium text-heading">
                   {expertise.title}
                 </h3>

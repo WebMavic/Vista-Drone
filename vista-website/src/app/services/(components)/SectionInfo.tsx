@@ -20,10 +20,10 @@ function SectionInfo({ title, content, image }: SectionInfoProps) {
       <img
           src={image}
           alt={title}
-          className="mx-auto  w-3/4 rounded-xl object-cover"
+          className="mx-auto  sm:w-3/4 rounded-xl object-cover"
         />
 
-      <p className="mx-auto w-3/4  text-[16px] tracking-wider text-heading">
+      <p className="mx-auto sm:w-3/4  text-[16px] tracking-wider text-heading">
         {content}
       </p>
     </SectionLayout>

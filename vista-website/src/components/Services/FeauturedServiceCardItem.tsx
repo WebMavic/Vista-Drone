@@ -13,8 +13,7 @@ interface FeauturedServiceCardsProps {
 }
 
 function FeauturedServiceCardItem({
-  service,
-  reference,
+  service
 }: FeauturedServiceCardsProps) {
   // const ref = useRef<HTMLDivElement>(null)
 

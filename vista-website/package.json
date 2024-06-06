@@ -12,6 +12,12 @@
     "@headlessui/react": "^2.0.3",
     "@heroicons/react": "^2.1.3",
     "chart.js": "^4.4.2",
+<<<<<<< Updated upstream
+=======
+    "clsx": "^2.1.1",
+    "framer-motion": "^11.2.4",
+    "gsap": "^3.12.5",
+>>>>>>> Stashed changes
     "locomotive-scroll": "^5.0.0-beta.12",
     "next": "14.2.3",
     "react": "^18",

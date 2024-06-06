@@ -19,9 +19,10 @@ function ServiceCards() {
       <div className="service-cards mt-5 w-full ">
         <div className="flex flex-col sm:flex-row gap-5 items-center flex-wrap justify-center w-full">
           {services.map(({title,avatar,description,path}, index) => (
-            <Link href={`services/${path}`}  
-              className="flex cursor-pointer flex-col p-5 w-80 sm:h-80 sm:w-96 sm:gap-3 text-center group justify-center items-center hover:bg-white hover:shadow-md rounded-lg "
+            <Link  href={`services/${path}` }  
+              className="flex cursor-pointer flex-col transition p-5 w-80 sm:h-80 sm:w-96 sm:gap-3 text-center group justify-center items-center hover:bg-white hover:shadow-md rounded-lg "
               key={index}>
+              
               <div className="image-container">
                 {avatar}
               </div>
@@ -29,6 +30,7 @@ function ServiceCards() {
               <p className="text-heading text-sm  w-3/4">
                 {description}
               </p>
+              
             </Link>
           ))}
         </div>

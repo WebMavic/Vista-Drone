@@ -33,3 +33,11 @@ export const expertiseImage = [
   require("../assets/images/why-choose-us-1.jpeg"),
   require("../assets/images/why-choose-us-1.jpeg"),
 ];
+
+
+export const projectImages = [
+  require("../assets/images/projects/project-1.jpg"),
+  require("../assets/images/projects/project-2.jpg"),
+  require("../assets/images/projects/project-3.jpg"),
+  require("../assets/images/projects/project-4.jpg"),
+]

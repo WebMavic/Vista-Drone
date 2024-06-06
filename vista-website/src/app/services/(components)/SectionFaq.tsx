@@ -12,7 +12,7 @@ type faq = {
 
 function SectionFaq({faqs}: {faqs: faq[]}) {
   return (
-    <SectionLayout className="bg-white">
+    <SectionLayout className="bg-white relative">
       <div className="space-y-4 mb-5">
         <Chips title="FAQs" />
         <h2 className="text-4xl font-bold capitalize dark:text-primary ">
@@ -21,7 +21,7 @@ function SectionFaq({faqs}: {faqs: faq[]}) {
       </div>
 
         <div className="flex justify-between items-start">
-        <div className="border w-1/2"> 
+        <div className="border sm:w-1/2"> 
         <ul className="divide-y divide-gray-200">
                     {faqs.map((ques,index) => (
                       
@@ -34,7 +34,7 @@ function SectionFaq({faqs}: {faqs: faq[]}) {
                   </ul>
         </div>
 
-        <img src="https://placehold.co/300x300" alt="img" className="rounded-full" />
+        <img src="https://placehold.co/300x300" alt="img" className="rounded-full hidden sm:block" />
 
         </div>
 

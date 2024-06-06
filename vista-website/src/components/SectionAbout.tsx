@@ -9,21 +9,26 @@ function SectionAbout() {
   //   const locomotiveScroll = new LocomotiveScroll();
   // }
   return (
-    <SectionLayout className="bg-primary h-full">
-      <div className="flex h-full  w-full flex-col  sm:flex-row sm:items-start sm:justify-between ">
+    <SectionLayout className="bg-white h-full">
+      <div className="flex h-full  w-full flex-col  sm:flex-row items-center sm:justify-between justify-center">
         <div className="sm:w-1/2">
           <img
             src="https://images.unsplash.com/photo-1555009306-9e3c5b6a66e3?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt="image"
-            className="w-2/3 rounded-2xl  object-cover shadow-md"
+            className="w-2/3 rounded-2xl  object-cover shadow-md hidden sm:block"
           />
         </div>
 
-        <div className=" sm:w-1/2  h-full">
+        <div className=" sm:w-1/2  h-full flex flex-col sm:items-start items-center gap-5">
           <h1 className="text-4xl font-medium uppercase text-heading dark:text-white sm:text-6xl">
             About Us
           </h1>
-          <p className="my-5 text-pretty font-light  text-subheading ">
+          <img
+            src="https://images.unsplash.com/photo-1555009306-9e3c5b6a66e3?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="image"
+            className="w-2/3 rounded-2xl block sm:hidden object-cover shadow-md"
+          />
+          <p className="text-pretty font-light  text-subheading ">
             After conducting thorough research to identify emerging business
             opportunities in the region, we leveraged our extensive
             qualifications and over two decades of industrial experience to
@@ -33,7 +38,7 @@ function SectionAbout() {
             Market was valued at USD 2.84 billion in 2023 and is projected to
             reach USD 5.88 billion by 2033
           </p>
-          <p className="my-5 text-pretty font-light  text-subheading">
+          <p className="text-pretty font-light  text-subheading">
           Our strategic positioning
             is bolstered by strong support from R&D labs and experts at the
             Indian Institute of Technology, India, and its Abu Dhabi branch, as
@@ -42,14 +47,13 @@ function SectionAbout() {
             technologies, supported by reputable international drone
             manufacturers.
           </p>
-            <div className="mt-10">
+           
           <Button
             href="/about"
             title="Learn more"
             className="border border-accent  text-accent hover:bg-accent  hover:text-white "
           />
 
-            </div>
         </div>
       </div>
     </SectionLayout>

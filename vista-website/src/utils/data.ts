@@ -306,4 +306,75 @@ export const services: Service[] = [
       },
     ],
   },
+  {
+    title: "Transportation and Power Industry",
+    description:
+      "Improve the efficiency and safety of your transportation and power infrastructure with Vista Drone Services. Our drones conduct detailed inspections and provide high-quality visual data for proactive maintenance and compliance. Equipped with advanced imaging technology and precise navigation systems, our drones are capable of capturing comprehensive visual data of roads, bridges, railways, power lines, and substations. By conducting thorough aerial inspections, we identify potential issues such as structural damage, wear and tear, and vegetation encroachment, allowing for timely maintenance and repairs to prevent failures and ensure the integrity of your infrastructure.",
+    image:
+      "https://geospatialmedia.s3.amazonaws.com/wp-content/uploads/2017/12/fut-09-15-15-drones-2.jpg",
+    service_description: [
+      {
+        title: "Infrastructure Inspections",
+        content:
+          "We perform comprehensive assessments of roads, bridges, railways, power lines, and substations. Our drones capture high-resolution images and videos, identifying structural issues, wear and tear, and potential maintenance needs. We also provide thermal imaging to detect heat anomalies in power lines and electrical components.",
+        image: "https://north-construction.com/wp-content/uploads/2023/04/drones-1024x675.jpeg",
+      },
+      {
+        title: "Fault Detection",
+        content:
+          "Early identification of potential issues is crucial for preventing failures. Our drones detect faults in power lines, road surfaces, and other infrastructure components, enabling timely repairs and reducing the risk of catastrophic failures. We use AI-powered analysis to detect cracks, corrosion, and other signs of deterioration.",
+          image: "https://www.gim-international.com/cache/7/a/a/0/6/7aa06c19005d315a3c5926906b3f49c507724d48.jpeg",
+      },
+      {
+        title: "Maintenance Planning",
+        content:
+          " Use our data-driven insights to plan efficient maintenance schedules. This helps in optimizing resources, reducing downtime, and extending the lifespan of infrastructure assets. Our predictive maintenance models help prioritize repairs and allocate resources effectively.",
+          image: "https://govdesignhub.com/wp-content/uploads/2020/02/shutterstock_685922518.jpg",
+      },
+      {
+        title: "Regulatory Compliance",
+        content:
+          "Ensure compliance with industry standards and regulations through regular drone inspections. Our detailed reports provide documentation required for regulatory audits and assessments, helping you stay compliant with local, state, and federal regulations.",
+          image: "https://portcoast-bim.com/public/images/solutions/uav-survey/aerial-survey.jpg",
+      },
+    ],
+    benefits: [
+      {
+        title: "Increased Safety",
+        content:
+          "Reduce the risk of accidents with regular inspections, ensuring that infrastructure components are in good condition and identifying hazards early.",
+        icon: "https://placehold.co/100x100",
+      },
+      {
+        title: "Operational Efficiency",
+        content:
+          "Optimize maintenance schedules and resource allocation, reducing downtime and improving the overall performance of infrastructure assets.",
+        icon: "https://placehold.co/100x100",
+      },
+      {
+        title: "Regulatory Adherence",
+        content:
+          "Maintain compliance with up-to-date inspection data, ensuring that your operations meet all required standards and regulations.",
+        icon: "https://placehold.co/100x100",
+      },
+    ],
+    faq: [
+      {
+        question:
+          "How do drones improve the safety of infrastructure inspections?",
+        answer:
+          " Drones reduce the need for manual inspections in hazardous areas, thereby minimizing risk to human inspectors and providing a safer, more efficient inspection process.",
+      },
+      {
+        question: "What types of faults can drones detect in power lines?",
+        answer:
+          " Drones can detect a variety of faults including corrosion, wear and tear, broken wires, vegetation encroachment, and heat anomalies that indicate potential failures.",
+      },
+      {
+        question: "How frequently should infrastructure be inspected using drones?",
+        answer:
+          "The frequency depends on the type and condition of the infrastructure, but semi-annual or annual inspections are common for most assets, with more frequent inspections recommended for high-risk areas.",
+      },
+    ],
+  },
 ];
