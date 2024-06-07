@@ -9,7 +9,7 @@ import React from 'react'
 function page() {
   return (
     <>
-    <SectionHeader title="FAQ" />
+    <SectionHeader title="Frequently Asked Questions"  image='https://s3.divcom.com/www.commercialuavnews.com/images/A006_03051609_C022-16094219.jpg.large.1024x1024.jpg' />
     <div className="text-center space-y-2 my-10 ">
         <h1 className='text-2xl font-bold text-accent'>Frequently Asked Questions</h1>
         <p className=" w-3/4 mx-auto dark:text-primary text-heading capitalize ">

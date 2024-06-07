@@ -7,6 +7,7 @@ import SectionInfo from "../(components)/SectionInfo";
 import Benifits from "../(components)/Benifits";
 import SectionFaq from "../(components)/SectionFaq";
 import { StickyScroll } from "@/components/ui/sticky-scroll-reveal";
+import SectionContact from "@/components/SectionContact";
 
 
 const content = services[3].service_description.map((item) => {
@@ -20,7 +21,7 @@ const content = services[3].service_description.map((item) => {
 const page = () => {
   return (
     <>
-      <SectionHeader title="Construction and Progress Monitoring" />
+      <SectionHeader title="Construction and Progress Monitoring" background={'/v7.mp4'} />
       <SectionInfo
         title="Construction and Progress Monitoring"
         content={services[3]?.description}
@@ -34,6 +35,7 @@ const page = () => {
       <Benifits content={services[3].benefits} />
 
       <SectionFaq faqs={services[3].faq} />
+      <SectionContact/>
     </>
   );
 };

@@ -6,9 +6,9 @@ import SectionLayout from "./ui/SectionLayout";
 
 function SectionFeaturedServices() {
   return (
-    <SectionLayout className="bg-primary h-full w-full">
-      <div className="flex">
-      <div className="content flex flex-col items-start space-y-4 sm:w-1/4 sticky top-0">
+    <SectionLayout className="bg-primary  w-full">
+      <div className="flex sm:justify-between lg:flex-row flex-col">
+      <div className="content lg:w-[30%] flex flex-col items-start space-y-4">
         <Chips title="Feautured Services" />
         <h2 className="text-4xl font-bold text-heading ">
           Elevating Industries with Next Gen UAV Solutions

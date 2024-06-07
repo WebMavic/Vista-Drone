@@ -23,13 +23,13 @@ const SwitchDarkMode: React.FC<SwitchDarkModeProps> = ({ className = "" }) => {
       onClick={() => {
         setisDarkMode(!isDarkMode);
       }}
-      className={`self-center text-2xl md:text-3xl w-12 h-12 focus:outline-none flex items-center justify-center ${className}`}
+      className={`flex h-12 w-12 items-center justify-center self-center text-2xl focus:outline-none md:text-3xl ${className}`}
     >
       <span className="sr-only">Enable dark mode</span>
       {isDarkMode ? (
-        <MoonIcon className="w-7 h-7  dark:text-white " aria-hidden="true" />
+        <MoonIcon className="h-7 w-7  dark:text-white " aria-hidden="true" />
       ) : (
-        <SunIcon className="w-7 h-7 dark:text-black " aria-hidden="true" />
+        <SunIcon className="h-7 w-7 dark:text-black " aria-hidden="true" />
       )}
     </button>
   );

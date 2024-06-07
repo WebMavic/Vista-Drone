@@ -1,22 +1,14 @@
 "use client";
-import image1 from "@/assets/images/why-choose-us-1.jpeg";
-import image2 from "@/assets/images/why-choose-us-2.jpeg";
-import image3 from "@/assets/images/why-choose-us-3.jpeg";
 import React, { useRef } from "react";
 import Chips from "./ui/Chips";
 import SectionLayout from "./ui/SectionLayout";
+import { PresentationChartBarIcon,ArrowTrendingUpIcon,UserIcon} from "@heroicons/react/24/outline";
 
-import { motion, useScroll, useTransform } from "framer-motion";
 function SectionExpertise() {
-  const ref = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["0 1", "start center"],
-  });
-  // const scale = useTransform(scrollYProgress,[0,1],['0%','100%'])
+  
   return (
     <SectionLayout className="bg-white">
-      <div className="h-full w-full" ref={ref}>
+      <div className="h-full w-full">
         <div className="space-y-3 text-center">
           <Chips title="Our expertise" />
           <h2 className="text-4xl font-bold text-heading ">Why Choose Us</h2>
@@ -25,25 +17,16 @@ function SectionExpertise() {
           </p>
         </div>
 
-        <div className="my-10  flex w-full flex-col items-center justify-center gap-5 sm:flex-row ">
+        <div className="my-10  flex w-full flex-col items-center justify-between gap-5 sm:flex-row ">
           {expertises.map((expertise, index) => (
-            <motion.div
-              key={index}
-              style={{ scale: scrollYProgress , opacity: scrollYProgress}}
-            >
-              <img src={expertise.avatar.src} alt="dwad" className="aspect-square rounded-lg " />
-              {/* <span className="textStroke absolute  -left-5 -top-5 z-[5] text-6xl font-bold opacity-50">
-                0{index + 1}
-              </span> */}
-              <div className="z-8 relative mt-3 sm:w-[450px] space-y-5 text-left">
-                <h3 className="text text-center text-lg font-medium text-heading">
+              <div className="flex flex-col lg:h-96 cursor-pointer lg:max-w-96 items-start hover:bg-accent/60 justify-center gap-5 p-6 group [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)] rounded-md" key={index}>
+                <expertise.avatar className="size-16 text-accent group-hover:text-neutral-100" />
+                <h2 className="text-xl font-bold uppercase text-heading group-hover:text-neutral-100">
                   {expertise.title}
-                </h3>
-                <p className="text-justify text-sm text-subheading">
-                  {expertise.description}
-                </p>
+                </h2>
+                <p className="text-left text-subheading group-hover:text-neutral-200 ">{expertise.description}</p>
               </div>
-            </motion.div>
+            
           ))}
         </div>
       </div>
@@ -55,22 +38,21 @@ export default SectionExpertise;
 
 const expertises = [
   {
-    title: "Extensive experience in  successfully delivering projects",
-    avatar: image1,
-
+    title: "Successfully projects delevering",
+    avatar: ArrowTrendingUpIcon,
     description:
-      "The forthcoming slides will showcase brief of the select projects, demonstrating team's expertise and proficiency in Civil Infrastructure, Oil & Gas, Mining and Geology, and Green Energy.",
+      "Expertise and proficiency in Civil Infrastructure, Oil & Gas, Mining and Geology, and Green Energy",
   },
   {
     title: "Sound technical expertise in  UAV market",
-    avatar: image2,
+    avatar: PresentationChartBarIcon,
     description:
-      "The team is well-versed in the UAE government's long-term UAV policy and market landscape. Consequently, they actively collaborates with R&D to innovate Drones in line with the demands of the clients.",
+      "The team is well-versed in the UAE government's long-term UAV policy and market landscape. Consequently",
   },
   {
     title: "Outstanding team of  professionals",
-    avatar: image3,
+    avatar: UserIcon,
     description:
-      "Includes experts with decades of experience in academia, complementing operational skills. This breadth of expertise enables us to offer comprehensive training programs to embrace the latest technology and drive continual improvement.",
+      "Includes experts with decades of experience in academia, complementing operational skills",
   },
 ];

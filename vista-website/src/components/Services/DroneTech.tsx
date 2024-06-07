@@ -48,12 +48,7 @@ function DroneTech() {
           </div>
 
           <div className="image-middle max-w-96 ">
-          <div className="f1 sm:w-52 mx-auto">
-              <span className="flex flex-col items-center justify-center">
-                <MapPinIcon height={50} />
-                <h4 className="text-xl font-semibold text-heading">GIS </h4>
-              </span>
-            </div>
+      
               <img
                 src="https://templatekit.tokomoo.com/dronekit/wp-content/uploads/sites/27/2021/08/img_drone_featured.png"
                 alt="ico"

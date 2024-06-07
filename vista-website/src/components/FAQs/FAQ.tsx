@@ -4,42 +4,42 @@ import { TabGroup, TabList, Tab, TabPanels, TabPanel } from "@headlessui/react";
 import FAQITEM from "./FAQITEM";
 
 
-function FAQ() {
+function FAQ({className}:{className?:string}) {
   return (
-    <>
-      <div className="w-full">
+ 
+      <div className={`w-full ${className ? className : ''}`}>
         <TabGroup>
           <TabList className="flex gap-4">
             {faqs.map(({ title }, index) => (
               <Tab
                 key={index}
-                className="rounded-md px-4 py-3 text-xl font-semibold focus:outline-none data-[hover]:bg-accent/5 data-[selected]:bg-accent/10 data-[focus]:outline-1  data-[focus]:outline-white dark:text-white"
+                className="rounded-md px-4 py-3 lg:text-xl font-semibold focus:outline-none data-[hover]:bg-accent/5 data-[selected]:bg-neutral-100 data-[focus]:outline-1  data-[focus]:outline-white dark:text-white"
               >
                 {title}
               </Tab>
             ))}
           </TabList>
-          <TabPanels className="mt-3 border ">
+          <TabPanels className="mt-3">
             {faqs.map(({ questions }, index) => (
               <TabPanel key={index} className="">
-                <ul className="divide-y divide-gray-200">
-                  {questions.map((ques) => (
+               {questions.map((ques,index) => (
                     
                       <FAQITEM
                         key={ques.question}
                         question={ques.question}
                         answer={ques.answer}
+                        id = {index}
                       />
                     
                   ))}
-                </ul>
+               
               </TabPanel>
             ))}
           </TabPanels>
         </TabGroup>
         
       </div>
-    </>
+  
   );
 }
 

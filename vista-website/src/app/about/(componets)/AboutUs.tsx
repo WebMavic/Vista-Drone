@@ -12,6 +12,13 @@ function AboutUs() {
             <h2 className="text-4xl font-bold capitalize text-heading ">
               how it started
             </h2>
+            <div className="image-containrr">
+            <img
+              src="https://geospatialmedia.s3.amazonaws.com/wp-content/uploads/2019/01/Construction-21_mini.jpg"
+              alt="logo"
+              className="rounded-2xl object-cover w-full h-96 sm:w-3/4"
+            />
+          </div>
             <p className="text-left font-light text-subheading sm:w-3/4">
               VISTA Drone Services LLC emerged from a blend of strategic
               foresight and extensive industrial experience. With over two
@@ -34,34 +41,30 @@ function AboutUs() {
               geoscience and engineering to energy optimization and regulatory
               compliance. Together, they ensure that Bhoomija UAV Drone Services
               LLC is well-positioned to pioneer advanced UAV solutions and drive
-              growth in the Middle East and beyond.{" "}
+              growth in the Middle East and beyond.
             </p>
           </div>
-          <div className="image-containrr">
-            <img
-              src="https://placehold.co/450x300"
-              alt="logo"
-              className="rounded-2xl object-cover"
-            />
-          </div>
+        
         </div>
 
         <div className="flex flex-col justify-around">
           <div className="vison relative">
-            <div className="absolute -left-10 -top-10 z-[5] hidden h-64 w-64 rounded-full bg-accent sm:block"></div>
+            <div className="absolute -left-10 -top-10 z-[5] hidden h-64 w-64 rounded-full bg-gradient-to-r from-indigo-400 to-blue-400 opacity-50  sm:block"></div>
+            <div className="absolute -left-10 -top-20 z-[5] hidden size-32 rounded-full bg-accent/30   sm:block"></div>
             <div className="relative z-10">
-              <h3 className="text-xl font-semibold sm:text-white">Mission</h3>
-              <p className="w-4/5 font-light sm:text-black">
+              <h3 className="text-2xl font-bold uppercase text-indigo-600 ">Mission</h3>
+              <p className="w-4/5  text-neutral-800">
                 Deliver unmatched UAV services, surpassing client expectations
                 through innovation, collaboration, and a devotion to excellence.
               </p>
             </div>
           </div>
           <div className="misson relative">
-            <div className="absolute -left-10 -top-10 z-[5]  hidden h-64 w-64 rounded-full bg-accent sm:block"></div>
+            <div className="absolute -left-10 -top-10 z-[5]  hidden h-64 w-64 rounded-full bg-gradient-to-r from-rose-400 to-red-500 opacity-50 sm:block"></div>
+            <div className="absolute -left-10 -top-20 z-[5] hidden size-32 rounded-full bg-red-400/60 backdrop-blur-sm  sm:block"></div>
             <div className="relative z-10">
-              <h3 className="text-xl font-semibold sm:text-white">Vision</h3>
-              <p className="w-4/5 font-light text-black">
+              <h3 className="text-2xl font-bold text-red-500 uppercase">Vision</h3>
+              <p className="w-4/5  text-neutral-800">
                 Pioneer the seamless integration of cutting-edge Unmanned Aerial
                 Vehicle (UAV) technology, transforming industries and shaping a
                 future where precision, efficiency, and sustainability

@@ -100,7 +100,8 @@ export const services: Service[] = [
     description:
       "Transform your planning and survey processes with our advanced drone technology. Vista Drone Services offers comprehensive solutions to support topographic mapping, land surveying, and infrastructure assessment. Our high-resolution drones capture detailed aerial imagery and data, enabling the creation of accurate topographic maps and 3D models. This detailed data collection aids in precise terrain analysis, essential for planning construction projects, land development, and environmental studies. By leveraging our drone technology, you can efficiently gather the necessary data for site evaluations and project planning, reducing the need for traditional ground surveys and enhancing the accuracy of your assessments. ",
     image:
-      "https://geospatialmedia.s3.amazonaws.com/wp-content/uploads/2019/01/Construction-21_mini.jpg",
+      
+      "https://www.rvslandsurveyors.com/wp-content/uploads/2021/10/drones_construction_industry.jpg",
     service_description: [
       {
         title: "Topographic Mapping",

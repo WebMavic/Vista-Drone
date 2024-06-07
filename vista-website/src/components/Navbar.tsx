@@ -20,26 +20,27 @@ function Navbar() {
 
   useEffect(() => {
     if (typeof window !== "undefined") {
-      window.addEventListener("scroll",scrollHandler);
+      window.addEventListener("scroll", scrollHandler);
     }
   }, []);
 
   return (
     <nav
       className={
-        isTop
-          ? "w-full sm:px-32 px-5 fixed top-0 left-0 z-[9999]"
-          : "bg-white  sm:px-32 z-50  px-5 fixed top-0 left-0 transition-all duration-300 ease-in-out w-full shadow-sm"
+        !isTop ? "fixed  left-0 top-0  z-50 w-full bg-heading/50 px-5 shadow-sm backdrop-blur-md transition-all duration-300 ease-in-out sm:px-32" : "fixed left-0 top-0 z-[9999] w-full px-5 sm:px-32"
       }
     >
-      <div className="lg:container min-h-20 flex justify-between items-center">
-        <Link href='/'>
-        <span className="text-xl font-bold uppercase tracking-[5px]">Vista</span>
+      <div className="flex min-h-20 items-center justify-between lg:container">
+        <Link href="/">
+          <span
+            className={`text-2xl font-bold uppercase tracking-[5px] text-current text-white`}
+          >
+            Vista
+          </span>
         </Link>
 
-        <div className="hidden md:flex flex-shrink-0 justify-end items-center flex-1 lg:flex-none gap-3">
-          <Navigation />
-          {/* <SwitchDarkMode /> */}
+        <div className="hidden flex-1 flex-shrink-0 items-center justify-end gap-3 md:flex lg:flex-none">
+          <Navigation isTop={isTop} />
         </div>
 
         <div className="lg:hidden ">
@@ -49,10 +50,12 @@ function Navbar() {
             }}
             className="rounded-full bg-black p-2 shadow-md"
           >
-            <Bars3Icon className="w-6 h-6 text-white " />
+            <Bars3Icon className="h-6 w-6 text-white " />
           </button>
         </div>
-        {isMobileNavVisible && <MobileNavigation />}
+        {isMobileNavVisible && (
+          <MobileNavigation setOpen={setIsMobileNavVisible} />
+        )}
       </div>
     </nav>
   );

@@ -1,20 +1,20 @@
-export const clientsLogos = {
-  client1: require("../assets/images/clients-logo/client1.png"),
-  client2: require("../assets/images/clients-logo/client2.png"),
-  client3: require("../assets/images/clients-logo/client3.png"),
-  client4: require("../assets/images/clients-logo/client4.png"),
-  client5: require("../assets/images/clients-logo/client5.png"),
-  client6: require("../assets/images/clients-logo/client6.png"),
-  client7: require("../assets/images/clients-logo/img18.jpg"),
-  client8: require("../assets/images/clients-logo/img19.jpg"),
-  client9: require("../assets/images/clients-logo/img20.jpg"),
-  client10: require("../assets/images/clients-logo/img21.jpg"),
-  client11: require("../assets/images/clients-logo/img22.jpg"),
-  client12: require("../assets/images/clients-logo/img23.jpg"),
-  client13: require("../assets/images/clients-logo/img24.jpg"),
-  client14: require("../assets/images/clients-logo/img25.jpg"),
-  client15: require("../assets/images/clients-logo/img26.jpg"),
-};
+export const clientsLogos = [
+   require("../assets/images/clients-logo/client1.png"),
+ require("../assets/images/clients-logo/client2.png"),
+   require("../assets/images/clients-logo/client3.png"),
+   require("../assets/images/clients-logo/client4.png"),
+   require("../assets/images/clients-logo/client5.png"),
+   require("../assets/images/clients-logo/client6.png"),
+  require("../assets/images/clients-logo/img18.jpg"),
+   require("../assets/images/clients-logo/img19.jpg"),
+   require("../assets/images/clients-logo/img20.jpg"),
+   require("../assets/images/clients-logo/img21.jpg"),
+   require("../assets/images/clients-logo/img22.jpg"),
+   require("../assets/images/clients-logo/img23.jpg"),
+   require("../assets/images/clients-logo/img24.jpg"),
+   require("../assets/images/clients-logo/img25.jpg"),
+   require("../assets/images/clients-logo/img26.jpg"),
+]
 
 export const droneImage = [
   require("../assets/images/drone1.png"),
@@ -43,8 +43,11 @@ export const projectImages = [
 
 export const serviceIcons = [
   require("../assets/icons/agriculture.svg"),
-  require("../assets/icons/construction.svg"),
-  require("../assets/icons/petroleum.svg"),
-  require("../assets/icons/pollution.svg"),
-  require("../assets/icons/transport.svg"),
+  require("../assets/icons/construction.png"),
+  require("../assets/icons/petroleum.png"),
+  require("../assets/icons/pollution.png"),
+  require("../assets/icons/transport.png"),
 ];
+
+
+

@@ -7,6 +7,7 @@ import SectionInfo from "../(components)/SectionInfo";
 import Benifits from "../(components)/Benifits";
 import SectionFaq from "../(components)/SectionFaq";
 import { StickyScroll } from "@/components/ui/sticky-scroll-reveal";
+import SectionContact from "@/components/SectionContact";
 
 const content = services[2].service_description.map((item) => {
   return {
@@ -25,7 +26,7 @@ const content = services[2].service_description.map((item) => {
 const page = () => {
   return (
     <>
-      <SectionHeader title="Agriculture" />
+      <SectionHeader title="Agriculture" background={'/v5.mp4'} />
       <SectionInfo
         title="Agriculture"
         content={services[2]?.description}
@@ -33,27 +34,13 @@ const page = () => {
       />
 
       <SectionLayout>
-        {/* <StickyScroll content={content} />*/}
-        <div className="flex flex-col gap-5">
-          {services[2].service_description.map((item, index) => (
-            <div key={index} className="flex justify-between items-center gap-5">
-
-              <div>
-              <h2 className="text-2xl font-bold text-slate-900">
-                {item.title}
-              </h2>
-              <p className="text-slate-800 max-w-sm mt-10">{item.content}</p>
-            </div>
-              <img src={item.image} alt={item.title} className="h-full w-96 rounded-md object-cover" />
-              </div>
-          ))}
-        </div>
-
+        <StickyScroll content={content} />
       </SectionLayout>
 
       <Benifits content={services[2].benefits} />
 
       <SectionFaq faqs={services[2].faq} />
+      <SectionContact/>
     </>
   );
 };

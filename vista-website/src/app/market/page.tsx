@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 function page() {
   return (
     <>
-      <SectionHeader title="Market Trends" />
+      <SectionHeader title="Market Trends" image="https://info.cecr.in/wp-content/uploads/3_7.png"/>
       <SectionLayout className="relative">
         <div className=" rounded-lg bg-white p-5 shadow-md">
           <MarketInNumbers />

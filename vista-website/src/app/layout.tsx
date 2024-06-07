@@ -1,14 +1,9 @@
 import type { Metadata } from "next";
-import { Poppins, Space_Grotesk } from "next/font/google";
+import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-// const inter = Poppins({
-//   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-//   subsets: ["latin"],
-//   display: "swap",
-// });
 
 const font = Space_Grotesk({
   weight: ["300", "400", "500", "600", "700"],

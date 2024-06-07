@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 function page() {
   return (
     <>
-      <SectionHeader title="About us"/>
+      <SectionHeader title="About Vista" image="https://i0.wp.com/www.globaltrademag.com/wp-content/uploads/2022/12/Why-Construction-Companies-are-Opting-for-Drone-Services.png?fit=1600%2C1064&ssl=1" />
       <AboutUs/>
       <ClientCaurosal/>
       <Team/>

@@ -15,7 +15,7 @@ interface Benefit {
 
 function Benifits({content}:Benefit) {
   return (
-    <SectionLayout className="space-y-6 relative">
+    <SectionLayout className="space-y-6 relative bg-white">
     <h3 className="text-2xl font-bold capitalize text-heading sm:text-4xl ">
           Benifits you get
         </h3>

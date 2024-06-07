@@ -13,7 +13,7 @@ interface ButtonProps {
     }
 function Button({title,className,href,icon}: ButtonProps) {
   return (
-    <div className={`${className} px-4 py-3 inline-flex  rounded-full cursor-pointer transition-all duration-200 ease-in-out `}>
+    <div className={`${className} px-4 py-3 inline-flex  rounded-md cursor-pointer transition-all duration-200 ease-in-out `}>
    <Link href={href || '/'}  >
         {icon ? <div className='inline-flex items-center justify-center' >
             {title}

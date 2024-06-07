@@ -1,40 +1,47 @@
 import React from "react";
 import SectionHeader from "@/components/SectionHeader";
 import SectionLayout from "@/components/ui/SectionLayout";
-import Chips from "@/components/ui/Chips";
-import  {services} from '../../../utils/data'
-
-import ServiceItem from "@/components/Services/ServiceItem";
+import { services } from "../../../utils/data";
 import SectionInfo from "../(components)/SectionInfo";
 import Benifits from "../(components)/Benifits";
 import SectionFaq from "../(components)/SectionFaq";
 import { StickyScroll } from "@/components/ui/sticky-scroll-reveal";
-import { HorizontalScrollCarousel } from "@/components/ui/HorizontalScroll";
+import SectionContact from "@/components/SectionContact";
 
 const content = services[0].service_description.map((item) => {
   return {
     title: item.title,
     description: item.content,
-    content: <img src={item.image} alt={item.title} className="w-96 h-full object-cover rounded-md"/>,
-  }
-} )
+    content: (
+      <img
+        src={item.image}
+        alt={item.title}
+        className="h-full w-96 rounded-md object-cover"
+      />
+    ),
+  };
+});
 
 const page = () => {
   return (
     <>
-      <SectionHeader title="Mining and Petroleum" />
-    <SectionInfo title="Mining and Petroleum" content={services[0].description} image={services[0].image}/>
+      <SectionHeader title="Mining and Petroleum" background={'/v10.mp4'}/>
+      <SectionInfo
+        title="Mining and Petroleum"
+        content={services[0].description}
+        image={services[0].image}
+      />
 
-      
-        {/* <StickyScroll content={content} /> */}
-        <HorizontalScrollCarousel content={services[0].service_description} className="bg-accent"  />
-      
+      <SectionLayout>
+        <StickyScroll content={content} />
+      </SectionLayout>
+
       <Benifits content={services[0].benefits} />
 
-      <SectionFaq faqs={services[0].faq}/>
+      <SectionFaq faqs={services[0].faq} />
+      <SectionContact />
     </>
   );
 };
 
 export default page;
-

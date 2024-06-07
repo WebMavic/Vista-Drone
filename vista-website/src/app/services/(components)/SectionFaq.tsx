@@ -20,21 +20,24 @@ function SectionFaq({faqs}: {faqs: faq[]}) {
         </h2>
       </div>
 
-        <div className="flex justify-between items-start">
-        <div className="border sm:w-1/2"> 
-        <ul className="divide-y divide-gray-200">
+        <div className="flex justify-between gap-10 items-center">
+        <div className="flex-1 "> 
+       
                     {faqs.map((ques,index) => (
                       
                         <FAQITEM
+                          id={index}
                           key={index}
                           question={ques.question}
                           ans={ques.answer}
                         />
                     ))}
-                  </ul>
+                  
         </div>
+                      <div className='w-3/12 hidden lg:block '>
+        <img src="https://www.clutterflyapp.com/img/faq.png" alt="img" className="size-full p-2 object-cover" />
 
-        <img src="https://placehold.co/300x300" alt="img" className="rounded-full hidden sm:block" />
+                      </div>
 
         </div>
 
