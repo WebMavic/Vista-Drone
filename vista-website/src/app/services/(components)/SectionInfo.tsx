@@ -18,12 +18,12 @@ function SectionInfo({ title, content, image }: SectionInfoProps) {
         </h2>
       </div>
       <img
-          src={image}
-          alt={title}
-          className="mx-auto  sm:w-3/4 rounded-xl object-cover"
-        />
+        src={image}
+        alt={title}
+        className="mx-auto  rounded-xl object-cover sm:w-3/4"
+      />
 
-      <p className="mx-auto sm:w-3/4  text-[16px] tracking-wider text-heading">
+      <p className="mx-auto text-[16px] tracking-wider text-heading sm:w-3/4">
         {content}
       </p>
     </SectionLayout>

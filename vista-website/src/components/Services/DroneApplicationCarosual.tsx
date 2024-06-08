@@ -1,8 +1,7 @@
 "use client"
-import React, { ReactNode } from "react";
-import { Pickaxe, MapIcon } from "lucide-react";
-import { serviceIcons } from "@/utils/images";
-import Image from "next/image";
+import React from "react";
+import { Pickaxe } from "lucide-react";
+import { MapIcon } from "@heroicons/react/24/outline";
 import { motion } from "framer-motion";
 
 function DroneApplicationCarosual() {
@@ -16,23 +15,25 @@ function DroneApplicationCarosual() {
             // viewport={{ once: true }}
             transition={{
               ease: "easeInOut",
-              delay: 0.2 * index,
-              duration: 0.5,
-              type: "tween",
+              delay: 0.1 * index,
+              type: "spring",
 
             }}
             key={index}
-            className="group flex  cursor-pointer flex-col items-start  justify-center rounded-xl bg-white p-6 transition-all duration-300 [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)] hover:bg-accent/40"
+            className="group flex relative overflow-hidden cursor-pointer flex-col items-start  justify-center rounded-xl bg-white p-6 transition-all duration-1000 [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)] "
           >
-            {service.image}
-            <div className="space-y-2 pt-5">
+            {/* {service.image} */}
+            <service.image className = 'size-10 z-10 text-accent group-hover:text-white' />
+            <div className="space-y-2 pt-5 z-10">
               <h3 className="text-2xl text-heading group-hover:text-white">
                 {service.title}
               </h3>
               <p className="text-sm text-subheading group-hover:text-neutral-200 ">
                 {service.content}
               </p>
+
             </div>
+            <div className="circle bg-accent/80 size-5 z-0 absolute group-hover:size-full  transition-all duration-500 ease-in-out top-0 right-0  rounded-bl-md"></div>
           </motion.div>
         ))}
       </div>
@@ -45,47 +46,43 @@ export default DroneApplicationCarosual;
 type description = {
   title: string;
   content: string;
-  image?: ReactNode;
+  image?: any;
 };
 
 const applications: description[] = [
   {
     title: "Infrastructure and Civil  Construction ",
-    image: <Pickaxe className="size-10 text-accent" />,
+    image: MapIcon,
     content:
       "lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet hendrerit volutpat.lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet hendrerit volutpat.",
   },
   {
     title: "Oil and Gas",
-    image: (
-      <Image src={serviceIcons[2].default} alt="oil" height={40} width={40} />
-    ),
+    image: MapIcon,
     content:
       "lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet hendrerit volutpat.lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet hendrerit volutpat.",
   },
   {
     title: "Mining & Geology",
-    image: <MapIcon className="size-10 text-accent" />,
+    image: MapIcon,
     content:
       "lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet hendrerit volutpat.lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet hendrerit volutpat.",
   },
   {
     title: "Green Renewable Energy ",
-    image: <Pickaxe className="size-10 text-accent" />,
+    image: Pickaxe,
     content:
       "lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet hendrerit volutpat.lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet hendrerit volutpat.",
   },
   {
     title: "Agriculture and Crop  Management",
-    image: (
-      <Image src={serviceIcons[0].default} alt="oil" height={40} width={40} />
-    ),
+    image: Pickaxe,
     content:
       "lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet hendrerit volutpat.lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet hendrerit volutpat.",
   },
   {
     title: "Surveying and Mapping",
-    image: <Pickaxe className="size-10 text-accent" />,
+    image: Pickaxe,
     content:
       "lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet hendrerit volutpat.lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet hendrerit volutpat.",
   },

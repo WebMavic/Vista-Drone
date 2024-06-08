@@ -1,7 +1,6 @@
 import React from 'react'
 import SectionLayout from '@/components/ui/SectionLayout'
 import Chips from '@/components/ui/Chips'
-import { services } from '@/utils/data'
 import FAQITEM from '@/components/FAQs/FAQITEM'
 
 
@@ -12,7 +11,7 @@ type faq = {
 
 function SectionFaq({faqs}: {faqs: faq[]}) {
   return (
-    <SectionLayout className="bg-white relative">
+    <SectionLayout className="bg-primary2 relative">
       <div className="space-y-4 mb-5">
         <Chips title="FAQs" />
         <h2 className="text-4xl font-bold capitalize dark:text-primary ">

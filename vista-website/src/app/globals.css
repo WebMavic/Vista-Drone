@@ -17,13 +17,13 @@ body {
 } */
 
 ::-webkit-scrollbar-track {
-  background: #ffffff6c;
+  background: #cecece;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #323132;
-  border-radius: 10px;
-  border: 3px solid #ffffff;
+  background-color: #6b6b6b;
+  border-radius: 5px;
+  border: 3px solid #cecece;
 }
 nav ul li {
   display: inline-block;

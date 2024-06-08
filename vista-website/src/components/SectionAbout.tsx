@@ -26,7 +26,7 @@ function SectionAbout() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1 }}
-            className="text-4xl font-medium uppercase text-heading dark:text-white sm:text-6xl"
+            className="font-medium uppercase text-primary dark:text-white text-6xl"
           >
             About Us
           </motion.h1>

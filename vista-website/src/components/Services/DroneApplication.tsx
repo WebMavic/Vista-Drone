@@ -6,7 +6,7 @@ import DroneApplicationCarosual from "./DroneApplicationCarosual";
 
 function DroneApplication() {
   return (
-    <SectionLayout className="bg-neutral-50">
+    <SectionLayout className="bg-primary2">
       <div className="space-y-4 sm:w-1/2 ">
         <Chips title="Applications" />
         <h2 className="text-4xl font-bold text-heading ">

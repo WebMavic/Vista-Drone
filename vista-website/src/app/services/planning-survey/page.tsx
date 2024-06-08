@@ -34,7 +34,7 @@ const page = () => {
         image={services[1]?.image}
       />
 
-      <SectionLayout>
+      <SectionLayout className="bg-primary">
         <StickyScroll content={content} />
       </SectionLayout>
 

@@ -19,13 +19,13 @@ const config = {
     },
     extend: {
       colors: {
-        accent: "#FFF2D7",
+        accent: "#543310",
         primary: "#74512D",
-        primary2: "#F8F4E1",
+        primary2: "#FFF9F2",
         secondary: "#112D4E",
-        heading: "##65463E",
+        heading: "#272829",
         subheading: "#555555",
-        darksubheading: "#543310",
+        darksubheading: "#73512C",
       },
       dropShadow: {
         drone: "-30px 60px 5px rgba(0, 0, 0, 0.09)",

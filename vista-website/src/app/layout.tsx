@@ -5,7 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 const font = Nunito({
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["200","300", "400", "500", "600", "700","800","900","1000"],
   subsets: ["latin"],
   display: "swap",
 });

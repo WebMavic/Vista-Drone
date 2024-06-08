@@ -62,7 +62,7 @@ const cards = [
 
 function SectionProjects() {
   return (
-    <SectionLayout>
+    <SectionLayout className="bg-primary2">
       <div className="space-y-4">
         <Chips title="Vista Projects" />
         <h2 className="sm:w-2/3 text-4xl font-bold text-heading">

@@ -1,36 +1,34 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, {useState } from "react";
 import Navigation from "./Navigation";
 import { Bars3Icon } from "@heroicons/react/24/outline";
 import MobileNavigation from "./MobileNavigation";
-import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import Link from "next/link";
 
 function Navbar() {
-  const [isTop, setIsTop] = useState<boolean>(false);
   const [isMobileNavVisible, setIsMobileNavVisible] = useState(false);
+  // const [hidden, setHidden] = useState<boolean>(false);
 
-  const { scrollY } = useScroll();
+  // const { scrollY } = useScroll();
 
-  useMotionValueEvent(scrollY, "change", (latest) => {
-    if (latest < window.innerHeight) {
-      setIsTop(true);
-      // setIsMobileNavVisible(false);
-    } else {
-      setIsTop(false);
-    }
-  });
+  // useMotionValueEvent(scrollY, "change", (latest) => {
+  //   const previous = scrollY.getPrevious();
+  //   if (latest > previous! && latest > 150) {
+  //     setHidden(true);
+  //   } else {
+  //     setHidden(false);
+  //   }
+  // });
 
   return (
-    <motion.nav
-      className={
-        !isTop
-          ? "fixed  left-0 top-0  z-[9999] w-full bg-[#F8C794] px-5 shadow-sm backdrop-blur-md transition-all duration-300 ease-in-out sm:px-32"
-          : "absolute top-0 z-[9999] w-full bg-transparent px-5 transition-all duration-300 ease-in-out sm:px-32"
-      }
-    >
+    <nav className="absolute top-0 z-[9999] w-full bg-transparent px-5  sm:px-32">
       <div className="flex min-h-20 items-center justify-between lg:container">
-        <Link href="/">
+        <Link href="/" className="inline-flex items-center gap-2">
+          <img
+            src="https://placehold.co/10X10"
+            alt="Logo"
+            className="size-10 cursor-pointer rounded-full"
+          />
           <span
             className={`text-2xl font-bold uppercase tracking-[5px] text-current text-white`}
           >
@@ -39,10 +37,10 @@ function Navbar() {
         </Link>
 
         <div className="hidden flex-1 flex-shrink-0 items-center justify-end gap-3 md:flex lg:flex-none">
-          <Navigation isTop={isTop} />
+          <Navigation />
         </div>
 
-        <div className="lg:hidden ">
+        <div className="inline-block lg:hidden">
           <button
             onClick={() => {
               setIsMobileNavVisible((prev) => !prev);
@@ -59,7 +57,7 @@ function Navbar() {
           />
         )}
       </div>
-    </motion.nav>
+    </nav>
   );
 }
 

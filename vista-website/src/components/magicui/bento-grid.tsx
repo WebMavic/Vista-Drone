@@ -1,8 +1,8 @@
 import { cn } from "@/lib/utils";
 import { m } from "framer-motion";
 import { ReactNode } from "react";
-import { ArrowRightIcon, Link } from "lucide-react";
-
+import { ArrowRightIcon} from "lucide-react";
+import Link from "next/link";
 const BentoGrid = ({
   children,
   className,
@@ -41,7 +41,7 @@ const BentoCard = ({
 
  
 }) => (
-  <div
+  <Link href={href ? href : "/"}
     key={title}
     className={cn(
       "group relative  flex flex-col justify-between overflow-hidden rounded-xl ",
@@ -67,15 +67,15 @@ const BentoCard = ({
       )}
     >
       <button className="pointer-events-auto group hover:bg-neutral-100  rounded-md px-2 py-1 ">
-        <a href={href} className="inline-flex text-sm items-center text-heading">
+        <div className="inline-flex text-sm items-center text-heading">
           {cta? cta : "Learn more"}
           <ArrowRightIcon className="ml-2 h-4 w-4 text-heading" />
-        </a>
+        </div>
       </button>
     </div>
     
     <div className="pointer-events-none absolute inset-0 transform-gpu transition-all duration-300 group-hover:bg-black/[.03] group-hover:dark:bg-neutral-800/10" />
-  </div>
+  </Link>
 );
 
 export { BentoCard, BentoGrid };

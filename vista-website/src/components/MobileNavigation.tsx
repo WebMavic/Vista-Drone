@@ -1,9 +1,92 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { AnimatePresence, motion } from "framer-motion";
-import { XMarkIcon } from "@heroicons/react/24/outline";
+import { motion, useScroll, useMotionValueEvent } from "framer-motion";
+import { XMarkIcon, ChevronDownIcon } from "@heroicons/react/24/outline";
 
+interface NavLinks {
+  name: string;
+  path: string;
+  children?: NavLinks[];
+}
+
+const navlinks: NavLinks[] = [
+  { name: "Home", path: "/" },
+  {
+    name: "Services",
+    path: "/services",
+    children: [
+      { name: "Survey", path: "/services/planning-survey" },
+      { name: "Mining", path: "/services/mining-petroleum" },
+      {
+        name: "Construction",
+        path: "/services/construction-progress-monitoring",
+      },
+      { name: "Agriculture", path: "/services/agriculture" },
+      { name: "Transportation", path: "/services/transportation" },
+    ],
+  },
+  { name: "About", path: "/about" },
+  { name: "Contact", path: "/contact" },
+  { name: "Market", path: "/market" },
+];
+
+const navVariants = {
+  hidden: { y: "-100vh" },
+  visible: {
+    y: 0,
+    transition: {
+      duration: 0.3,
+      ease: "easeInOut",
+      type: "tweet",
+    },
+  },
+  exit: {
+    y: "-100vh",
+    transition: {
+      type: "tween",
+      duration: 0.3,
+      delay: 0.3,
+    },
+  },
+};
+
+const linkItemVariants = {
+  hidden: { opacity: 0, y: "50%" },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+      ease: "easeOut", // Add ease-out easing function
+    },
+  },
+  exit: {
+    opacity: 0,
+    y: "50%",
+    transition: {
+      duration: 0.1,
+      ease: "easeOut", // Add ease-out easing function
+    },
+  },
+};
+
+const navLinksVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.1,
+      delayChildren: 0.3,
+    },
+  },
+  exit: {
+    transition: {
+      staggerChildren: 0.05,
+      staggerDirection: -1,
+    },
+  },
+};
 function MobileNavigation({
   setOpen,
   open,
@@ -11,73 +94,9 @@ function MobileNavigation({
   setOpen: (value: boolean) => void;
   open: boolean;
 }) {
+  const [hidden, setHidden] = useState<boolean>(true);
+
   const pathname = usePathname();
-  const navlinks = [
-    { name: "Home", path: "/" },
-    { name: "Services", path: "/services" },
-    { name: "About", path: "/about" },
-    { name: "Contact", path: "/contact" },
-    { name: "Market", path: "/market" },
-  ];
-
-  const navVariants = {
-    hidden: { y: "-100vh" },
-    visible: {
-      y: 0,
-      transition: {
-        duration: 0.3,
-        ease: "easeInOut",
-        type: "tweet",
-      },
-    },
-    exit: {
-      y: '-100vh',
-      transition: {
-          type: 'tween',
-          duration: 0.3,
-          delay: 0.3,
-      },
-  },
-  };
-
-
-  const linkItemVariants = {
-    hidden: { opacity: 0, y: '50%' },
-    visible: {
-        opacity: 1,
-        y: 0,
-        transition: {
-            duration: 0.5,
-            ease: "easeOut" // Add ease-out easing function
-
-        },
-    },
-    exit: {
-        opacity: 0,
-        y: '50%',
-        transition: {
-            duration: 0.1,
-            ease: "easeOut" // Add ease-out easing function
-        }
-    },
-};
-
-
-const navLinksVariants = {
-  hidden: {},
-  visible: {
-      transition: {
-          staggerChildren: 0.1,
-          delayChildren: 0.3,
-      },
-  },
-  exit: {
-      transition: {
-          staggerChildren: 0.05,
-          staggerDirection: -1,
-      },
-  },
-};
 
   return (
     <motion.aside
@@ -85,7 +104,7 @@ const navLinksVariants = {
       initial="hidden"
       exit="exit"
       animate={open ? "visible" : "hidden"}
-      className="absolute left-0 top-0 inset-0 z-50 flex h-screen w-full items-center justify-center  bg-white shadow-md  dark:bg-neutral-900 "
+      className="absolute inset-0 left-0 top-0 z-50 flex h-screen w-full items-center justify-center  bg-white shadow-md  dark:bg-neutral-900 "
     >
       <span>
         <button
@@ -97,28 +116,77 @@ const navLinksVariants = {
           <XMarkIcon className="size-10" />
         </button>
       </span>
-        <motion.ul variants={navLinksVariants} initial='hidden' animate="visible" exit="exit"  className="relative flex flex-col items-center justify-center  text-neutral-900 *:py-2 *:dark:text-white ">
-          {navlinks.map((link, index) => (
-     
-            <motion.li key={index} variants={linkItemVariants} className="nav-item inline-block w-full text-2xl">
+      <motion.ul
+        variants={navLinksVariants}
+        initial="hidden"
+        animate="visible"
+        exit="exit"
+        className="relative flex flex-col items-center justify-center  text-neutral-900 *:py-2 *:dark:text-white "
+      >
+        {navlinks.map((link, index) => (
+          <motion.li
+            key={index}
+            variants={linkItemVariants}
+            className="nav-item inline-block w-full text-2xl"
+          >
+            <div className="inline-flex items-center gap-3">
               <Link
                 onClick={() => {
                   setOpen(false);
                 }}
                 href={link.path}
-                className={`${
+                className={` ${
                   pathname === link.path
-                    ? "text-center text-accent"
+                    ? "text-center font-bold text-accent dark:text-white"
                     : "text-center dark:text-white"
                 }`}
               >
                 {link.name}
               </Link>
-            </motion.li>
-          
-          ))}
-        </motion.ul>
 
+              {link.children && (
+                <button
+                  onClick={() => {
+                    setHidden((prev) => !prev);
+                  }}
+                >
+                  <ChevronDownIcon
+                    className={`size-6 ${!hidden && "rotate-180"}`}
+                  />
+                </button>
+              )}
+            </div>
+            {link.children && (
+              <div
+                className={`transition-all duration-500 ease-in-out ${hidden ? "hidden " : "block"} `}
+              >
+                <ul className="flex flex-col  items-start divide-y text-neutral-900 transition-all duration-500  ease-in-out dark:text-white">
+                  {link.children.map((child, index) => (
+                    <li
+                      key={index}
+                      className="nav-item inline-block w-full py-1"
+                    >
+                      <Link
+                        onClick={() => {
+                          setOpen(false);
+                        }}
+                        href={child.path}
+                        className={` text-lg  ${
+                          pathname === child.path
+                            ? "font-bold text-accent"
+                            : "text-neutral-900  dark:text-white"
+                        }`}
+                      >
+                        {child.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </motion.li>
+        ))}
+      </motion.ul>
     </motion.aside>
   );
 }

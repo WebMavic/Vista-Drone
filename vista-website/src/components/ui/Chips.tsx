@@ -8,7 +8,7 @@ interface ChipsProps {
 function Chips({ title, className }: ChipsProps) {
   return (
     <span
-      className={`text-lg font-semibold uppercase tracking-[3px] text-darksubheading ${className}`}
+      className={`text-lg font-semibold uppercase tracking-[3px] text-accent ${className}`}
     >
       {title}
     </span>

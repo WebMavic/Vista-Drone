@@ -6,7 +6,7 @@ import SectionInfo from "../(components)/SectionInfo";
 import Benifits from "../(components)/Benifits";
 import SectionFaq from "../(components)/SectionFaq";
 import { StickyScroll } from "@/components/ui/sticky-scroll-reveal";
-import SectionContact from "@/components/SectionContact";
+
 
 const content = services[0].service_description.map((item) => {
   return {
@@ -32,7 +32,7 @@ const page = () => {
         image={services[0].image}
       />
 
-      <SectionLayout>
+      <SectionLayout className="bg-primary2 relative">
         <StickyScroll content={content} />
       </SectionLayout>
 

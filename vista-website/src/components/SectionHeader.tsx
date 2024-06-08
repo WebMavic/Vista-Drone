@@ -38,7 +38,7 @@ function SectionHeader({ background, title, image }: SectionHeaderProps) {
         <h1 className="text-2xl  uppercase text-white sm:text-[2.5rem] text-center">
           {title}
         </h1>
-        <p className="text-center text-sm text-white sm:text-lg">
+        <p className="text-center text-sm text-neutral-200 sm:text-lg">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
           imperdiet
         </p>

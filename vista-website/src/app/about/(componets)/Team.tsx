@@ -4,7 +4,7 @@ import SectionLayout from "@/components/ui/SectionLayout";
 
 function Team() {
   return (
-    <SectionLayout>
+    <SectionLayout className='bg-primary2'>
     <div className="space-y-4">
         <Chips title="Behind Vista"/>
         <h2 className="text-4xl font-bold text-heading capitalize ">Meet our team</h2>

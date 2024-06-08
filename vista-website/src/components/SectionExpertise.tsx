@@ -29,7 +29,7 @@ function SectionExpertise() {
 
               viewport={{ once: true, }}
               transition={{ duration: 0.5 , delay: index * 0.1,bounce:0.25,ease: "easeInOut"}}
-              className="group flex cursor-pointer flex-col items-start justify-center gap-5 rounded-md p-6 [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)] hover:bg-accent/60 lg:h-96 lg:max-w-96"
+              className="group flex cursor-pointer flex-col items-start justify-center gap-5 rounded-md p-6 [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)] hover:bg-accent/80 lg:h-96 lg:max-w-96"
               key={index}
             >
         

@@ -22,7 +22,7 @@ const data = {
     {
       label: 'Done revenue by Country in 2024',
       data: [12, 19, 3, 5, 2, 3],
-      backgroundColor: ['#0077b6','#0096c7','#00b4d8','#48cae4','#90e0ef','#ade8f4'],
+      backgroundColor: ['#543310','#73512C','#B08F70','#8A704B','#AE926C','#D0BA98'],
       borderWidth: 0,
     },
   ],

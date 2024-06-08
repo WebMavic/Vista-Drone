@@ -13,7 +13,7 @@ function FAQ({className}:{className?:string}) {
             {faqs.map(({ title }, index) => (
               <Tab
                 key={index}
-                className="rounded-md px-4 py-3 lg:text-xl font-semibold focus:outline-none data-[hover]:bg-accent/5 data-[selected]:bg-neutral-100 data-[focus]:outline-1  data-[focus]:outline-white dark:text-white"
+                className="rounded-md px-4 py-3 lg:text-xl font-semibold focus:outline-none data-[hover]:bg-accent/10 data-[selected]:bg-accent/20 data-[focus]:outline-1  data-[focus]:outline-white text-black"
               >
                 {title}
               </Tab>
