@@ -4,8 +4,8 @@ import SectionContact from "./SectionContact";
 
 function Footer() {
   return (
-    <footer className="bg-white  dark:bg-gray-900">
-      <SectionContact/>
+    <footer className="bg-accent  dark:bg-gray-900">
+      <SectionContact />
       <div className="mx-auto w-full max-w-screen-xl p-4 md:py-8">
         <div className="sm:flex sm:items-center sm:justify-between">
           <Link
