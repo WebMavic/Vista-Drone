@@ -1,31 +1,34 @@
 "use client";
-import React, {useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Navigation from "./Navigation";
 import { Bars3Icon } from "@heroicons/react/24/outline";
 import MobileNavigation from "./MobileNavigation";
-import { motion,useScroll,useMotionValueEvent } from "framer-motion";
+import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import Link from "next/link";
 
 function Navbar() {
   const [isTop, setIsTop] = useState<boolean>(false);
   const [isMobileNavVisible, setIsMobileNavVisible] = useState(false);
 
+  const { scrollY } = useScroll();
 
-  const {scrollY} = useScroll();
-  
-  useMotionValueEvent(scrollY,"change", (latest) => {
-    if(latest < window.innerHeight){
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    if (latest < window.innerHeight) {
       setIsTop(true);
       // setIsMobileNavVisible(false);
-    }else{
+    } else {
       setIsTop(false);
     }
-    
   });
 
   return (
-    <motion.nav className={!isTop ? "fixed  left-0 top-0  z-[9999] w-full bg-secondary/80 px-5 shadow-sm backdrop-blur-md transition-all duration-300 ease-in-out sm:px-32" : "absolute top-0 z-[9999] w-full px-5 bg-transparent sm:px-32 transition-all duration-300 ease-in-out"}>
-
+    <motion.nav
+      className={
+        !isTop
+          ? "fixed  left-0 top-0  z-[9999] w-full bg-[#F8C794] px-5 shadow-sm backdrop-blur-md transition-all duration-300 ease-in-out sm:px-32"
+          : "absolute top-0 z-[9999] w-full bg-transparent px-5 transition-all duration-300 ease-in-out sm:px-32"
+      }
+    >
       <div className="flex min-h-20 items-center justify-between lg:container">
         <Link href="/">
           <span
@@ -50,7 +53,10 @@ function Navbar() {
           </button>
         </div>
         {isMobileNavVisible && (
-          <MobileNavigation setOpen={setIsMobileNavVisible} open = {isMobileNavVisible}/>
+          <MobileNavigation
+            setOpen={setIsMobileNavVisible}
+            open={isMobileNavVisible}
+          />
         )}
       </div>
     </motion.nav>
