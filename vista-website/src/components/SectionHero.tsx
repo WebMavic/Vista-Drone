@@ -1,25 +1,25 @@
 import React from "react";
-import GridPattern from "./magicui/animated-grid-pattern";
+// import GridPattern from "./magicui/animated-grid-pattern";
 import FlipText from "@/components/magicui/flip-text";
 import Button from "@/components/ui/Button";
-import { TypewriterEffectSmooth } from "./ui/typewriter-effect";
+// import { TypewriterEffectSmooth } from "./ui/typewriter-effect";
 
 
 
 
-const string = "Lorem ipsum dolor sit amet, consectetur adipisicing elit.";
-const words = string.split(" ").map((word) => (
-  { 
-    text : word,
-    className : "text-center text-2xl text-neutral-200"
+// const string = "Lorem ipsum dolor sit amet, consectetur adipisicing elit.";
+// const words = string.split(" ").map((word) => (
+//   { 
+//     text : word,
+//     className : "text-center text-2xl text-neutral-200"
 
-  }
-));
+//   }
+// ));
 
 function SectionHero() {
 
   return (
-    <section className="relative w-full px-5 sm:h-screen sm:px-32">
+    <section className="relative w-full px-5 sm:h-screen sm:px-32 overflow-hidden">
   
       {/* <GridPattern
         className="absolute inset-0 z-0 h-full w-full"
@@ -45,13 +45,13 @@ function SectionHero() {
             className="text-4xl  font-bold tracking-[-0.1em] text-white md:text-7xl "
             word="Elevate Your Vision Cutting Edge UAV Solutions Await"
           />
-
-          <TypewriterEffectSmooth  words={words} />
+          <p className="text-xl text-neutral-100">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          {/* <TypewriterEffectSmooth  words={words} /> */}
 
           <div className="action flex gap-3 items-center">
 
-          <Button title="Services" href={"/services"} className="rounded-full font-bold bg-accent text-white shadow-md hover:-translate-y-1 hover:scale-[1.05]  transition ease-in-out duration-300  px-6 py-3"/>
-          <Button title="About Us" href={"/about"} className="rounded-full font-bold  border-white border text-white shadow-md hover:-translate-y-1 hover:scale-[1.05]  transition ease-in-out duration-300  px-6 py-3"/>
+          <Button title="Explore Services" href={"/services"} className="rounded-full font-bold bg-accent text-white shadow-md hover:-translate-y-1 hover:scale-[1.05]  transition ease-in-out duration-300  px-6 py-3"/>
+          {/* <Button title="About Us" href={"/about"} className="rounded-full font-bold  border-white border text-white shadow-md hover:-translate-y-1 hover:scale-[1.05]  transition ease-in-out duration-300  px-6 py-3"/> */}
         
       
           </div>

@@ -35,7 +35,7 @@ function SectionHeader({ background, title, image }: SectionHeaderProps) {
       )}
 
       <div className="z-10 flex flex-col items-center justify-center gap-6">
-        <h1 className="text-2xl  uppercase text-white sm:text-[2.5rem]">
+        <h1 className="text-2xl  uppercase text-white sm:text-[2.5rem] text-center">
           {title}
         </h1>
         <p className="text-center text-sm text-white sm:text-lg">

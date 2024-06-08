@@ -2,7 +2,10 @@ import React from "react";
 import SectionLayout from "@/components/ui/SectionLayout";
 import Chips from "@/components/ui/Chips";
 
+
 function AboutUs() {
+  
+
   return (
     <SectionLayout>
       <div className="flex flex-wrap justify-center sm:flex-nowrap">
@@ -47,13 +50,13 @@ function AboutUs() {
         
         </div>
 
-        <div className="flex flex-col justify-around">
-          <div className="vison relative">
+        <div className="flex flex-col lg:justify-around lg:gap-0 gap-5 justify-center  items-center my-5 lg:my-0">
+          <div className="vison relative"  >
             <div className="absolute -left-10 -top-10 z-[5] hidden h-64 w-64 rounded-full bg-gradient-to-r from-indigo-400 to-blue-400 opacity-50  sm:block"></div>
             <div className="absolute -left-10 -top-20 z-[5] hidden size-32 rounded-full bg-accent/30   sm:block"></div>
             <div className="relative z-10">
               <h3 className="text-2xl font-bold uppercase text-indigo-600 ">Mission</h3>
-              <p className="w-4/5  text-neutral-800">
+              <p className="lg:w-4/5  text-neutral-800">
                 Deliver unmatched UAV services, surpassing client expectations
                 through innovation, collaboration, and a devotion to excellence.
               </p>
@@ -64,7 +67,7 @@ function AboutUs() {
             <div className="absolute -left-10 -top-20 z-[5] hidden size-32 rounded-full bg-red-400/60 backdrop-blur-sm  sm:block"></div>
             <div className="relative z-10">
               <h3 className="text-2xl font-bold text-red-500 uppercase">Vision</h3>
-              <p className="w-4/5  text-neutral-800">
+              <p className="lg:w-4/5  text-neutral-800">
                 Pioneer the seamless integration of cutting-edge Unmanned Aerial
                 Vehicle (UAV) technology, transforming industries and shaping a
                 future where precision, efficiency, and sustainability

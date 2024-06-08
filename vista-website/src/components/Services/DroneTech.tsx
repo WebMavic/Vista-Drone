@@ -20,7 +20,7 @@ function DroneTech() {
       </div>
       <div className="container h-full w-full py-10">
         <div className="flex h-full w-full flex-wrap items-center justify-center sm:justify-between">
-          <div className="left flex h-full flex-col gap-4 text-center sm:text-right">
+          <div className="left flex h-full lg:flex-col gap-4 text-center sm:text-right">
             <div className="f1 sm:w-52">
               <span className="inline-flex items-end">
                 <CameraIcon height={50} />
@@ -63,7 +63,7 @@ function DroneTech() {
             </div>
           </div>
 
-          <div className="right flex  flex-col gap-4 text-center sm:text-left">
+          <div className="right flex  lg:flex-col gap-4 text-center sm:text-left">
             <div className="f1 sm:w-52">
               <span className="inline-flex items-end">
                 <EyeIcon height={50} />

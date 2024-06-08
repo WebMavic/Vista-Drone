@@ -6,11 +6,11 @@ function SectionContact() {
   return (
     <div className="relative z-0 grid place-items-center gap-10  py-5 bg-footer bg-center bg-no-repeat bg-cover bg-fixed">
       
-      <h3 className="z-10 text-4xl lg:text-8xl text-neutral-50">Ready to work with us?</h3>
+      <h3 className="z-10 text-4xl lg:text-8xl text-neutral-50 text-center">Ready to work with us?</h3>
 
       <MagneticHover>
         <a
-          href="/contact"
+          href="/contact" 
           className="group inline-flex size-40 items-center justify-center rounded-full border-2 border-white p-5 transition-all duration-300 ease-in-out hover:border-none hover:bg-accent"
         >
           <span className="text-xl font-bold text-white">

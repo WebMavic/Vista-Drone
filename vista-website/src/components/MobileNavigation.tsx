@@ -97,9 +97,9 @@ const navLinksVariants = {
           <XMarkIcon className="size-10" />
         </button>
       </span>
-      <AnimatePresence>
         <motion.ul variants={navLinksVariants} initial='hidden' animate="visible" exit="exit"  className="relative flex flex-col items-center justify-center  text-neutral-900 *:py-2 *:dark:text-white ">
           {navlinks.map((link, index) => (
+     
             <motion.li key={index} variants={linkItemVariants} className="nav-item inline-block w-full text-2xl">
               <Link
                 onClick={() => {
@@ -115,10 +115,10 @@ const navLinksVariants = {
                 {link.name}
               </Link>
             </motion.li>
+          
           ))}
         </motion.ul>
 
-      </AnimatePresence>
     </motion.aside>
   );
 }
