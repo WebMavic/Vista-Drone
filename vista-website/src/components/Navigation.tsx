@@ -2,18 +2,9 @@
 import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuIndicator,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-  NavigationMenuViewport,
-} from "@/components/ui/navigation-menu";
 
-function Navigation({ isTop }: { isTop: boolean }) {
+
+function Navigation({ isTop }: { isTop?: boolean }) {
   const pathname = usePathname();
   const navlinks = [
     { name: "Home", path: "/" },

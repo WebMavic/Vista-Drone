@@ -20,7 +20,7 @@ function page() {
       <DroneApplication />
       <DroneTech />
       <SectionProjects />
-      <SectionContact/>
+  
       
     </>
   );

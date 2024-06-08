@@ -18,8 +18,6 @@ export default function Home() {
       <SectionFeaturedServices />
       <SectionExpertise />
       <SectionProjects />
-
-      <SectionContact />
     </>
   );
 }

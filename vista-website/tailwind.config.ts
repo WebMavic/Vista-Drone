@@ -18,6 +18,7 @@ const config = {
       },
     },
     extend: {
+      
       colors : {
         accent: '#3F72AF',
         primary: '#F9F7F7',
@@ -64,6 +65,10 @@ const config = {
         "marquee": "marquee var(--duration) linear infinite",
         "marquee-vertical": "marquee-vertical var(--duration) linear infinite",
       },
+      backgroundImage: {
+        "footer": "url('https://images.unsplash.com/photo-1514043133987-e4801c95b2c8?q=80&w=1910&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
+      },
+      
     },
   },
   plugins: [require("tailwindcss-animate")],

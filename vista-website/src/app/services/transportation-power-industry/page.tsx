@@ -36,7 +36,7 @@ const page = () => {
       </SectionLayout>
       <Benifits content={services[4].benefits} />
       <SectionFaq faqs={services[4].faq} />
-      <SectionContact/>
+      
     </>
   );
 };

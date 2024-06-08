@@ -1,9 +1,11 @@
 import Link from "next/link";
 import React from "react";
+import SectionContact from "./SectionContact";
 
 function Footer() {
   return (
     <footer className="bg-white  dark:bg-gray-900">
+      <SectionContact/>
       <div className="mx-auto w-full max-w-screen-xl p-4 md:py-8">
         <div className="sm:flex sm:items-center sm:justify-between">
           <Link
@@ -45,6 +47,11 @@ function Footer() {
             Vista Drone Services™
           </a>
           . All Rights Reserved.
+        </span>
+        <span className="block text-sm text-gray-500 dark:text-gray-400 sm:text-center">
+          <Link href="http://webmavic.com/" className="hover:underline">
+            Developed by Webmavic
+          </Link>
         </span>
       </div>
     </footer>

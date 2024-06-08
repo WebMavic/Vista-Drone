@@ -17,7 +17,7 @@ function page() {
       <AboutUs/>
       <ClientCaurosal/>
       <Team/>
-      <SectionContact/>
+   
     </>
   );
 }

@@ -20,7 +20,7 @@ function page() {
         <FAQ/>
     </SectionLayout>
 
-    <SectionContact/>
+    
     </>
   )
 }

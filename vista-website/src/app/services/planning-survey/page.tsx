@@ -41,7 +41,7 @@ const page = () => {
       <Benifits content={services[1].benefits} />
 
       <SectionFaq faqs={services[1].faq} />
-      <SectionContact />
+      
     </>
   );
 };

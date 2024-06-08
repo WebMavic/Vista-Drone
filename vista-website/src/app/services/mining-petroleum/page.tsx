@@ -39,7 +39,7 @@ const page = () => {
       <Benifits content={services[0].benefits} />
 
       <SectionFaq faqs={services[0].faq} />
-      <SectionContact />
+  
     </>
   );
 };
