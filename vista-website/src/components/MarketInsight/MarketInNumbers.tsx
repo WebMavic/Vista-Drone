@@ -18,7 +18,7 @@ function MarketInNumbers() {
         >
           <div>{item.icon}</div>
           <div className="inline-flex flex-col">
-            <h3 className="text-2xl">
+            <h3 className="text-2xl tabular-nums">
               <CountUp
                 end={item.value}
                 start={0}

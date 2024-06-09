@@ -9,34 +9,34 @@ import {
 function QuickTabs() {
   return (
     
-    <div className="lg:my-10 my-10 flex lg:flex-col   w-full justify-center gap-4 items-center lg:items-start">
-      <div className="flex flex-col lg:flex-row items-center gap-3 justify-center">
-        <div className="rounded-full border-[3px] border-accent p-3 shadow-md dark:text-white">
-          <PhoneIcon height={50} />
+    <div className="lg:my-10 my-10 flex lg:flex-col   w-full justify-between gap-4 items-center lg:items-start">
+      <div className="flex flex-col lg:flex-row items-center gap-3 justify-center group transition-all duration-300 ">
+        <div className="rounded-full border-[2px] border-accent p-3 shadow-md dark:text-white ">
+          <PhoneIcon className='size-5 lg:size-8 group-hover:animate-rotateLeftandRight transition ' />
         </div>
         <div>
-        <h2 className="text-xl uppercase">Call Us</h2>
-        <p className="text-subheading">+123 456 7890</p>
+        <h2 className="text-xl uppercase text-center lg:text-left">Phone</h2>
+        <p className="text-subheading text-center lg:text-left">+123 456 7890</p>
 
         </div>
       </div>
-      <div className="flex gap-3 flex-col lg:flex-row items-center">
-        <div className="rounded-full border-[3px] border-accent p-3 shadow-md dark:text-white">
-          <EnvelopeIcon height={50} />
+      <div className="flex gap-3 flex-col lg:flex-row items-center group">
+        <div className="rounded-full border-[2px] border-accent p-3 shadow-md dark:text-white">
+          <EnvelopeIcon className='size-5 lg:size-8  group-hover:animate-rotateLeftandRight' />
         </div>
         <div>
-        <h2 className="text-xl uppercase">Mail Us</h2>
-        <p className="text-subheading">vista@uae.com</p>
+        <h2 className="text-xl uppercase text-center lg:text-left">E-mail</h2>
+        <p className="text-subheading text-center lg:text-left">vista@uae.com</p>
 
         </div>
       </div>
-      <div className="flex gap-3 flex-col lg:flex-row items-center">
-        <div className="rounded-full border-[3px] border-accent p-3 shadow-md dark:text-white">
-          <MapPinIcon height={50} />
+      <div className="flex gap-3 flex-col lg:flex-row items-center group">
+        <div className="rounded-full border-[2px] border-accent p-3 shadow-md dark:text-white">
+          <MapPinIcon className='size-5 lg:size-8 group-hover:animate-rotateLeftandRight' />
         </div>
         <div>
-          <h2 className="text-xl uppercase">Location</h2>
-          <p className="text-subheading">UAE Street 2</p>
+          <h2 className="text-xl uppercase text-center lg:text-left">Location</h2>
+          <p className="text-subheading text-center lg:text-left">UAE Street 2</p>
         </div>
       </div>
     </div>

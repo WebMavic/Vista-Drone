@@ -3,7 +3,11 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
-import { XMarkIcon, ChevronDownIcon } from "@heroicons/react/24/outline";
+import {
+  XMarkIcon,
+  ChevronDownIcon,
+  ArrowRightIcon,
+} from "@heroicons/react/24/outline";
 
 interface NavLinks {
   name: string;
@@ -99,23 +103,29 @@ function MobileNavigation({
   const pathname = usePathname();
 
   return (
+    // <motion.aside
+    //   variants={navVariants}
+    //   initial="hidden"
+    //   exit="exit"
+    //   animate={open ? "visible" : "hidden"}
+    //   className="absolute inset-0 left-0 top-0 z-50 flex h-screen w-full items-center justify-center  bg-white shadow-md  dark:bg-neutral-900 "
+    // >
     <motion.aside
       variants={navVariants}
       initial="hidden"
       exit="exit"
       animate={open ? "visible" : "hidden"}
-      className="absolute inset-0 left-0 top-0 z-50 flex h-screen w-full items-center justify-center  bg-white shadow-md  dark:bg-neutral-900 "
+      className="flex h-full w-full items-center justify-center  bg-white shadow-md  dark:bg-neutral-900 "
     >
-      <span>
-        <button
-          onClick={() => {
-            setOpen(false);
-          }}
-          className="absolute right-0 top-0 p-2"
-        >
-          <XMarkIcon className="size-10" />
-        </button>
-      </span>
+      <button
+        onClick={() => {
+          setOpen(false);
+        }}
+        className="absolute left-0 top-0 p-2 "
+      >
+        <ArrowRightIcon className="size-7" />
+      </button>
+
       <motion.ul
         variants={navLinksVariants}
         initial="hidden"
@@ -151,20 +161,20 @@ function MobileNavigation({
                   }}
                 >
                   <ChevronDownIcon
-                    className={`size-6 ${!hidden && "rotate-180"}`}
+                    className={`size-6 transition-all duration-200 ${!hidden && "rotate-180"}`}
                   />
                 </button>
               )}
             </div>
             {link.children && (
               <div
-                className={`transition-all duration-500 ease-in-out ${hidden ? "hidden " : "block"} `}
+                className={`transition-all duration-500 ${hidden ? "h-0 overflow-hidden opacity-0" : "h-max opacity-100"} `}
               >
-                <ul className="flex flex-col  items-start divide-y text-neutral-900 transition-all duration-500  ease-in-out dark:text-white">
+                <ul className="flex flex-col  items-start justify-between text-neutral-900 transition-all duration-500  ease-in-out dark:text-white">
                   {link.children.map((child, index) => (
                     <li
                       key={index}
-                      className="nav-item inline-block w-full py-1"
+                      className="nav-item inline-block h-auto w-full py-1"
                     >
                       <Link
                         onClick={() => {

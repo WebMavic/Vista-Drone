@@ -25,7 +25,7 @@ function SectionHero() {
         </video>
       </div>
       <div className="relative z-10 flex h-full w-full flex-col items-center justify-center gap-2  py-24 ">
-        <h1 className="text-center  text-2xl  font-bold text-white md:text-7xl">
+        <h1 className="text-center  text-2xl  font-semibold text-white md:text-4xl lg:text-7xl ">
           Elevate Your Vision Cutting Edge UAV Solutions Await{" "}
         </h1>
         <TypewriterEffectSmooth words={words} />

@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ChevronDownIcon } from "@heroicons/react/24/solid";
+import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/24/solid";
 
 function Navigation() {
   const pathname = usePathname();
@@ -46,14 +46,15 @@ function Navigation() {
                   setHidden((prev) => !prev);
                 }}
               >
-                <ChevronDownIcon className="ml-2 size-4 text-white" />
+                <span><ChevronDownIcon className={`ml-2 size-4 text-white transition-all duration-200 ${!hidden && 'rotate-180'}`} /></span>
+                
               </button>
             )}
           </div>
-          {link.children && !hidden && (
-            <ul className="navbar-dropdown absolute left-0 top-full flex flex-col gap-2 rounded-md bg-white/80  p-5 ">
+          {link.children && (
+            <ul className={`navbar-dropdown absolute left-0 space-y-4 top-full  rounded-md bg-white/80 p-5 transition-all duration-300 opacity-0 ${!hidden && 'block opacity-100'} `}>
               {link.children.map((child, index) => (
-                <li className="nav-item" key={index}>
+                <li className="nav-item block" key={index}>
                   <Link
                     href={child.path}
                     className={`${pathname === child.path ? "text-black" : "text-neutral-900"}`}

@@ -34,6 +34,10 @@ const config = {
         spinText: {
           to: { transform: "rotate(360deg)" },
         },
+        rotateLeftandRight: {
+          "0%": { transform: "rotate(0deg)" },
+          "100%": { transform: "rotate(10deg)" },
+        },
         marquee: {
           from: { transform: "translateX(0)" },
           to: { transform: "translateX(calc(-100% - var(--gap)))" },
@@ -57,6 +61,7 @@ const config = {
       },
       animation: {
         spinText: "spinText 30s linear infinite",
+        rotateLeftandRight: "rotateLeftandRight 0.2s  infinite",
         wobble: "wobble 3s infinite",
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
