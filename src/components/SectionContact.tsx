@@ -1,6 +1,7 @@
 import React from "react";
 import SectionLayout from "./ui/SectionLayout";
 import MagneticHover from "./ui/MagneticHover";
+import Link from "next/link";
 
 function SectionContact() {
   return (
@@ -9,7 +10,7 @@ function SectionContact() {
       <h3 className="z-10 text-4xl lg:text-8xl text-neutral-50 text-center">Ready to work with us?</h3>
 
       <MagneticHover>
-        <a
+        <Link
           href="/contact" 
           className="group inline-flex size-40 items-center justify-center rounded-full border-2 border-white p-5 transition-all duration-300 ease-in-out hover:border-none hover:bg-accent"
         >
@@ -24,7 +25,7 @@ function SectionContact() {
           >
             <path d="M0 1H12M12 1V13M12 1L0.5 12" />
           </svg>
-        </a>
+        </Link>
       </MagneticHover>
     </div>
   );

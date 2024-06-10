@@ -6,7 +6,7 @@ import { CubeTransparentIcon } from "@heroicons/react/24/outline";
 import React from "react";
 import { Metadata } from "next";
 import SectionLayout from "@/components/ui/SectionLayout";
-
+import cnbg from "@/assets/images/cnbg.png";
 
 export const metadata: Metadata = {
   title: "Market Trends",
@@ -18,7 +18,7 @@ const dummy = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta f
 function page() {
   return (
     <>
-      <SectionHeader title="Market Trends" image="https://info.cecr.in/wp-content/uploads/3_7.png"/>
+      <SectionHeader title="Market Trends" image={cnbg}/>
       <SectionLayout className="bg-primary2">
         <div className=" rounded-lg bg-white p-5 shadow-md">
           <MarketInNumbers />

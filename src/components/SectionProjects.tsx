@@ -3,7 +3,6 @@ import React from "react";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
-import dummy from "@/assets/images/dummy.jpg";
 import Chips from "./ui/Chips";
 import SectionLayout from "./ui/SectionLayout";
 import { projectImages } from "@/utils/images";
@@ -95,6 +94,7 @@ function SectionProjects() {
               <Image
                 src={image}
                 alt={index + "drone"}
+                placeholder="blur"
                 className="object-cover h-96 rounded-lg overflow-hidden "
               />
            

@@ -1,6 +1,5 @@
 "use client"
 import React from "react";
-import { SunIcon,BellIcon,CalendarIcon } from "@heroicons/react/24/solid";
 import "swiper/css";
 import "swiper/css/pagination";
 import { BentoCard,BentoGrid } from "../magicui/bento-grid";
@@ -26,7 +25,6 @@ function FeauturedList() {
 export default FeauturedList;
 
 
-{/* <Map className="h-12 w-12 origin-left transform-gpu text-neutral-700 transition-all duration-300 ease-in-out group-hover:scale-75"  /> */}
 
 const services = [
  

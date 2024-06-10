@@ -3,7 +3,8 @@ import SectionLayout from "@/components/ui/SectionLayout";
 import Chips from "@/components/ui/Chips";
 import vision from '@/assets/icons/vision-icon.svg'
 import mission from '@/assets/icons/mission-icon.svg'
-
+import Image from "next/image";
+import constru from '@/assets/images/construction.jpg'
 function AboutUs() {
   
 
@@ -16,11 +17,13 @@ function AboutUs() {
             <h2 className="text-4xl font-bold capitalize text-heading ">
               how it started
             </h2>
-            <div className="image-containrr">
-            <img
-              src="https://geospatialmedia.s3.amazonaws.com/wp-content/uploads/2019/01/Construction-21_mini.jpg"
-              alt="logo"
-              className="rounded-2xl object-cover w-full h-96 sm:w-3/4"
+            <div className="image-container w-full shadow-sm relative h-96 sm:w-3/4 ">
+            <Image
+              src={constru} 
+              sizes="100vw"
+              alt="about-image"
+              placeholder="blur"
+              className="rounded-2xl size-full object-cover"
             />
           </div>
             <p className="text-left font-light text-subheading sm:w-3/4">

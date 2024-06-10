@@ -8,6 +8,7 @@ import SectionFaq from "../(components)/SectionFaq";
 import { StickyScroll } from "@/components/ui/sticky-scroll-reveal";
 
 
+
 const content = services[0].service_description.map((item) => {
   return {
     title: item.title,

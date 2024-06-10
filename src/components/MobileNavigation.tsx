@@ -28,7 +28,7 @@ const navlinks: NavLinks[] = [
         path: "/services/construction-progress-monitoring",
       },
       { name: "Agriculture", path: "/services/agriculture" },
-      { name: "Transportation", path: "/services/transportation" },
+      { name: "Transportation", path: "/services/transportation-power-industry" },
     ],
   },
   { name: "About", path: "/about" },

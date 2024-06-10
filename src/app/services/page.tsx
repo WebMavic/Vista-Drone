@@ -5,8 +5,7 @@ import ServiceCards from "@/components/Services/ServiceCards";
 import DroneApplication from "@/components/Services/DroneApplication";
 import DroneTech from "@/components/Services/DroneTech";
 import { Metadata } from "next";
-import SectionContact from "@/components/SectionContact";
-
+import bg from "@/assets/images/Drone-Solution.jpg";
 
 export const metadata: Metadata = {
   title: "Services",
@@ -15,7 +14,7 @@ export const metadata: Metadata = {
 function page() {
   return (
     <>
-      <SectionHeader title="DRONE SERVICES - AERIAL AND COMMERCIAL DRONE SERVICES" image="https://feds.ae/wp-content/uploads/2022/07/Drone-Solution-End-to-end.jpg"/>
+      <SectionHeader title="DRONE SERVICES - AERIAL AND COMMERCIAL DRONE SERVICES" image={bg}/>
       <ServiceCards />
       <DroneApplication />
       <DroneTech />

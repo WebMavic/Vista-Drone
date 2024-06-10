@@ -1,10 +1,9 @@
 import React from "react";
-import SectionContact from "@/components/SectionContact";
 import SectionHeader from "@/components/SectionHeader";
 import AboutUs from "./(componets)/AboutUs";
 import ClientCaurosal from "./(componets)/ClientCaurosal";
 import Team from "./(componets)/Team";
-
+import aboutbg from "@/assets/images/aboutbg.webp";
 import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "About Us",
@@ -13,7 +12,7 @@ export const metadata: Metadata = {
 function page() {
   return (
     <>
-      <SectionHeader title="About Vista" image="https://i0.wp.com/www.globaltrademag.com/wp-content/uploads/2022/12/Why-Construction-Companies-are-Opting-for-Drone-Services.png?fit=1600%2C1064&ssl=1" />
+      <SectionHeader title="About Vista" image={aboutbg} />
       <AboutUs/>
       <ClientCaurosal/>
       <Team/>

@@ -3,22 +3,25 @@ import React from "react";
 import { motion } from "framer-motion";
 import Button from "./ui/Button";
 import SectionLayout from "./ui/SectionLayout";
+import Image from "next/image";
 function SectionAbout() {
 
   return (
     <SectionLayout className="h-full bg-white">
       <div className="flex h-full  w-full flex-col  items-center justify-center sm:flex-row sm:justify-between">
-        <div className="sm:w-1/2">
-          <motion.img
-            src="https://images.unsplash.com/photo-1555009306-9e3c5b6a66e3?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt="image"
-            className="hidden w-2/3 rounded-2xl object-cover shadow-md sm:block"
-            initial={{ scale: 0.8, opacity: 0 }}
+        <motion.div className="sm:w-1/2"   initial={{ scale: 0.8, opacity: 0 }}
             whileInView={{ scale: 1, opacity: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 1 }}
+            transition={{ duration: 1 }}>
+          <Image 
+            width={0}
+            height={0}
+            sizes="100vw"
+            src="https://images.unsplash.com/photo-1555009306-9e3c5b6a66e3?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="about-image"
+            className="hidden w-2/3 h-auto rounded-2xl shadow-md sm:block"
           />
-        </div>
+        </motion.div>
 
         <div className=" flex  h-full flex-col items-center gap-5 sm:w-1/2 sm:items-start">
           <motion.h1
@@ -30,9 +33,12 @@ function SectionAbout() {
           >
             About Us
           </motion.h1>
-          <img
+          <Image
             src="https://images.unsplash.com/photo-1555009306-9e3c5b6a66e3?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt="image"
+            width={0}
+            height={0}
+            sizes="100vw"
             className="block w-2/3 rounded-2xl object-cover shadow-md sm:hidden"
           />
 

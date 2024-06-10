@@ -1,8 +1,8 @@
 "use client";
-import React, { useRef } from "react";
+import React from "react";
 import Chips from "./ui/Chips";
 import SectionLayout from "./ui/SectionLayout";
-import { motion, useInView } from "framer-motion";
+import { motion} from "framer-motion";
 import {
   PresentationChartBarIcon,
   ArrowTrendingUpIcon,

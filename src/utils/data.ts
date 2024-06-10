@@ -1,7 +1,18 @@
+import mining from "@/assets/images/mining_info.jpeg";
+import survey from "@/assets/images/drones_construction_industry.jpg";
+import agriculture from "@/assets/images/agriculture_info.jpg";
+import construction from "@/assets/images/cns_info.jpg";
+import power from "@/assets/images/aboutbg.webp";
+
+import { StaticImport } from "next/dist/shared/lib/get-img-props";
+
+
+
+
 interface Service {
   title: string;
   description: string;
-  image: string;
+  image: StaticImport;
   service_description: description[];
   benefits: benefits[];
   faq: faq[];
@@ -29,8 +40,8 @@ export const services: Service[] = [
     title: "Mining and Petroleum",
     description:
       "Maximize operational efficiency and safety in your mining and petroleum projects with Vista Drone Services. Our specialized drone solutions provide precise aerial data, helping you streamline exploration, site assessment, and resource management. Utilizing state-of-the-art drones equipped with high-resolution cameras and advanced sensors, we conduct comprehensive aerial surveys that generate detailed maps and 3D models of your site. This allows for accurate identification of mineral deposits and thorough evaluation of terrain conditions. By capturing extensive data quickly and safely from above, we eliminate the need for manual ground surveys, thus minimizing the risk to personnel and reducing operational downtime. ",
-    image:
-      "https://russelsmithgroup.com/wp-content/uploads/2023/09/Drone-Mapping.jpg",
+    image: mining,
+    
     service_description: [
       {
         title: "Aerial Surveys",
@@ -99,9 +110,9 @@ export const services: Service[] = [
     title: "Planning and Survey",
     description:
       "Transform your planning and survey processes with our advanced drone technology. Vista Drone Services offers comprehensive solutions to support topographic mapping, land surveying, and infrastructure assessment. Our high-resolution drones capture detailed aerial imagery and data, enabling the creation of accurate topographic maps and 3D models. This detailed data collection aids in precise terrain analysis, essential for planning construction projects, land development, and environmental studies. By leveraging our drone technology, you can efficiently gather the necessary data for site evaluations and project planning, reducing the need for traditional ground surveys and enhancing the accuracy of your assessments. ",
-    image:
+    image:survey,
       
-      "https://www.rvslandsurveyors.com/wp-content/uploads/2021/10/drones_construction_industry.jpg",
+      
     service_description: [
       {
         title: "Topographic Mapping",
@@ -170,7 +181,7 @@ export const services: Service[] = [
     title: "Agriculture",
     description:
       "Optimize your agricultural operations with Vista Drone Services. Our drone solutions provide actionable insights for crop management, irrigation planning, and pest detection, helping you enhance productivity and sustainability. Leveraging advanced drone technology, we conduct comprehensive aerial surveys of your fields, capturing high-resolution imagery and data for detailed crop analysis. This enables us to monitor crop health, identify potential issues such as nutrient deficiencies or pest infestations, and provide timely recommendations for optimized management practices. By integrating our drone solutions into your agricultural operations, you can make informed decisions to maximize yields while minimizing resource usage and environmental impact.",
-    image: "https://i.ytimg.com/vi/P2YPG8PO9JU/maxresdefault.jpg",
+    image: agriculture,
     service_description: [
       {
         title: "Crop Health Monitoring",
@@ -240,8 +251,7 @@ export const services: Service[] = [
     title: "Construction and Progress Monitoring",
     description:
       "Elevate your construction projects with Vista Drone Services. We offer comprehensive drone solutions for site planning, progress monitoring, and safety inspections, ensuring your projects stay on track and within budget. Our advanced drones are equipped with high-resolution cameras and sophisticated sensors, enabling us to capture detailed aerial imagery and data for precise site analysis and planning. Whether youre in the initial stages of project development or require ongoing monitoring throughout construction, our drone solutions provide valuable insights to optimize your project workflow and streamline operations.",
-    image:
-      "https://geospatialmedia.s3.amazonaws.com/wp-content/uploads/2017/12/fut-09-15-15-drones-2.jpg",
+    image:construction,
     service_description: [
       {
         title: "Site Planning:",
@@ -311,8 +321,7 @@ export const services: Service[] = [
     title: "Transportation and Power Industry",
     description:
       "Improve the efficiency and safety of your transportation and power infrastructure with Vista Drone Services. Our drones conduct detailed inspections and provide high-quality visual data for proactive maintenance and compliance. Equipped with advanced imaging technology and precise navigation systems, our drones are capable of capturing comprehensive visual data of roads, bridges, railways, power lines, and substations. By conducting thorough aerial inspections, we identify potential issues such as structural damage, wear and tear, and vegetation encroachment, allowing for timely maintenance and repairs to prevent failures and ensure the integrity of your infrastructure.",
-    image:
-      "https://geospatialmedia.s3.amazonaws.com/wp-content/uploads/2017/12/fut-09-15-15-drones-2.jpg",
+    image: power,
     service_description: [
       {
         title: "Infrastructure Inspections",

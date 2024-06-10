@@ -20,7 +20,7 @@ function Navigation() {
           path: "/services/construction-progress-monitoring",
         },
         { name: "Agriculture", path: "/services/agriculture" },
-        { name: "Transportation", path: "/services/transportation" },
+        { name: "Transportation", path: "/services/transportation-power-industry" },
       ],
     },
     { name: "About", path: "/about" },
@@ -46,13 +46,18 @@ function Navigation() {
                   setHidden((prev) => !prev);
                 }}
               >
-                <span><ChevronDownIcon className={`ml-2 size-4 text-white transition-all duration-200 ${!hidden && 'rotate-180'}`} /></span>
-                
+                <span>
+                  <ChevronDownIcon
+                    className={`ml-2 size-4 text-white transition-all duration-200 ${!hidden && "rotate-180"}`}
+                  />
+                </span>
               </button>
             )}
           </div>
           {link.children && (
-            <ul className={`navbar-dropdown absolute left-0 space-y-4 top-full  rounded-md bg-white/80 p-5 transition-all duration-300 opacity-0 ${!hidden && 'block opacity-100'} `}>
+            <ul
+              className={`navbar-dropdown absolute left-0 top-full space-y-4  rounded-md bg-white/80 p-5 opacity-0 transition-all duration-300 ${!hidden && "block opacity-100"} `}
+            >
               {link.children.map((child, index) => (
                 <li className="nav-item block" key={index}>
                   <Link

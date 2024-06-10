@@ -1,15 +1,14 @@
 import FAQ from '@/components/FAQs/FAQ'
-import SectionContact from '@/components/SectionContact'
 import SectionHeader from '@/components/SectionHeader'
 import SectionLayout from '@/components/ui/SectionLayout'
 import React from 'react'
-
+import faqBg from '@/assets/images/faqbg.jpg'
 
 
 function page() {
   return (
     <>
-    <SectionHeader title="Frequently Asked Questions"  image='https://s3.divcom.com/www.commercialuavnews.com/images/A006_03051609_C022-16094219.jpg.large.1024x1024.jpg' />
+    <SectionHeader title="Frequently Asked Questions"  image={faqBg} />
     <div className="text-center space-y-2 my-10 ">
         <h1 className='text-2xl font-bold text-heading'>Frequently Asked Questions</h1>
         <p className=" w-3/4 mx-auto dark:text-primary text-subheading capitalize ">

@@ -6,7 +6,7 @@ import SectionInfo from "../(components)/SectionInfo";
 import Benifits from "../(components)/Benifits";
 import SectionFaq from "../(components)/SectionFaq";
 import { StickyScroll } from "@/components/ui/sticky-scroll-reveal";
-
+import placeholder from "@/assets/images/placeholders/placeholder (3).png";
 
 const content = services[2].service_description.map((item) => {
   return {
@@ -25,11 +25,11 @@ const content = services[2].service_description.map((item) => {
 const page = () => {
   return (
     <>
-      <SectionHeader title="Agriculture" background={'/v5.mp4'} />
+      <SectionHeader title="Agriculture" background={'/v5.mp4'} placeholder={placeholder.src}/>
       <SectionInfo
         title="Agriculture"
         content={services[2]?.description}
-        image={services[2]?.image}
+        image={services[2].image} 
       />
 
       <SectionLayout className="bg-primary2">

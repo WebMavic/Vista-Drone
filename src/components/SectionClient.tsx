@@ -14,8 +14,8 @@ const secondRow = clientsLogos.slice(clientsLogos.length / 2);
 
 const ClientLogo = ({ src, alt }:{src:any,alt:string}) => {
   return (
-    <div className="flex items-center justify-center w-32 aspect-square">
-      <Image src={src} alt={alt} className="object-contain mix-blend-color-burn"/>
+    <div className="inline-flex items-center justify-center lg:w-32 size-24 ">
+      <Image src={src} alt={alt}  className="object-contain size-full mix-blend-color-burn"/>
     </div>
   )
 }
