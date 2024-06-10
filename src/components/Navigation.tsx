@@ -61,7 +61,7 @@ function Navigation() {
               {link.children.map((child, index) => (
                 <li className="nav-item block" key={index}>
                   <Link
-                    href={child.path}
+                    href={child.path} onClick={() => setHidden(true)}
                     className={`${pathname === child.path ? "text-black" : "text-neutral-900"}`}
                   >
                     {child.name}
