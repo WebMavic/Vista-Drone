@@ -15,13 +15,11 @@ body {
 
 
 ::-webkit-scrollbar-track {
-  background: #cecece;
+  background: #000000ae;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #6b6b6b;
-  border-radius: 5px;
-  border: 3px solid #cecece;
+  background-color: #eae8e8;
 }
 nav ul li {
   display: inline-block;
@@ -59,6 +57,14 @@ nav ul li a:hover:after {
   .textStroke {
     -webkit-text-stroke: 2px black;
     color: transparent;
+  }
+
+  .hero {
+    background: url("../assets/images/home_bg.png") rgba(0, 0, 0, 0.4);
+    background-size: cover;
+    background-blend-mode: darken;
+    background-position: center;
+    background-repeat: no-repeat;
   }
   
   

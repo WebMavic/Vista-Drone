@@ -9,6 +9,8 @@ function Navigation() {
   const [hidden, setHidden] = useState<boolean>(true);
   const navlinks = [
     { name: "Home", path: "/" },
+    
+    { name: "About", path: "/about" },
     {
       name: "Services",
       path: "/services",
@@ -23,10 +25,8 @@ function Navigation() {
         { name: "Transportation", path: "/services/transportation-power-industry" },
       ],
     },
-    { name: "About", path: "/about" },
-    { name: "Contact", path: "/contact" },
     { name: "Market", path: "/market" },
-    { name: "FAQs", path: "/faq" },
+    // { name: "FAQs", path: "/faq" },
   ];
 
   return (
@@ -36,7 +36,7 @@ function Navigation() {
           <div className="inline-flex items-center">
             <Link
               href={link.path}
-              className={`${pathname === link.path ? "text-white" : "text-neutral-200"}`}
+              className={`text-[16px] ${pathname === link.path ? "text-white font-semibold" : "text-neutral-50"}`}
             >
               {link.name}
             </Link>

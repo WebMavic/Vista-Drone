@@ -1,5 +1,4 @@
 import type { Config } from "tailwindcss";
-
 const config = {
   darkMode: ["class"],
   content: [
@@ -24,6 +23,7 @@ const config = {
         primary2: "#FFF9F2",
         secondary: "#112D4E",
         heading: "#272829",
+        body : "#EEEEEE",
         subheading: "#555555",
         darksubheading: "#73512C",
       },
@@ -71,6 +71,7 @@ const config = {
       backgroundImage: {
         footer:
           "url('https://images.unsplash.com/photo-1514043133987-e4801c95b2c8?q=80&w=1910&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
+        
       },
     },
   },

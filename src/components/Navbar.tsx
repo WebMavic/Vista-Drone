@@ -11,6 +11,11 @@ import {
 } from "@headlessui/react";
 import Link from "next/link";
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
+import Image from "next/image";
+import logo from "@/assets/images/vista.png"
+import Button from "./ui/Button";
+
+
 
 function Navbar() {
   const [isMobileNavVisible, setIsMobileNavVisible] = useState(false);
@@ -29,24 +34,23 @@ function Navbar() {
 
   return (
     <>
-      <nav className="absolute top-0 z-[99] w-full bg-transparent px-5  sm:px-32">
+      <nav className="absolute top-0 z-[99] w-full bg-transparent px-5  sm:px-28">
         <div className="flex min-h-20 items-center justify-between ">
-          <Link href="/" className="inline-flex items-center gap-2">
+          <Link href="/">
             <img
-              src="https://placehold.co/10X10"
+              src={logo.src}
               alt="Logo"
-              className="size-10 cursor-pointer rounded-full"
+              className="lg:size-20 size-12  object-cover"
             />
-            <span
-              className={`text-2xl font-bold uppercase tracking-[5px] text-current text-white`}
-            >
-              Vista
-            </span>
+            
           </Link>
 
           <div className="hidden flex-1 flex-shrink-0 items-center justify-end gap-3 md:flex lg:flex-none">
             <Navigation />
+            <Button title="Contact Us" type="primary" className="ml-3" href="/contact" />
           </div>
+
+        
           <Transition appear show={isMobileNavVisible}>
             <Dialog
               open={isMobileNavVisible}

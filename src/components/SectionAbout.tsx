@@ -8,22 +8,24 @@ function SectionAbout() {
 
   return (
     <SectionLayout className="h-full bg-white">
-      <div className="flex h-full  w-full flex-col  items-center justify-center sm:flex-row sm:justify-between">
-        <motion.div className="sm:w-1/2"   initial={{ scale: 0.8, opacity: 0 }}
+      <div className="flex h-full w-full items-start justify-between gap-11">
+
+        {/* <motion.div className="sm:w-1/2"   initial={{ scale: 0.8, opacity: 0 }}
             whileInView={{ scale: 1, opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 1 }}>
-          <Image 
-            width={0}
-            height={0}
-            sizes="100vw"
-            src="https://images.unsplash.com/photo-1555009306-9e3c5b6a66e3?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt="about-image"
-            className="hidden w-2/3 h-auto rounded-2xl shadow-md sm:block"
-          />
-        </motion.div>
+              <Image 
+                width={0}
+                height={0}
+                sizes="100vw"
+                src="https://images.unsplash.com/photo-1555009306-9e3c5b6a66e3?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="about-image"
+                className="hidden w-2/3 h-auto rounded-2xl shadow-md sm:block"
+              />
+        </motion.div> 
+        */}
 
-        <div className=" flex  h-full flex-col items-center gap-5 sm:w-1/2 sm:items-start">
+        <div className="w-1/2 space-y-5">
           <motion.h1
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -33,14 +35,6 @@ function SectionAbout() {
           >
             About Us
           </motion.h1>
-          <Image
-            src="https://images.unsplash.com/photo-1555009306-9e3c5b6a66e3?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt="image"
-            width={0}
-            height={0}
-            sizes="100vw"
-            className="block w-2/3 rounded-2xl object-cover shadow-md sm:hidden"
-          />
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -70,11 +64,17 @@ function SectionAbout() {
           </motion.p>
 
           <Button
-            href="/about"
+            href="/about" type="outline"
             title="Learn more"
-            className="border border-accent  text-accent hover:bg-accent  hover:text-white "
+            // className=""
           />
         </div>
+
+        <img
+            src="https://images.unsplash.com/photo-1555009306-9e3c5b6a66e3?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="image"
+            className="rounded-2xl object-cover w-1/2 h-[28rem]"
+          />
       </div>
     </SectionLayout>
   );
