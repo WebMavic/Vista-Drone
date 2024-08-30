@@ -12,7 +12,7 @@ function Navigation() {
     
     { name: "About", path: "/about" },
     {
-      name: "Services",
+      name: "Industries",
       path: "/services",
       children: [
         { name: "Survey", path: "/services/planning-survey" },
