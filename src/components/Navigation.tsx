@@ -10,7 +10,7 @@ function Navigation() {
   const navlinks = [
     { name: "Home", path: "/" },
     {
-      name: "Services",
+      name: "Industries",
       path: "/services",
       children: [
         { name: "Survey", path: "/services/planning-survey" },
