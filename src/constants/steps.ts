@@ -29,6 +29,6 @@ export const steps: Steps[] = [
     {
       id:"6",
       title : "final product",
-      desc : "Once the processing is done, our software produces models, maps & other results in the desired outputs. Direct Outputs are Ortho-Photos (.tiff, jpeg, .obj), Contours (.dfx, .dwg, .shp), DSM/DTM (.tiff, jpeg), Point Clouds (las, xyz, ply) & 3D Models. The data is CAD-ready and can be imported into any CAD/GIS/ENGG software for project works."
+      desc : "Our software generates CAD-ready outputs like ortho-photos, contours, DSM/DTM, point clouds, and 3D models in various formats. These files are compatible with CAD, GIS, and engineering software."
     },
   ]

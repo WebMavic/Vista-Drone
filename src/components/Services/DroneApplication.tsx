@@ -7,7 +7,7 @@ import StepsCards from "./StepsCards";
 
 function DroneApplication() {
   return (
-    <SectionLayout className="bg-primary2">
+    <SectionLayout className="bg-primary2 h-auto">
       <div className="space-y-4 lg:w-1/2 ">
         <Chips title="workflow" />
         <h2 className="text-4xl font-bold text-heading ">How we do it</h2>

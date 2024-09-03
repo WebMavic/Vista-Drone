@@ -457,13 +457,13 @@ export const services: Service[] = [
   {
     title: "Oil and Gas Industry",
     description:
-      "Improve the efficiency and safety of your transportation and power infrastructure with Vista Drone Services. Our drones conduct detailed inspections and provide high-quality visual data for proactive maintenance and compliance. Equipped with advanced imaging technology and precise navigation systems, our drones are capable of capturing comprehensive visual data of roads, bridges, railways, power lines, and substations. By conducting thorough aerial inspections, we identify potential issues such as structural damage, wear and tear, and vegetation encroachment, allowing for timely maintenance and repairs to prevent failures and ensure the integrity of your infrastructure.",
+      "Maximize operational efficiency and safety in your oil and gas operations with Vista Drone Services. Our specialized drone solutions are tailored to the unique demands of the Middle East's oil and gas sector, providing precise aerial data that enhances exploration, site assessment, and resource management. Equipped with state-of-the-art drones featuring high-resolution cameras and advanced sensors, we conduct comprehensive aerial surveys of your oil fields, pipelines, and offshore platforms. This generates detailed maps and 3D models that facilitate accurate monitoring and management of your assets. By capturing extensive, high-quality data quickly and safely from above, we streamline the inspection process and reduce reliance on traditional ground surveys. This approach not only minimizes risk to personnel but also decreases operational downtime, allowing for timely identification of issues such as leaks, structural damage, and environmental concerns. Our services ensure that you maintain optimal operational efficiency and safety standards, driving the success of your oil and gas projects in the dynamic Middle Eastern market.",
     image: oil,
     service_description: [
       {
         title: "Flare stack inspection",
         content:
-          "Drones obtain detailed images of flare stack heads. Drones capture images in a very short period of time, making repairs and maintenance less expensive and time-consuming.",
+          "Drones quickly capture detailed images of flare stack heads, reducing the time and cost of repairs and maintenance.",
           image: Diameter,
           color : "rose"
       },
@@ -477,25 +477,26 @@ export const services: Service[] = [
       {
         title: "Offshore oil rig inspections",
         content:
-          "Working offshore complicates the inspection of oil rigs and exposes workers to greater risk. Drones send real-time information to operators on the platform while flying within a few meters of the offshore platform.",
+          "Drones provide real-time, high-definition visuals for offshore oil rig inspections, reducing risk and aiding in precise maintenance planning.",
           image: Diameter,
           color : "rose"
       },
-      {
-        title: "Pilferage point Inspections",
-        content:" Security surveillance of pipelines against theft.",
-          image: Diameter,
-          color : "rose"
-      },
+      
       {
         title: "Tailings pond inspection",
-        content:" Using drones for this application makes it possible to gather information in hazardous environments, and extreme weather conditions should no longer be a barrier to conducting such inspections.",
+        content:" Drones enable data collection in hazardous environments, overcoming barriers like extreme weather for safer and more efficient inspections.",
+          image: Diameter,
+          color : "rose"
+      },
+      {
+        title: "Oil spill and oil spill detection",
+        content:"Drones swiftly detect and measure oil spills, providing real-time data on location and spread, enabling faster, targeted response.",
           image: Diameter,
           color : "rose"
       },
       {
         title: "Monitor gas emissions",
-        content:"The highly sensitive optical sensors provided by drones help monitor gas emissions at critical sites and in large areas that are difficult to cover. Drones help reduce the cost of performing such inspections and enable safe 3-D mapping of drilling sites, natural gas pipelines, landfills, and other municipal operations.",
+        content:"Drones with optical sensors efficiently monitor gas emissions over large areas, reducing costs and enabling safe 3D mapping of critical sites.",
           image: Diameter,
           color : "rose"
       },
@@ -504,7 +505,7 @@ export const services: Service[] = [
     ],
     benefits: [
       {
-        title: "Enhanced Safety and Efficiency in Inspections",
+        title: "Enhanced Safety and Efficiency ",
         content:
           "Reduce the risk of accidents with regular inspections, ensuring that infrastructure components are in good condition and identifying hazards early.",
         icon: "https://placehold.co/100x100",
@@ -524,13 +525,13 @@ export const services: Service[] = [
       {
         title: "Emergency Response",
         content:
-          "Maintain compliance with up-to-date inspection data, ensuring that your operations meet all required standards and regulations.",
+          "Drones provide real-time aerial assessments for rapid and effective emergency management in hazardous situations.",
         icon: "https://placehold.co/100x100",
       },
       {
         title: "More Accurate Data Collection",
         content:
-          "Maintain compliance with up-to-date inspection data, ensuring that your operations meet all required standards and regulations.",
+          "Drones capture high-resolution, detailed data for precise monitoring and analysis of oil and petroleum assets.",
         icon: "https://placehold.co/100x100",
       },
     ],
@@ -542,14 +543,39 @@ export const services: Service[] = [
           " Drones reduce the need for manual inspections in hazardous areas, thereby minimizing risk to human inspectors and providing a safer, more efficient inspection process.",
       },
       {
-        question: "What types of faults can drones detect in power lines?",
+        question: "How do drones detect oil and gas leaks",
         answer:
-          " Drones can detect a variety of faults including corrosion, wear and tear, broken wires, vegetation encroachment, and heat anomalies that indicate potential failures.",
+          " Drones equipped with thermal imaging technology can detect temperature differences between fluids and the surrounding environment, allowing for the identification of oil and gas leaks.",
       },
       {
-        question: "How frequently should infrastructure be inspected using drones?",
+        question: "What are the benefits of using drones for offshore oil rig inspections?",
         answer:
-          "The frequency depends on the type and condition of the infrastructure, but semi-annual or annual inspections are common for most assets, with more frequent inspections recommended for high-risk areas.",
+          "Drones provide real-time, high-definition visuals that help reduce risk, enhance safety, and aid in precise maintenance planning for offshore oil rigs.",
+      },
+      {
+        question: "How can drones help in detecting and responding to oil spills?",
+        answer:
+          "Drones swiftly detect oil spills and measure their extent, providing real-time data on their location and spread, which facilitates quicker and more targeted response efforts.",
+      },
+      {
+        question: "What advantages do drones offer for monitoring gas emissions?",
+        answer:
+          "Drones equipped with optical sensors can efficiently monitor gas emissions over large areas, reducing costs and enabling safe, detailed 3D mapping of critical sites.",
+      },
+      {
+        question: "How do drones contribute to better leak detection capabilities?",
+        answer:
+          "By providing high-resolution, real-time data, drones improve the accuracy of leak detection, enabling timely maintenance and optimizing resource allocation.",
+      },
+      {
+        question: "What are the cost benefits of using drones for asset maintenance?",
+        answer:
+          "Drones reduce maintenance costs by providing up-to-date inspection data, helping maintain compliance and allowing for efficient resource allocation and reduced downtime.",
+      },
+      {
+        question: "How do drones support emergency response efforts?",
+        answer:
+          "Drones offer real-time aerial assessments that enhance emergency response by providing critical information quickly and safely in hazardous situations.",
       },
     ],
   },
