@@ -8,7 +8,21 @@ import green from '@/assets/images/green energy/wind-1.jpg'
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import { ForwardRefExoticComponent, RefAttributes } from "react";
 import { Aperture, BarChart, Cctv, Diameter, LucideProps } from "lucide-react";
+import { GiEclipseFlare,GiLeadPipe,GiOffshorePlatform,GiMoebiusTrefoil,GiGasMask,GiBarrelLeak,GiMoneyStack,GiBonsaiTree,GiPathDistance,GiProgression,GiCargoCrane } from "react-icons/gi";
+import { BsDatabaseFillCheck } from "react-icons/bs";
 
+import { PiWall } from "react-icons/pi";
+import { VscLightbulbSparkle } from "react-icons/vsc";
+
+import { SiSpond,SiExoscale } from "react-icons/si";
+import { MdHealthAndSafety,MdSos } from "react-icons/md";
+import { FaDatabase,FaMapMarkedAlt,FaCheck,FaPlusCircle } from "react-icons/fa";
+import { AiOutlineSafetyCertificate,AiOutlineSafety } from "react-icons/ai";
+
+
+
+import { FaHelmetSafety } from "react-icons/fa6";
+import { IconType } from "react-icons/lib";
 
 
 
@@ -21,16 +35,16 @@ interface Service {
   faq: faq[];
 }
 
-type benefits = {
+export type benefits = {
   title: string;
   content: string;
-  icon: string;
+  icon: ForwardRefExoticComponent<Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>> | IconType ;
 };
 
 export type description = {
   title: string;
   content: string;
-  image: ForwardRefExoticComponent<Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>>;
+  image: ForwardRefExoticComponent<Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>> | IconType;
   color  : string
 };
 
@@ -65,20 +79,20 @@ export const services: Service[] = [
         title: "Volumetric Measurements",
         content:
           "Accurate calculation of stockpile volumes and excavation quantities is essential for inventory management and project planning. Our drones measure volumes with high precision, providing detailed reports that help in tracking material movement, ensuring compliance with contractual agreements, and optimizing resource allocation.",
-          image: Diameter,
+          image: SiExoscale,
           color : "rose"
       },
       {
         title: "Environmental Impact Assessments",
         content:
           "We conduct thorough environmental assessments to help you comply with regulatory standards. This includes monitoring for potential environmental damage, such as soil erosion, water contamination, and deforestation, and providing actionable data to support sustainable practices and minimize environmental impact.",
-          image: BarChart,
+          image: GiBonsaiTree,
           color : "rose"
       },
       {
         title: "Exploration & Planning",
         content: "Lease hold area Survey & mapping Digital Terrain Modelling (DTM) of the entire site , Digital Surface Modelling (DSM) of the entire site Excavation & Environmental impact Assessment",
-          image: BarChart,
+          image: FaMapMarkedAlt,
           color : "rose"
       },
       {
@@ -93,37 +107,37 @@ export const services: Service[] = [
         title: "Enhanced Safety",
         content:
           "Minimize on-ground risks by utilizing aerial data collection, reducing the need for personnel in hazardous areas.",
-        icon: "https://placehold.co/100x100",
+      icon: AiOutlineSafetyCertificate,
       },
       {
         title: "Cost Efficiency",
         content:
           "Reduce operational costs with precise data and efficient resource management, avoiding over-extraction and optimizing resource use.",
-        icon: "https://placehold.co/100x100",
+        icon: GiMoneyStack,
       },
       {
         title: "Accurate Data",
         content:
           "Obtain high-precision data for better decision-making and project planning, ensuring more accurate forecasting and budgeting.",
-        icon: "https://placehold.co/100x100",
+        icon:BsDatabaseFillCheck,
       },
       {
         title: "Distances",
         content:
           "Any specific distance can be measured precisely whether horizontally or vertically.",
-        icon: "https://placehold.co/100x100",
+        icon:GiPathDistance,
       },
       {
         title: "Boundaries",
         content:
           "The lease boundary can be geo-tagged and generated to view the limits more accurately and plan suitably.  ",
-        icon: "https://placehold.co/100x100",
+        icon:PiWall,
       },
       {
         title: "Accurate Data",
         content:
           "Obtain high-precision data for better decision-making and project planning, ensuring more accurate forecasting and budgeting.",
-        icon: "https://placehold.co/100x100",
+        icon:FaHelmetSafety,
       },
     ],
     faq: [
@@ -203,28 +217,28 @@ export const services: Service[] = [
       {
         title: "Increased Efficiency",
         content: "Streamlined inspection processes",
-        icon: "https://placehold.co/100x100",
+        icon:FaHelmetSafety,
       },
       {
         title: "Enhanced Safety",
         content:"Minimized need for manual inspections in hazardous areas",
-        icon: "https://placehold.co/100x100",
+        icon:FaHelmetSafety,
       },
       {
         title: "High Precision",
         content:
           "Achieve detailed and accurate survey results for better planning and execution, ensuring project accuracy and regulatory compliance",
-        icon: "https://placehold.co/100x100",
+        icon:FaHelmetSafety,
       },
       {
         title: "Data-Driven Decisions",
         content:"Access to accurate, timely data",
-        icon: "https://placehold.co/100x100",
+        icon:FaHelmetSafety,
       },
       {
         title: "Regulatory Compliance",
         content:"Continuous monitoring supports meeting safety and environmental regulations",
-        icon: "https://placehold.co/100x100",
+        icon:FaHelmetSafety,
       },
     ],
     faq: [
@@ -299,37 +313,37 @@ export const services: Service[] = [
         title: "Improved Yield",
         content:
           " Enhance crop productivity with precise data insights, ensuring optimal growth conditions and timely interventions.",
-        icon: "https://placehold.co/100x100",
+        icon:FaHelmetSafety,
       },
       {
         title: "Resource Management",
         content:
           " Optimize resource usage and reduce waste, leading to cost savings and more sustainable farming practices.",
-        icon: "https://placehold.co/100x100",
+        icon:FaHelmetSafety,
       },
       {
         title: "Sustainability",
         content:
           "Promote sustainable farming practices with advanced technology, reducing the environmental impact of agricultural activities.",
-        icon: "https://placehold.co/100x100",
+        icon:FaHelmetSafety,
       },
       {
         title: "Monitoring Plant Health",
         content:
           "Software analysis can be used to change values in order to reflect the specific crop type and even in which stage of life a specific crop is in.",
-        icon: "https://placehold.co/100x100",
+        icon:FaHelmetSafety,
       },
       {
         title: "Monitoring Field Condition",
         content:
           "Drones provide accurate field mapping.Having information on field elevation is useful in determining drainage patterns and wet/dry spots which allow for more efficient watering techniques.",
-        icon: "https://placehold.co/100x100",
+        icon:FaHelmetSafety,
       },
       {
         title: "Planting And Seeding",
         content:
           "Automated drone seeders are mostly being used in forestry industries.Planting with drones means very hard to reach areas can be re-planted without endangering farmers.",
-        icon: "https://placehold.co/100x100",
+        icon:FaHelmetSafety,
       },
     ],
     faq: [
@@ -352,6 +366,11 @@ export const services: Service[] = [
     ],
   },
  
+
+
+
+
+
   {
     title: "Civil Construction",
     description:
@@ -362,40 +381,40 @@ export const services: Service[] = [
         title: "Site Planning:",
         content:
           "We provide detailed site analysis and 3D modeling for effective planning. This includes pre-construction surveys to identify potential challenges, optimize site layout, and plan logistics. Our drones generate high-resolution orthomosaic maps and digital elevation models (DEMs) that assist in site preparation and design.",
-          image: Diameter,
+          image: VscLightbulbSparkle,
           color : "rose"
       },
       {
         title: "Progress Monitoring",
         content:
           " Our drones conduct regular aerial updates to track project milestones. High-resolution images and videos help in documenting progress, identifying potential delays, and ensuring adherence to timelines. We also provide 4D modeling that integrates time as a component, allowing you to visualize project progress over time.",
-          image: Diameter,
+          image: GiProgression,
           color : "blue"
       },
       {
         title: "Safety Inspections",
         content:
           "Identify potential hazards and ensure compliance with safety standards through regular aerial inspections. This includes monitoring for unsafe working conditions, verifying compliance with OSHA regulations, and providing data for safety audits. Our drones can access hard-to-reach areas, reducing the need for scaffolding or manual inspections.",
-          image: Diameter,
+          image: AiOutlineSafety,
           color : "rose"
       },
       {
         title: "Quality Control",
         content:
           " Conduct thorough quality assessments with high-resolution imagery. This allows for early detection of construction defects, such as structural anomalies or poor workmanship, ensuring that the work meets the required standards. We also provide thermal imaging to detect insulation issues and identify energy inefficiencies.",
-          image: Diameter,
+          image: FaCheck,
           color : "rose"
       },
       {
         title: "Earthwork and Volume Measurements",
         content:"Calculating cut-and-fill volumes ,Monitoring material usage and site topography changes",
-          image: Diameter,
+          image: GiCargoCrane,
           color : "rose"
       },
       {
         title: "Safety and Security",
         content: "Surveillance to ensure site safety and compliance,Monitoring unauthorized access and theft prevention",
-          image: Diameter,
+          image: FaPlusCircle,
           color : "rose"
       },
     ],
@@ -404,34 +423,34 @@ export const services: Service[] = [
         title: "Enhanced Oversight",
         content:
           " Keep track of project progress with up-to-date aerial data, providing clear and accurate documentation for stakeholders and investors.",
-        icon: "https://placehold.co/100x100",
+        icon:FaHelmetSafety,
       },
       {
         title: "Cost Savings",
         content:
           "Reduce delays and budget overruns with efficient monitoring, ensuring that potential issues are identified and addressed promptly.",
-        icon: "https://placehold.co/100x100",
+        icon:FaHelmetSafety,
       },
       {
         title: " Environmental Monitoring",
         content:"Compliance ,Erosion and Drainage Monitoring",
-        icon: "https://placehold.co/100x100",
+        icon:FaHelmetSafety,
       },
       {
         title: "Improved Safety",
         content:
           "Conduct remote inspections to maintain a safe work environment, reducing the need for personnel to access hazardous areas.",
-        icon: "https://placehold.co/100x100",
+        icon:FaHelmetSafety,
       },
       {
         title: "Progress Tracking and Reporting",
         content:"Real-Time Monitoring , Visual Documentation",
-        icon: "https://placehold.co/100x100",
+        icon:FaHelmetSafety,
       },
       {
         title: "Improved Communication and Collaboration",
         content:"Visual Data Sharing , Remote Accessibility",
-        icon: "https://placehold.co/100x100",
+        icon:FaHelmetSafety,
       },
     ],
     faq: [
@@ -464,40 +483,40 @@ export const services: Service[] = [
         title: "Flare stack inspection",
         content:
           "Drones quickly capture detailed images of flare stack heads, reducing the time and cost of repairs and maintenance.",
-          image: Diameter,
+          image: GiEclipseFlare,
           color : "rose"
       },
       {
         title: "Pipeline inspections",
         content:
           "Using thermal imaging technology, temperature differences between fluids and the ground can be easily detected and oil and gas leaks can be found.",
-          image: Diameter,
+          image: GiLeadPipe,
           color : "rose"
       },
       {
         title: "Offshore oil rig inspections",
         content:
           "Drones provide real-time, high-definition visuals for offshore oil rig inspections, reducing risk and aiding in precise maintenance planning.",
-          image: Diameter,
+          image: GiOffshorePlatform,
           color : "rose"
       },
       
       {
         title: "Tailings pond inspection",
         content:" Drones enable data collection in hazardous environments, overcoming barriers like extreme weather for safer and more efficient inspections.",
-          image: Diameter,
+          image: SiSpond,
           color : "rose"
       },
       {
         title: "Oil spill and oil spill detection",
         content:"Drones swiftly detect and measure oil spills, providing real-time data on location and spread, enabling faster, targeted response.",
-          image: Diameter,
+          image: GiMoebiusTrefoil,
           color : "rose"
       },
       {
         title: "Monitor gas emissions",
         content:"Drones with optical sensors efficiently monitor gas emissions over large areas, reducing costs and enabling safe 3D mapping of critical sites.",
-          image: Diameter,
+          image: GiGasMask,
           color : "rose"
       },
 
@@ -508,31 +527,31 @@ export const services: Service[] = [
         title: "Enhanced Safety and Efficiency ",
         content:
           "Reduce the risk of accidents with regular inspections, ensuring that infrastructure components are in good condition and identifying hazards early.",
-        icon: "https://placehold.co/100x100",
+        icon: MdHealthAndSafety,
       },
       {
         title: "Better Leak Detection Capabilities",
         content:
           "Optimize maintenance schedules and resource allocation, reducing downtime and improving the overall performance of infrastructure assets.",
-        icon: "https://placehold.co/100x100",
+        icon:GiBarrelLeak,
       },
       {
         title: "Reduced Asset Maintenance Costs",
         content:
           "Maintain compliance with up-to-date inspection data, ensuring that your operations meet all required standards and regulations.",
-        icon: "https://placehold.co/100x100",
+        icon:GiMoneyStack,
       },
       {
         title: "Emergency Response",
         content:
           "Drones provide real-time aerial assessments for rapid and effective emergency management in hazardous situations.",
-        icon: "https://placehold.co/100x100",
+        icon:MdSos,
       },
       {
         title: "More Accurate Data Collection",
         content:
           "Drones capture high-resolution, detailed data for precise monitoring and analysis of oil and petroleum assets.",
-        icon: "https://placehold.co/100x100",
+        icon:FaDatabase,
       },
     ],
     faq: [
@@ -607,31 +626,31 @@ export const services: Service[] = [
         title: "Efficiency",
         content:
           "Drones have the ability to cover large areas quickly, streamlining the inspection process. In contrast, manual inspections are often labor-intensive and can take a considerable amount of time.",
-        icon: "https://placehold.co/100x100",
+        icon:FaHelmetSafety,
       },
       {
         title: "Cost Savings",
         content:
           "Solar panel inspection drones significantly reduce costs by reducing the need for workers and allowing faster inspection times, thereby reducing budgetary strain for solar farm operators.",
-        icon: "https://placehold.co/100x100",
+        icon:FaHelmetSafety,
       },
       {
         title: "Safety",
         content:
           "Solar panel inspections can be conducted remotely, reducing workplace accidents and injuries by eliminating the need for dangerous climbs or heavy equipment use.",
-        icon: "https://placehold.co/100x100",
+        icon:FaHelmetSafety,
       },
       {
         title: "High-Quality Imaging",
         content:
           "Drones with high-resolution cameras can capture detailed images of solar panels, enabling the identification of invisible damage, dirt, or defects, preventing irrevocable damage.",
-        icon: "https://placehold.co/100x100",
+        icon:FaHelmetSafety,
       },
       {
         title: "Thermal Imaging",
         content:
           "Drones with thermal imaging cameras that can detect hotspots on solar panels where energy may be getting wasted due to damage or other issues. This technology helps operators identify areas in need of repair or replacement.",
-        icon: "https://placehold.co/100x100",
+        icon:FaHelmetSafety,
       },
     ],
     faq: [

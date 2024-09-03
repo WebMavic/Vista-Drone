@@ -1,4 +1,4 @@
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/utils"
 import { ForwardRefExoticComponent, ReactNode, RefAttributes } from "react";
 import { ArrowRightIcon, LucideProps} from "lucide-react";
 import Link from "next/link";
@@ -11,6 +11,7 @@ const BentoGrid = ({
   children: ReactNode;
   className?: string;
 }) => {
+  
   return (
     <div
       className={cn(

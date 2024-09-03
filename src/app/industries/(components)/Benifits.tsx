@@ -1,15 +1,11 @@
 import React from 'react'
 import SectionLayout from '@/components/ui/SectionLayout'
 import { ShieldAlert } from 'lucide-react';
-type ben = {
-    title: string;
-    content: string;
-    icon: string;
+import { benefits } from '@/utils/data';
 
-}
 
 interface Benefit {
-        content: ben[];
+        content: benefits[];
   
     }
 
@@ -21,15 +17,17 @@ function Benifits({content}:Benefit) {
         </h3>
 
       <div className="grid lg:grid-cols-3  gap-4 mt-20">
-      {content.map((benefit, index) => (
+      {content.map(({content,icon : Icon,title}, index) => (
         <div key={index} className="flex flex-col cursor-pointer items-center space-y-2 text-center  p-5 ">
-          <div className='bg-blue-400 flex justify-center items-center' id='modern' >
-          {/* <Image src={safety} alt="icon" className="size-20 p-1.5"  /> */}
-          <ShieldAlert className='size-16 p-2.5 text-white' />
+          <div className='bg-blue-400  flex justify-center items-center' id='modern' >
+            <span className='p-4'>
+            <Icon className="size-10 "  />
+            </span>
+
           </div>
 
-          <h3 className="text-lg font-bold text-heading group-hover:text-white ">{benefit.title}</h3>
-          <p className="text-sm text-subheading group-hover:text-white">{benefit.content}</p>
+          <h3 className="text-lg font-bold text-heading group-hover:text-white ">{title}</h3>
+          <p className="text-sm text-subheading group-hover:text-white">{content}</p>
         </div>
       ))}
       </div>

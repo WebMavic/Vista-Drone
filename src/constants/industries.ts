@@ -1,12 +1,19 @@
 import { serviceIcons } from "@/utils/images";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import { FanIcon, LucideProps } from "lucide-react";
+import { MdOilBarrel } from "react-icons/md";
+import { MdOutlineWindPower } from "react-icons/md";
+import { GiGoldMine } from "react-icons/gi";
+import { GiSteelClaws } from "react-icons/gi";
+
+
 import { ForwardRefExoticComponent, ReactNode, RefAttributes } from "react";
+import { IconType } from "react-icons/lib";
 
 type Industry = {
   title: string;
   icon?: string | StaticImport
-  Icon?: ForwardRefExoticComponent<Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>>;
+  Icon?: ForwardRefExoticComponent<Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>> | IconType;
   description?: string;
   className?: string;
   background?: string;
@@ -29,7 +36,7 @@ export const industries: Industry[] = [
   {
     title: "Mining",
     href: "/industries/mining",
-    icon: serviceIcons[3],
+    Icon: GiGoldMine,
     background:
       "https://www.nanofiltersolutions.com/images/sectors/Mining-Gas-and-Oil-5.jpg",
     className: "lg:row-span-2",
@@ -40,14 +47,14 @@ export const industries: Industry[] = [
   {
     title: "Oil and Gas",
     href: "/industries/oil-and-gas",
-    icon: serviceIcons[4],
+    Icon: MdOilBarrel,
     className: "lg:col-span-1",
     background:
       "https://www.nanofiltersolutions.com/images/sectors/Mining-Gas-and-Oil-5.jpg",
   },
   {
     title: "Green Energy",
-    //   icon: ,
+    Icon: MdOutlineWindPower,
     href: "/industries/green-energy",
     background: "https://avaada.com/wp-content/uploads/solar-and-wind.jpg",
     className: "lg:row-span-2",
@@ -56,7 +63,7 @@ export const industries: Industry[] = [
   },
   {
     title: "Steel Industry",
-    Icon: FanIcon,
+    Icon: GiSteelClaws,
     background:
       " https://www.futureelectronics.com/blog/wp-content/uploads/2023/05/drone-delivery-services.jpg",
     description:

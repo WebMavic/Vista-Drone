@@ -20,8 +20,6 @@ function page() {
       <DroneTech />
       <DataSharing/>
       <SectionProjects />
-  
-      
     </>
   );
 }
