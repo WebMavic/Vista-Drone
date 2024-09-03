@@ -4,6 +4,7 @@ import { Button } from "./ui/Button";
 import SectionLayout from "./ui/SectionLayout";
 import Image from "next/image";
 import about from "@/assets/images/aboutbg.webp";
+import about1 from "@/assets/images/about1.jpg";
 import Chips from "./ui/Chips";
 import Reveal from "./Reveal";
 function SectionAbout() {
@@ -13,7 +14,7 @@ function SectionAbout() {
       <div className="flex h-full w-full  flex-col-reverse justify-between gap-5 lg:flex-row lg:gap-10">
         <div className="h-full lg:w-1/2">
           <Image
-            src={about}
+            src={about1}
             blurDataURL={about.blurDataURL}
             placeholder="blur"
             alt="image"

@@ -4,8 +4,9 @@ import SectionClient from "@/components/SectionClient";
 import SectionExpertise from "@/components/SectionExpertise";
 import SectionFeaturedServices from "@/components/SectionFeaturedServices";
 import SectionHero from "@/components/SectionHero";
-import SectionProjects from "@/components/SectionProjects";
+import Certification from "./about/(componets)/Certification";
 import SectionContact from "@/components/SectionContact";
+import DroneApplication from "@/components/Services/DroneApplication";
 
 export default function Home() {
   return (
@@ -16,7 +17,10 @@ export default function Home() {
       <SectionFeaturedServices />
       <SectionContact/>
       <SectionExpertise />
-      <SectionProjects />
+      <Certification/>
+      <DroneApplication/>
+      
+      {/* <SectionProjects /> */}
     </>
   );
 }
