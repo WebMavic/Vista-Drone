@@ -7,7 +7,6 @@ import { clientsLogos } from "@/utils/images";
 
 
 
-
 const firstRow = clientsLogos.slice(0, clientsLogos.length / 2);
 const secondRow = clientsLogos.slice(clientsLogos.length / 2);
 

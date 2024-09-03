@@ -1,3 +1,4 @@
+
 import React from "react";
 import SectionLayout from "@/components/ui/SectionLayout";
 import Chips from "@/components/ui/Chips";
@@ -26,7 +27,7 @@ function AboutUs() {
               className="rounded-2xl size-full object-cover"
             />
           </div>
-            <p className="text-left font-light text-subheading sm:w-3/4">
+            <p className="text-left  text-subheading sm:w-3/4">
               VISTA Drone Services LLC emerged from a blend of strategic
               foresight and extensive industrial experience. With over two
               decades of expertise in various sectors, our founders identified a

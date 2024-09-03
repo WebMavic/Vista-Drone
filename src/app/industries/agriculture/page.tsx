@@ -1,40 +1,25 @@
 import SectionHeader from "@/components/SectionHeader";
 import React from "react";
-import SectionLayout from "@/components/ui/SectionLayout";
 import { services } from "../../../utils/data";
 import SectionInfo from "../(components)/SectionInfo";
 import Benifits from "../(components)/Benifits";
 import SectionFaq from "../(components)/SectionFaq";
-import { StickyScroll } from "@/components/ui/sticky-scroll-reveal";
-import placeholder from "@/assets/images/placeholders/placeholder (3).png";
+import bg from "@/assets/images/agriculture/agri-6.jpg";
+import Services from "../(components)/Services";
 
-const content = services[2].service_description.map((item) => {
-  return {
-    title: item.title,
-    description: item.content,
-    content: (
-      <img
-        src={item.image}
-        alt={item.title}
-        className="h-full w-96 rounded-md object-cover"
-      />
-    ),
-  };
-});
+const service = services[2]
 
 const page = () => {
   return (
     <>
-      <SectionHeader title="Agriculture" background={'/v5.mp4'} placeholder={placeholder.src}/>
+      <SectionHeader title="Agriculture" image={bg}/>
       <SectionInfo
         title="Agriculture"
         content={services[2]?.description}
         image={services[2].image} 
       />
 
-      <SectionLayout className="bg-primary2">
-        <StickyScroll content={content} />
-      </SectionLayout>
+      <Services services={service.service_description}/>
 
       <Benifits content={services[2].benefits} />
 

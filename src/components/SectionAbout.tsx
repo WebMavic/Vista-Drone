@@ -1,37 +1,22 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import Button from "./ui/Button";
+import {Button} from "./ui/Button";
 import SectionLayout from "./ui/SectionLayout";
 import Image from "next/image";
+import about from "@/assets/images/aboutbg.webp"
 function SectionAbout() {
 
   return (
     <SectionLayout className="h-full bg-white">
-      <div className="flex h-full w-full items-start justify-between gap-11">
-
-        {/* <motion.div className="sm:w-1/2"   initial={{ scale: 0.8, opacity: 0 }}
-            whileInView={{ scale: 1, opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1 }}>
-              <Image 
-                width={0}
-                height={0}
-                sizes="100vw"
-                src="https://images.unsplash.com/photo-1555009306-9e3c5b6a66e3?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                alt="about-image"
-                className="hidden w-2/3 h-auto rounded-2xl shadow-md sm:block"
-              />
-        </motion.div> 
-        */}
-
-        <div className="w-1/2 space-y-5">
+      <div className="flex h-full w-full lg:items-start items-center justify-between lg:gap-10 gap-5 flex-col-reverse lg:flex-row">
+        <div className="lg:w-1/2 space-y-5">
           <motion.h1
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1 }}
-            className="font-medium uppercase text-primary dark:text-white text-6xl"
+            className="font-medium uppercase text-primary dark:text-white text-6xl text-center lg:text-left"
           >
             About Us
           </motion.h1>
@@ -42,39 +27,25 @@ function SectionAbout() {
             transition={{ duration: 0.5 }}
             className="text-pretty font-light  text-subheading"
           >
-            Our strategic positioning is bolstered by strong support from R&D
-            labs and experts at the Indian Institute of Technology, India, and
-            its Abu Dhabi branch, as well as the Lima College of Engineering,
-            Abu Dhabi. This collaboration enables us to innovate and integrate
-            cutting-edge technologies, supported by reputable international
-            drone manufacturers.
-          </motion.p>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="text-pretty font-light  text-subheading"
-          >
-            Our strategic positioning is bolstered by strong support from R&D
-            labs and experts at the Indian Institute of Technology, India, and
-            its Abu Dhabi branch, as well as the Lima College of Engineering,
-            Abu Dhabi. This collaboration enables us to innovate and integrate
-            cutting-edge technologies, supported by reputable international
-            drone manufacturers.
+            Vista Drone UAV LLC is a registered company with the Department of Economic Development, Government of UAE, under commercial license number CN-5384149.
+            We offer professional drone services(end to end solutions, like aerial data/picture acquisition to the processing and report submission) across multiple sectors, including Agriculture & Livestock, Green Energy, Oil & Gas fields, Civil Constructions, Mining, Safety and Surveillance etc. Our team comprises trained and certified drone pilots with experience of over 5 to 6 years in the respective field.
+
           </motion.p>
 
-          <Button
-            href="/about" type="outline"
-            title="Learn more"
-            // className=""
-          />
+          <Button variant={"outline"}>
+            Learn More
+          </Button>
         </div>
 
-        <img
-            src="https://images.unsplash.com/photo-1555009306-9e3c5b6a66e3?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt="image"
-            className="rounded-2xl object-cover w-1/2 h-[28rem]"
-          />
+            <div className="lg:w-1/2" >
+              <Image
+                  src={about}
+                  blurDataURL={about.blurDataURL}
+                  placeholder="blur"
+                  alt="image"
+                  className="object-cover rounded-2xl " id="leaf"
+                />
+            </div>
       </div>
     </SectionLayout>
   );

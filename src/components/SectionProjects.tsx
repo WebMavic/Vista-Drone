@@ -8,7 +8,6 @@ import SectionLayout from "./ui/SectionLayout";
 import { projectImages } from "@/utils/images";
 import "swiper/css";
 import "swiper/css/pagination";
-import { LayoutGrid } from "./ui/LayoutGrid";
 import proj1 from "@/assets/images/projects/project-1.jpg";
 import proj2 from "@/assets/images/projects/project-2.jpg";
 import proj3 from "@/assets/images/projects/project-3.jpg";
@@ -61,24 +60,24 @@ const cards = [
 
 function SectionProjects() {
   return (
-    <SectionLayout className="bg-primary2">
+    <SectionLayout className="bg-white">
       <div className="space-y-4">
         <Chips title="Vista Projects" />
         <h2 className="sm:w-2/3 text-4xl font-bold text-heading">
           Project Delivered in Market
         </h2>
       </div>
-      <div className="my-5 w-full h-screen hidden lg:block">
+      {/* <div className="my-5 w-full h-screen hidden lg:block">
         <LayoutGrid cards={cards} />
-      </div>
-      <div className="block lg:hidden my-5">
+      </div> */}
+      <div className="my-5">
 
       <Swiper
         slidesPerView={1}
         spaceBetween={10}
         centeredSlides={true}
         autoplay={{
-          delay: 5000,
+          delay: 1000,
           pauseOnMouseEnter: true,
         }}
         
@@ -95,7 +94,7 @@ function SectionProjects() {
                 src={image}
                 alt={index + "drone"}
                 placeholder="blur"
-                className="object-cover h-96 rounded-lg overflow-hidden "
+                className="object-cover h-96 rounded-lg overflow-hidden w-full "
               />
            
           </SwiperSlide>

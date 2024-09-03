@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Space_Grotesk, Nunito } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-const font = Nunito({
-  weight: ["200","300", "400", "500", "600", "700","800","900","1000"],
+const font = Inter({
+  weight: ["200","300", "400", "500", "600", "700","800","900"],
   subsets: ["latin"],
   display: "swap",
 });

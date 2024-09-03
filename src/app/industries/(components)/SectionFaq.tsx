@@ -11,7 +11,7 @@ type faq = {
 
 function SectionFaq({faqs}: {faqs: faq[]}) {
   return (
-    <SectionLayout className="bg-primary2 relative">
+    <SectionLayout className="relative bg-white">
       <div className="space-y-4 mb-5">
         <Chips title="FAQs" />
         <h2 className="text-4xl font-bold capitalize dark:text-primary ">
@@ -19,7 +19,7 @@ function SectionFaq({faqs}: {faqs: faq[]}) {
         </h2>
       </div>
 
-        <div className="flex justify-between gap-10 items-center">
+        <div className="flex justify-between gap-10 items-start">
         <div className="flex-1 "> 
        
                     {faqs.map((ques,index) => (
@@ -33,8 +33,8 @@ function SectionFaq({faqs}: {faqs: faq[]}) {
                     ))}
                   
         </div>
-                      <div className='w-3/12 hidden lg:block '>
-        <img src="https://www.clutterflyapp.com/img/faq.png" alt="img" className="size-full p-2 object-cover" />
+                      <div className='w-3/6 hidden lg:block '>
+        <img src="https://www.clutterflyapp.com/img/faq.png" alt="img" className="size-96 p-2 object-cover" />
 
                       </div>
 

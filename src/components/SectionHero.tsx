@@ -1,22 +1,13 @@
 import React from "react";
-import Button from "@/components/ui/Button";
-import { TypewriterEffectSmooth } from "./ui/typewriter-effect";
-import placeholder from "@/assets/images/placeholders/placeholder (2).png";
-import home from "@/assets/images/home_bg.png";
-import Image from "next/image";
-const string = "lorem ipsum dolor sit amet, consectetur adipisicing elit.";
-const words = string.split(" ").map((word) => {
-  return { text: word };
-});
+import {Button} from "@/components/ui/Button";
 
 function SectionHero() {
   return (
-    <section className="hero w-full overflow-hidden px-5 sm:h-screen sm:px-28">
+    <section className="hero w-full overflow-hidden px-5 lg:h-screen lg:px-28">
       <div className="flex h-full w-full flex-col lg:w-1/2 items-start justify-center gap-6 py-24 ">
         <h1 className="text-3xl font-medium text-white md:text-4xl lg:text-7xl ">
           Elevate Your Vision Cutting Edge UAV Solutions Await
         </h1>
-        {/* <TypewriterEffectSmooth words={words} /> */}
         <p className="text-body font-light  ">
           Vista Drone captures and maps aerial data in a smart, cost-effective
           manner, empowering businesses to make informed decisions. We help you
@@ -24,11 +15,9 @@ function SectionHero() {
           UAV services.
         </p>
 
-        <Button
-          title="Explore Services"
-          href="/services"
-          type="primary"
-        />
+        <Button>
+          Explore
+        </Button>
       </div>
     </section>
   );
