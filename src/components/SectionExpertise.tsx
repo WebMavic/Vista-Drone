@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useRef } from "react";
 import Chips from "./ui/Chips";
 import SectionLayout from "./ui/SectionLayout";
 import { motion} from "framer-motion";
@@ -8,11 +8,22 @@ import {
   ArrowTrendingUpIcon,
   UserIcon,
 } from "@heroicons/react/24/outline";
+import inner from "@/assets/images/home_inner_05.png";
+
+
 
 function SectionExpertise() {
+
   return (
-    <SectionLayout className="bg-white">
-      <div className="h-full w-full">
+    <SectionLayout className="min-h-screen relative ">
+      <div className="h-full w-full ">
+        <div className="absolute left-0 top-0 h-80 pointer-events-none select-none">
+          <img
+            src={inner.src}
+            alt="inner-4"
+            className="h-full w-full object-cover opacity-80 mix-blend-darken"
+          />
+        </div>
         <div className="space-y-3 text-center">
           <Chips className="text-primary" title="Our expertise" />
           <h2 className="text-4xl font-bold text-heading ">Why Choose Us</h2>
@@ -21,29 +32,27 @@ function SectionExpertise() {
           </p>
         </div>
 
-        <div className="my-10  flex w-full flex-col items-center justify-between gap-5 sm:flex-row ">
+        <div className="relative  my-16 grid lg:grid-cols-3 ">
           {expertises.map((expertise, index) => (
             <motion.div
-              initial={{ scale: 0.8, opacity: 0,y:-100 }}
-              whileInView={{ scale: 1, opacity: 1 , y:0 }}
-
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
               viewport={{ once: true, }}
-              transition={{ duration: 0.5 , delay: index * 0.25,bounce:0.25,ease: "easeInOut"}}
-              className="group flex cursor-pointer flex-col items-start justify-center gap-5 rounded-md p-6 [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)] hover:bg-accent/80 lg:h-96 lg:max-w-96"
+              transition={{ delay: index * 0.25, ease: "linear" }}
+              className="group flex cursor-pointer  flex-col items-start justify-center gap-5 rounded-md p-6   transition  duration-300 ease-in-out lg:h-96 "
               key={index}
             >
-        
-              <expertise.avatar className="size-16 text-darksubheading group-hover:text-primary-100" />
-              <h2 className="text-xl font-bold uppercase text-heading group-hover:text-primary-100">
+              <expertise.avatar className="size-16 rounded-full  p-2 text-darksubheading group-hover:bg-accent/80 group-hover:text-white" />
+              <h2 className="text-xl font-bold uppercase text-heading ">
                 {expertise.title}
               </h2>
-              <p className="text-left text-subheading group-hover:text-primary-200 ">
+              <p className="text-left text-subheading ">
                 {expertise.description}
               </p>
-
-            </motion.div>))
-          }
+            </motion.div>
+          ))}
         </div>
+
       </div>
     </SectionLayout>
   );

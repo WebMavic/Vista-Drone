@@ -20,6 +20,7 @@ export type Hero = {
     background?: string
     avatar ?:StaticImport
     image?: StaticImport;
+    imageStyle?: string
     className? : HTMLProps<HTMLElement>["className"] ,
     customParaStyle? : ClassValue
 }

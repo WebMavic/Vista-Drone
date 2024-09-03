@@ -18,7 +18,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #eae8e8;
+  background-color: #fffefe;
 }
 
 /* nav ul li {
@@ -79,13 +79,16 @@ nav ul li a:hover:after {
   -webkit-border-radius: 20px 100px 100px 20px;
 }
 
-#modern { 
-  border-radius: 72% 28% 54% 46% / 31% 30% 70% 69%  ;
-  
+#modern {
+  border-radius: 72% 28% 54% 46% / 31% 30% 70% 69%;
 }
 
 .mask {
   clip-path: url(#svgPath);
+}
+
+.mask-image-hero {
+  mask-image: linear-gradient(to right, transparent 50%, #000 100%);
 }
 
 @layer components {
@@ -124,11 +127,8 @@ nav ul li a:hover:after {
   }
 
   .inputs {
-    @apply block w-full rounded-lg border border-gray-300 bg-gray-50 py-4 px-2 text-gray-900  
+    @apply block w-full rounded-lg border border-gray-300 bg-gray-50 px-2 py-4 text-gray-900;
   }
-
-
-  
 }
 
 @layer base {

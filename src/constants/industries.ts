@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { serviceIcons } from "@/utils/images";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import { FanIcon, LucideProps } from "lucide-react";

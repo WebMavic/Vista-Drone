@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { motion, useScroll, useMotionValueEvent } from "framer-motion";
+import { motion } from "framer-motion";
 import {
   XMarkIcon,
   ChevronDownIcon,
@@ -40,25 +40,7 @@ const navlinks: NavLinks[] = [
   { name: "FAQs", path: "/faq" },
 ];
 
-const navVariants = {
-  hidden: { y: "-100vh" },
-  visible: {
-    y: 0,
-    transition: {
-      duration: 0.3,
-      ease: "easeInOut",
-      type: "tweet",
-    },
-  },
-  exit: {
-    y: "-100vh",
-    transition: {
-      type: "tween",
-      duration: 0.3,
-      delay: 0.3,
-    },
-  },
-};
+
 
 const linkItemVariants = {
   hidden: { opacity: 0, y: "50%" },
@@ -107,18 +89,9 @@ function MobileNavigation({
   const pathname = usePathname();
 
   return (
-    // <motion.aside
-    //   variants={navVariants}
-    //   initial="hidden"
-    //   exit="exit"
-    //   animate={open ? "visible" : "hidden"}
-    //   className="absolute inset-0 left-0 top-0 z-50 flex h-screen w-full items-center justify-center  bg-white shadow-md  dark:bg-neutral-900 "
-    // >
+
     <motion.aside
-      variants={navVariants}
-      initial="hidden"
-      exit="exit"
-      animate={open ? "visible" : "hidden"}
+    
       className="flex h-full w-full items-center justify-center  bg-white shadow-md  dark:bg-neutral-900 "
     >
       <button

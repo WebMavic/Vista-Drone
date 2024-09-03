@@ -59,13 +59,14 @@ function Navbar() {
               onClose={() => setIsMobileNavVisible(false)}
               className="relative z-[9999]"
             >
+              <div className="fixed inset-0 bg-black/50"/>
               <TransitionChild
-                enter="transform transition ease-in-out duration-300"
-                enterFrom="translate-x-full"
-                enterTo="translate-x-0"
-                leave="transform transition ease-in-out duration-500"
-                leaveFrom="translate-x-0"
-                leaveTo="translate-x-full opacity-0"
+                 enter="transform transition ease-in-out duration-500"
+                 enterFrom="translate-x-full"
+                 enterTo="translate-x-0"
+                 leave="transform transition ease-in-out duration-500"
+                 leaveFrom="translate-x-0"
+                 leaveTo="translate-x-full opacity-0"
               >
                 <div className="fixed inset-0 right-0 top-0 ">
                   <DialogPanel className=" absolute right-0 h-screen w-1/2 space-y-4  border bg-white ">

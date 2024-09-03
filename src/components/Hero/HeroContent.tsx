@@ -21,6 +21,7 @@ const HeroContent = ({
     avatar,
     className,
     customParaStyle,
+    imageStyle,
   },
 }: HeroProps) => {
   return (
@@ -37,8 +38,7 @@ const HeroContent = ({
           <Image
             src={image}
             alt="img"
-            //   blurDataURL={image}
-            className="h-full w-full object-cover"
+            className={cn("h-full w-full object-cover ", imageStyle)}
           />
         )}
         {background && (
@@ -62,7 +62,7 @@ const HeroContent = ({
       <div
         className={cn(
           "relative z-10 flex h-full w-full flex-col items-start justify-center  py-24  ",
-          avatar && "lg:flex-row items-center justify-between ",
+          avatar && "items-center justify-between lg:flex-row ",
           className,
         )}
       >
@@ -95,8 +95,8 @@ const HeroContent = ({
           </Link>
         </Reveal>
 
-        <div className="hidden lg:block">
-          {avatar && (
+        {avatar && (
+          <div className="hidden lg:block">
             <Anime>
               <Image
                 src={avatar}
@@ -104,8 +104,8 @@ const HeroContent = ({
                 className="h-[30rem]  object-cover"
               />
             </Anime>
-          )}
-        </div>
+          </div>
+        )}
       </div>
     </>
   );

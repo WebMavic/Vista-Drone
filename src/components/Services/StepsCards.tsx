@@ -20,7 +20,7 @@ const StepsCards = () => {
               }}
               
               key={index}
-              className="relative flex h-[250px] w-[420px]  gap-4 rounded-2xl bg-primary/20 p-5 "
+              className="relative flex h-[250px]   gap-4 rounded-2xl bg-primary/20 p-5 "
             >
               <div className="absolute -top-10 left-5 flex size-10  items-center justify-center rounded-full border-[6px] border-primary2 bg-primary p-8 text-center text-2xl font-bold text-white">
                 <span>{card.id}</span>

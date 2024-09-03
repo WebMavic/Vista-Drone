@@ -6,7 +6,7 @@ import HeroContent from "./Hero/HeroContent";
 import { Hero } from "@/types/steps";
 import bg from "@/assets/images/draft.jpg";
 import drone from "@/assets/images/drone9.png"
-
+import bg2 from "@/assets/images/ricardo-gomez-angel.jpg";
 
 
 const heroOptions: Hero[] = [
@@ -36,14 +36,16 @@ const heroOptions: Hero[] = [
     description:
       "We help you unlock the limitless possibilities of the open sky with our top-tier UAV services.Vista Drone captures and maps aerial data in a smart",
     // background: "/v6.mp4",
-    avatar : drone,
+    // avatar : drone,
+    image : bg2,
     customParaStyle : 'w-1/2 ',
+    imageStyle : 'mask-image-hero'
   },
 
 ];
 
 function SectionHero() {
-  const [hero, setHero] = useState(0);
+  const [hero, setHero] = useState(1);
   return (
     <section className="relative w-full overflow-hidden px-5 lg:h-screen h-[70vh] lg:px-28">
       {hero === 0 && <HeroContent data={heroOptions[0]} />}
@@ -94,46 +96,3 @@ function SectionHero() {
 
 export default SectionHero;
 
-{
-  /*
-      <div className="hero-video absolute inset-0 left-0 top-0 z-[5] w-full overflow-hidden lg:h-screen">
-        <div className="div absolute top-0 z-[1] h-full w-full  bg-black/30 bg-blend-overlay " />
-        <Image src={home.src} alt="img" 
-        width={0} height={0} sizes="100vw" blurDataURL={home.blurDataURL}
-             className="h-full w-full object-cover" />
-         <video
-          poster={placeholder.src}
-          autoPlay 
-          width={"100%"}
-          muted
-          playsInline
-          preload="none"
-          loop
-          className="h-full w-full object-cover"
-        >
-          <source src="/v10.mp4" type="video/mp4" />
-          Your browser does not support the video.
-        </video> 
-      </div>
-      */
-}
-
-// <div className="hero-video absolute inset-0 left-0 top-0 z-[5] w-full overflow-hidden lg:h-screen">
-// <div className="div absolute top-0 z-[1] h-full w-full  bg-black/50 bg-blend-overlay " />
-// {/* <Image src={home.src} alt="img"
-// width={0} height={0} sizes="100vw" blurDataURL={home.blurDataURL}
-//      className="h-full w-full object-cover" /> */}
-//  <video
-//   // poster={placeholder.src}
-//   autoPlay
-//   width={"100%"}
-//   muted
-//   playsInline
-//   preload="none"
-//   loop
-//   className="h-full w-full object-cover"
-// >
-//   <source src="/MATRICE.mp4" type="video/mp4" />
-//   Your browser does not support the video.
-// </video>
-// </div>

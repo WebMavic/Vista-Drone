@@ -1,9 +1,9 @@
 import Link from "next/link";
 import React from "react";
-import SectionContact from "./SectionContact";
-import SectionLayout from "./ui/SectionLayout";
 import logo from "@/assets/images/vista.png"
 import Image from "next/image";
+
+
 const navlinks = [
   { name: "Home", path: "/" },
   { name: "Services", path: "/services" },
@@ -12,16 +12,7 @@ const navlinks = [
   { name: "Market", path: "/market" },
 ];
 
-{
-  /* <ul className ="mb-6 flex flex-wrap items-center text-sm font-medium text-gray-500 dark:text-gray-400 sm:mb-0">
-  {navlinks.map((link, index) => (
-    <li key={index} className ="me-4 hover:underline md:me-6">
-      <Link href={link.path}>{link.name}</Link>
-    </li>
-  ))} */
-}
-
-function Footer() {
+const Footer = () => {
   return (
 
     <footer className="bg-neutral-100" >
