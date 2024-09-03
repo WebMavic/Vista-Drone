@@ -16,6 +16,7 @@
     "@radix-ui/react-slot": "^1.1.0",
     "chart.js": "^4.4.4",
     "class-variance-authority": "^0.7.0",
+    "embla-carousel": "^8.2.0",
     "embla-carousel-react": "^8.2.0",
     "framer-motion": "^11.3.31",
     "lucide-react": "^0.390.0",

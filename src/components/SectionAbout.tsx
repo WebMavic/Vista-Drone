@@ -25,14 +25,14 @@ function SectionAbout() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="text-pretty font-light  text-subheading"
+            className="text-pretty-500 font-dark  text-subheading"
           >
             Vista Drone UAV LLC is a registered company with the Department of Economic Development, Government of UAE, under commercial license number CN-5384149.
             We offer professional drone services(end to end solutions, like aerial data/picture acquisition to the processing and report submission) across multiple sectors, including Agriculture & Livestock, Green Energy, Oil & Gas fields, Civil Constructions, Mining, Safety and Surveillance etc. Our team comprises trained and certified drone pilots with experience of over 5 to 6 years in the respective field.
 
           </motion.p>
 
-          <Button variant={"outline"}>
+          <Button variant={"outline"} className="ml-3 text-primary">
             Learn More
           </Button>
         </div>

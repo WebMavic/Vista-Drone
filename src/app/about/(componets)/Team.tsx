@@ -75,7 +75,7 @@ const teams = [
   },
   {
     name: "Shlok Srivastava",
-    role: "Co-Founder & CFO",
+    role: "Co-Founder & CTO",
     avatar: member2,
     bio: "A Canadian Citizen & Govt. Certified Petroleum Engineer of Alberta, Canada with a career dedicated to optimizing energy resources. Over eight years, he has excelled in bridging the gap between industry, government, and regulatory bodies to tackle pressing issues of food and energy security. Notably, his contributions include identifying key methane emission reduction opportunities in Canada’s LNG production system, spearheading Canada’s first oil well-to-geothermal conversion project, and developing a geospatial heatmap for CO2 emissions from large-scale energy processes for a feasible CCUS application.",
   },

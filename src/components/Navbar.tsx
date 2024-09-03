@@ -34,7 +34,7 @@ function Navbar() {
 
   return (
     <>
-      <header className="absolute top-0 z-[99] w-full bg-transparent px-5  sm:px-28">
+      <header className="absolute top-0 z-[99] w-full bg-accent/[.1] px-5  sm:px-28">
         <div className="flex min-h-20 items-center justify-between ">
           <Link href="/">
             <Image
@@ -47,7 +47,7 @@ function Navbar() {
 
           <div className="hidden flex-1 flex-shrink-0 items-center justify-end gap-3 md:flex lg:flex-none">
             <Navigation />
-            <Button title="Contact Us"  className="ml-3">
+            <Button title="Contact Us"  className="ml-3 text-primary">
               Contact
             </Button>
           </div>

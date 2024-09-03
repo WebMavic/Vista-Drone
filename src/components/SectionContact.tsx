@@ -23,7 +23,7 @@ function SectionContact() {
           </p>
         </div>
 
-        <div className="inline-flex flex-col gap-3">
+        <div className="ml-3  text-primary">
         <Button>Contact Us</Button>
         
           

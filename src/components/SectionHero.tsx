@@ -15,7 +15,7 @@ function SectionHero() {
           UAV services.
         </p>
 
-        <Button>
+        <Button className="ml-3 text-primary">
           Explore
         </Button>
       </div>

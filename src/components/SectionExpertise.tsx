@@ -14,7 +14,7 @@ function SectionExpertise() {
     <SectionLayout className="bg-white">
       <div className="h-full w-full">
         <div className="space-y-3 text-center">
-          <Chips title="Our expertise" />
+          <Chips className="text-primary" title="Our expertise" />
           <h2 className="text-4xl font-bold text-heading ">Why Choose Us</h2>
           <p className="mx-auto  text-subheading sm:w-2/6 ">
             Cultivating Excellence: Our Areas of Mastery
@@ -33,11 +33,11 @@ function SectionExpertise() {
               key={index}
             >
         
-              <expertise.avatar className="size-16 text-darksubheading group-hover:text-neutral-100" />
-              <h2 className="text-xl font-bold uppercase text-heading group-hover:text-neutral-100">
+              <expertise.avatar className="size-16 text-darksubheading group-hover:text-primary-100" />
+              <h2 className="text-xl font-bold uppercase text-heading group-hover:text-primary-100">
                 {expertise.title}
               </h2>
-              <p className="text-left text-subheading group-hover:text-neutral-200 ">
+              <p className="text-left text-subheading group-hover:text-primary-200 ">
                 {expertise.description}
               </p>
 
@@ -56,7 +56,7 @@ const expertises = [
     title: "Successfully projects delevering",
     avatar: ArrowTrendingUpIcon,
     description:
-      "Expertise and proficiency in Civil Infrastructure, Oil & Gas, Mining and Geology, and Green Energy",
+      "Expertise and proficiency in Civil & Steel, Oil & Gas, Agriculture, Green Energy, Mining & Real Estate.",
   },
   {
     title: "Sound technical expertise in  UAV market",
@@ -68,6 +68,6 @@ const expertises = [
     title: "Outstanding team of  professionals",
     avatar: UserIcon,
     description:
-      "Includes experts with decades of experience in academia, complementing operational skills",
+      "Includes experts with decades of experience in academia, complementing operational skills delivering end to end solution.",
   },
 ];
