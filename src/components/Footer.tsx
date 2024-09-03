@@ -23,9 +23,8 @@ const navlinks = [
 
 function Footer() {
   return (
-    <SectionLayout className="bg-white"  >
-    <footer >
-      <SectionContact />
+
+    <footer className="bg-neutral-100" >
       <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0">
@@ -75,40 +74,8 @@ function Footer() {
                 </li>
               </ul>
             </div>
-            <div>
-              <h2 className="mb-6 text-sm font-semibold uppercase text-gray-900 dark:text-white">
-                Follow us
-              </h2>
-              <ul className="font-medium text-gray-500 dark:text-gray-400">
-                <li className="mb-4">
-                  <Link href="/" className="hover:underline ">
-                    About Us
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/" className="hover:underline">
-                    Contact
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h2 className="mb-6 text-sm font-semibold uppercase text-gray-900 dark:text-white">
-                Legal
-              </h2>
-              <ul className="font-medium text-gray-500 dark:text-gray-400">
-                <li className="mb-4">
-                  <Link href="/" className="hover:underline">
-                    Privacy Policy
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/" className="hover:underline">
-                    Terms &amp; Conditions
-                  </Link>
-                </li>
-              </ul>
-            </div>
+           
+           
           </div>
         </div>
         <hr className="my-6 border-gray-500 dark:border-gray-700 sm:mx-auto lg:my-8" />
@@ -131,7 +98,7 @@ function Footer() {
         </div>
       </div>
     </footer>
-    </SectionLayout>
+    
   );
 }
 

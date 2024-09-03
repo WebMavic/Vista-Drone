@@ -1,7 +1,5 @@
 import React from 'react'
 import SectionLayout from '@/components/ui/SectionLayout'
-import safety from '@/assets/icons/safety.png'
-import Image from 'next/image';
 import { ShieldAlert } from 'lucide-react';
 type ben = {
     title: string;

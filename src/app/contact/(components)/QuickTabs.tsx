@@ -1,47 +1,51 @@
-import SectionLayout from '@/components/ui/SectionLayout'
-import React from 'react'
+import React from "react";
 import {
-    PhoneIcon,
-    EnvelopeIcon,
-    MapPinIcon,
-  } from "@heroicons/react/24/outline";
+  PhoneIcon,
+  EnvelopeIcon,
+  MapPinIcon,
+} from "@heroicons/react/24/outline";
+import SectionLayout from "@/components/ui/SectionLayout";
+
+const contacts = [
+  {
+    icon: PhoneIcon,
+    title: "Call Us",
+    description: "+971 56 440 1460",
+  },
+  {
+    icon: EnvelopeIcon,
+    title: "Quote",
+    description: "ceo@bdrone.org",
+  },
+  {
+    icon: MapPinIcon,
+    title: "Address",
+    description:"Vista Drone UAV LLC | Office No 403, Tower 1 | Mazyad Mall | MBZ City | Street 28, Musaffah | Abu Dhabi(UAE)",
+  },
+];
 
 function QuickTabs() {
   return (
-    
-    <div className="lg:my-10 my-10 flex lg:flex-col   w-full justify-between gap-4 items-center lg:items-start">
-      <div className="flex flex-col lg:flex-row items-center gap-3 justify-center group transition-all duration-300 ">
-        <div className="rounded-full border-[2px] border-accent p-3 shadow-md dark:text-white ">
-          <PhoneIcon className='size-5 lg:size-8 group-hover:animate-rotateLeftandRight transition ' />
+    <SectionLayout >
+    <div className="lg:max-w-5xl lg:mx-auto grid lg:grid-cols-3 grid-cols-2 gap-10">
+      {contacts.map((contact, index) => (
+        <div key={index} className="group flex flex-col items-center gap-4 group">
+          <div className="rounded-full border-[2px] border-accent p-5 shadow-md dark:text-white">
+            <contact.icon className="size-5 text-subheading group-hover:animate-rotateLeftandRight lg:size-20" />
+          </div>
+          <div className="text-center space-y-5">
+            <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
+              {contact.title}
+            </h3>
+            <p className="max-w-44 text-sm text-gray-500 dark:text-gray-400">
+              {contact.description}
+            </p>
+          </div>
         </div>
-        <div>
-        <h2 className="text-xl uppercase text-center lg:text-left">Phone</h2>
-        <p className="text-subheading text-center lg:text-left">+123 456 7890</p>
-
-        </div>
-      </div>
-      <div className="flex gap-3 flex-col lg:flex-row items-center group">
-        <div className="rounded-full border-[2px] border-accent p-3 shadow-md dark:text-white">
-          <EnvelopeIcon className='size-5 lg:size-8  group-hover:animate-rotateLeftandRight' />
-        </div>
-        <div>
-        <h2 className="text-xl uppercase text-center lg:text-left">E-mail</h2>
-        <p className="text-subheading text-center lg:text-left">vista@uae.com</p>
-
-        </div>
-      </div>
-      <div className="flex gap-3 flex-col lg:flex-row items-center group">
-        <div className="rounded-full border-[2px] border-accent p-3 shadow-md dark:text-white">
-          <MapPinIcon className='size-5 lg:size-8 group-hover:animate-rotateLeftandRight' />
-        </div>
-        <div>
-          <h2 className="text-xl uppercase text-center lg:text-left">Location</h2>
-          <p className="text-subheading text-center lg:text-left">UAE Street 2</p>
-        </div>
-      </div>
+      ))}
     </div>
- 
-  )
+    </SectionLayout>
+  );
 }
 
-export default QuickTabs
+export default QuickTabs;

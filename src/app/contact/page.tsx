@@ -17,26 +17,19 @@ function page() {
   return (
     <>
       <SectionHeader title="Lets Talk" image={contactbg} />
-      <SectionLayout className="bg-neutral-100 flex w-full lg:items-start   lg:flex-row flex-col">
-        <div className="">
-      <div className="space-y-3 ">
-          <Chips title="Contact us" />
-          <h2 className="text-4xl font-bold text-heading ">Contact With Us</h2>
-          <p className="text-subheading sm:w-1/2">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam, qui.
-          </p>
-        </div>
       <QuickTabs />
+      <div>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d29079.386008751448!2d54.49215!3d24.349166!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e40e7483d11d5%3A0x7672bbc1a32c03c2!2sMusaffah%20-%20Abu%20Dhabi%20-%20United%20Arab%20Emirates!5e0!3m2!1sen!2sus!4v1725385238732!5m2!1sen!2sus"
+         
+          className="w-full h-[500px] border-0"
+          allowFullScreen
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
 
-        </div>
-        <div className="flex-1">
-          <div className="space-y-3">
-            <Form/>
-          </div>
-
-       
-        </div>
-      </SectionLayout>
+      <Form />
 
       <SectionFaq />
     </>

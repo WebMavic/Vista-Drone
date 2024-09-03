@@ -2,11 +2,11 @@ import React from "react";
 import MagneticHover from "./ui/MagneticHover";
 import Link from "next/link";
 import art from "@/assets/images/home_inner_04.png";
-import { Button } from "./ui/Button";
+import { Button, buttonVariants } from "./ui/Button";
 
 function SectionContact() {
   return (
-    <div className="relative overflow-hidden rounded-lg bg-[#5D432C] px-10 py-20">
+    <div className="relative overflow-hidden  bg-[#5D432C] px-10 py-20">
       <img
         src={art.src}
         alt="ill"
@@ -23,7 +23,7 @@ function SectionContact() {
           </p>
         </div>
 
-          <Button variant={"outline"}>Contact Us</Button>
+          <Link href="/contact" className={buttonVariants({variant : 'outline'})}>Contact Us</Link>
       </div>
     </div>
   );

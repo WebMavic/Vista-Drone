@@ -5,6 +5,7 @@ import SectionExpertise from "@/components/SectionExpertise";
 import SectionFeaturedServices from "@/components/SectionFeaturedServices";
 import SectionHero from "@/components/SectionHero";
 import SectionProjects from "@/components/SectionProjects";
+import SectionContact from "@/components/SectionContact";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       {/* <SectionClient /> */}
       <SectionAbout />
       <SectionFeaturedServices />
+      <SectionContact/>
       <SectionExpertise />
       <SectionProjects />
     </>
