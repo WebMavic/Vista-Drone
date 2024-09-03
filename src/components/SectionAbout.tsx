@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import { motion } from "framer-motion";
 import { Button } from "./ui/Button";
 import SectionLayout from "./ui/SectionLayout";
 import Image from "next/image";
@@ -9,7 +8,7 @@ import Chips from "./ui/Chips";
 import Reveal from "./Reveal";
 function SectionAbout() {
   return (
-    <SectionLayout className="h-screen bg-white sm:px-0 sm:py-0">
+    <SectionLayout className="lg:h-screen bg-white sm:px-0 sm:py-0">
       {/* <div className="flex h-full w-full lg:items-start items-center justify-between lg:gap-10 gap-5 flex-col-reverse lg:flex-row"> */}
       <div className="flex h-full w-full  flex-col-reverse justify-between gap-5 lg:flex-row lg:gap-10">
         <div className="h-full lg:w-1/2">
@@ -22,10 +21,10 @@ function SectionAbout() {
           />
         </div>
 
-        <div className="p-20  lg:w-1/2">
+        <div className="lg:p-20  lg:w-1/2">
           <Reveal width="100%">
             <div>
-              <Chips title="about us" className="text-heading" />
+              <Chips title="about us" className="text-heading hidden lg:block" />
               <h1
                 // initial={{ opacity: 0, x: -50 }}
                 // whileInView={{ opacity: 1, x: 0 }}
@@ -33,8 +32,7 @@ function SectionAbout() {
                 // transition={{ duration: 1 }}
                 className="mt-2 text-center text-4xl font-medium uppercase text-primary dark:text-white lg:text-left"
               >
-                Elevating Industries with Precision UAV Solutions Across Every
-                Sector.
+                Navigating New Heights with Expert UAV Solutions for Every Industry
               </h1>
             </div>
 
@@ -55,7 +53,7 @@ function SectionAbout() {
               over 5 to 6 years in the respective field.
             </p>
 
-            <Button variant="outline" className="p-5 mt-6 text-primary">
+            <Button variant="outline" className="mt-6">
               Learn More
             </Button>
           </Reveal>

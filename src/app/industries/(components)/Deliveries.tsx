@@ -29,7 +29,7 @@ const Deliveries = ({projects}:Props) => {
     <Carousel className="mt-10">
       <CarouselContent>
         {projects.map((project, i) => (
-          <CarouselItem className="lg:basis-1/4" key={i}>
+          <CarouselItem className="lg:basis-1/4 basis-1/2" key={i}>
             <div className="relative h-96 overflow-hidden rounded-2xl">
               <div className="absolute h-full w-full  bg-black/60 opacity-0 transition-all duration-150 ease-in-out hover:opacity-100">
                 <div className="p-5 text-left">

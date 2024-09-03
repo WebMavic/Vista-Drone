@@ -13,7 +13,8 @@ import Link from "next/link";
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import Image from "next/image";
 import logo from "@/assets/images/vista.png"
-import {Button} from "./ui/Button";
+import {buttonVariants} from "./ui/Button";
+
 
 
 
@@ -34,22 +35,21 @@ function Navbar() {
 
   return (
     <>
-      <header className="absolute top-0 z-[99] w-full bg-accent/[.1] px-5  sm:px-28">
+      <header className="absolute top-0 z-[99] w-full  px-5  sm:px-28">
         <div className="flex min-h-20 items-center justify-between ">
           <Link href="/">
             <Image
               src={logo}
               alt="Logo" priority 
-              className="lg:size-20 size-12 object-cover mix-blend-screen"
+              className="lg:size-16 size-12 object-cover mix-blend-screen"
             />
             
           </Link>
 
           <div className="hidden flex-1 flex-shrink-0 items-center justify-end gap-3 md:flex lg:flex-none">
             <Navigation />
-            <Button title="Contact Us"  className="ml-3 text-primary">
-              Contact
-            </Button>
+            <Link href="/contact" className={buttonVariants()}>Contact</Link>
+              
           </div>
 
         

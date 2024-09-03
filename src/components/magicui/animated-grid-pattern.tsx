@@ -1,8 +1,9 @@
 "use client";
 
-import { cn } from "@/lib/utils";
-import { motion } from "framer-motion";
 import { useEffect, useId, useRef, useState } from "react";
+import { motion } from "framer-motion";
+
+import { cn } from "@/lib/utils";
 
 interface GridPatternProps {
   width?: number;
@@ -15,25 +16,19 @@ interface GridPatternProps {
   maxOpacity?: number;
   duration?: number;
   repeatDelay?: number;
-  color?: string;
-  fillColor?: string; // Added fillColor prop
-  strokeColor?: string; // Added strokeColor prop
 }
 
 export function GridPattern({
-  width = 150,
-  height = 150,
+  width = 40,
+  height = 40,
   x = -1,
   y = -1,
   strokeDasharray = 0,
-  numSquares = 8,
+  numSquares = 50,
   className,
-  maxOpacity = 0.01,
+  maxOpacity = 0.5,
   duration = 4,
   repeatDelay = 0.5,
-  color = "currentColor",
-  fillColor = "fill-gray-400/30", // Default fill color
-  strokeColor = "stroke-gray-400/30",
   ...props
 }: GridPatternProps) {
   const id = useId();
@@ -104,7 +99,7 @@ export function GridPattern({
       ref={containerRef}
       aria-hidden="true"
       className={cn(
-        `pointer-events-none absolute inset-0 h-full w-full ${fillColor} ${strokeColor}`,
+        "pointer-events-none absolute inset-0 h-full w-full fill-gray-400/30 stroke-gray-400/30",
         className,
       )}
       {...props}

@@ -95,7 +95,7 @@ nav ul li a:hover:after {
   }
 
   .hero {
-    background: url("../assets/images/streched.jpg") rgba(0, 0, 0, 0.484);
+    background: url("../assets/images/draft.jpg") rgba(0, 0, 0, 0.484);
     background-size: cover;
     background-blend-mode: darken;
     background-position: left;
