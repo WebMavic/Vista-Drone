@@ -22,7 +22,7 @@ function Benifits({content}:Benefit) {
           Benifits you get
         </h3>
 
-      <div className="grid lg:grid-cols-3 gap-4 mt-20">
+      <div className="grid lg:grid-cols-3  gap-4 mt-20">
       {content.map((benefit, index) => (
         <div key={index} className="flex flex-col cursor-pointer items-center space-y-2 text-center  p-5 ">
           <div className='bg-blue-400 flex justify-center items-center' id='modern' >

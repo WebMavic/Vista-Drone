@@ -1,4 +1,4 @@
-import { title } from "process";
+import { cn } from "@/lib/utils";
 import React from "react";
 
 interface ChipsProps {
@@ -8,7 +8,7 @@ interface ChipsProps {
 function Chips({ title, className }: ChipsProps) {
   return (
     <span
-      className={`text-lg font-semibold uppercase tracking-[3px] text-accent ${className}`}
+      className={cn("text-lg font-semibold uppercase tracking-[3px] text-accent", className)}
     >
       {title}
     </span>
