@@ -6,19 +6,24 @@ import SectionFaq from "../(components)/SectionFaq";
 import { services } from "../../../utils/data";
 import Services from "../(components)/Services";
 import green from '@/assets/images/green energy/green-1.jpg'
+import SectionAbout from "@/components/SectionAbout";
+
 const service = services[5]
 
 const page = () => {
   return (
     <>
       <SectionHeader title={service.title} image={service.image}/>
-      <SectionInfo
-        title={service.title}
-        content={services[1]?.description}
-        image={green}
+      <Services services={service.service_description}/>
+      <SectionAbout
+        chips="vista drone service"
+        cta="/contact"
+        heading={service.title}
+        image={service.image}
+        para={service.description}
       />
 
-    <Services services={service.service_description}/>
+    
 
       <Benifits content={services[1].benefits} />
 

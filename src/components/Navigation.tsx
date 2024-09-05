@@ -40,7 +40,7 @@ function Navigation() {
     // { name: "Construction & Real Estate",path: "/industries/construction",icon:serviceIcons[1]},
     
     // { name: "Agriculture", path: "/industries/agriculture",icon:serviceIcons[0] },
-    { name: "Fisheries", path: "/industries/fisheries",icon:GiFishingBoat },
+    { name: "Marine Fisheries", path: "/industries/fisheries",icon:GiFishingBoat },
     { name: "Steel", path: "/industries/steel",icon:GiSteelClaws},
   ];
 

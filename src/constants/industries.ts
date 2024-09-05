@@ -95,3 +95,4 @@ export const industries: Industry[] = [
       "Advance ability to collect and analyze data on crop health and soil conditions.",
   },
 ];
+

@@ -9,6 +9,7 @@ import SectionFaq from "../(components)/SectionFaq";
 import oil from "@/assets/images/drones_construction_industry.jpg";
 import Services from "../(components)/Services";
 import Deliveries from "../(components)/Deliveries";
+import SectionContact from "@/components/SectionContact";
 import { Project } from "@/types/steps";
 import { oilDeliveryImages } from "@/utils/images";
 import SectionAbout from "@/components/SectionAbout";
@@ -105,6 +106,7 @@ const page = () => {
       />
       <Deliveries projects={projects} />
       <Benifits content={service.benefits} />
+      <SectionContact/>
       <SectionFaq faqs={service.faq} />
     </>
   );

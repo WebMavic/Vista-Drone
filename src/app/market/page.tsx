@@ -7,6 +7,8 @@ import React from "react";
 import { Metadata } from "next";
 import SectionLayout from "@/components/ui/SectionLayout";
 import cnbg from "@/assets/images/cnbg.png";
+import SectionContact from "@/components/SectionContact";
+
 
 export const metadata: Metadata = {
   title: "Market Trends",
@@ -55,6 +57,7 @@ function page() {
           </div>
         </div>
       </SectionLayout>
+      <SectionContact/>
       <SectionLayout className="bg-white">
         <div className="space-y-2 text-center ">
           <Chips title="Driving factors" />
@@ -74,6 +77,7 @@ function page() {
           ))}
         </div>
       </SectionLayout>
+      
     </>
   );
 }

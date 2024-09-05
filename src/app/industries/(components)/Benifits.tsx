@@ -20,7 +20,7 @@ function Benifits({ content }: Benefit) {
           <div key={index}>
             <div className="flex items-start gap-5">
               <span>
-              <Icon className="size-5 " />
+              <Icon className="size-8 " />
               </span>
               <div>
                 <h3 className="text-lg leading-none font-bold text-heading">{title}</h3>
