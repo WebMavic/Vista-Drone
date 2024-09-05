@@ -1,7 +1,10 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
+import { serviceIcons } from "@/utils/images";
 import { usePathname } from "next/navigation";
+import { MdOilBarrel,MdOutlineWindPower } from "react-icons/md";
+import { GiGoldMine,GiSteelClaws,GiFishingBoat } from "react-icons/gi";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -31,12 +34,14 @@ function Navigation() {
   ];
 
   const linksWithChildren = [
-    { name: "Oil", path: "/industries/oil-and-gas" },
-    { name: "Mining", path: "/industries/mining" },
-    { name: "Construction",path: "/industries/construction"},
-    { name: "Steel", path: "/industries/steel"},
-    { name: "Green", path: "/industries/green-energy" },
-    { name: "Agriculture", path: "/industries/agriculture" },
+    { name: "Oil & Gas", path: "/industries/oil-and-gas",icon: MdOilBarrel },
+    { name: "Green Energy", path: "/industries/green-energy",icon:MdOutlineWindPower },
+    { name: "Mining", path: "/industries/mining",icon:GiGoldMine },
+    // { name: "Construction & Real Estate",path: "/industries/construction",icon:serviceIcons[1]},
+    
+    // { name: "Agriculture", path: "/industries/agriculture",icon:serviceIcons[0] },
+    { name: "Fisheries", path: "/industries/fisheries",icon:GiFishingBoat },
+    { name: "Steel", path: "/industries/steel",icon:GiSteelClaws},
   ];
 
   return (
@@ -98,14 +103,23 @@ function Navigation() {
           <NavigationMenuTrigger>Industries</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[400px] gap-3 p-4 md:grid-cols-2">
-              {linksWithChildren.map((component) => (
+              {linksWithChildren.map(({icon:Icon ,path,name},index) => (
+               
                 <ListItem
-                  key={component.path}
-                  title={component.name}
-                  href={component.path}
+                  key={path}
+                  title={name}
+                  href={path}
                 >
-                  {component.name}
+                  {<Icon/>}
+                 
                 </ListItem>
+              //  <Link key={index} href={path} className="hover:text-accent-foreground focus:text-accent-foreground block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent/50 focus:bg-accent">
+              //   <div className="inline-flex">
+              //     <span>{<Icon/>}</span>
+              //     <p className="text-sm font-medium leading-none">{name}</p>
+              //   </div>
+              //  </Link>
+               
               ))}
             </ul>
           </NavigationMenuContent>
@@ -134,13 +148,18 @@ const ListItem = React.forwardRef<
           )}
           {...props}
         >
-          <div className="text-sm font-medium leading-none">{title}</div>
-          <p className="text-muted-foreground line-clamp-2 text-sm leading-snug">
+          <div className="inline-flex items-center">
+          <span className="mr-3">
             {children}
-          </p>
+          </span>
+          <div className="text-sm font-medium leading-none">{title}</div>
+
+          </div>
         </a>
       </NavigationMenuLink>
     </li>
   );
 });
 ListItem.displayName = "ListItem";
+
+

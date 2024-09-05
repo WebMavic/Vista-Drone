@@ -8,16 +8,17 @@ import green from '@/assets/images/green energy/wind-1.jpg'
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import { ForwardRefExoticComponent, RefAttributes } from "react";
 import { Aperture, BarChart, Cctv, Diameter, LucideProps } from "lucide-react";
-import { GiEclipseFlare,GiLeadPipe,GiOffshorePlatform,GiMoebiusTrefoil,GiGasMask,GiBarrelLeak,GiMoneyStack,GiBonsaiTree,GiPathDistance,GiProgression,GiCargoCrane } from "react-icons/gi";
+import { GiEclipseFlare,GiLeadPipe,GiOffshorePlatform,GiMoebiusTrefoil,GiGasMask,GiBarrelLeak,GiMoneyStack,GiBonsaiTree,GiPathDistance,GiProgression,GiCargoCrane,GiReceiveMoney,GiSatelliteCommunication } from "react-icons/gi";
 import { BsDatabaseFillCheck } from "react-icons/bs";
 
 import { PiWall } from "react-icons/pi";
 import { VscLightbulbSparkle } from "react-icons/vsc";
+import { TbReport } from "react-icons/tb";
 
-import { SiSpond,SiExoscale } from "react-icons/si";
+import { SiSpond,SiExoscale,SiDrone } from "react-icons/si";
 import { MdHealthAndSafety,MdSos } from "react-icons/md";
-import { FaDatabase,FaMapMarkedAlt,FaCheck,FaPlusCircle } from "react-icons/fa";
-import { AiOutlineSafetyCertificate,AiOutlineSafety } from "react-icons/ai";
+import { FaDatabase,FaMapMarkedAlt,FaCheck,FaPlusCircle,FaEye } from "react-icons/fa";
+import { AiOutlineSafetyCertificate,AiOutlineSafety, } from "react-icons/ai";
 
 
 
@@ -423,34 +424,34 @@ export const services: Service[] = [
         title: "Enhanced Oversight",
         content:
           " Keep track of project progress with up-to-date aerial data, providing clear and accurate documentation for stakeholders and investors.",
-        icon:FaHelmetSafety,
+        icon:FaEye,
       },
       {
         title: "Cost Savings",
         content:
           "Reduce delays and budget overruns with efficient monitoring, ensuring that potential issues are identified and addressed promptly.",
-        icon:FaHelmetSafety,
+        icon:GiReceiveMoney,
       },
       {
         title: " Environmental Monitoring",
         content:"Compliance ,Erosion and Drainage Monitoring",
-        icon:FaHelmetSafety,
+        icon:SiDrone,
       },
       {
         title: "Improved Safety",
         content:
           "Conduct remote inspections to maintain a safe work environment, reducing the need for personnel to access hazardous areas.",
-        icon:FaHelmetSafety,
+        icon:AiOutlineSafety,
       },
       {
         title: "Progress Tracking and Reporting",
         content:"Real-Time Monitoring , Visual Documentation",
-        icon:FaHelmetSafety,
+        icon:TbReport,
       },
       {
         title: "Improved Communication and Collaboration",
         content:"Visual Data Sharing , Remote Accessibility",
-        icon:FaHelmetSafety,
+        icon:GiSatelliteCommunication,
       },
     ],
     faq: [

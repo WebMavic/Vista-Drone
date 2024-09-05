@@ -1,29 +1,26 @@
+import SectionHeader from "@/components/SectionHeader";
 import React from "react";
 import { services } from "../../../utils/data";
-import SectionHeader from "@/components/SectionHeader";
 import SectionInfo from "../(components)/SectionInfo";
 import Benifits from "../(components)/Benifits";
 import SectionFaq from "../(components)/SectionFaq";
 import Services from "../(components)/Services";
-import bg from '@/assets/images/construction/const-2.jpg'
-
-const service = services[3]
+import  bg from '@/assets/images/cnbg.png'
+const service = services[1]
 
 const page = () => {
   return (
     <>
-      <SectionHeader title={service.title} image={service.image}/>
+      <SectionHeader title={service.title} image={bg}  />
       <SectionInfo
-        title={service.title}
-        content={services[3]?.description}
-        image={bg}
+        title="Fisheries"
+        content={service.description}
+        image={service.image}
       />
-
       <Services services={service.service_description}/>
-      <Benifits content={services[3].benefits} />
+      <Benifits content={service.benefits} />
+      <SectionFaq faqs={service.faq} />
       
-      <SectionFaq faqs={services[3].faq} />
-     
     </>
   );
 };
