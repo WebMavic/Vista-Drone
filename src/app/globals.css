@@ -21,36 +21,7 @@ body {
   background-color: #fffefe;
 }
 
-/* nav ul li {
-  display: inline-block;
-}
 
-nav ul li a,
-nav ul li a:after,
-nav ul li a:before {
-  transition: all 0.5s;
-}
-nav ul li a {
-  display: block;
-  position: relative;
-} */
-
-/* nav ul li a:after,
-nav ul li a:after {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin-top: 5px;
-  width: 0%;
-  content: ".";
-  color: transparent;
-  background: #fff;
-  height: 2px;
-}
-nav ul li a:hover:after {
-  width: 100%;
-} */
 
 #leaf {
   border-radius: 0 120px 0 120px;
@@ -127,7 +98,7 @@ nav ul li a:hover:after {
   }
 
   .inputs {
-    @apply block w-full rounded-lg border border-gray-300 bg-gray-50 px-2 py-4 text-gray-900;
+    @apply w-full rounded-lg border border-gray-300 bg-gray-50 p-4 text-gray-900;
   }
 }
 

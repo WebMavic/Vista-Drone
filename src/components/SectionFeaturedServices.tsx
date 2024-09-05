@@ -5,7 +5,7 @@ import SectionLayout from "./ui/SectionLayout";
 
 function SectionFeaturedServices() {
   return (
-    <SectionLayout className="w-full  bg-primary2">
+    <SectionLayout className="w-full h-screen  bg-primary2">
       <div className="space-y-3">
           <Chips title="Industries" />
           <h2 className="text-4xl font-bold text-heading ">Feautured Industries</h2>

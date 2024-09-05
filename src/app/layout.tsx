@@ -4,7 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ui/ScrollToTop";
-
+import NextTopLoader from 'nextjs-toploader'
 const font = Inter({
   weight: ["200","300", "400", "500", "600", "700","800","900"],
   subsets: ["latin"],
@@ -22,6 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${font.className}`}>
+        <NextTopLoader showSpinner={false} height={4} />
         <Navbar />
         <main>{children}</main>
         <Footer />

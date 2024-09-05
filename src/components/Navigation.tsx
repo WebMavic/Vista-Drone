@@ -94,13 +94,13 @@ function Navigation() {
         {navlinks.map((link, index) => (
           <NavigationMenuItem key={"list" + index}>
             <Link href={link.path} legacyBehavior passHref>
-              <NavigationMenuLink>{link.name}</NavigationMenuLink>
+              <NavigationMenuLink className="hover:text-neutral-300">{link.name}</NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
         ))}
 
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Industries</NavigationMenuTrigger>
+          <NavigationMenuTrigger className="hover:text-neutral-300">Industries</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[400px] gap-3 p-4 md:grid-cols-2">
               {linksWithChildren.map(({icon:Icon ,path,name},index) => (
@@ -143,7 +143,7 @@ const ListItem = React.forwardRef<
         <a
           ref={ref}
           className={cn(
-            "hover:text-accent-foreground focus:text-accent-foreground block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent/50 focus:bg-accent",
+            "hover:text-accent-foreground focus:text-accent-foreground block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent/60 focus:bg-accent",
             className,
           )}
           {...props}

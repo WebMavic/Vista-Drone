@@ -8,29 +8,33 @@ import Chips from "./ui/Chips";
 import Reveal from "./Reveal";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import Link from "next/link";
+import { cn } from "@/lib/utils";
 
 
 interface Props {
   image ?:StaticImport
+  imageStyle ?:string
   chips ?:string
   heading ?:string
   para?: string
   cta?:string
+  mirror?:boolean
+  className ?:string
 }
 
-function SectionAbout({chips,cta,image,heading,para} : Props) {
+function SectionAbout({chips,cta,image,heading,para,mirror,imageStyle,className} : Props) {
   return (
-    <SectionLayout className="lg:h-screen bg-white sm:px-0 sm:py-0">
+    <SectionLayout className={cn("lg:h-screen bg-white sm:px-0 sm:py-0",className)}>
       {/* <div className="flex h-full w-full lg:items-start items-center justify-between lg:gap-10 gap-5 flex-col-reverse lg:flex-row"> */}
-      <div className="flex h-full w-full  flex-col-reverse justify-between gap-5 lg:flex-row lg:gap-10">
-        <div className="h-full lg:w-1/2">
+      <div className={cn("flex h-full w-full  flex-col-reverse justify-between gap-5 lg:flex-row lg:gap-10",mirror && 'lg:flex-row-reverse')}>
+        <div className="h-full lg:w-1/2 ">
           <Image
             src={image ? image :about1}
             // @ts-ignore
             // blurDataURL={image.blurDataURL ? image.blurDataURL :about.blurDataURL}
             placeholder="blur"
             alt="image"
-            className="h-full w-full object-cover"
+            className={cn("object-cover w-full h-full",imageStyle)}
           />
         </div>
 

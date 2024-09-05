@@ -14,13 +14,22 @@ const page = () => {
   return (
     <>
       <SectionHeader title={service.title} image={service.image}/>
-      <Services services={service.service_description}/>
+      {/* <Services services={service.service_description}/> */}
       <SectionAbout
-        chips="vista drone service"
+        chips="01"
         cta="/contact"
-        heading={service.title}
+        heading={service.service_description[0].title}
+        mirror
+        className="lg:h-[50vh]"
+        para={service.service_description[0].content}
+      />
+      <SectionAbout
+        chips="02"
+        cta="/contact"
+        heading={service.service_description[1].title}
         image={service.image}
-        para={service.description}
+        className="lg:h-[50vh]"
+        para={service.service_description[1].content}
       />
 
     

@@ -8,8 +8,9 @@ function FeauturedList() {
   
   return (
    
-    <BentoGrid className="mt-5 lg:grid-rows-2 ">
+    <BentoGrid className="mt-5">
     {industries.map((feature) => (
+      // @ts-ignore
       <BentoCard key={feature.title} {...feature} />
     ))}
   </BentoGrid>

@@ -95,13 +95,11 @@ const page = () => {
   return (
     <>
       <SectionHeader title={service.title} image={oil} />
-      {/* <SectionInfo title={service.title} content={service.description} image={service.image}/> */}
       <Services services={service.service_description} />
       <SectionAbout
         chips="vista drone service"
-        cta="/contact"
-        heading={service.title}
-        image={service.image}
+        cta="/contact" mirror
+        heading={service.title} imageStyle="rounded-l-[20%]"
         para={service.description}
       />
       <Deliveries projects={projects} />
