@@ -34,7 +34,7 @@ function SectionAbout({chips,cta,image,heading,para,mirror,imageStyle,className}
             // blurDataURL={image.blurDataURL ? image.blurDataURL :about.blurDataURL}
             placeholder="blur"
             alt="image"
-            className={cn("object-cover w-full h-full",imageStyle)}
+            className={cn("object-cover w-full h-full rounded-r-[2%]",imageStyle)}
           />
         </div>
 

@@ -9,26 +9,26 @@ export const steps: Steps[] = [
     {
       id:"2",
       title : "ground control points",
-      desc : "We set up visual ground control points using high accuracy survey grade GPS system to achieve high accuracy geo-referencing to ensure that the data is truly survey grade."
+      desc : "We uses a high-accuracy GPS system to set up visual ground control points for precise geo-referencing and survey-grade data quality."
     },
     {
       id:"3",
       title : "flight planning",
-      desc : "The survey flight plan is being created to capture the UAV's surveying data. Flight direction, resolution, amount, route and stereo overlap are planned to execute."
+      desc : "The survey flight plan is designed to capture UAV data, specifying flight direction, resolution, route, and stereo overlap."
     },
     {
       id:"4",
       title : "data acquisition",
-      desc : "Once the surveying schedule has been uploaded, data acquisition is completely automatic where the drone follows a pre-programmed waypoints collecting data automatically."
+      desc : "After uploading the survey schedule, data acquisition is fully automated, the drone follows a pre-programmed waypoints to collect data."
     },
     {
       id:"5",
       title : "post flight data processing",
-      desc : "After the flight is complete, we load the data from the drone into our software to verify its quality before we leave the site. Once we have data that meets our quality standards & accuracy, we go back to our office to process the data."
+      desc : "After the flight, we verify the data quality on-site.If it meets our standards, we proceed with data processing back at the office."
     },
     {
       id:"6",
       title : "final product",
-      desc : "Our software generates CAD-ready outputs like ortho-photos, contours, DSM/DTM, point clouds, and 3D models in various formats. These files are compatible with CAD, GIS, and engineering software."
+      desc : "Our software produces CAD-ready ortho-photos, contours, DSM/DTM, point clouds, and 3D models, compatible with CAD and GIS."
     },
   ]

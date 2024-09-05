@@ -17,7 +17,7 @@ import { TbReport } from "react-icons/tb";
 
 import { SiSpond,SiExoscale,SiDrone } from "react-icons/si";
 import { MdHealthAndSafety,MdSos } from "react-icons/md";
-import { FaDatabase,FaMapMarkedAlt,FaCheck,FaPlusCircle,FaEye } from "react-icons/fa";
+import { FaDatabase,FaMapMarkedAlt,FaCheck,FaPlusCircle,FaEye,FaCalendarCheck } from "react-icons/fa";
 import { AiOutlineSafetyCertificate,AiOutlineSafety, } from "react-icons/ai";
 
 
@@ -65,40 +65,40 @@ export const services: Service[] = [
       {
         title: "Aerial Surveys",
         content:
-          " Utilizing high-resolution drones equipped with advanced sensors, we capture detailed imagery and create 3D maps for accurate site analysis. These surveys assist in identifying mineral deposits, evaluating terrain conditions, and planning extraction processes. We also provide orthomosaic maps that offer a seamless, georeferenced representation of the survey area.",
+          " High-resolution drones provide 3D maps, mineral identification, terrain assessment, and georeferenced orthomosaic maps.",
         image: Aperture,
         color : "red"
       },
       {
         title: "Real-time Monitoring",
         content:
-          "Our drones offer continuous real-time monitoring, crucial for maintaining safety and operational efficiency. This includes live feed monitoring of drilling operations, pipeline inspections, and environmental impact monitoring. Real-time data helps in making prompt decisions and mitigating risks.",
+          "Our drones offer real-time monitoring for drilling, pipelines, and environmental impact, aiding safety and decision-making.",
           image: Cctv ,
           color : "rose"
       },
       {
         title: "Volumetric Measurements",
         content:
-          "Accurate calculation of stockpile volumes and excavation quantities is essential for inventory management and project planning. Our drones measure volumes with high precision, providing detailed reports that help in tracking material movement, ensuring compliance with contractual agreements, and optimizing resource allocation.",
+          "Our drones precisely measure stockpile volumes and excavation quantities, aiding inventory management and project planning.",
           image: SiExoscale,
           color : "rose"
       },
       {
         title: "Environmental Impact Assessments",
         content:
-          "We conduct thorough environmental assessments to help you comply with regulatory standards. This includes monitoring for potential environmental damage, such as soil erosion, water contamination, and deforestation, and providing actionable data to support sustainable practices and minimize environmental impact.",
+          "We conduct environmental assessments, monitoring damage like soil erosion and water contamination, to ensure compliance and sustainability.",
           image: GiBonsaiTree,
           color : "rose"
       },
       {
         title: "Exploration & Planning",
-        content: "Lease hold area Survey & mapping Digital Terrain Modelling (DTM) of the entire site , Digital Surface Modelling (DSM) of the entire site Excavation & Environmental impact Assessment",
+        content: "Leasehold area survey, mapping, DTM, DSM, excavation, and environmental impact assessment of the entire site.",
           image: FaMapMarkedAlt,
           color : "rose"
       },
       {
         title: "Slope Analysis",
-        content: "he slopes can be shown as per the angles in specific colors to get a better understanding for planning of mines.",
+        content: "Hill slopes can be shown as per the angles in specific colors to get a better understanding for planning of mines.",
           image: BarChart,
           color : "rose"
       },
@@ -169,50 +169,38 @@ export const services: Service[] = [
       
     service_description: [
       {
-        title: "Routine Inspections",
-        content:"Infrastructure, steel structures, storage facilities, machinery.",
-          image: Diameter,
-          color : "rose"
-      },
-      {
-        title: "Real-Time Monitoring",
-        content:"For security and operational oversight.",
-          image: Diameter,
-          color : "rose"
-      },
-      {
-        title: "High-Resolution Imagery",
-        content:
-          "Detailed analysis for maintenance and planning.",
+        title: "Aerial Inspection and Surveillance",
+        content:"Routine inspections, real-time monitoring, and high-resolution imagery for infrastructure, security, and detailed maintenance analysis.",
           image: Diameter,
           color : "rose"
       },
       {
         title: "Thermal Imaging",
-        content:
-          "Detects heat anomalies in equipment and structures to prevent failures ,Regular thermal audits to ensure maintenance and safety compliance, Early detection of overheating, energy loss, and equipment inefficiencies",
+        content:"Detects heat anomalies to prevent failures, ensures maintenance, and identifies overheating and inefficiencies through regular thermal audits.",
           image: Diameter,
           color : "rose"
       },
       {
         title: "Mapping and Modeling",
-        content:"Accurate 3D models for planning, construction, and maintenance , Detailed topographic surveys for terrain analysis and site planning,Volumetric calculation for inventory management and material estimation.",
+        content:
+          "Accurate 3D models for planning, topographic surveys for site analysis, and volumetric calculations for inventory management.",
           image: Diameter,
           color : "rose"
       },
       {
         title: "Environmental Monitoring",
         content:
-          "Real-time monitoring of emissions and environmental impact ,Data collection to ensure compliance with environmental regulations,Support for sustainability initiatives and reduction of ecological footprint",
+          "Real-time monitoring of emissions and environmental impact ensures compliance, supports sustainability, and reduces ecological footprint.",
           image: Diameter,
           color : "rose"
       },
       {
         title: "Emergency Response",
-        content:"Rapid deployment for quick assessment of incidents,Support in disaster management and recovery operations,Real-time situational awareness for effective decision-making",
+        content:"Rapid deployment provides quick incident assessment, supports disaster management, and offers real-time situational awareness for effective decisions.",
           image: Diameter,
           color : "rose"
       },
+      
     ],
     benefits: [
       {
@@ -223,23 +211,23 @@ export const services: Service[] = [
       {
         title: "Enhanced Safety",
         content:"Minimized need for manual inspections in hazardous areas",
-        icon:FaHelmetSafety,
+        icon:MdHealthAndSafety,
       },
       {
-        title: "High Precision",
+        title: "Cost Savings",
         content:
-          "Achieve detailed and accurate survey results for better planning and execution, ensuring project accuracy and regulatory compliance",
-        icon:FaHelmetSafety,
+          "Efficient resource allocation and preventive maintenance.",
+        icon:GiReceiveMoney,
       },
       {
         title: "Data-Driven Decisions",
         content:"Access to accurate, timely data",
-        icon:FaHelmetSafety,
+        icon:BsDatabaseFillCheck,
       },
       {
         title: "Regulatory Compliance",
         content:"Continuous monitoring supports meeting safety and environmental regulations",
-        icon:FaHelmetSafety,
+        icon:FaCalendarCheck,
       },
     ],
     faq: [
@@ -670,6 +658,110 @@ export const services: Service[] = [
         question: "How frequently should infrastructure be inspected using drones?",
         answer:
           "The frequency depends on the type and condition of the infrastructure, but semi-annual or annual inspections are common for most assets, with more frequent inspections recommended for high-risk areas.",
+      },
+    ],
+  },
+  {
+    title: "Marine Fisheries",
+    description:
+      "Maximize operational efficiency and safety in your mining and petroleum projects with Vista Drone Services. Our specialized drone solutions provide precise aerial data, helping you streamline exploration, site assessment, and resource management. Utilizing state-of-the-art drones equipped with high-resolution cameras and advanced sensors, we conduct comprehensive aerial surveys that generate detailed maps and 3D models of your site. This allows for accurate identification of mineral deposits and thorough evaluation of terrain conditions. By capturing extensive data quickly and safely from above, we eliminate the need for manual ground surveys, thus minimizing the risk to personnel and reducing operational downtime. ",
+    image: mining,
+    
+    service_description: [
+      {
+        title: "Overfishing and Depletion Control",
+        content:
+          " Vista Drone provides real-time data on fish populations, habitat, and environmental factors for informed fisheries management.",
+        image: Aperture,
+        color : "red"
+      },
+      {
+        title: "Illegal,and Unregulated Fishing.",
+        content:
+          "Vista Drone enhances enforcement by tracking vessels and capturing evidence of illegal fishing for rapid response.",
+          image: Cctv ,
+          color : "rose"
+      },
+      {
+        title: "Monitoring & Surveillance Limitations",
+        content:
+          "Our drones accurately measure stockpile volumes and excavation quantities, supporting inventory management and project planning.",
+          image: SiExoscale,
+          color : "rose"
+      },
+      {
+        title: "Environmental Impact",
+        content:
+          "Drones reduce environmental impact by detecting illegal trawling, pollution, and monitoring protected marine areas.",
+          image: GiBonsaiTree,
+          color : "rose"
+      },
+      {
+        title: "Fish Farm Inspection & Maintenance",
+        content: "Drones inspect fish farms, monitoring fish health, feeding, and cage conditions, improving efficiency and early issue detection.",
+          image: FaMapMarkedAlt,
+          color : "rose"
+      },
+      {
+        title: "Data Collection for Sustainable Practices",
+        content: "Drones collect marine data to aid fisheries in implementing sustainable practices and making informed decisions.",
+          image: BarChart,
+          color : "rose"
+      },
+    ],
+    benefits: [
+      {
+        title: "Enhanced Safety",
+        content:
+          "Minimize on-ground risks by utilizing aerial data collection, reducing the need for personnel in hazardous areas.",
+      icon: AiOutlineSafetyCertificate,
+      },
+      {
+        title: "Cost Efficiency",
+        content:
+          "Reduce operational costs with precise data and efficient resource management, avoiding over-extraction and optimizing resource use.",
+        icon: GiMoneyStack,
+      },
+      {
+        title: "Accurate Data",
+        content:
+          "Obtain high-precision data for better decision-making and project planning, ensuring more accurate forecasting and budgeting.",
+        icon:BsDatabaseFillCheck,
+      },
+      {
+        title: "Distances",
+        content:
+          "Any specific distance can be measured precisely whether horizontally or vertically.",
+        icon:GiPathDistance,
+      },
+      {
+        title: "Boundaries",
+        content:
+          "The lease boundary can be geo-tagged and generated to view the limits more accurately and plan suitably.  ",
+        icon:PiWall,
+      },
+      {
+        title: "Accurate Data",
+        content:
+          "Obtain high-precision data for better decision-making and project planning, ensuring more accurate forecasting and budgeting.",
+        icon:FaHelmetSafety,
+      },
+    ],
+    faq: [
+      {
+        question: "How accurate are your volumetric measurements?",
+        answer:
+          "Our drones use advanced sensors and software to provide volumetric measurements with an accuracy of within 1-2%, ensuring precise inventory tracking and resource management",
+      },
+      {
+        question: "Can drones be used for offshore petroleum sites?",
+        answer:
+          "Yes, our drones are equipped to handle offshore conditions, providing reliable data for offshore exploration, rig inspections, and pipeline monitoring, even in challenging weather. ",
+      },
+      {
+        question: "What is the turnaround time for aerial surveys? ",
+        answer:
+          "Depending on the size and complexity of the site, most surveys can be completed within 1-3 days, with data analysis and comprehensive reports available within a week.",
       },
     ],
   },

@@ -98,8 +98,8 @@ const page = () => {
       <Services services={service.service_description} />
       <SectionAbout
         chips="vista drone service"
-        cta="/contact" mirror
-        heading={service.title} imageStyle="rounded-l-[20%]"
+        cta="/contact" 
+        heading={service.title} 
         para={service.description}
       />
       <Deliveries projects={projects} />

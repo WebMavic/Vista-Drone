@@ -5,20 +5,20 @@ import SectionInfo from "../(components)/SectionInfo";
 import Benifits from "../(components)/Benifits";
 import SectionFaq from "../(components)/SectionFaq";
 import Services from "../(components)/Services";
+import SectionAbout from "@/components/SectionAbout";
 import  bg from '@/assets/images/cnbg.png'
+import SectionContact from "@/components/SectionContact";
 const service = services[1]
 
 const page = () => {
   return (
     <>
       <SectionHeader title={service.title} image={bg}  />
-      <SectionInfo
-        title="Steel Industry"
-        content={service.description}
-        image={service.image}
-      />
       <Services services={service.service_description}/>
+      <SectionAbout  chips="Vista Drone Services" cta="/contact" heading={service.title} para={service.description} image={service.image}/>
+      
       <Benifits content={service.benefits} />
+      <SectionContact/>
       <SectionFaq faqs={service.faq} />
       
     </>
