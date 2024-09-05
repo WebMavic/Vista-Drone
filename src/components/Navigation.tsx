@@ -20,81 +20,47 @@ import { navigationMenuTriggerStyle } from "@/components/ui/navigation-menu"
 
 
 import { cn } from "@/lib/utils";
+import { IconType } from "react-icons/lib";
+import { StaticImport } from "next/dist/shared/lib/get-img-props";
+import Image from "next/image";
 
 function Navigation() {
   const pathname = usePathname();
   const [hidden, setHidden] = useState<boolean>(true);
   const navlinks = [
-    { name: "Home", path: "/" },
+    { name: "Home", path: "/" ,active : pathname === "/"},
 
-    { name: "About", path: "/about" },
+    { name: "About", path: "/about" , active : pathname === '/about' },
 
-    { name: "Market", path: "/market" },
+    { name: "Market", path: "/market" , active : pathname === '/market' },
     // { name: "FAQs", path: "/faq" },
   ];
 
-  const linksWithChildren = [
-    { name: "Oil & Gas", path: "/industries/oil-and-gas",icon: MdOilBarrel },
-    { name: "Green Energy", path: "/industries/green-energy",icon:MdOutlineWindPower },
-    { name: "Mining", path: "/industries/mining",icon:GiGoldMine },
-    // { name: "Construction & Real Estate",path: "/industries/construction",icon:serviceIcons[1]},
-    
-    // { name: "Agriculture", path: "/industries/agriculture",icon:serviceIcons[0] },
-    { name: "Marine Fisheries", path: "/industries/fisheries",icon:GiFishingBoat },
-    { name: "Steel", path: "/industries/steel",icon:GiSteelClaws},
+
+  type LinkWithChildren = {
+    name: string;
+    path :string
+    Icon? : IconType
+    icon ?: StaticImport 
+  }
+  const linksWithChildren:LinkWithChildren[]   = [
+    { name: "Oil & Gas", path: "/industries/oil-and-gas",Icon: MdOilBarrel },
+    { name: "Green Energy", path: "/industries/green-energy",Icon:MdOutlineWindPower },
+    { name: "Mining", path: "/industries/mining",Icon:GiGoldMine },
+    { name: "Construction & Real Estate",path: "/industries/construction",icon:serviceIcons[1]},
+    { name: "Agriculture", path: "/industries/agriculture",icon:serviceIcons[0] },
+    { name: "Marine Fisheries", path: "/industries/fisheries",Icon:GiFishingBoat },
+    { name: "Steel", path: "/industries/steel",Icon:GiSteelClaws},
   ];
 
   return (
-    // <ul className="navbar relative hidden items-center justify-center gap-5 lg:flex lg:flex-wrap lg:space-x-1">
-    //   {navlinks.map((link, index) => (
-    //     <li className="nav-item" key={index}>
-    //       <div className="inline-flex items-center">
-    //         <Link
-    //           href={link.path}
-    //           className={`text-[16px] ${pathname === link.path ? "text-white font-semibold" : "text-neutral-50"}`}
-    //         >
-    //           {link.name}
-    //         </Link>
-    //         {link.children && (
-    //           <button
-    //             onClick={() => {
-    //               setHidden((prev) => !prev);
-    //             }}
-    //           >
-    //             <span>
-    //               <ChevronDownIcon
-    //                 className={`ml-2 size-4 text-white transition-all duration-200 ${!hidden && "rotate-180"}`}
-    //               />
-    //             </span>
-    //           </button>
-    //         )}
-    //       </div>
-    //       {link.children && (
-    //         <ul
-    //           className={`navbar-dropdown absolute left-0 top-full space-y-4  rounded-md bg-white/80 p-5 opacity-0 transition-all duration-300 ${!hidden && "block opacity-100"} `}
-    //         >
-    //           {link.children.map((child, index) => (
-    //             <li className="nav-item block" key={index}>
-    //               <Link
-    //                 href={child.path} onClick={() => setHidden(true)}
-    //                 className={`${pathname === child.path ? "text-black" : "text-neutral-900"}`}
-    //               >
-    //                 {child.name}
-    //               </Link>
-    //             </li>
-    //           ))}
-    //         </ul>
-    //       )}
-    //     </li>
-    //   ))}
-    // </ul>
     <NavigationMenu className="text-white">
       <NavigationMenuList>
       
         {navlinks.map((link, index) => (
           <NavigationMenuItem key={"list" + index}>
             <Link href={link.path} legacyBehavior passHref>
-              <NavigationMenuLink className="hover:text-neutral-300">{link.name}</NavigationMenuLink>
+              <NavigationMenuLink className={`hover:text-neutral-300 ${link.active && 'underline underline-offset-8'}`} >{link.name}</NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
         ))}
@@ -103,23 +69,17 @@ function Navigation() {
           <NavigationMenuTrigger className="hover:text-neutral-300">Industries</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[400px] gap-3 p-4 md:grid-cols-2">
-              {linksWithChildren.map(({icon:Icon ,path,name},index) => (
+              {linksWithChildren.map(({icon,path,name,Icon},index) => (
                
                 <ListItem
                   key={path}
                   title={name}
                   href={path}
+                  className={pathname === path ? "bg-accent/50" : ""}
                 >
-                  {<Icon/>}
-                 
+                  {icon && <Image src={icon} alt={name} className="w-6 h-6" />}
+                  {Icon && <Icon className="w-6 h-6" />}                 
                 </ListItem>
-              //  <Link key={index} href={path} className="hover:text-accent-foreground focus:text-accent-foreground block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent/50 focus:bg-accent">
-              //   <div className="inline-flex">
-              //     <span>{<Icon/>}</span>
-              //     <p className="text-sm font-medium leading-none">{name}</p>
-              //   </div>
-              //  </Link>
-               
               ))}
             </ul>
           </NavigationMenuContent>
@@ -143,7 +103,7 @@ const ListItem = React.forwardRef<
         <a
           ref={ref}
           className={cn(
-            "hover:text-accent-foreground focus:text-accent-foreground block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent/60 focus:bg-accent",
+            "hover:text-accent-foreground focus:text-accent-foreground block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent/60 focus:bg-accent ",
             className,
           )}
           {...props}
