@@ -12,7 +12,7 @@ function SectionContact() {
         className="pointer-events-none absolute -top-10 right-0 z-0 h-60 object-cover mix-blend-multiply"
       />
 
-      <div className="z-10 flex flex-wrap items-center lg:h-[30vh] h-auto justify-center gap-10">
+      <div className="z-10 flex flex-wrap items-center lg:h-[20vh] h-auto justify-center gap-10">
         <div className="space-y-4  text-center ">
           <h3 className="text-2xl text-neutral-50 lg:text-4xl  ">
             Would you like to start a project with us?

@@ -9,6 +9,8 @@ import Services from "../(components)/Services";
 import Deliveries from "../(components)/Deliveries";
 import { Project } from "@/types/steps";
 import { miningDeliveryImages } from "@/utils/images";
+import SectionContact from "@/components/SectionContact";
+import SectionAbout from "@/components/SectionAbout";
 
 const service = services[0];
 
@@ -44,10 +46,11 @@ const page = () => {
   return (
     <>
       <SectionHeader title = {service.title} image={bg} />
-      <SectionInfo title = {service.title} content={service.description} image={service.image}/>
       <Services services={service.service_description} />
+      <SectionAbout  chips="Vista Drone Services" cta="/contact" heading={service.title} para={service.description} image={service.image}/>
       <Deliveries projects={projects} />
       <Benifits content={service.benefits} />
+      <SectionContact/>
       <SectionFaq faqs={service.faq} />
     </>
   );
