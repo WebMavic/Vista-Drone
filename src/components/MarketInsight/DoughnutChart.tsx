@@ -1,19 +1,48 @@
 'use client'
+import { ApexOptions } from 'apexcharts'
 import React from 'react'
-import { Doughnut } from 'react-chartjs-2';
-import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
-function DoughnutChart() {
+import Chart from 'react-apexcharts'
+
+
+interface Props {
+  options:ApexOptions
+  series:ApexAxisChartSeries
+  type : 'donut' | 'line' | 'area' | 'pie'
+  height ? : string | number
+  width ?: string | number
+}
+
+function DoughnutChart({options,series,type,width = 500,height}:Props) {
   return (
-    <Doughnut data={data} className='h-48 text-white'/>
+    <Chart
+    options={options}
+    series={series} 
+    type = {type}
+    width={width}
+    height={height}/>
   )
 }
 
 export default DoughnutChart
 
 
+const options:ApexOptions =  {
+  chart : {
+    id: "basic-bar"
+  },
+  xaxis: {
+    categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998]
+  }
+} 
+const series:ApexAxisChartSeries = [
+  {
+    name: "series-1",
+    data: [30, 40, 45, 50, 49, 60, 70, 91]
+  }
+]
 
 
-ChartJS.register(ArcElement, Tooltip, Legend);
+
 
 const data = {
   labels: ['Saudi Arab', 'UAE', 'Qatar', 'Kuwait', 'Oman', 'Orange'],

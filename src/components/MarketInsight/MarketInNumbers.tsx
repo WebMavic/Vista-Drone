@@ -10,34 +10,30 @@ import {
 
 function MarketInNumbers() {
   return (
-    <div className="grid h-full w-full select-none place-items-center gap-5 sm:grid-cols-3 sm:gap-3">
-      {MarketInNumbersCode.map((item, index) => (
-        <div
-          className="flex items-center justify-between gap-5 text-heading dark:text-white"
-          key={index}
-        >
-          <div>{item.icon}</div>
-          <div className="inline-flex flex-col">
-            <h3 className="text-2xl tabular-nums">
+    <div className="grid h-full w-full select-none lg:place-items-center gap-5 lg:grid-cols-3 lg:gap-10">
+      {MarketInNumbersCode.map(({description,icon,tag,value}, index) => (
+        <div key={index} className="flex p-2 flex-col items-center">
+          <div className="inline-flex items-center justify-center gap-5">
+            <span>{icon}</span>
+            <div className="text-2xl tabular-nums text-accent">
               <CountUp
-                end={item.value}
+                end={value}
                 start={0}
                 duration={5}
                 decimals={2}
-                prefix={item.tag === "million" ? "$" : ""}
+                prefix={tag === "million" ? "$" : ""}
               />{" "}
-              {item.tag}
-            </h3>
-
-            <span className="text-justify font-light text-subheading sm:w-2/3 ">
-              {item.description.trim()}
-            </span>
+              {tag}
+            </div>
           </div>
+          <p className="text-center py-2 font-light px-2 text-subheading">{description}</p>
         </div>
       ))}
     </div>
   );
 }
+
+
 
 export default MarketInNumbers;
 

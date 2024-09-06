@@ -24,7 +24,7 @@ const Services = ({ services }: Props) => {
         <h2 className="text-4xl font-bold text-heading">What we offer</h2>
       </div>
 
-      <div className="mt-10 grid gap-5 lg:grid-cols-3">
+      <div className="mt-10 grid gap-5 lg:grid-cols-3 w-full">
         {services.map((service, index) => (
           <div 
             key={index} 

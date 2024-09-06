@@ -13,30 +13,30 @@ function scrollToTop() {
 
 const ScrollToTop = () => {
   const [hidden, setHidden] = useState<boolean>(false);
-  const { scrollY } = useScroll();
+  // const { scrollY } = useScroll();
 
-  useMotionValueEvent(scrollY, "change", (latest) => {
-    const previous = scrollY.getPrevious();
-    if (latest > previous! && latest > 500) {
-      setHidden(true);
-    } else {
-      setHidden(false);
-    }
-  });
+  // useMotionValueEvent(scrollY, "change", (latest) => {
+  //   const previous = scrollY.getPrevious();
+  //   if (latest > previous! && latest > 500) {
+  //     setHidden(true);
+  //   } else {
+  //     setHidden(false);
+  //   }
+  // });
   return (
-    <motion.div
-      variants={{
-        hidden: { y: 0 },
-        visible: { y: "200%" },
-      }}
-      animate={hidden ? "hidden" : "visible"}
+    <div
+      // variants={{
+      //   hidden: { y: 0 },
+      //   visible: { y: "200%" },
+      // }}
+      // animate={hidden ? "hidden" : "visible"}
       className="fixed bottom-5 right-5 z-50  flex  items-center gap-2  p-4"
     >
       <Button size={"icon"} className="rounded-full" onClick={scrollToTop}>
         <ChevronUp className="size-8 " />
         <span className="sr-only">scroll to top</span>
       </Button>
-    </motion.div>
+    </div>
   );
 };
 
