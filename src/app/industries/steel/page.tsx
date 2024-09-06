@@ -6,7 +6,7 @@ import Benifits from "../(components)/Benifits";
 import SectionFaq from "../(components)/SectionFaq";
 import Services from "../(components)/Services";
 import SectionAbout from "@/components/SectionAbout";
-import  bg from '@/assets/images/cnbg.png'
+import  bg from '@/assets/images/steel/steel2.jpeg'
 import SectionContact from "@/components/SectionContact";
 const service = services[1]
 

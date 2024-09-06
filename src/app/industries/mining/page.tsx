@@ -4,7 +4,7 @@ import { services } from "../../../utils/data";
 import SectionInfo from "../(components)/SectionInfo";
 import Benifits from "../(components)/Benifits";
 import SectionFaq from "../(components)/SectionFaq";
-import bg from "@/assets/images/mine/mine-1.jpeg";
+import bg from "@/assets/images/mining/mine4.jpeg";
 import Services from "../(components)/Services";
 import Deliveries from "../(components)/Deliveries";
 import { Project } from "@/types/steps";

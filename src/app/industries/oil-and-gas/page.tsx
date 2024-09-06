@@ -6,7 +6,7 @@ import React from "react";
 import Benifits from "../(components)/Benifits";
 import SectionFaq from "../(components)/SectionFaq";
 
-import oil from "@/assets/images/drones_construction_industry.jpg";
+import oil from "@/assets/images/oil&gas/oil3.jpeg";
 import Services from "../(components)/Services";
 import Deliveries from "../(components)/Deliveries";
 import SectionContact from "@/components/SectionContact";
@@ -98,9 +98,11 @@ const page = () => {
       <Services services={service.service_description} />
       <SectionAbout
         chips="vista drone service"
-        cta="/contact" 
+        cta="/contact"
+        image={service.image}
         heading={service.title} 
         para={service.description}
+        
       />
       <Deliveries projects={projects} />
       <Benifits content={service.benefits} />

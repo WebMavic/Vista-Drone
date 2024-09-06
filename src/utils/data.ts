@@ -1,27 +1,32 @@
-import mining from "@/assets/images/mining_info.jpeg";
-import survey from "@/assets/images/drones_construction_industry.jpg";
-import agriculture from "@/assets/images/agriculture_info.jpg";
-import construction from "@/assets/images/construction/const-3.jpg";
-import oil from "@/assets/images/oil.png";
-import green from '@/assets/images/green energy/wind-1.jpg'
-
-import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import { ForwardRefExoticComponent, RefAttributes } from "react";
-import { Aperture, BarChart, Cctv, Diameter, LucideProps } from "lucide-react";
-import { GiEclipseFlare,GiLeadPipe,GiOffshorePlatform,GiMoebiusTrefoil,GiGasMask,GiBarrelLeak,GiMoneyStack,GiBonsaiTree,GiPathDistance,GiProgression,GiCargoCrane,GiReceiveMoney,GiSatelliteCommunication } from "react-icons/gi";
-import { BsDatabaseFillCheck } from "react-icons/bs";
+import { StaticImport } from "next/dist/shared/lib/get-img-props";
 
-import { PiWall } from "react-icons/pi";
+import mine from "@/assets/images/mining/mine1.jpeg";
+import agriculture from "@/assets/images/agriculture/agriculture2.jpeg";
+import construction from "@/assets/images/construction/const-3.jpg";
+import oil from "@/assets/images/oil&gas/oil1.jpeg";
+import green from '@/assets/images/greenenergy/solar3.jpeg'
+import steel from '@/assets/images/steel/steel1.jpeg'
+
+import { Aperture, BarChart, Cctv, Diameter, LucideProps } from "lucide-react";
+import { GiEclipseFlare,GiLeadPipe,GiOffshorePlatform,GiMoebiusTrefoil,GiGasMask,GiBarrelLeak,GiMoneyStack,GiBonsaiTree,GiPathDistance,GiProgression,GiCargoCrane,GiReceiveMoney,GiSatelliteCommunication,GiPlantRoots,GiWateringCan,GiSpray,GiHealthPotion,GiCctvCamera,GiCrackedGlass } from "react-icons/gi";
+import { BsDatabaseFillCheck,BsFillSignYieldFill } from "react-icons/bs";
+import { TbBrandSnapseed,TbCell } from "react-icons/tb";
+import { PiThermometerHotFill } from "react-icons/pi";
+import { VscColorMode } from "react-icons/vsc";
+
+
+import { PiWall,PiPlantLight } from "react-icons/pi";
 import { VscLightbulbSparkle } from "react-icons/vsc";
 import { TbReport } from "react-icons/tb";
-
 import { SiSpond,SiExoscale,SiDrone } from "react-icons/si";
-import { MdHealthAndSafety,MdSos } from "react-icons/md";
-import { FaDatabase,FaMapMarkedAlt,FaCheck,FaPlusCircle,FaEye,FaCalendarCheck } from "react-icons/fa";
+import { MdHealthAndSafety,MdSos,MdOutlinePestControl,MdLandscape } from "react-icons/md";
+import { TbPlant2 } from "react-icons/tb";
+import { FaNoteSticky } from "react-icons/fa6";
+import { FaDatabase,FaMapMarkedAlt,FaCheck,FaPlusCircle,FaEye,FaCalendarCheck, } from "react-icons/fa";
+import { GrResources } from "react-icons/gr";
+import { RiHotspotFill } from "react-icons/ri";
 import { AiOutlineSafetyCertificate,AiOutlineSafety, } from "react-icons/ai";
-
-
-
 import { FaHelmetSafety } from "react-icons/fa6";
 import { IconType } from "react-icons/lib";
 
@@ -56,10 +61,10 @@ type faq = {
 
 export const services: Service[] = [
   {
-    title: "Mining and Petroleum",
+    title: "Mining",
     description:
       "Maximize operational efficiency and safety in your mining and petroleum projects with Vista Drone Services. Our specialized drone solutions provide precise aerial data, helping you streamline exploration, site assessment, and resource management. Utilizing state-of-the-art drones equipped with high-resolution cameras and advanced sensors, we conduct comprehensive aerial surveys that generate detailed maps and 3D models of your site. This allows for accurate identification of mineral deposits and thorough evaluation of terrain conditions. By capturing extensive data quickly and safely from above, we eliminate the need for manual ground surveys, thus minimizing the risk to personnel and reducing operational downtime. ",
-    image: mining,
+    image: mine,
     
     service_description: [
       {
@@ -143,61 +148,79 @@ export const services: Service[] = [
     ],
     faq: [
       {
-        question: "How accurate are your volumetric measurements?",
-        answer:
-          "Our drones use advanced sensors and software to provide volumetric measurements with an accuracy of within 1-2%, ensuring precise inventory tracking and resource management",
+        question: "What are the benefits of using drones in mining?",
+        answer: "Drones provide high-definition imagery, elevation data, and 3D models for better planning, design, operations, and maintenance decisions in mining.",
       },
       {
-        question: "Can drones be used for offshore petroleum sites?",
-        answer:
-          "Yes, our drones are equipped to handle offshore conditions, providing reliable data for offshore exploration, rig inspections, and pipeline monitoring, even in challenging weather. ",
+        question: "How do drones assist in mine planning?",
+        answer: "Drones offer tools for surveying, lease area mapping, Digital Terrain Modelling (DTM), Digital Surface Modelling (DSM), and environmental impact assessments.",
       },
       {
-        question: "What is the turnaround time for aerial surveys? ",
-        answer:
-          "Depending on the size and complexity of the site, most surveys can be completed within 1-3 days, with data analysis and comprehensive reports available within a week.",
+        question: "What types of analyses can drones perform for mining operations?",
+        answer: "Drones can perform volumetric analysis, slope analysis, contour mapping, distance measurement, and boundary geo-tagging for comprehensive mine assessment.",
       },
+      {
+        question: "How are drones used for stockpile measurement in mining?",
+        answer: "Drones measure the volume of stockpiles, overburdens, or any materials effectively in 3D, aiding in accurate inventory management.",
+      },
+      {
+        question: "What deliverables does Vista Drone provide for mining projects?",
+        answer: "Vista Drone provides digital terrain models, digital surface models, ortho-mosaics, 3D models, and point clouds for mining projects.",
+      },
+      {
+        question: "How do drones support safety and surveillance in mining?",
+        answer: "Drones monitor blasting sites, capture data for front row burden analysis, and provide real-time surveillance for safety and operational efficiency.",
+      },
+      {
+        question: "What is the workflow for drone data collection in mining?",
+        answer: "The workflow includes preparation, flight planning, data acquisition, post-flight data processing, and delivering final products like maps and models.",
+      },
+      {
+        question: "How does Vista Drone ensure collaboration in mining projects?",
+        answer: "Vista Drone uses a secure online cloud environment to host drone data, enabling easy sharing and collaboration with stakeholders for better decision-making.",
+      }
     ],
+    
   },
   
   {
     title: "Steel Industries",
     description:
       "Transform your planning and survey processes with our advanced drone technology. Vista Drone Services offers comprehensive solutions to support topographic mapping, land surveying, and infrastructure assessment. Our high-resolution drones capture detailed aerial imagery and data, enabling the creation of accurate topographic maps and 3D models. This detailed data collection aids in precise terrain analysis, essential for planning construction projects, land development, and environmental studies. By leveraging our drone technology, you can efficiently gather the necessary data for site evaluations and project planning, reducing the need for traditional ground surveys and enhancing the accuracy of your assessments. ",
-    image:survey,
+    image:steel,
       
       
     service_description: [
       {
         title: "Aerial Inspection and Surveillance",
         content:"Routine inspections, real-time monitoring, and high-resolution imagery for infrastructure, security, and detailed maintenance analysis.",
-          image: Diameter,
+          image: Aperture,
           color : "rose"
       },
       {
         title: "Thermal Imaging",
         content:"Detects heat anomalies to prevent failures, ensures maintenance, and identifies overheating and inefficiencies through regular thermal audits.",
-          image: Diameter,
+          image: PiThermometerHotFill,
           color : "rose"
       },
       {
         title: "Mapping and Modeling",
         content:
           "Accurate 3D models for planning, topographic surveys for site analysis, and volumetric calculations for inventory management.",
-          image: Diameter,
+          image: FaMapMarkedAlt,
           color : "rose"
       },
       {
         title: "Environmental Monitoring",
         content:
           "Real-time monitoring of emissions and environmental impact ensures compliance, supports sustainability, and reduces ecological footprint.",
-          image: Diameter,
+          image: PiPlantLight,
           color : "rose"
       },
       {
         title: "Emergency Response",
         content:"Rapid deployment provides quick incident assessment, supports disaster management, and offers real-time situational awareness for effective decisions.",
-          image: Diameter,
+          image: MdSos,
           color : "rose"
       },
       
@@ -232,21 +255,39 @@ export const services: Service[] = [
     ],
     faq: [
       {
-        question: "What types of infrastructure can you assess with drones? ",
-        answer:
-          "We can assess roads, bridges, buildings, pipelines, and other critical infrastructure components, providing comprehensive visual and thermal data.",
+        question: "What services does Vista Drone offer to the steel industry?",
+        answer: "Vista Drone offers aerial inspections, real-time monitoring, thermal imaging, mapping and modeling, environmental monitoring, and emergency response services.",
       },
       {
-        question: "How do you ensure the accuracy of land surveys?",
-        answer:
-          " Our drones use advanced GPS and RTK technology to achieve high accuracy, often within a few centimeters, providing reliable data for property development and boundary delineation.",
+        question: "How do drones enhance safety in the steel industry?",
+        answer: "Drones minimize the need for manual inspections in hazardous areas, reducing risk to personnel and enhancing overall safety.",
       },
       {
-        question: "Can you provide 3D models for large areas? ",
-        answer:
-          "Yes, we can create detailed 3D models for both small and large areas, depending on the project requirements, using photogrammetry and LiDAR technology.",
+        question: "What role do drones play in environmental monitoring for steel industries?",
+        answer: "Drones provide real-time monitoring of emissions and environmental impact, helping ensure compliance with regulations and supporting sustainability initiatives.",
       },
+      {
+        question: "How do drones improve operational efficiency in steel production?",
+        answer: "Drones streamline inspection processes, provide accurate data for maintenance planning, and enable quick assessments of incidents, improving operational efficiency.",
+      },
+      {
+        question: "What benefits does thermal imaging by drones provide?",
+        answer: "Thermal imaging detects heat anomalies, helps prevent equipment failures, ensures safety compliance, and identifies energy loss and equipment inefficiencies.",
+      },
+      {
+        question: "How do drones support emergency response in the steel industry?",
+        answer: "Drones enable rapid deployment for quick incident assessments, support disaster management, and provide real-time situational awareness for decision-making.",
+      },
+      {
+        question: "What is the significance of collaboration via cloud for drone data?",
+        answer: "Collaboration via cloud allows stakeholders to access digital drone data, improving decision-making for planning, monitoring, and maintenance.",
+      },
+      {
+        question: "How do drones assist in mapping and modeling for steel industries?",
+        answer: "Drones create accurate 3D models, perform topographic surveys, and calculate volumes for inventory management, aiding in planning and construction.",
+      }
     ],
+    
   },
  
   {
@@ -258,35 +299,35 @@ export const services: Service[] = [
       {
         title: "Crop Health Monitoring",
         content:
-          "Using multispectral and thermal imaging, we monitor crop health and detect issues early. This helps in identifying nutrient deficiencies, disease outbreaks, and water stress. Our drones fly over fields to capture images that are then processed to generate NDVI (Normalized Difference Vegetation Index) maps, indicating the health and vigor of crops.",
-          image: Diameter,
+          "Drones use multispectral and thermal imaging to monitor crop health, detect issues, and generate NDVI maps.",
+          image: GiPlantRoots,
           color : "rose"
       },
       {
         title: "Irrigation Planning",
         content:
-          "Our drones create detailed irrigation maps that help in efficient water usage. By analyzing soil moisture levels and identifying areas with inadequate or excessive irrigation, we provide recommendations for optimal irrigation schedules, reducing water waste and improving crop yields.",
-          image: Diameter,
+          "Our drones create irrigation maps, analyze soil moisture, and recommend optimal schedules to reduce water waste and improve yields.",
+          image: GiWateringCan,
           color : "rose"
       },
       {
         title: "Pest Detection",
         content:
-          "Early identification of pest infestations is crucial for minimizing crop damage. Our drones use advanced imaging to detect pest activity by spotting changes in crop coloration and health, providing data for targeted pest control measures, and reducing the need for widespread pesticide application.",
-          image: Diameter,
+          "Our drones use advanced imaging to detect pest infestations early, enabling targeted control and reducing pesticide use.",
+          image: MdOutlinePestControl,
           color : "rose"
       },
       {
         title: "Yield Prediction",
         content:
-          "We analyze various factors such as plant health, soil conditions, and historical data to provide accurate yield predictions. By integrating data from different stages of crop growth, we offer insights into expected yields, helping farmers in better planning, marketing, and resource allocation.",
-          image: Diameter,
+          "We analyze plant health, soil conditions, and historical data for accurate yield predictions, aiding planning and resource allocation.",
+          image: BsFillSignYieldFill,
           color : "rose"
       },
       {
         title : 'Spray Application',
-        content : "Crop spraying drones can carry liquid storage tanks and can be operated more safely. Water/pesticides can be sprayed in the field in a most efficient way and helping to conserve resources.",
-        image  : Diameter,
+        content : "Crop spraying drones carry tanks and spray efficiently, enhancing safety and resource conservation in the field.",
+        image  : GiSpray,
         color : "blue"
         
       },
@@ -294,65 +335,90 @@ export const services: Service[] = [
         title : ' Soil health monitoring',
         content : "Using microwave sensing, drones are able to capture very accurate soil health information.",
         color :"rose",
-        image  : Diameter 
+        image  : GiHealthPotion 
       }
     ],
     benefits: [
       {
-        title: "Improved Yield",
-        content:
-          " Enhance crop productivity with precise data insights, ensuring optimal growth conditions and timely interventions.",
-        icon:FaHelmetSafety,
-      },
-      {
-        title: "Resource Management",
-        content:
-          " Optimize resource usage and reduce waste, leading to cost savings and more sustainable farming practices.",
-        icon:FaHelmetSafety,
-      },
-      {
-        title: "Sustainability",
-        content:
-          "Promote sustainable farming practices with advanced technology, reducing the environmental impact of agricultural activities.",
-        icon:FaHelmetSafety,
-      },
-      {
         title: "Monitoring Plant Health",
         content:
-          "Software analysis can be used to change values in order to reflect the specific crop type and even in which stage of life a specific crop is in.",
-        icon:FaHelmetSafety,
+          " Drones with NDVI imaging and software analysis adjust values to reflect crop type and growth stage.",
+        icon:PiPlantLight,
       },
       {
         title: "Monitoring Field Condition",
         content:
-          "Drones provide accurate field mapping.Having information on field elevation is useful in determining drainage patterns and wet/dry spots which allow for more efficient watering techniques.",
-        icon:FaHelmetSafety,
+          " Drones offer accurate field mapping, helping determine drainage patterns and wet/dry spots for efficient watering.",
+        icon:GrResources,
       },
       {
         title: "Planting And Seeding",
         content:
-          "Automated drone seeders are mostly being used in forestry industries.Planting with drones means very hard to reach areas can be re-planted without endangering farmers.",
-        icon:FaHelmetSafety,
+          "Automated drone seeders, used in forestry, enable planting in hard-to-reach areas without risking farmers' safety.",
+        icon:TbBrandSnapseed,
+      },
+      {
+        title: "Spray Application",
+        content:
+          "Crop spraying drones with liquid tanks operate safely, spraying water and pesticides efficiently while conserving resources.",
+        icon:GiSpray,
+      },
+      {
+        title: "Security & Surveillance",
+        content:
+          "Drones monitor remote farm areas and livestock, enabling frequent and efficient surveillance of inaccessible regions.",
+        icon:GiCctvCamera,
+      },
+      {
+        title: " Soil health monitoring ",
+        content:
+          "Microwave sensing drones capture highly accurate soil health data for precise analysis.",
+        icon:MdLandscape,
       },
     ],
     faq: [
       {
-        question:
-          "How frequently should drone surveys be conducted on crops?  ",
-        answer:
-          "This depends on the crop type and growth stage, but typically, monthly surveys provide sufficient data for effective monitoring and timely interventions.",
+        question: "What services does Vista Drone offer for agriculture?",
+        answer: "Vista Drone provides crop health monitoring, irrigation planning, pest detection, yield prediction, spray application, soil health monitoring, and security surveillance to enhance agricultural productivity and sustainability.",
       },
       {
-        question: "Can drones detect specific crop diseases?",
-        answer:
-          "Yes, our drones can identify specific diseases by analyzing changes in plant health through multispectral and thermal imaging, allowing for early treatment and prevention of disease spread.",
+        question: "How do drones help in crop health monitoring?",
+        answer: "Our drones use multispectral and thermal imaging to detect issues early, monitor crop health, and generate NDVI maps for accurate crop analysis.",
       },
       {
-        question: "What is the accuracy of your yield predictions",
-        answer:
-          "Our yield predictions are highly accurate, with a typical variance of less than 5% when compared to actual harvest data, providing reliable forecasts for planning and decision-making.",
+        question: "What role do drones play in irrigation planning?",
+        answer: "Drones create irrigation maps, analyze soil moisture levels, and recommend optimal watering schedules to minimize water waste and improve crop yields.",
+      },
+      {
+        question: "Can drones help with pest detection?",
+        answer: "Yes, our drones use advanced imaging to detect pest infestations early, allowing for targeted control measures and reduced pesticide use.",
+      },
+      {
+        question: "How do drones assist in yield prediction?",
+        answer: "We analyze plant health, soil conditions, and historical data to provide accurate yield predictions, helping farmers plan and allocate resources efficiently.",
+      },
+      {
+        question: "What is drone spray application, and how is it beneficial?",
+        answer: "Drone spray application involves using drones with liquid storage tanks to safely and efficiently spray water or pesticides, conserving resources and enhancing safety.",
+      },
+      {
+        question: "How do drones monitor soil health?",
+        answer: "Using microwave sensing, drones capture accurate soil health data, providing precise information for better soil management.",
+      },
+      {
+        question: "Can drones be used for planting and seeding?",
+        answer: "Yes, automated drone seeders are used, especially in forestry, to plant in hard-to-reach areas without risking farmers' safety.",
+      },
+      {
+        question: "How do drones help in monitoring field conditions?",
+        answer: "Drones provide accurate field mapping, helping identify drainage patterns, wet/dry spots, and areas needing efficient watering.",
+      },
+      {
+        question: "Are drones useful for security and surveillance on farms?",
+        answer: "Absolutely, drones monitor remote farm areas and livestock, providing frequent and efficient surveillance of otherwise inaccessible regions.",
       },
     ],
+    
   },
  
 
@@ -444,22 +510,40 @@ export const services: Service[] = [
     ],
     faq: [
       {
-        question:
-          "How often should progress monitoring be done on construction sites?",
-        answer:
-          "Weekly or bi-weekly monitoring is recommended for most projects to effectively track progress, identify potential issues, and ensure timely completion.",
+        question: "How do drones benefit civil construction projects?",
+        answer: "Drones enhance efficiency, safety, and precision by providing accurate surveying, progress monitoring, inspections, and real-time data sharing.",
       },
       {
-        question: "Can drones be used for both small and large construction projects?",
-        answer:
-          " Yes, our drone services are scalable and can be tailored to suit both small and large construction projects, providing valuable data for any project size.",
+        question: "What types of drones are used in civil construction?",
+        answer: "We use fixed-wing drones for large area mapping, multi-rotor drones for site inspections, and hybrid drones for versatile applications.",
       },
       {
-        question: "What kind of safety standards do your drones help monitor? ",
-        answer:
-          "Our drones help monitor compliance with OSHA standards, site-specific safety protocols, and other industry regulations, ensuring a safe working environment and reducing the risk of accidents.",
+        question: "How do drones improve safety on construction sites?",
+        answer: "Drones enable remote inspections of hard-to-reach areas, reducing the need for manual inspections and minimizing risk to personnel.",
       },
+      {
+        question: "What deliverables does Vista Drone provide for civil construction projects?",
+        answer: "Vista Drone delivers 3D models, topographic maps, inspection reports, thermal imaging, progress monitoring, and real-time data feeds for construction projects.",
+      },
+      {
+        question: "What are the benefits of using drones for real estate marketing?",
+        answer: "Drones provide cost-effective aerial photography and video, creating dramatic and compelling images that attract customer interest more effectively than traditional methods.",
+      },
+      {
+        question: "How do drones enhance property presentation in real estate?",
+        answer: "Drones capture aerial photographs and videos that highlight key property features like backyards, walking paths, pools, and landscaping, which are important to many buyers.",
+      },
+      {
+        question: "Why is aerial imagery important in a competitive real estate market?",
+        answer: "Detailed aerial images provide more information, helping a property listing stand out among competitors and potentially increasing revenue over time.",
+      },
+      {
+        question: "How does drone technology create more compelling real estate images?",
+        answer: "Drone technology allows for capturing professional-looking, attractive photographs that can quickly capture customer interest, enhancing marketing effectiveness.",
+      }
+
     ],
+    
   },
 
   {
@@ -612,60 +696,77 @@ export const services: Service[] = [
     ],
     benefits: [
       {
-        title: "Efficiency",
+        title: "Cell Mismatch Defect",
         content:
-          "Drones have the ability to cover large areas quickly, streamlining the inspection process. In contrast, manual inspections are often labor-intensive and can take a considerable amount of time.",
-        icon:FaHelmetSafety,
+          "Cell mismatches in photovoltaic (PV) cells can significantly impact system output and yield,potentially leading to hotspots causing browning, burns, or fire.",
+        icon:TbCell,
       },
       {
-        title: "Cost Savings",
+        title: "Cracks",
         content:
-          "Solar panel inspection drones significantly reduce costs by reducing the need for workers and allowing faster inspection times, thereby reducing budgetary strain for solar farm operators.",
-        icon:FaHelmetSafety,
+          "Defects in photovoltaic systems, resulting from manufacturing processes, handling, packaging, transport, and reloading, and harsh climates like strong winds, snow, and hail, are common throughout their lifetime.",
+        icon:GiCrackedGlass,
       },
       {
-        title: "Safety",
+        title: "Discolorations",
         content:
-          "Solar panel inspections can be conducted remotely, reducing workplace accidents and injuries by eliminating the need for dangerous climbs or heavy equipment use.",
-        icon:FaHelmetSafety,
+          "PV systems can suffer from discoloration due to internal components like low-quality polymers or external factors like high temperatures and humidity, reducing sunlight entry and causing significant losses.",
+        icon:VscColorMode,
       },
       {
-        title: "High-Quality Imaging",
+        title: "Delamination",
         content:
-          "Drones with high-resolution cameras can capture detailed images of solar panels, enabling the identification of invisible damage, dirt, or defects, preventing irrevocable damage.",
-        icon:FaHelmetSafety,
+          "Through a PV modules’ lifetime, adhesive bonds between solar cells’ materials can begin to hold moisture, causing severe delamination. These defects can also occur due to improper lamination methods and harsh weather conditions.",
+        icon:FaNoteSticky,
       },
       {
-        title: "Thermal Imaging",
+        title: "Hotspots",
         content:
-          "Drones with thermal imaging cameras that can detect hotspots on solar panels where energy may be getting wasted due to damage or other issues. This technology helps operators identify areas in need of repair or replacement.",
-        icon:FaHelmetSafety,
+          "Overloaded regions on solar panels can cause warm spots due to poorly soldered cell connections or structural flaws, resulting in increased resistance and short-circuits, depreciating the productivity and goodwill of the PV system.",
+        icon:RiHotspotFill,
       },
     ],
     faq: [
       {
-        question:
-          "How do drones improve the safety of infrastructure inspections?",
-        answer:
-          " Drones reduce the need for manual inspections in hazardous areas, thereby minimizing risk to human inspectors and providing a safer, more efficient inspection process.",
+        question: "What are the common defects observed during solar panel inspections?",
+        answer: "Common defects include cell mismatches, cracks, discolorations, delamination, and hotspots, all of which can reduce solar panel efficiency and lifespan.",
       },
       {
-        question: "What types of faults can drones detect in power lines?",
-        answer:
-          " Drones can detect a variety of faults including corrosion, wear and tear, broken wires, vegetation encroachment, and heat anomalies that indicate potential failures.",
+        question: "How do drones benefit solar panel inspections?",
+        answer: "Drones offer efficiency by covering large areas quickly, cost savings, enhanced safety, high-quality imaging, and thermal detection of hotspots, enabling faster and more accurate inspections.",
       },
       {
-        question: "How frequently should infrastructure be inspected using drones?",
-        answer:
-          "The frequency depends on the type and condition of the infrastructure, but semi-annual or annual inspections are common for most assets, with more frequent inspections recommended for high-risk areas.",
+        question: "What role does thermal imaging play in solar panel inspections?",
+        answer: "Thermal imaging drones detect 'hotspots' where energy may be wasted due to damage or defects, allowing operators to identify areas in need of repair or replacement.",
       },
+      {
+        question: "How do drones contribute to preventative maintenance of solar panels?",
+        answer: "Regular drone inspections identify potential issues early, allowing for preventative maintenance, extending the panels' lifespan, and minimizing downtime.",
+      },
+      {
+        question: "Why are drones essential for wind turbine inspections?",
+        answer: "Drones provide safe, efficient, and high-quality inspections of wind turbines, reducing downtime, reaching inaccessible areas, and enabling preventive maintenance.",
+      },
+      {
+        question: "What methodologies are used for wind turbine inspections with drones?",
+        answer: "Drones use digital and thermographic cameras for visual inspection of components, detecting structural defects, weaknesses, and hidden failures in turbine blades.",
+      },
+      {
+        question: "How do drones ensure safety during wind turbine inspections?",
+        answer: "Drones provide a non-contact, non-destructive inspection method, reducing the need for dangerous climbs and allowing for safe monitoring of critical components.",
+      },
+      {
+        question: "What are the benefits of using drones for both solar and wind turbine inspections?",
+        answer: "Drones offer safe inspections, reduced downtime, high-quality imaging, access to hard-to-reach areas, dynamic surveying, and improved maintenance planning.",
+      }
     ],
+    
   },
   {
     title: "Marine Fisheries",
     description:
-      "Maximize operational efficiency and safety in your mining and petroleum projects with Vista Drone Services. Our specialized drone solutions provide precise aerial data, helping you streamline exploration, site assessment, and resource management. Utilizing state-of-the-art drones equipped with high-resolution cameras and advanced sensors, we conduct comprehensive aerial surveys that generate detailed maps and 3D models of your site. This allows for accurate identification of mineral deposits and thorough evaluation of terrain conditions. By capturing extensive data quickly and safely from above, we eliminate the need for manual ground surveys, thus minimizing the risk to personnel and reducing operational downtime. ",
-    image: mining,
+      "Enhance operational efficiency and safety in your marine fisheries with Vista Drone Services. Our advanced drone solutions deliver precise aerial data, optimizing fish stock monitoring, habitat mapping, and resource management. Equipped with high-resolution cameras and specialized sensors, our drones conduct comprehensive aerial surveys to generate detailed maps and 3D models of aquatic environments. This enables accurate monitoring of fish populations, habitat conditions, and environmental changes.In addition to initial surveys, our drones offer real-time monitoring of fishing activities and marine ecosystems. This continuous oversight helps ensure safety and regulatory compliance by providing live feeds and high-resolution imagery for immediate detection and response to potential issues. By integrating our state-of-the-art drone technology, Vista Drone Services supports effective fishery management, minimizes environmental impact, and enhances decision-making with up-to-date, actionable data.",
+    image: mine,
     
     service_description: [
       {
@@ -749,20 +850,26 @@ export const services: Service[] = [
     ],
     faq: [
       {
-        question: "How accurate are your volumetric measurements?",
-        answer:
-          "Our drones use advanced sensors and software to provide volumetric measurements with an accuracy of within 1-2%, ensuring precise inventory tracking and resource management",
+        question: "What challenges do marine fisheries face?",
+        answer: "Marine fisheries face challenges such as overfishing, illegal fishing, difficulties in monitoring vast ocean areas, environmental impacts, and high costs of traditional surveillance methods.",
       },
       {
-        question: "Can drones be used for offshore petroleum sites?",
-        answer:
-          "Yes, our drones are equipped to handle offshore conditions, providing reliable data for offshore exploration, rig inspections, and pipeline monitoring, even in challenging weather. ",
+        question: "How do Vista Drone solutions address overfishing and fish stock depletion?",
+        answer: "Vista Drone offers real-time data, surveillance, and monitoring to collect accurate information on fish populations and environmental conditions, aiding fisheries managers in making informed decisions on quotas and sustainability measures.",
       },
       {
-        question: "What is the turnaround time for aerial surveys? ",
-        answer:
-          "Depending on the size and complexity of the site, most surveys can be completed within 1-3 days, with data analysis and comprehensive reports available within a week.",
+        question: "How can drones help combat illegal fishing activities?",
+        answer: "Vista Drone enhances enforcement capabilities by tracking vessels, capturing evidence of illegal fishing, enabling rapid response by authorities, and increasing compliance with fisheries regulations.",
       },
+      {
+        question: "How do drones reduce the environmental impact of fishing?",
+        answer: "Drones detect and mitigate environmental damage such as illegal trawling or pollution and monitor protected marine areas, ensuring the preservation of sensitive habitats.",
+      },
+      {
+        question: "What are the benefits of using drones for fish farm inspection and maintenance?",
+        answer: "Drones conduct regular inspections of fish farms, monitor fish health, feeding patterns, and structural conditions, detecting issues early, reducing manual inspections, and improving operational efficiency.",
+      }
     ],
+    
   },
 ];

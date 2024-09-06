@@ -64,3 +64,23 @@ export const oilDeliveryImages = [
     require("@/assets/images/projects/oil/Picture6.png"),
     require("@/assets/images/projects/oil/Picture7.png"),
 ]
+export const solarimages = [
+  require("@/assets/images/projects/greenenergy/solar/Picture1.png"),
+  require("@/assets/images/projects/greenenergy/solar/Picture2.png"),
+  require("@/assets/images/projects/greenenergy/solar/Picture3.png"),
+  require("@/assets/images/projects/greenenergy/solar/Picture4.png"),
+  require("@/assets/images/projects/greenenergy/solar/Picture5.png"),
+  require("@/assets/images/projects/greenenergy/solar/Picture6.png"),
+  require("@/assets/images/projects/greenenergy/solar/Picture7.png"),
+  require("@/assets/images/projects/greenenergy/solar/Picture8.png"),
+  require("@/assets/images/projects/greenenergy/solar/Picture9.png"),
+  require("@/assets/images/projects/greenenergy/solar/Picture10.png"),
+  require("@/assets/images/projects/greenenergy/solar/Picture11.png"),
+  require("@/assets/images/projects/greenenergy/solar/Picture12.png"),
+  require("@/assets/images/projects/greenenergy/solar/Picture13.png"),
+  require("@/assets/images/projects/greenenergy/solar/Picture14.png"),
+  require("@/assets/images/projects/greenenergy/solar/Picture15.png"),
+  require("@/assets/images/projects/greenenergy/solar/Picture16.png"),
+  require("@/assets/images/projects/greenenergy/solar/Picture17.png"),
+  require("@/assets/images/projects/greenenergy/solar/Picture18.png"),
+]
