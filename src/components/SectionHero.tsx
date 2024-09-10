@@ -1,48 +1,11 @@
 "use client";
 import React, { useState } from "react";
-import { Button, buttonVariants } from "@/components/ui/Button";
+import { Button} from "@/components/ui/Button";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import HeroContent from "./Hero/HeroContent";
-import { Hero } from "@/types/steps";
-import bg from "@/assets/images/draft.jpg";
-import drone from "@/assets/images/drone9.png"
-import bg2 from "@/assets/images/ricardo-gomez-angel.jpg";
+import { heroOptions } from "@/constants";
 
 
-const heroOptions: Hero[] = [
-  {
-    title: "Elevate Your Vision Cutting Edge UAV Solutions Await",
-    description:
-      "Vista Drone captures and maps aerial data in a smart, cost-effective manner, empowering businesses to make informed decisions. We help you unlock the limitless possibilities of the open sky with our top-tier UAV services.",
-    background: "/MATRICE.mp4",
-    className:'lg:w-1/2'
-  },
-  {
-    title: "Elevate Your Vision Cutting Edge UAV Solutions Await",
-    description:
-      "Vista Drone captures and maps aerial data in a smart, cost-effective manner, empowering businesses to make informed decisions. We help you unlock the limitless possibilities of the open sky with our top-tier UAV services.",
-    image: bg,
-  },
-  {
-    title: "Elevate Your Vision Cutting Edge UAV Solutions Await",
-    description:
-      "We help you unlock the limitless possibilities of the open sky with our top-tier UAV services.Vista Drone captures and maps aerial data in a smart",
-    background: "/v6.mp4",
-    className:'items-center w-full text-center',
-    customParaStyle : 'w-1/2 mx-auto'
-  },
-  // {
-  //   title: "Elevate Your Vision Cutting Edge UAV Solutions Await",
-  //   description:
-  //     "We help you unlock the limitless possibilities of the open sky with our top-tier UAV services.Vista Drone captures and maps aerial data in a smart",
-  //   // background: "/v6.mp4",
-  //   // avatar : drone,
-  //   image : bg2,
-  //   customParaStyle : 'w-1/2 ',
-  //   imageStyle : 'mask-image-hero'
-  // },
-
-];
 
 function SectionHero() {
   const [hero, setHero] = useState(1);

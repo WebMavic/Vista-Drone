@@ -1,12 +1,17 @@
 import React from "react";
-import SectionLayout from "../ui/SectionLayout";
-import { Button } from "../ui/Button";
+import SectionLayout from "@/components/ui/SectionLayout";
+import { Button } from "@/components/ui/Button";
+import dataSharingImg from "@/assets/images/Cloud-Computing.webp"
+import Image from "next/image";
+
+
+
 const DataSharing = () => {
   return (
     <SectionLayout className="h-full">
-      <div className="flex h-full w-full flex-col-reverse items-center justify-between  lg:flex-row lg:items-start lg:gap-10">
+      <div className="flex h-full w-full flex-col items-center justify-between  lg:flex-row lg:items-start lg:gap-10 gap-5">
         <div className="space-y-5 lg:w-1/2">
-          <h1 className="text-center text-6xl font-medium uppercase text-primary dark:text-white lg:text-left">
+          <h1 className="text-center lg:text-6xl text-3xl font-medium uppercase text-primary dark:text-white lg:text-left">
             Smart Use of Data via Point Cloud
           </h1>
 
@@ -24,13 +29,13 @@ const DataSharing = () => {
         </div>
 
         <div className="lg:flex-1">
-          <img
-            src={
-              "https://www.infinitivehost.com/blog/wp-content/uploads/2023/12/How-to-understanding-Relationship-Between-Cloud-Computing-and-Data-Centers-1170x700.webp"
-            }
+          <Image 
+            src={dataSharingImg}
+            placeholder="blur"
+            blurDataURL={dataSharingImg.blurDataURL} 
             alt="image" id="adv-round-rectangle"
             // id="border-style-1"
-            className="object-cover h-96"
+            className="object-cover h-96 w-full"
           />
         </div>
       </div>

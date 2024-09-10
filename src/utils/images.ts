@@ -84,3 +84,13 @@ export const solarimages = [
   require("@/assets/images/projects/greenenergy/solar/Picture17.png"),
   require("@/assets/images/projects/greenenergy/solar/Picture18.png"),
 ]
+
+
+export const bentoImages = [
+  require("@/assets/images/bento/bento1.webp"),
+  require("@/assets/images/bento/bento2.jpg"),
+  require("@/assets/images/bento/bento3.webp"),
+  require("@/assets/images/bento/bento4.webp"),
+  require("@/assets/images/bento/bento6.jpeg"),
+  require("@/assets/images/bento/bento5.jpg"),
+]

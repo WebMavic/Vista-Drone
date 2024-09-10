@@ -1,8 +1,10 @@
-import Chips from '@/components/ui/Chips'
-import SectionLayout from '@/components/ui/SectionLayout'
 import { certification } from '@/utils/images'
+import dynamic from 'next/dynamic'
 import Image from 'next/image'
 import React from 'react'
+
+const Chips = dynamic(()=>import('@/components/ui/Chips')) 
+const SectionLayout = dynamic(()=>import('@/components/ui/SectionLayout'))
 
 const Certification = () => {
   return (

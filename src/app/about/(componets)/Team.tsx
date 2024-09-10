@@ -1,13 +1,14 @@
 import React from "react";
 import Chips from "@/components/ui/Chips";
-import SectionLayout from "@/components/ui/SectionLayout";
 import Image from "next/image";
-import member1 from "@/assets/images/team/t2.jpg";
-import member2 from "@/assets/images/team/t1.jpg";
-import { StaticImageData, StaticImport } from "next/dist/shared/lib/get-img-props";
-import { cn } from "@/lib/utils";
 import Link from "next/link";
+import dynamic from "next/dynamic";
+
+import { StaticImageData, StaticImport } from "next/dist/shared/lib/get-img-props";
+const SectionLayout = dynamic(()=>import("@/components/ui/SectionLayout"))
+import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/Button";
+import { teams } from "@/constants";
 
 function Team() {
   return (
@@ -20,12 +21,11 @@ function Team() {
       </div>
 
       <div className="mt-10 space-y-10 ">
-        {teams.map((team,index) => {
-          if (index === 0 ) {
-            return <TeamItem key={index} {...team} direction="left"  />
-          }
-          return <TeamItem key={index} {...team} direction="right" />
-        })}
+        {teams.map((team,index) => (
+          <TeamItem key={index} {...team} direction={index === 0 ? 'left' : 'right'} />
+        ))
+        }
+      
        
       </div>
     </SectionLayout>
@@ -34,19 +34,21 @@ function Team() {
 
 export default Team;
 
-export const TeamItem = ({bio,className,avatar,name,role,direction,cta}: {
+export const TeamItem = ({bio,className,avatar,name,role,direction,cta,email}: {
   avatar : StaticImport | StaticImageData | any
   className ?: string
   name :  string
   role? : string
   bio : string
   cta? : string
+  email ?: string
   direction : 'right' | 'left'
 }) => {
   return (
     <div className={cn("flex w-full lg:justify-between lg:items-start justify-center items-center lg:flex-row flex-col gap-6  ",direction === "right" && 'lg:flex-row-reverse',className)}>
       <Image
         src={avatar}
+        placeholder="blur"
         alt={name+"-avatar"}
         className="size-[300px] overflow-hidden rounded-xl  object-cover"
       />
@@ -55,26 +57,10 @@ export const TeamItem = ({bio,className,avatar,name,role,direction,cta}: {
         {role && <span className="text-sm">{role}</span>}
         <p className=" my-3  text-subheading">{bio}</p>
         {cta && <Link href={"/"+cta} className={buttonVariants()}>{cta.toUpperCase()}</Link>}
+        {email && <Link target="_blank" href={"mailto:"+email} className={buttonVariants()}>Contact</Link>}
       </div>
 
       
     </div>
   );
 };
-
-const teams = [
-  {
-    name: "S. Sudan",
-    role: "Founder and CEO",
-    avatar: member1,
-    cta : 'contact',
-    bio: "An entrepreneur and experienced Geo scientist with experience of over 30 years, spanning two decades in key roles in the Middle East, is marked by expertise in various sectors including mining, geology, oil and gas, ferrous and non-ferrous metal production, trading, export-import, and business development. He holds a Master's degree in Earth Science from IIT(ISM) Dhanbad, India, an MBA and Trained Drone Pilot.",
-  },
-  {
-    name: "Shlok Srivastava",
-    role: "Co-Founder & CTO",
-    avatar: member2,
-    cta : 'contact',
-    bio: "A Canadian Citizen & Govt. Certified Petroleum Engineer of Alberta, Canada with a career dedicated to optimizing energy resources. Over eight years, he has excelled in bridging the gap between industry, government, and regulatory bodies to tackle pressing issues of food and energy security. Notably, his contributions include identifying key methane emission reduction opportunities in Canada’s LNG production system, spearheading Canada’s first oil well-to-geothermal conversion project, and developing a geospatial heatmap for CO2 emissions from large-scale energy processes for a feasible CCUS application.",
-  },
-];

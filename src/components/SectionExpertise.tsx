@@ -1,14 +1,12 @@
 "use client";
-import React, { useRef } from "react";
+import React from "react";
 import Chips from "./ui/Chips";
 import SectionLayout from "./ui/SectionLayout";
 import { motion} from "framer-motion";
-import {
-  PresentationChartBarIcon,
-  ArrowTrendingUpIcon,
-  UserIcon,
-} from "@heroicons/react/24/outline";
+import Image from "next/image";
+
 import inner from "@/assets/images/home_inner_05.png";
+import { expertises } from "@/constants";
 
 
 
@@ -18,8 +16,8 @@ function SectionExpertise() {
     <SectionLayout className="min-h-screen relative ">
       <div className="h-full w-full ">
         <div className="absolute left-0 top-0 h-80 pointer-events-none select-none">
-          <img
-            src={inner.src}
+          <Image
+            src={inner}
             alt="inner-4"
             className="h-full w-full object-cover opacity-80 mix-blend-darken"
           />
@@ -60,23 +58,3 @@ function SectionExpertise() {
 
 export default SectionExpertise;
 
-const expertises = [
-  {
-    title: "Successfully projects delevering",
-    avatar: ArrowTrendingUpIcon,
-    description:
-      "Expertise and proficiency in Civil & Steel, Oil & Gas, Agriculture, Green Energy, Mining & Real Estate.",
-  },
-  {
-    title: "Sound technical expertise in  UAV market",
-    avatar: PresentationChartBarIcon,
-    description:
-      "The team is well-versed in the UAE government's long-term UAV policy and market landscape. Consequently",
-  },
-  {
-    title: "Outstanding team of  professionals",
-    avatar: UserIcon,
-    description:
-      "Includes experts with decades of experience in academia, complementing operational skills delivering end to end solution.",
-  },
-];

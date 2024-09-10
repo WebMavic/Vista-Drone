@@ -55,10 +55,10 @@ export default function SectionContent() {
             </div>
           </div>
         </div>
-        <div className="-ml-12 -mt-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
+        <div className="lg:-ml-12 lg:-mt-12 lg:p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
           
           <Image
-          className="size-full object-cover rounded-xl lg:h-screen"
+          className="size-full object-cover rounded-xl lg:h-[80vh]"
           src={solar1}
           alt="header-image"
           placeholder="blur"
@@ -70,28 +70,28 @@ export default function SectionContent() {
               
               <ul role="list" className="mt-8 space-y-8 text-gray-600">
                 <li className="flex gap-x-3">
-                  <FaTableCellsLarge  aria-hidden="true" className="mt-1 h-5 w-5 flex-none text-heading-600" />
+                  <FaTableCellsLarge  aria-hidden="true" className="mt-1 h-5 w-5 flex-none text-accent" />
                   <span>
                     <strong className="font-semibold text-gray-900">Cell Mismatch Defect.</strong> Cell mismatches in photovoltaic (PV) cells can significantly impact system output and yield, potentially leading to hotspots causing browning, burns, or fire.
 
                   </span>
                 </li>
                 <li className="flex gap-x-3">
-                  <GiCrackedGlass aria-hidden="true" className="mt-1 h-5 w-5 flex-none text-indigo-600" />
+                  <GiCrackedGlass aria-hidden="true" className="mt-1 h-5 w-5 flex-none text-accent" />
                   <span>
                     <strong className="font-semibold text-gray-900">Cracks .</strong> Defects in photovoltaic systems, resulting from manufacturing processes, handling, packaging, transport, and reloading, and harsh climates like strong winds, snow, and hail, are common throughout their lifetime.
 
                   </span>
                 </li>
                 <li className="flex gap-x-3">
-                  <IoColorFilter aria-hidden="true" className="mt-1 h-5 w-5 flex-none text-indigo-600" />
+                  <IoColorFilter aria-hidden="true" className="mt-1 h-5 w-5 flex-none text-accent" />
                   <span>
                     <strong className="font-semibold text-gray-900">Discolorations .</strong> PV systems can suffer from discoloration due to internal components like low-quality polymers or external factors like high temperatures and humidity, reducing sunlight entry and causing significant losses.
 
                   </span>
                 </li>
                 <li className="flex gap-x-3">
-                  <BsLayersHalf aria-hidden="true" className="mt-1 h-5 w-5 flex-none text-indigo-600" />
+                  <BsLayersHalf aria-hidden="true" className="mt-1 h-5 w-5 flex-none text-accent" />
                   <span>
                     <strong className="font-semibold text-gray-900">Delamination  .</strong> Through a PV modules’ lifetime, adhesive bonds between solar cells’ materials can begin to hold moisture, causing severe delamination. These defects can also occur due to improper lamination methods and harsh weather conditions.
 
@@ -99,7 +99,7 @@ export default function SectionContent() {
                   </span>
                 </li>
                 <li className="flex gap-x-3">
-                  <RiHotspotFill aria-hidden="true" className="mt-1 h-5 w-5 flex-none text-indigo-600" />
+                  <RiHotspotFill aria-hidden="true" className="mt-1 h-5 w-5 flex-none text-accent" />
                   <span>
                     <strong className="font-semibold text-gray-900">Hotspots  .</strong> Overloaded regions on solar panels can cause warm spots due to poorly soldered cell connections or structural flaws, resulting in increased resistance and short-circuits, depreciating the productivity and goodwill of the PV system.
 

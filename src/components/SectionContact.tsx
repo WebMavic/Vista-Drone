@@ -1,15 +1,15 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import art from "@/assets/images/home_inner_04.png";
 import { buttonVariants } from "./ui/Button";
 
 function SectionContact() {
   return (
     <div className="relative overflow-hidden   bg-[#5D432C] px-10 py-20">
-      <img
-        src={art.src}
-        alt="ill"
-        className="pointer-events-none absolute -top-10 right-0 z-0 h-60 object-cover mix-blend-multiply"
+      <Image src={art}
+        alt="art"
+        className="pointer-events-none absolute -top-10 right-0 z-0 h-60 object-cover mix-blend-multiply w-auto "
       />
 
       <div className="z-10 flex flex-wrap items-center lg:h-[20vh] h-auto justify-center gap-10">

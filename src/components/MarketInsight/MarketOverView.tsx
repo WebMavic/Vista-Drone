@@ -1,7 +1,5 @@
 import React from 'react'
-import DoughnutChart from './DoughnutChart';
 import MarketInNumbers from './MarketInNumbers';
-import Button from '../ui/Button';
 import SectionLayout from '../ui/SectionLayout';
 
 
@@ -14,7 +12,6 @@ function MarketOverView() {
           <MarketInNumbers/>
           {/* <Button href='/market' title='Learn more' icon className="hover:bg-accent border border-accent text-accent hover:text-white space-y-4"/> */}
           </div>
-        <div><DoughnutChart/></div>
      
 
 

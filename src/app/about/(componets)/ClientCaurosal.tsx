@@ -1,7 +1,9 @@
 import React from "react";
 import Chips from "@/components/ui/Chips";
-import SectionLayout from "@/components/ui/SectionLayout";
+import dynamic from "next/dynamic";
 import SectionClient from "@/components/SectionClient";
+
+const SectionLayout = dynamic(()=>import("@/components/ui/SectionLayout"))
 
 function ClientCaurosal() {
 

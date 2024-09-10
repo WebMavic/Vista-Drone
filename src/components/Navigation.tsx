@@ -1,5 +1,5 @@
-"use client";
-import React, { useState } from "react";
+// "use client";
+import React from "react";
 import Link from "next/link";
 import { serviceIcons } from "@/utils/images";
 import { usePathname } from "next/navigation";
@@ -8,15 +8,12 @@ import { GiGoldMine,GiSteelClaws,GiFishingBoat } from "react-icons/gi";
 import {
   NavigationMenu,
   NavigationMenuContent,
-  NavigationMenuIndicator,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-  NavigationMenuViewport,
 } from "@/components/ui/navigation-menu";
 
-import { navigationMenuTriggerStyle } from "@/components/ui/navigation-menu"
 
 
 import { cn } from "@/lib/utils";
@@ -26,14 +23,10 @@ import Image from "next/image";
 
 function Navigation() {
   const pathname = usePathname();
-  const [hidden, setHidden] = useState<boolean>(true);
   const navlinks = [
     { name: "Home", path: "/" ,active : pathname === "/"},
-
     { name: "About", path: "/about" , active : pathname === '/about' },
-
     { name: "Market", path: "/market" , active : pathname === '/market' },
-    // { name: "FAQs", path: "/faq" },
   ];
 
 
@@ -66,7 +59,7 @@ function Navigation() {
         ))}
 
         <NavigationMenuItem>
-          <NavigationMenuTrigger className="hover:text-neutral-300">Industries</NavigationMenuTrigger>
+          <NavigationMenuTrigger onClick={()=>alert("fuck")} className="hover:text-neutral-300">Industries</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[400px] gap-3 p-4 md:grid-cols-2">
               {linksWithChildren.map(({icon,path,name,Icon},index) => (

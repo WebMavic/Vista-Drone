@@ -3,11 +3,15 @@ import {
   VideoCameraIcon,
   CameraIcon,
   EyeIcon,
-  MapPinIcon,
   CubeTransparentIcon,
 } from "@heroicons/react/24/outline";
-import Chips from "../ui/Chips";
-import SectionLayout from "../ui/SectionLayout";
+import dynamic from "next/dynamic";
+
+const Chips = dynamic(()=>import("@/components/ui/Chips"))
+const SectionLayout = dynamic(()=>import("@/components/ui/SectionLayout"))
+
+import drone from '@/assets/images/img_drone_featured.png'
+import Image from "next/image";
 
 function DroneTech() {
   return (
@@ -43,18 +47,12 @@ function DroneTech() {
           </div>
 
           <div className="image-middle max-w-96 ">
-            <img
-              src="https://templatekit.tokomoo.com/dronekit/wp-content/uploads/sites/27/2021/08/img_drone_featured.png"
+            <Image src={drone}
               alt="ico"
               className="animate-wobble object-cover"
             />
 
-            {/* <div className="f1 sm:w-52 mx-auto">
-              <span className="flex items-center flex-col justify-center">
-                <EyeIcon height={50} />
-                <h4 className="text-xl font-semibold text-heading">IR Sensor</h4>
-              </span>
-            </div> */}
+          
           </div>
 
           <div className="right flex  gap-4 text-center sm:text-left lg:flex-col">

@@ -2,11 +2,12 @@
 import React, { ReactNode } from "react";
 import CountUp from "react-countup";
 
-import {
-  CurrencyDollarIcon,
-  SpeakerWaveIcon,
-  SignalIcon,
-} from "@heroicons/react/24/outline";
+
+
+import { BsGraphUpArrow } from "react-icons/bs";
+import { FaChartPie,FaUncharted } from "react-icons/fa";
+import { AiOutlineDollarCircle } from "react-icons/ai";
+
 
 function MarketInNumbers() {
   return (
@@ -49,38 +50,38 @@ const MarketInNumbersCode: MarketInNumbers[] = [
     value: 23.7,
     tag: "million",
     description: "In 2024, the projected revenue in the Drones market in GCC",
-    icon: <CurrencyDollarIcon className="h-10  text-accent" />,
+    icon: <AiOutlineDollarCircle className="h-10 w-10  text-accent" />,
   },
   {
     value: 4.49,
     tag: "% growth",
     description:
       "Increased focus in oil and gas, construction, and security (GCC)",
-    icon: <SignalIcon className="h-10 text-accent" />,
+    icon: <BsGraphUpArrow className="h-10 w-10 text-accent" />,
   },
   {
     value: 3,
     tag: "sectors",
-    description: "Annual growth rate from 2024 to 2028 (GCC)",
-    icon: <SpeakerWaveIcon className="h-10 text-accent" />,
+    description: "Increased focus in oil and gas, construction, and security (GCC)",
+    icon: <FaChartPie  className="h-10 w-10 text-accent" />,
   },
   {
     value: 4.37,
     tag: "million",
-    description: "In 2024, the projected revenue in  the Drones market in UAE",
-    icon: <CurrencyDollarIcon className="h-10 text-accent" />,
+    description: "In 2024, the projected revenue in the Drones market in UAE",
+    icon: <AiOutlineDollarCircle className="h-10 w-10 text-accent" />,
   },
   {
     value: 1.29,
     tag: "% growth",
     description: "Annual growth rate from  2024 to 2028 (UAE)",
-    icon: <SignalIcon className="h-10 text-accent" />,
+    icon: <BsGraphUpArrow className="h-10 w-10 text-accent" />,
   },
   {
     value: 2,
     tag: "areas",
     description:
       "Increased focus in aerial  photography and videography  purposes (UAE)",
-    icon: <SpeakerWaveIcon className="h-10 text-accent" />,
+    icon: <FaUncharted className="h-10 w-10 text-accent" />,
   },
 ];

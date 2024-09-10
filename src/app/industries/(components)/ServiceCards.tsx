@@ -1,7 +1,10 @@
 import React from "react";
-import Chips from "../ui/Chips";
-import SectionLayout from "@/components/ui/SectionLayout";
-import FeauturedList from "./FeauturedList";
+import dynamic from "next/dynamic";
+
+const SectionLayout = dynamic(()=>import("@/components/ui/SectionLayout"))
+const FeauturedList = dynamic(()=>import("./FeauturedList"));
+const Chips = dynamic(()=>import("@/components/ui/Chips"))
+
 
 function ServiceCards() {
   return (

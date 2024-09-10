@@ -18,29 +18,22 @@ interface NavLinks {
 const navlinks: NavLinks[] = [
   { name: "Home", path: "/" },
   {
-    name: "Services",
-    path: "/services",
+    name: "Industries",
+    path: "/industries",
     children: [
-      { name: "Survey", path: "/services/planning-survey" },
-      { name: "Mining", path: "/services/mining-petroleum" },
-      {
-        name: "Construction",
-        path: "/services/construction-progress-monitoring",
-      },
-      { name: "Agriculture", path: "/services/agriculture" },
-      {
-        name: "Transportation",
-        path: "/services/transportation-power-industry",
-      },
+      { name: "Oil & Gas", path: "/industries/oil-and-gas" },
+      { name: "Green Energy", path: "/industries/green-energy" },
+      { name: "Mining", path: "/industries/mining" },
+      { name: "Construction & Real Estate", path: "/industries/construction" },
+      { name: "Agriculture", path: "/industries/agriculture" },
+      { name: "Marine Fisheries", path: "/industries/fisheries" },
+      { name: "Steel", path: "/industries/steel" },
     ],
   },
   { name: "About", path: "/about" },
   { name: "Contact", path: "/contact" },
   { name: "Market", path: "/market" },
-  { name: "FAQs", path: "/faq" },
 ];
-
-
 
 const linkItemVariants = {
   hidden: { opacity: 0, y: "50%" },
@@ -89,11 +82,7 @@ function MobileNavigation({
   const pathname = usePathname();
 
   return (
-
-    <motion.aside
-    
-      className="flex h-full w-full items-center justify-center  bg-white shadow-md  dark:bg-neutral-900 "
-    >
+    <motion.aside className="flex h-full w-full items-start justify-center  bg-white shadow-md  dark:bg-neutral-900 ">
       <button
         onClick={() => {
           setOpen(false);
@@ -108,7 +97,7 @@ function MobileNavigation({
         initial="hidden"
         animate="visible"
         exit="exit"
-        className="relative flex flex-col items-center justify-center  text-neutral-900 *:py-2 *:dark:text-white "
+        className="relative mt-[50%] flex flex-col items-center justify-center px-5  text-neutral-900 *:py-2 *:dark:text-white "
       >
         {navlinks.map((link, index) => (
           <motion.li

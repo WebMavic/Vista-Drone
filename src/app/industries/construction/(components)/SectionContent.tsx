@@ -42,18 +42,18 @@ export default function SectionContent() {
         <div className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
           <div className="lg:pr-4">
             <div className="lg:max-w-lg">
-              <p className="text-base font-semibold leading-7 text-primary2-600">Innovative Aerial Solutions for the Real Estate Industry
+              <p className="text-base font-semibold leading-7 text-primary">Innovative Aerial Solutions for the Real Estate Industry
               </p>
-              <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Drone Services for Real Estate: Enhancing Marketing, Sales, and Site Management
+              <h1 className="mt-2 text-3xl font-bold tracking-tight text-heading lg:text-4xl">Drone Services for Real Estate: Enhancing Marketing, Sales, and Site Management
               </h1>
               
             </div>
           </div>
         </div>
-        <div className="-ml-12 -mt-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
+        <div className="lg:-ml-12 lg:-mt-12 lg:p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
           
           <Image
-          className="size-full object-cover rounded-xl lg:h-screen"
+          className="size-full object-cover rounded-xl lg:h-[80vh]"
           src={solar1}
           alt="header-image"
           placeholder="blur"

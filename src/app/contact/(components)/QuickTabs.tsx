@@ -1,28 +1,7 @@
 import React from "react";
-import {
-  PhoneIcon,
-  EnvelopeIcon,
-  MapPinIcon,
-} from "@heroicons/react/24/outline";
-import SectionLayout from "@/components/ui/SectionLayout";
 
-const contacts = [
-  {
-    icon: PhoneIcon,
-    title: "Call Us",
-    description: "+971 56 440 1460",
-  },
-  {
-    icon: EnvelopeIcon,
-    title: "Quote",
-    description: "ceo@bdrone.org",
-  },
-  {
-    icon: MapPinIcon,
-    title: "Address",
-    description:"Vista Drone UAV LLC | Office No 403, Tower 1 | Mazyad Mall | MBZ City | Street 28, Musaffah | Abu Dhabi(UAE)",
-  },
-];
+import SectionLayout from "@/components/ui/SectionLayout";
+import { contacts } from "@/constants";
 
 function QuickTabs() {
   return (

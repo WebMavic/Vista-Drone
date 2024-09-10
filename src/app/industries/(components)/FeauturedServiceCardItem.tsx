@@ -2,7 +2,6 @@
 import React, { useRef } from "react";
 import { CubeTransparentIcon } from "@heroicons/react/24/outline";
 import MagneticHover from "@/components/ui/MagneticHover";
-import { motion, useScroll, useTransform } from "framer-motion";
 
 interface FeauturedServiceCardsProps {
   service: {
@@ -15,7 +14,6 @@ interface FeauturedServiceCardsProps {
 function FeauturedServiceCardItem({
   service
 }: FeauturedServiceCardsProps) {
-  // const ref = useRef<HTMLDivElement>(null)
 
   return (
     <div className="flex h-[300px] w-[274px] flex-col items-center justify-center gap-2 rounded-md bg-white p-5 shadow-md ">

@@ -1,12 +1,12 @@
 "use client";
 
 import React from "react";
-import { steps } from "@/constants/steps";
+import { steps } from "@/constants";
 import { motion } from "framer-motion";
 
 const StepsCards = () => {
   return (
-    <section className="mt-10 h-5/6">
+    <section className="mt-10 ">
       <div className="grid gap-5 lg:grid-cols-3">
         {steps.map((card, index) => {
           return (
@@ -15,7 +15,7 @@ const StepsCards = () => {
               whileInView={{ opacity: 1}}
               viewport={{ once: true }}
               transition={{
-                delay: index * 0.3,
+                delay: index * 0.2,
                 duration: index * 0.1,
               }}
               

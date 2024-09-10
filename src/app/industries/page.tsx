@@ -1,23 +1,29 @@
 import React from "react";
-import SectionProjects from "@/components/SectionProjects";
-import SectionHeader from "@/components/SectionHeader";
-import ServiceCards from "@/components/Services/ServiceCards";
-import DroneApplication from "@/components/Services/DroneApplication";
-import DroneTech from "@/components/Services/DroneTech";
 import { Metadata } from "next";
-import bg from "@/assets/images/Drone-Solution.jpg";
-import DataSharing from "@/components/Services/DataSharing";
-import SectionContact from "@/components/SectionContact";
+import dynamic from "next/dynamic";
 
+import SectionHeader from "@/components/SectionHeader";
+
+
+const SectionProjects = dynamic(()=>import("@/components/SectionProjects"))
+const ServiceCards = dynamic(()=>import("./(components)/ServiceCards"))
+const WorkFlow = dynamic(()=>import("./(components)/DroneApplication"))
+const DroneTech = dynamic(()=>import("./(components)/DroneTech"))
+const DataSharing = dynamic(()=>import("./(components)/DataSharing"))
+const SectionContact = dynamic(()=>import("@/components/SectionContact"));
+
+
+import bg from "@/assets/images/Drone-Solution.jpg";
 export const metadata: Metadata = {
   title: "Industries",
 };
+
 function page() {
   return (
     <>
       <SectionHeader title="Revolutionizing Industries with Advanced UAV Solutions" image={bg}/>
       <ServiceCards />
-      <DroneApplication />
+      <WorkFlow />
       
       <DataSharing/>
       <SectionContact/>

@@ -1,46 +1,22 @@
 import React from "react";
-import SectionHeader from "@/components/SectionHeader";
-import { services } from "../../../utils/data";
-import SectionInfo from "../(components)/SectionInfo";
-import Benifits from "../(components)/Benifits";
-import SectionFaq from "../(components)/SectionFaq";
+import dynamic from "next/dynamic";
+import { services } from "@/utils/data"
+import { projects } from "@/constants";
+
+
+
+const SectionHeader =  dynamic(()=>import("@/components/SectionHeader"));
+const Benifits = dynamic(()=>import("../(components)/Benifits"));
+const SectionFaq = dynamic(()=>import("../(components)/SectionFaq"))
+const Services = dynamic(()=>import("../(components)/Services"))
+const Deliveries = dynamic(()=>import("../(components)/Deliveries"))
+const SectionContact = dynamic(()=>import("@/components/SectionContact"))
+const SectionAbout = dynamic(()=>import("@/components/SectionAbout"))
+
 import bg from "@/assets/images/mining/mine4.jpeg";
-import Services from "../(components)/Services";
-import Deliveries from "../(components)/Deliveries";
-import { Project } from "@/types/steps";
-import { miningDeliveryImages } from "@/utils/images";
-import SectionContact from "@/components/SectionContact";
-import SectionAbout from "@/components/SectionAbout";
 
 const service = services[0];
 
-const projects: Project[] = [
-  {
-    title: "Digital Terrain Model",
-    avatar: miningDeliveryImages[0],
-    description: "Digital Terrain model here",
-  },
-  {
-    title: "Contours",
-    avatar: miningDeliveryImages[1],
-    description: "Digital Terrain model here",
-  },
-  {
-    title: "Digital Surface Model",
-    avatar: miningDeliveryImages[2],
-    description: "Digital Terrain model here",
-  },
-  {
-    title: "Ortho-mosaic",
-    avatar: miningDeliveryImages[3],
-    description: "Digital Terrain model here",
-  },
-  {
-    title: "Volumetric Analysis",
-    avatar: miningDeliveryImages[4],
-    description: "Digital Terrain model here",
-  },
-];
 
 const page = () => {
   return (

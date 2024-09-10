@@ -2,46 +2,68 @@ import React from "react";
 import { Button, buttonVariants } from "./ui/Button";
 import SectionLayout from "./ui/SectionLayout";
 import Image from "next/image";
-import about from "@/assets/images/aboutbg.webp";
 import about1 from "@/assets/images/image (2).png";
 import Chips from "./ui/Chips";
 import Reveal from "./Reveal";
-import { StaticImageData, StaticImport } from "next/dist/shared/lib/get-img-props";
+import {
+  StaticImageData,
+  StaticImport,
+} from "next/dist/shared/lib/get-img-props";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 
-
 interface Props {
-  image ?:StaticImport | StaticImageData | any
-  imageStyle ?:string
-  chips ?:string
-  heading ?:string
-  para?: string
-  cta?:string
-  mirror?:boolean
-  className ?:string
+  image?: StaticImport | StaticImageData | any;
+  imageStyle?: string;
+  chips?: string;
+  heading?: string;
+  para?: string;
+  cta?: string;
+  mirror?: boolean;
+  className?: string;
 }
 
-function SectionAbout({chips,cta,image,heading,para,mirror,imageStyle,className} : Props) {
+function SectionAbout({
+  chips,
+  cta,
+  image,
+  heading,
+  para,
+  mirror,
+  imageStyle,
+  className,
+}: Props) {
   return (
-    <SectionLayout className={cn("lg:h-screen bg-white sm:px-0 sm:py-0",className)}>
-      {/* <div className="flex h-full w-full lg:items-start items-center justify-between lg:gap-10 gap-5 flex-col-reverse lg:flex-row"> */}
-      <div className={cn("flex h-full w-full  flex-col-reverse justify-between gap-5 lg:flex-row lg:gap-10",mirror && 'lg:flex-row-reverse')}>
+    <SectionLayout
+      className={cn("bg-white sm:px-0 sm:py-0 lg:h-screen", className)}
+    >
+     
+      <div
+        className={cn(
+          "flex h-full w-full  flex-col-reverse justify-between gap-5 lg:flex-row lg:gap-10",
+          mirror && "lg:flex-row-reverse",
+        )}
+      >
         <div className="h-full lg:w-1/2 ">
           <Image
-            src={image ? image :about1}
-            // @ts-ignore
+            src={image ? image : about1}
             // blurDataURL={image.blurDataURL ? image.blurDataURL :about.blurDataURL}
             placeholder="blur"
             alt="image"
-            className={cn("object-cover w-full h-full lg:rounded-r-[2%] rounded-md  ",imageStyle)}
+            className={cn(
+              "h-full w-full rounded-md object-cover lg:rounded-r-[2%]",
+              imageStyle,
+            )}
           />
         </div>
 
-        <div className="lg:p-20  lg:w-1/2">
-          <Reveal width="100%">
+        <div className="lg:w-1/2  lg:p-20">
+          {/* <Reveal width="100%"> */}
             <div>
-              <Chips title={chips ? chips : 'About us'} className="text-heading hidden lg:block" />
+              <Chips
+                title={chips ? chips : "About us"}
+                className="hidden text-heading lg:block"
+              />
               <h1
                 // initial={{ opacity: 0, x: -50 }}
                 // whileInView={{ opacity: 1, x: 0 }}
@@ -49,7 +71,9 @@ function SectionAbout({chips,cta,image,heading,para,mirror,imageStyle,className}
                 // transition={{ duration: 1 }}
                 className="mt-2 text-center text-4xl font-medium uppercase text-primary dark:text-white lg:text-left"
               >
-                {heading ? heading : "Navigating New Heights with Expert UAV Solutions for Every Industry"}
+                {heading
+                  ? heading
+                  : "Navigating New Heights with Expert UAV Solutions for Every Industry"}
               </h1>
             </div>
 
@@ -57,16 +81,20 @@ function SectionAbout({chips,cta,image,heading,para,mirror,imageStyle,className}
               // initial={{ opacity: 0, y: 20 }}
               // whileInView={{ opacity: 1, y: 0 }}
               // transition={{ duration: 0.5 }}
-              className="text-left font-light mt-6 text-subheading"
+              className="mt-6 text-left font-light text-subheading"
             >
-              {para ? para : "Vista Drone UAV LLC is a registered company with the Department of Economic Development, Government of UAE, under commercial license number CN-5384149. We offer professional drone services(end to end solutions, like aerial data/picture acquisition to the processing and report submission) across multiple sectors, including Agriculture & Livestock, Green Energy, Oil & Gas fields, Civil Constructions, Mining, Safety and Surveillance etc. Our team comprises trained and certified drone pilots with experience of over 5 to 6 years in the respective field."}
-              
+              {para
+                ? para
+                : "Vista Drone UAV LLC is a registered company with the Department of Economic Development, Government of UAE, under commercial license number CN-5384149. We offer professional drone services(end to end solutions, like aerial data/picture acquisition to the processing and report submission) across multiple sectors, including Agriculture & Livestock, Green Energy, Oil & Gas fields, Civil Constructions, Mining, Safety and Surveillance etc. Our team comprises trained and certified drone pilots with experience of over 5 to 6 years in the respective field."}
             </p>
 
-            <Link href={cta ? cta : '/about'} className={buttonVariants({className:'mt-5'})}>
+            <Link
+              href={cta ? cta : "/about"}
+              className={buttonVariants({ className: "mt-5" })}
+            >
               Learn More
             </Link>
-          </Reveal>
+          {/* </Reveal> */}
         </div>
       </div>
     </SectionLayout>

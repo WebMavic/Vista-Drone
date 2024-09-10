@@ -1,6 +1,9 @@
 import React from "react";
-import Chips from "../ui/Chips";
-import SectionLayout from "../ui/SectionLayout";
+import dynamic from "next/dynamic";
+
+const Chips = dynamic(()=>import("@/components/ui/Chips"))
+const SectionLayout = dynamic(()=>import("@/components/ui/SectionLayout"))
+
 import StepsCards from "./StepsCards";
 
 
@@ -18,7 +21,6 @@ function DroneApplication() {
           hours.
         </p>
       </div>
-      {/* <DroneApplicationCarosual /> */}
 
       <StepsCards/>
     </SectionLayout>

@@ -1,7 +1,7 @@
 "use client"
 
 import React from "react";
-import { BentoCard,BentoGrid } from "../magicui/bento-grid";
+import { BentoCard,BentoGrid } from "@/components/magicui/bento-grid";
 import { industries} from "@/constants/industries";
 
 function FeauturedList() {
