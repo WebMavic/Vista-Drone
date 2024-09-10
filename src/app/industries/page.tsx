@@ -7,6 +7,7 @@ import DroneTech from "@/components/Services/DroneTech";
 import { Metadata } from "next";
 import bg from "@/assets/images/Drone-Solution.jpg";
 import DataSharing from "@/components/Services/DataSharing";
+import SectionContact from "@/components/SectionContact";
 
 export const metadata: Metadata = {
   title: "Industries",
@@ -17,8 +18,10 @@ function page() {
       <SectionHeader title="Revolutionizing Industries with Advanced UAV Solutions" image={bg}/>
       <ServiceCards />
       <DroneApplication />
-      <DroneTech />
+      
       <DataSharing/>
+      <SectionContact/>
+      <DroneTech />
       <SectionProjects />
     </>
   );

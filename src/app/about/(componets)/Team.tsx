@@ -4,7 +4,7 @@ import SectionLayout from "@/components/ui/SectionLayout";
 import Image from "next/image";
 import member1 from "@/assets/images/team/t2.jpg";
 import member2 from "@/assets/images/team/t1.jpg";
-import { StaticImport } from "next/dist/shared/lib/get-img-props";
+import { StaticImageData, StaticImport } from "next/dist/shared/lib/get-img-props";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { buttonVariants } from "@/components/ui/Button";
@@ -35,7 +35,7 @@ function Team() {
 export default Team;
 
 export const TeamItem = ({bio,className,avatar,name,role,direction,cta}: {
-  avatar : StaticImport
+  avatar : StaticImport | StaticImageData | any
   className ?: string
   name :  string
   role? : string

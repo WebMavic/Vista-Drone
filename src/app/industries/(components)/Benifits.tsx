@@ -4,6 +4,7 @@ import { benefits } from "@/utils/data";
 import { cn } from "@/lib/utils";
 
 
+
 interface Benefit {
   content: benefits[];
 }

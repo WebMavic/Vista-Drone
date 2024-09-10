@@ -6,12 +6,12 @@ import { StaticImport } from "next/dist/shared/lib/get-img-props";
 
 interface SectionHeaderProps {
   title: string;
-  image?: string | StaticImport;
+  image?: string | StaticImport | any ;
 }
 
 function SectionHeader({ title, image }: SectionHeaderProps) {
   return (
-    <header className="relative grid h-96  w-full px-5 lg:h-[60vh] lg:px-32 ">
+    <header className="relative grid h-lg  w-full px-5 lg:h-[60vh] lg:px-32 ">
       <div className="hero-video absolute inset-0 left-0 top-0 z-[5] w-full overflow-hidden lg:h-[60vh]">
         <div className="div absolute top-0 z-[1] h-full w-full  bg-black/40 bg-blend-overlay " />
         <Image

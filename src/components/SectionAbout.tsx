@@ -3,16 +3,16 @@ import { Button, buttonVariants } from "./ui/Button";
 import SectionLayout from "./ui/SectionLayout";
 import Image from "next/image";
 import about from "@/assets/images/aboutbg.webp";
-import about1 from "@/assets/images/about1.jpg";
+import about1 from "@/assets/images/image (2).png";
 import Chips from "./ui/Chips";
 import Reveal from "./Reveal";
-import { StaticImport } from "next/dist/shared/lib/get-img-props";
+import { StaticImageData, StaticImport } from "next/dist/shared/lib/get-img-props";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 
 
 interface Props {
-  image ?:StaticImport
+  image ?:StaticImport | StaticImageData | any
   imageStyle ?:string
   chips ?:string
   heading ?:string

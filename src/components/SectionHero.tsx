@@ -18,29 +18,29 @@ const heroOptions: Hero[] = [
     className:'lg:w-1/2'
   },
   {
-    title: "Elevate Your Vision",
+    title: "Elevate Your Vision Cutting Edge UAV Solutions Await",
     description:
       "Vista Drone captures and maps aerial data in a smart, cost-effective manner, empowering businesses to make informed decisions. We help you unlock the limitless possibilities of the open sky with our top-tier UAV services.",
     image: bg,
   },
   {
-    title: "Elevate Your Dick",
+    title: "Elevate Your Vision Cutting Edge UAV Solutions Await",
     description:
       "We help you unlock the limitless possibilities of the open sky with our top-tier UAV services.Vista Drone captures and maps aerial data in a smart",
     background: "/v6.mp4",
     className:'items-center w-full text-center',
     customParaStyle : 'w-1/2 mx-auto'
   },
-  {
-    title: "Elevate Your Dick with Srijan",
-    description:
-      "We help you unlock the limitless possibilities of the open sky with our top-tier UAV services.Vista Drone captures and maps aerial data in a smart",
-    // background: "/v6.mp4",
-    // avatar : drone,
-    image : bg2,
-    customParaStyle : 'w-1/2 ',
-    imageStyle : 'mask-image-hero'
-  },
+  // {
+  //   title: "Elevate Your Vision Cutting Edge UAV Solutions Await",
+  //   description:
+  //     "We help you unlock the limitless possibilities of the open sky with our top-tier UAV services.Vista Drone captures and maps aerial data in a smart",
+  //   // background: "/v6.mp4",
+  //   // avatar : drone,
+  //   image : bg2,
+  //   customParaStyle : 'w-1/2 ',
+  //   imageStyle : 'mask-image-hero'
+  // },
 
 ];
 

@@ -3,9 +3,10 @@ import SectionHeader from "@/components/SectionHeader";
 import AboutUs from "./(componets)/AboutUs";
 import ClientCaurosal from "./(componets)/ClientCaurosal";
 import Team from "./(componets)/Team";
-import aboutbg from "@/assets/images/aboutbg.webp";
+import aboutbg from "@/assets/images/image (6).png";
 import { Metadata } from "next";
 import Certification from "./(componets)/Certification";
+import SectionContact from "@/components/SectionContact";
 
 export const metadata: Metadata = {
   title: "About Us",
@@ -16,10 +17,11 @@ function page() {
     <>
       <SectionHeader title="About Vista" image={aboutbg} />
       <AboutUs/>
-      <ClientCaurosal/>
+    {/* <ClientCaurosal/> */}
       <Team/>
+      <SectionContact/>
       <Certification/>
-   
+      
     </>
   );
 }

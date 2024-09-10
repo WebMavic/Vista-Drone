@@ -19,7 +19,7 @@ const Footer = () => {
     <footer className="bg-neutral-100" >
       <div className="w-full py-3 bg-primary">
         <Marquee className="[--duration:20s]">
-          <h1 className="text-body text-xl opacity-35">Vista Drone Ecommerce ... Coming Soon</h1>
+          <h1 className="text-body text-xl opacity-35">Vista Drone Trainings and Certifications ... Coming Soon</h1>
         </Marquee>
       </div>
       <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">

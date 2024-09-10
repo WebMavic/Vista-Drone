@@ -7,7 +7,7 @@ import SectionFaq from "../(components)/SectionFaq";
 import Services from "../(components)/Services";
 import SectionAbout from "@/components/SectionAbout";
 import SectionContact from "@/components/SectionContact";
-import  bg from '@/assets/images/cnbg.png'
+import  bg from '@/assets/images/marinefish/marine2.jpeg'
 const service = services[6]
 
 const page = () => {

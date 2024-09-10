@@ -8,6 +8,7 @@ import Certification from "./about/(componets)/Certification";
 import SectionContact from "@/components/SectionContact";
 import DroneApplication from "@/components/Services/DroneApplication";
 
+
 export default function Home() {
   return (
     <>
@@ -15,10 +16,11 @@ export default function Home() {
       {/* <SectionClient /> */}
       <SectionAbout />
       <SectionFeaturedServices />
-      <SectionContact/>
+      
       <SectionExpertise />
-      <Certification/>
+      <SectionContact/>
       <DroneApplication/>
+      <Certification/>
       
       {/* <SectionProjects /> */}
     </>

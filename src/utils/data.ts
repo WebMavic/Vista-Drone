@@ -1,12 +1,15 @@
 import { ForwardRefExoticComponent, RefAttributes } from "react";
-import { StaticImport } from "next/dist/shared/lib/get-img-props";
-
+import { StaticImageData, StaticImport } from "next/dist/shared/lib/get-img-props";
+import windimg from "@/assets/images/green energy/wind-2.jpg"
 import mine from "@/assets/images/mining/mine1.jpeg";
 import agriculture from "@/assets/images/agriculture/agriculture2.jpeg";
-import construction from "@/assets/images/construction/const-3.jpg";
+import construction from "@/assets/images/construction&realestate/construction1.jpeg";
 import oil from "@/assets/images/oil&gas/oil1.jpeg";
-import green from '@/assets/images/greenenergy/solar3.jpeg'
+import solar1 from '@/assets/images/greenenergy/solar1.jpeg'
+import solar2 from '@/assets/images/greenenergy/solar2.jpeg'
+import solar3 from '@/assets/images/greenenergy/solar3.jpeg'
 import steel from '@/assets/images/steel/steel1.jpeg'
+import marine from "@/assets//images/marinefish/marine1.jpeg"
 
 import { Aperture, BarChart, Cctv, Diameter, LucideProps } from "lucide-react";
 import { GiEclipseFlare,GiLeadPipe,GiOffshorePlatform,GiMoebiusTrefoil,GiGasMask,GiBarrelLeak,GiMoneyStack,GiBonsaiTree,GiPathDistance,GiProgression,GiCargoCrane,GiReceiveMoney,GiSatelliteCommunication,GiPlantRoots,GiWateringCan,GiSpray,GiHealthPotion,GiCctvCamera,GiCrackedGlass } from "react-icons/gi";
@@ -19,15 +22,18 @@ import { VscColorMode } from "react-icons/vsc";
 import { PiWall,PiPlantLight } from "react-icons/pi";
 import { VscLightbulbSparkle } from "react-icons/vsc";
 import { TbReport } from "react-icons/tb";
-import { SiSpond,SiExoscale,SiDrone } from "react-icons/si";
+import { SiSpond,SiExoscale,SiDrone,SiSubversion  } from "react-icons/si";
 import { MdHealthAndSafety,MdSos,MdOutlinePestControl,MdLandscape } from "react-icons/md";
 import { TbPlant2 } from "react-icons/tb";
-import { FaNoteSticky } from "react-icons/fa6";
-import { FaDatabase,FaMapMarkedAlt,FaCheck,FaPlusCircle,FaEye,FaCalendarCheck, } from "react-icons/fa";
+import { FaNoteSticky,FaHelmetSafety,FaMoneyBillTrendUp,FaHotjar,FaClockRotateLeft } from "react-icons/fa6";
+import { FaDatabase,FaMapMarkedAlt,FaCheck,FaPlusCircle,FaEye,FaCalendarCheck,FaChartLine,FaTools,FaSortAmountDown    } from "react-icons/fa";
 import { GrResources } from "react-icons/gr";
 import { RiHotspotFill } from "react-icons/ri";
-import { AiOutlineSafetyCertificate,AiOutlineSafety, } from "react-icons/ai";
-import { FaHelmetSafety } from "react-icons/fa6";
+import { AiOutlineSafetyCertificate,AiOutlineSafety,AiFillEnvironment  } from "react-icons/ai";
+
+import { ImImage } from "react-icons/im";
+import { IoMdDocument } from "react-icons/io";
+
 import { IconType } from "react-icons/lib";
 
 
@@ -35,7 +41,7 @@ import { IconType } from "react-icons/lib";
 interface Service {
   title: string;
   description: string;
-  image: StaticImport;
+  image: ForwardRefExoticComponent<Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>> | IconType | StaticImport | StaticImageData;
   service_description: description[];
   benefits: benefits[];
   faq: faq[];
@@ -50,7 +56,7 @@ export type benefits = {
 export type description = {
   title: string;
   content: string;
-  image: ForwardRefExoticComponent<Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>> | IconType;
+  image: ForwardRefExoticComponent<Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>> | IconType | StaticImport;
   color  : string
 };
 
@@ -63,7 +69,7 @@ export const services: Service[] = [
   {
     title: "Mining",
     description:
-      "Maximize operational efficiency and safety in your mining and petroleum projects with Vista Drone Services. Our specialized drone solutions provide precise aerial data, helping you streamline exploration, site assessment, and resource management. Utilizing state-of-the-art drones equipped with high-resolution cameras and advanced sensors, we conduct comprehensive aerial surveys that generate detailed maps and 3D models of your site. This allows for accurate identification of mineral deposits and thorough evaluation of terrain conditions. By capturing extensive data quickly and safely from above, we eliminate the need for manual ground surveys, thus minimizing the risk to personnel and reducing operational downtime. ",
+      "Maximize operational efficiency and safety in your mining projects with Vista Drone Services. Our specialized drone solutions provide precise aerial data, helping you streamline exploration, site assessment, and resource management. Utilizing state-of-the-art drones equipped with high-resolution cameras and advanced sensors, we conduct comprehensive aerial surveys that generate detailed maps and 3D models of your site. This allows for accurate identification of mineral deposits and thorough evaluation of terrain conditions. By capturing extensive data quickly and safely from above, we eliminate the need for manual ground surveys, thus minimizing the risk to personnel and reducing operational downtime. ",
     image: mine,
     
     service_description: [
@@ -434,78 +440,100 @@ export const services: Service[] = [
     service_description: [
       {
         title: "Site Planning:",
-        content:
-          "We provide detailed site analysis and 3D modeling for effective planning. This includes pre-construction surveys to identify potential challenges, optimize site layout, and plan logistics. Our drones generate high-resolution orthomosaic maps and digital elevation models (DEMs) that assist in site preparation and design.",
-          image: VscLightbulbSparkle,
-          color : "rose"
+        content: "Detailed site analysis, 3D modeling, and high-resolution maps for effective planning and design.",
+        image: VscLightbulbSparkle,
+        color: "rose"
       },
       {
         title: "Progress Monitoring",
-        content:
-          " Our drones conduct regular aerial updates to track project milestones. High-resolution images and videos help in documenting progress, identifying potential delays, and ensuring adherence to timelines. We also provide 4D modeling that integrates time as a component, allowing you to visualize project progress over time.",
-          image: GiProgression,
-          color : "blue"
+        content: "Regular aerial updates with high-resolution images and 4D modeling to track project progress.",
+        image: GiProgression,
+        color: "blue"
       },
       {
         title: "Safety Inspections",
-        content:
-          "Identify potential hazards and ensure compliance with safety standards through regular aerial inspections. This includes monitoring for unsafe working conditions, verifying compliance with OSHA regulations, and providing data for safety audits. Our drones can access hard-to-reach areas, reducing the need for scaffolding or manual inspections.",
-          image: AiOutlineSafety,
-          color : "rose"
+        content: "Aerial inspections to identify hazards, ensure safety compliance, and access hard-to-reach areas.",
+        image: AiOutlineSafety,
+        color: "rose"
       },
       {
         title: "Quality Control",
-        content:
-          " Conduct thorough quality assessments with high-resolution imagery. This allows for early detection of construction defects, such as structural anomalies or poor workmanship, ensuring that the work meets the required standards. We also provide thermal imaging to detect insulation issues and identify energy inefficiencies.",
-          image: FaCheck,
-          color : "rose"
+        content: "High-resolution imagery and thermal imaging for detecting defects and assessing construction quality.",
+        image: FaCheck,
+        color: "rose"
       },
       {
         title: "Earthwork and Volume Measurements",
-        content:"Calculating cut-and-fill volumes ,Monitoring material usage and site topography changes",
-          image: GiCargoCrane,
-          color : "rose"
+        content: "Calculating volumes and monitoring material use and site changes.",
+        image: GiCargoCrane,
+        color: "rose"
       },
       {
         title: "Safety and Security",
-        content: "Surveillance to ensure site safety and compliance,Monitoring unauthorized access and theft prevention",
-          image: FaPlusCircle,
-          color : "rose"
-      },
+        content: "Surveillance for site safety, unauthorized access monitoring, and theft prevention.",
+        image: FaPlusCircle,
+        color: "rose"
+      }
     ],
     benefits: [
       {
-        title: "Enhanced Oversight",
+        title: "Enhanced Site Surveying and Mapping",
         content:
-          " Keep track of project progress with up-to-date aerial data, providing clear and accurate documentation for stakeholders and investors.",
-        icon:FaEye,
-      },
-      {
-        title: "Cost Savings",
-        content:
-          "Reduce delays and budget overruns with efficient monitoring, ensuring that potential issues are identified and addressed promptly.",
-        icon:GiReceiveMoney,
-      },
-      {
-        title: " Environmental Monitoring",
-        content:"Compliance ,Erosion and Drainage Monitoring",
-        icon:SiDrone,
+          " Quick Data Collection & High Accuracy",
+        icon:Aperture,
       },
       {
         title: "Improved Safety",
         content:
-          "Conduct remote inspections to maintain a safe work environment, reducing the need for personnel to access hazardous areas.",
-        icon:AiOutlineSafety,
+          "Risk Reduction & Safety Monitoring",
+        icon:MdHealthAndSafety,
+      },
+      {
+        title: " Environmental Monitoring",
+        content:"Compliance ,Erosion and Drainage Monitoring",
+        icon:GiBonsaiTree,
+      },
+      {
+        title: "Time and Cost Savings",
+        content:
+          "Efficient Project Management & Cost-Effective Inspections",
+        icon:GiMoneyStack,
       },
       {
         title: "Progress Tracking and Reporting",
-        content:"Real-Time Monitoring , Visual Documentation",
-        icon:TbReport,
+        content:"Real-Time Monitoring & Visual Documentation",
+        icon:FaClockRotateLeft,
       },
       {
         title: "Improved Communication and Collaboration",
-        content:"Visual Data Sharing , Remote Accessibility",
+        content:"Visual Data Sharing & Remote Accessibility",
         icon:GiSatelliteCommunication,
+      },
+      
+      {
+        title: "Accurate Volume Measurements and Earthworks Management",
+        content:"Precise Calculations & Efficient Resource Management",
+        icon:BarChart,
+      },
+      {
+        title: "Environmental Monitoring",
+        content:"Compliance & Erosion and Drainage Monitoring",
+        icon:AiFillEnvironment ,
+      },
+      {
+        title: "Marketing and Business Development",
+        content:"Visual Marketing Content & Client Engagement",
+        icon:FaChartLine ,
+      },
+      {
+        title: "Enhanced Inspection Capabilities",
+        content:"Detailed Inspections & Thermal and Multispectral Imaging",
+        icon:Cctv,
+      },
+      {
+        title: "Flexibility and Versatility",
+        content:"Adaptability to Various Projects & Operation in Difficult Terrains",
+        icon:SiSubversion,
       },
     ],
     faq: [
@@ -676,18 +704,18 @@ export const services: Service[] = [
     title: "Green Energy",
     description:
       "Commercial Drone Services in the Oil & Gas , Civil Infrastructure, Mining, Surveillance, Agriculture & Farming, Green Energy | Skill development through Training program of Drone Operator | Testing, Service and Maintenance of the Drone.",
-    image: green,
+    image:solar1,
     service_description: [
       {
         title: "Solar Panel inspection & monitoring",
-          image: Diameter,
+          image: solar2,
           content: "Drones are used for inspecting and maintaining solar panels, identifying issues quickly, and optimizing energy production.",
           color : "rose"
       },
       {
         title: "Wind Turbine inspection & monitoring",
         content:"Wind turbine inspections are of crucial importance as wind turbines need continuous monitoring and maintenance to ensure they are operating at the optimum efficiency. Critical components have to be carefully monitored by means of a systematic maintenance program and regular inspections.",
-          image: Diameter,
+          image:windimg,
           color : "rose"
       },
       
@@ -766,7 +794,7 @@ export const services: Service[] = [
     title: "Marine Fisheries",
     description:
       "Enhance operational efficiency and safety in your marine fisheries with Vista Drone Services. Our advanced drone solutions deliver precise aerial data, optimizing fish stock monitoring, habitat mapping, and resource management. Equipped with high-resolution cameras and specialized sensors, our drones conduct comprehensive aerial surveys to generate detailed maps and 3D models of aquatic environments. This enables accurate monitoring of fish populations, habitat conditions, and environmental changes.In addition to initial surveys, our drones offer real-time monitoring of fishing activities and marine ecosystems. This continuous oversight helps ensure safety and regulatory compliance by providing live feeds and high-resolution imagery for immediate detection and response to potential issues. By integrating our state-of-the-art drone technology, Vista Drone Services supports effective fishery management, minimizes environmental impact, and enhances decision-making with up-to-date, actionable data.",
-    image: mine,
+    image: marine,
     
     service_description: [
       {
@@ -868,6 +896,117 @@ export const services: Service[] = [
       {
         question: "What are the benefits of using drones for fish farm inspection and maintenance?",
         answer: "Drones conduct regular inspections of fish farms, monitor fish health, feeding patterns, and structural conditions, detecting issues early, reducing manual inspections, and improving operational efficiency.",
+      }
+    ],
+    
+  },
+
+  {
+    title: "Solar",
+    description:
+      "",
+    image: solar3,
+    service_description: [
+      {
+        title: "Solar Panel inspection & monitoring",
+          image: Diameter,
+          content: "Drones are used for inspecting and maintaining solar panels, identifying issues quickly, and optimizing energy production.",
+          color : "rose"
+      },
+      {
+        title: "Wind Turbine inspection & monitoring",
+        content:"Wind turbine inspections are of crucial importance as wind turbines need continuous monitoring and maintenance to ensure they are operating at the optimum efficiency. Critical components have to be carefully monitored by means of a systematic maintenance program and regular inspections.",
+          image: Diameter,
+          color : "rose"
+      },
+      
+
+
+    ],
+    benefits: [
+      {
+        title: "Efficiency",
+        content: "Drones quickly cover large areas, streamlining inspections and saving time compared to manual methods.",
+        icon: FaChartLine 
+      },
+      {
+        title: "Cost Savings",
+        content: "Drones reduce costs by minimizing the need for workers and speeding up inspection times.",
+        icon: FaMoneyBillTrendUp 
+      },
+      {
+        title: "Safety",
+        content: "Remote drone inspections prevent workplace accidents by avoiding dangerous climbs and equipment use.",
+        icon: AiOutlineSafety 
+      },
+      {
+        title: "High-Quality Imaging",
+        content: "Drones capture detailed images of panels, identifying damage, dirt, or defects effectively.",
+        icon: ImImage
+      },
+      {
+        title: "Thermal Imaging",
+        content: "Drones detect hotspots on panels, pinpointing areas needing repair to prevent energy loss.",
+        icon: FaHotjar 
+      },
+      {
+        title: "Accurate Data Collection",
+        content: "Drones capture precise data, including GPS coordinates and altitudes, using integrated drone software.",
+        icon: FaDatabase 
+      },
+      {
+        title: "Preventative Maintenance",
+        content: "Drones detect potential issues early, allowing for preventative maintenance to extend panel lifespan.",
+        icon: FaTools 
+      },
+      {
+        title: "Real-Time Insights",
+        content: "Drones provide real-time data for quick assessment and response to issues during inspections.",
+        icon: FaClockRotateLeft 
+      },
+      {
+        title: "Improved Documentation",
+        content: "Drones digitally record inspections, aiding in tracking changes and supporting analysis and claims.",
+        icon: IoMdDocument
+      },
+      {
+        title: "Minimised Downtime",
+        content: "Faster drone inspections allow timely repairs, reducing downtime and maximizing solar energy production.",
+        icon: FaSortAmountDown 
+      }
+    ],
+    faq: [
+      {
+        question: "What are the common defects observed during solar panel inspections?",
+        answer: "Common defects include cell mismatches, cracks, discolorations, delamination, and hotspots, all of which can reduce solar panel efficiency and lifespan.",
+      },
+      {
+        question: "How do drones benefit solar panel inspections?",
+        answer: "Drones offer efficiency by covering large areas quickly, cost savings, enhanced safety, high-quality imaging, and thermal detection of hotspots, enabling faster and more accurate inspections.",
+      },
+      {
+        question: "What role does thermal imaging play in solar panel inspections?",
+        answer: "Thermal imaging drones detect 'hotspots' where energy may be wasted due to damage or defects, allowing operators to identify areas in need of repair or replacement.",
+      },
+      {
+        question: "How do drones contribute to preventative maintenance of solar panels?",
+        answer: "Regular drone inspections identify potential issues early, allowing for preventative maintenance, extending the panels' lifespan, and minimizing downtime.",
+      },
+      {
+        question: "Why are drones essential for wind turbine inspections?",
+        answer: "Drones provide safe, efficient, and high-quality inspections of wind turbines, reducing downtime, reaching inaccessible areas, and enabling preventive maintenance.",
+      },
+      {
+        question: "What methodologies are used for wind turbine inspections with drones?",
+        answer: "Drones use digital and thermographic cameras for visual inspection of components, detecting structural defects, weaknesses, and hidden failures in turbine blades.",
+      },
+      {
+        question: "How do drones ensure safety during wind turbine inspections?",
+        answer: "Drones provide a non-contact, non-destructive inspection method, reducing the need for dangerous climbs and allowing for safe monitoring of critical components.",
+      },
+      {
+        question: "What are the benefits of using drones for both solar and wind turbine inspections?",
+        answer: "Drones offer safe inspections, reduced downtime, high-quality imaging, access to hard-to-reach areas, dynamic surveying, and improved maintenance planning.",
       }
     ],
     
