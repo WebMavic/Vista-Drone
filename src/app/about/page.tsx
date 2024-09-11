@@ -11,7 +11,7 @@ const Certification = dynamic(()=>import('./(componets)/Certification'))
 const SectionContact = dynamic(()=>import('@/components/SectionContact'))
 
 export const metadata: Metadata = {
-  title: "About Us",
+  title: "About Us | Vista Drone",
 };
 
 

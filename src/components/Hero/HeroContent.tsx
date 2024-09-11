@@ -6,7 +6,6 @@ import { buttonVariants } from "../ui/Button";
 import { Hero } from "@/types/steps";
 import { cn } from "@/utils/cn";
 import Anime from "./Anime";
-import circle from "@/assets/images/circle.png";
 
 interface HeroProps {
   data: Hero;
@@ -29,7 +28,7 @@ const HeroContent = ({
       <div className="hero-video pointer-events-none absolute inset-0 left-0 top-0 z-[5] w-full select-none overflow-hidden lg:h-screen">
         <div
           className={cn(
-            "absolute top-0  z-[1] h-full w-full bg-black/50 bg-blend-overlay",
+            "absolute top-0  z-[1] h-full w-full bg-black/75 bg-blend-overlay",
             avatar && "bg-white",
           )}
         />

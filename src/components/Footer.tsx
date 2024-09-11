@@ -1,10 +1,10 @@
 import Link from "next/link";
 import React from "react";
-import logo from "@/assets/images/vista.png"
+import logo from "@/assets/images/vista.png";
 import Image from "next/image";
 import Marquee from "./magicui/marquee";
 
-
+import { Facebook, Twitter, Instagram, Linkedin, Youtube } from 'lucide-react'
 const navlinks = [
   { name: "Home", path: "/" },
   { name: "Services", path: "/services" },
@@ -15,88 +15,74 @@ const navlinks = [
 
 const Footer = () => {
   return (
-
-    <footer className="bg-neutral-100" >
-      <div className="w-full py-3 bg-accent">
+    <footer className="bg-neutral-100">
+      <div className="w-full bg-accent py-3">
         <Marquee className="[--duration:20s]">
-          <h1 className="text-body text-xl opacity-35">Vista Drone Trainings and Certifications ... Coming Soon</h1>
+          <h1 className="text-xl text-body opacity-35">
+            Vista Drone Trainings and Certifications ... Coming Soon
+          </h1>
         </Marquee>
       </div>
-      <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
-        <div className="md:flex md:justify-between">
+     
+      <div className="bg-gray-100 text-gray-600">
+      <div className="max-w-6xl mx-auto px-4 py-8">
+        <div className="flex flex-col gap-10 justify-between items-center">
           <div className="mb-6 md:mb-0">
-            <Link href="/" className="flex items-center">
-              <Image
-                src={logo}
-                className="me-3 size-12 object-cover"
-                alt="logo"
-              />
-              <span className="self-center whitespace-nowrap text-2xl font-semibold dark:text-white">
-                Vista Drone
-              </span>
+            <Link href="/" className="flex items-center justify-center mb-2">
+              <Image src={logo} alt="DroneServ"  width={40} height={40} />
+              <span className="text-xl ms-2 font-bold text-gray-800">Vista Drone</span>
             </Link>
+            <p className="text-sm text-gray-600">Elevating your perspective with cutting-edge drone services.</p>
           </div>
-          <div className="grid grid-cols-2 gap-8 sm:grid-cols-4 sm:gap-6">
-            <div>
-              <h2 className="mb-6 text-sm font-semibold uppercase text-gray-900 dark:text-white">
-                Services
-              </h2>
-              <ul className="font-medium text-gray-500 dark:text-gray-400">
-                <li className="mb-4">
-                  <Link href="/survey-and-planning" className="hover:underline">
-                    Survey
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/agriculture" className="hover:underline">
-                    Agriculture
-                  </Link>
-                </li>
-              </ul>
+          <div className="mb-6 md:mb-0">
+            <ul className="flex flex-wrap justify-center space-x-6">
+              <li><Link href="/industries" className="hover:text-blue-600 transition-colors">Industries</Link></li>
+              <li><Link href="/about" className="hover:text-blue-600 transition-colors">About Us</Link></li>
+              <li><Link href="/contact" className="hover:text-blue-600 transition-colors">Contact</Link></li>
+              {/* <li><Link href="/faq" className="hover:text-blue-600 transition-colors">FAQ</Link></li> */}
+              <li><Link href="/market" className="hover:text-blue-600 transition-colors">Market</Link></li>
+            </ul>
+          </div>
+          <div>
+            <div className="flex space-x-4">
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-600 transition-colors">
+                <Facebook size={24} />
+                <span className="sr-only">Facebook</span>
+              </a>
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-600 transition-colors">
+                <Twitter size={24} />
+                <span className="sr-only">Twitter</span>
+              </a>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-600 transition-colors">
+                <Instagram size={24} />
+                <span className="sr-only">Instagram</span>
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-600 transition-colors">
+                <Linkedin size={24} />
+                <span className="sr-only">LinkedIn</span>
+              </a>
+              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-600 transition-colors">
+                <Youtube size={24} />
+                <span className="sr-only">YouTube</span>
+              </a>
             </div>
-            <div>
-              <h2 className="mb-6 text-sm font-semibold uppercase text-gray-900 dark:text-white">
-                Services
-              </h2>
-              <ul className="font-medium text-gray-500 dark:text-gray-400">
-                <li className="mb-4">
-                  <Link href="/transport" className="hover:underline">
-                    Transport
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/" className="hover:underline">
-                    Mining
-                  </Link>
-                </li>
-              </ul>
-            </div>
-           
-           
           </div>
         </div>
-        <hr className="my-6 border-gray-500 dark:border-gray-700 sm:mx-auto lg:my-8" />
-        <div className="sm:flex sm:items-center sm:justify-between">
-          <span className="text-sm text-gray-500 dark:text-gray-400 sm:text-center">
-            © 2024 
-            <Link href="/" className="hover:underline">
-              Vista™
-            </Link>
-            . All Rights Reserved.
-          </span>
-          <div className=" mt-4  sm:mt-0">
-            <Link
+        <div className="mt-8 pt-8 border-t border-gray-200 text-sm text-center text-gray-500">
+          <div className="flex items-center justify-between">
+          <p>&copy; {new Date().getFullYear()} Vista Drone. All rights reserved.</p>
+          <Link
               href={"https://webmavic.com"}
-              className="text-sm text-gray-500 dark:text-gray-400 sm:text-center"
+              className="text-sm mt-3 text-gray-500 dark:text-gray-400 sm:text-center"
             >
               Developed By Web Mavic
             </Link>
           </div>
         </div>
       </div>
+    </div>
     </footer>
-    
   );
-}
+};
 
 export default Footer;
