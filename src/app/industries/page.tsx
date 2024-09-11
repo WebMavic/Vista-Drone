@@ -28,7 +28,7 @@ function page() {
       <DataSharing/>
       <SectionContact/>
       <DroneTech />
-      <SectionProjects />
+      {/* <SectionProjects /> */}
     </>
   );
 }
