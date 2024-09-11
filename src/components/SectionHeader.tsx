@@ -1,6 +1,6 @@
 import React from "react";
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
-import lines from "@/assets/images/constantin.jpg";
+
 import Image from "next/image";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 

@@ -14,17 +14,6 @@ export const clientsLogos = [
   require("../assets/images/clients-logo/img26.jpg"),
 ];
 
-export const droneImage = [
-  require("../assets/images/drone1.png"),
-  require("../assets/images/drone2.png"),
-  require("../assets/images/drone3.png"),
-  require("../assets/images/drone4.png"),
-  require("../assets/images/drone5.png"),
-  require("../assets/images/drone6.png"),
-  require("../assets/images/drone7.png"),
-  require("../assets/images/drone8.png"),
-  require("../assets/images/drone9.png"),
-];
 
 export const projectImages = [
   require("../assets/images/projects/project-1.jpg"),
