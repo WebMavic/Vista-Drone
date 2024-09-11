@@ -1,10 +1,9 @@
 import React from "react";
-import { Button, buttonVariants } from "./ui/Button";
+import { buttonVariants } from "./ui/Button";
 import SectionLayout from "./ui/SectionLayout";
 import Image from "next/image";
 import about1 from "@/assets/images/image (2).png";
 import Chips from "./ui/Chips";
-import Reveal from "./Reveal";
 import {
   StaticImageData,
   StaticImport,
@@ -37,7 +36,6 @@ function SectionAbout({
     <SectionLayout
       className={cn("bg-white sm:px-0 sm:py-0 lg:h-screen", className)}
     >
-     
       <div
         className={cn(
           "flex h-full w-full  flex-col-reverse justify-between gap-5 lg:flex-row lg:gap-10",
@@ -47,7 +45,6 @@ function SectionAbout({
         <div className="h-full lg:w-1/2 ">
           <Image
             src={image ? image : about1}
-            // blurDataURL={image.blurDataURL ? image.blurDataURL :about.blurDataURL}
             placeholder="blur"
             alt="image"
             className={cn(
@@ -59,41 +56,43 @@ function SectionAbout({
 
         <div className="lg:w-1/2  lg:p-20">
           {/* <Reveal width="100%"> */}
-            <div>
-              <Chips
-                title={chips ? chips : "About us"}
-                className="hidden text-heading lg:block"
-              />
-              <h1
-                // initial={{ opacity: 0, x: -50 }}
-                // whileInView={{ opacity: 1, x: 0 }}
-                // viewport={{ once: true }}
-                // transition={{ duration: 1 }}
-                className="mt-2 text-center text-4xl font-medium uppercase text-primary dark:text-white lg:text-left"
-              >
-                {heading
-                  ? heading
-                  : "Navigating New Heights with Expert UAV Solutions for Every Industry"}
-              </h1>
-            </div>
-
-            <p
-              // initial={{ opacity: 0, y: 20 }}
-              // whileInView={{ opacity: 1, y: 0 }}
-              // transition={{ duration: 0.5 }}
-              className="mt-6 text-left font-light text-subheading"
+          <div>
+            <Chips
+              title={chips ? chips : "About us"}
+              className="hidden text-heading lg:block"
+            />
+            <h1
+              // initial={{ opacity: 0, x: -50 }}
+              // whileInView={{ opacity: 1, x: 0 }}
+              // viewport={{ once: true }}
+              // transition={{ duration: 1 }}
+              className="mt-2 text-center text-4xl font-medium capitalize text-primary dark:text-white lg:text-left"
             >
-              {para
-                ? para
-                : "Vista Drone UAV LLC is a registered company with the Department of Economic Development, Government of UAE, under commercial license number CN-5384149. We offer professional drone services(end to end solutions, like aerial data/picture acquisition to the processing and report submission) across multiple sectors, including Agriculture & Livestock, Green Energy, Oil & Gas fields, Civil Constructions, Mining, Safety and Surveillance etc. Our team comprises trained and certified drone pilots with experience of over 5 to 6 years in the respective field."}
-            </p>
+              {heading
+                ? heading
+                : "Navigating New Heights with Expert UAV Solutions for Every Industry"}
+            </h1>
+          </div>
 
+          <p
+            // initial={{ opacity: 0, y: 20 }}
+            // whileInView={{ opacity: 1, y: 0 }}
+            // transition={{ duration: 0.5 }}
+            className="mt-6 text-left  text-subheading"
+          >
+            {para
+              ? para
+              : "Vista Drone UAV LLC is a registered company with the Department of Economic Development, Government of UAE, under commercial license number CN-5384149. We offer professional drone services(end to end solutions, like aerial data/picture acquisition to the processing and report submission) across multiple sectors, including Agriculture & Livestock, Green Energy, Oil & Gas fields, Civil Constructions, Mining, Safety and Surveillance etc. Our team comprises trained and certified drone pilots with experience of over 5 to 6 years in the respective field."}
+          </p>
+          {cta && (
             <Link
-              href={cta ? cta : "/about"}
+              href={cta}
               className={buttonVariants({ className: "mt-5" })}
             >
               Learn More
             </Link>
+          )}
+
           {/* </Reveal> */}
         </div>
       </div>

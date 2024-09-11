@@ -3,6 +3,7 @@ import bg from "@/assets/images/draft.jpg";
 import { miningDeliveryImages } from "@/utils/images";
 import { solarimages } from "@/utils/images";
 import { oilDeliveryImages } from "@/utils/images";
+import { FaXTwitter,FaFacebook,FaLinkedin } from "react-icons/fa6";
 
 
 import member1 from "@/assets/images/team/t2.jpg";
@@ -63,7 +64,7 @@ export const heroOptions: Hero[] = [
       title: "Elevate Your Vision Cutting Edge UAV Solutions Await",
       description:
         "Vista Drone captures and maps aerial data in a smart, cost-effective manner, empowering businesses to make informed decisions. We help you unlock the limitless possibilities of the open sky with our top-tier UAV services.",
-      background: "/MATRICE.mp4",
+      background: "/hero-video.mp4",
       className:'lg:w-1/2'
     },
     {
@@ -123,17 +124,20 @@ export const teams = [
     name: "S. Sudan",
     role: "Founder and CEO",
     avatar: member1,
-    email : 'lorem.me@gmail.com',
     bio: "An entrepreneur and experienced Geo scientist with experience of over 30 years, spanning two decades in key roles in the Middle East, is marked by expertise in various sectors including mining, geology, oil and gas, ferrous and non-ferrous metal production, trading, export-import, and business development. He holds a Master's degree in Earth Science from IIT(ISM) Dhanbad, India, an MBA and Trained Drone Pilot.",
   },
   {
     name: "Shlok Srivastava",
     role: "Co-Founder & CTO",
     avatar: member2,
-    email : 'shlok@gmail.com',
     bio: "A Canadian Citizen & Govt. Certified Petroleum Engineer of Alberta, Canada with a career dedicated to optimizing energy resources. Over eight years, he has excelled in bridging the gap between industry, government, and regulatory bodies to tackle pressing issues of food and energy security. Notably, his contributions include identifying key methane emission reduction opportunities in Canada’s LNG production system, spearheading Canada’s first oil well-to-geothermal conversion project, and developing a geospatial heatmap for CO2 emissions from large-scale energy processes for a feasible CCUS application.",
   },
 ];
+
+export const countries = [
+  "Abkhazia", "Ascension Island", "Andorra", "United Arab Emirates", "Afghanistan", "Antigua and Barbuda", "Anguilla", "Albania", "Armenia", "Angola", "Antarctica", "Argentina", "American Samoa", "Austria", "Australia", "Aruba", "Åland Islands", "Azerbaijan", "Bosnia and Herzegovina", "Barbados", "Bangladesh", "Belgium", "Burkina Faso", "Bulgaria", "Bahrain", "Burundi", "Benin", "Saint Barthélemy", "Bermuda", "Brunei Darussalam", "Bolivia", "Bonaire, Sint Eustatius and Saba", "Brazil", "Bahamas", "Bhutan", "Bouvet Island", "Botswana", "Belarus", "Belize", "Canada", "Cocos (Keeling) Islands", "Congo, Democratic Republic of the", "Central African Republic", "Congo", "Switzerland", "Cote d'Ivoire", "Cook Islands", "Chile", "Cameroon", "China", "Colombia", "Costa Rica", "Cuba", "Cape Verde", "Curaçao", "Christmas Island", "Cyprus", "Czech Republic", "Germany", "Djibouti", "Denmark", "Dominica", "Dominican Republic", "Algeria", "Ecuador", "Estonia", "Egypt", "Western Sahara", "Eritrea", "Spain", "Ethiopia", "Finland", "Fiji", "Falkland Islands", "Federated States of Micronesia", "Faroe Islands", "France", "Gabon", "United Kingdom", "Grenada", "Georgia", "French Guiana", "Guernsey", "Ghana", "Gibraltar", "Greenland", "Gambia", "Guinea", "Guadeloupe", "Equatorial Guinea", "Greece", "South Georgia and the South Sandwich Islands", "Guatemala", "Guam", "Guinea-Bissau", "Guyana", "Hong Kong", "Heard Island and McDonald Islands", "Honduras", "Croatia", "Haiti", "Hungary", "Indonesia", "Ireland", "Israel", "Isle of Man", "India", "British Indian Ocean Territory", "Iraq", "Iran", "Iceland", "Italy", "Jersey", "Jamaica", "Jordan", "Japan", "Kenya", "Kyrgyzstan", "Cambodia", "Kiribati", "Comoros", "Saint Kitts and Nevis", "North Korea", "South Korea", "Kuwait", "Cayman Islands", "Kazakhstan", "Laos", "Lebanon", "Saint Lucia", "Liechtenstein", "Sri Lanka", "Liberia", "Lesotho", "Lithuania", "Luxembourg", "Latvia", "Libya", "Morocco", "Monaco", "Moldova", "Montenegro", "Saint Martin (French Part)", "Madagascar", "Marshall Islands", "North Macedonia", "Mali", "Myanmar", "Mongolia", "Macao", "Northern Mariana Islands", "Martinique", "Mauritania", "Montserrat", "Malta", "Mauritius", "Maldives", "Malawi", "Mexico", "Malaysia", "Mozambique", "Namibia", "New Caledonia", "Niger", "Norfolk Island", "Nigeria", "Nicaragua", "Netherlands", "Norway", "Nepal", "Nauru", "Niue", "New Zealand", "Oman", "South Ossetia", "Panama", "Peru", "French Polynesia", "Papua New Guinea", "Philippines", "Pakistan", "Poland", "Saint Pierre and Miquelon", "Pitcairn", "Puerto Rico", "Palestine", "Portugal", "Palau", "Paraguay", "Qatar", "Reunion", "Romania", "Serbia", "Russia", "Rwanda", "Saudi Arabia", "Solomon Islands", "Seychelles", "Sudan", "Sweden", "Singapore", "Saint Helena", "Slovenia", "Svalbard and Jan Mayen", "Slovakia", "Sierra Leone", "San Marino", "Senegal", "Somalia", "Suriname", "South Sudan", "Sao Tome and Principe", "El Salvador", "Sint Maarten", "Syria", "Swaziland", "Tristan da Cunha", "Turks and Caicos Islands", "Chad", "French Southern Territories", "Togo", "Thailand", "Tajikistan", "Tokelau", "Timor-Leste", "Turkmenistan", "Tunisia", "Tonga", "Turkey", "Trinidad and Tobago", "Tuvalu", "Taiwan", "Tanzania", "Ukraine", "Uganda", "United States Minor Outlying Islands", "United States", "Uruguay", "Uzbekistan", "Holy See (Vatican City State)", "Saint Vincent and the Grenadines", "Venezuela", "Virgin Islands, British", "Virgin Islands, U.S.", "Vietnam", "Vanuatu", "Wallis and Futuna", "Samoa", "Kosovo", "Yemen", "Mayotte", "South Africa", "Zambia", "Zimbabwe", "International"
+]
+
 
 
 
@@ -179,7 +183,7 @@ export const contacts = [
   {
     icon: EnvelopeIcon,
     title: "Quote",
-    description: "ceo@bdrone.org",
+    description: "vistadrone11@gmail.com",
   },
   {
     icon: MapPinIcon,
@@ -413,3 +417,30 @@ export const oilProjects: Project[] = [
       "A proposed schedule for routine drone inspections, ensuring consistent data collection and timely maintenance.",
   },
 ];
+
+
+export const navlinks = [
+  { name: "Home", path: "/" },
+  { name: "Industries", path: "/industries" },
+  { name: "About", path: "/about" },
+  { name: "Contact", path: "/contact" },
+  { name: "Market", path: "/market" },
+];
+
+export const socials = [
+  {
+    name: "Facebook",
+    url: " https://www.facebook.com/people/Vista-Drone/61562356981476/",
+    icon: FaFacebook,
+  },
+  {
+    name: "Twitter",
+    url: "https://x.com/VDrone90365",
+    icon: FaXTwitter,
+  },
+  {
+    name: "LinkedIn",
+    url: "https://www.linkedin.com/company/vistadrone",
+    icon: FaLinkedin,
+  },
+]

@@ -3,15 +3,8 @@ import React from "react";
 import logo from "@/assets/images/vista.png";
 import Image from "next/image";
 import Marquee from "./magicui/marquee";
+import { navlinks, socials } from "@/constants";
 
-import { Facebook, Twitter, Instagram, Linkedin, Youtube } from 'lucide-react'
-const navlinks = [
-  { name: "Home", path: "/" },
-  { name: "Services", path: "/services" },
-  { name: "About", path: "/about" },
-  { name: "Contact", path: "/contact" },
-  { name: "Market", path: "/market" },
-];
 
 const Footer = () => {
   return (
@@ -36,35 +29,19 @@ const Footer = () => {
           </div>
           <div className="mb-6 md:mb-0">
             <ul className="flex flex-wrap justify-center space-x-6">
-              <li><Link href="/industries" className="hover:text-blue-600 transition-colors">Industries</Link></li>
-              <li><Link href="/about" className="hover:text-blue-600 transition-colors">About Us</Link></li>
-              <li><Link href="/contact" className="hover:text-blue-600 transition-colors">Contact</Link></li>
-              {/* <li><Link href="/faq" className="hover:text-blue-600 transition-colors">FAQ</Link></li> */}
-              <li><Link href="/market" className="hover:text-blue-600 transition-colors">Market</Link></li>
+              {navlinks.map((link,index) => (<li key={index} ><Link href={link.path} className="hover:text-accent transition-colors">{link.name}</Link></li>))}
             </ul>
           </div>
           <div>
             <div className="flex space-x-4">
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-600 transition-colors">
-                <Facebook size={24} />
-                <span className="sr-only">Facebook</span>
-              </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-600 transition-colors">
-                <Twitter size={24} />
-                <span className="sr-only">Twitter</span>
-              </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-600 transition-colors">
-                <Instagram size={24} />
-                <span className="sr-only">Instagram</span>
-              </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-600 transition-colors">
-                <Linkedin size={24} />
-                <span className="sr-only">LinkedIn</span>
-              </a>
-              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-600 transition-colors">
-                <Youtube size={24} />
-                <span className="sr-only">YouTube</span>
-              </a>
+              {socials.map(({icon:Icon,name,url},index) =>(
+                  <Link key={index} href={url} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-accent transition-colors">
+                  <Icon size={24} />
+                  <span className="sr-only">{name}</span>
+                </Link>
+              ))}
+              
+             
             </div>
           </div>
         </div>
@@ -73,7 +50,7 @@ const Footer = () => {
           <p>&copy; {new Date().getFullYear()} Vista Drone. All rights reserved.</p>
           <Link
               href={"https://web-mavic-com.vercel.app/"} target="_blank"
-              className="text-sm mt-3 text-gray-500 dark:text-gray-400 sm:text-center"
+              className="text-sm lg:mt-3 text-gray-500 dark:text-gray-400 sm:text-center"
             >
               Developed By Web Mavic
             </Link>

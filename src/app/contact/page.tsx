@@ -1,11 +1,10 @@
 import React from "react";
 import type { Metadata } from "next";
-import QuickTabs from "./(components)/QuickTabs";
-import SectionHeader from "@/components/SectionHeader";
-
-
+import dynamic from "next/dynamic";
+const QuickTabs = dynamic(()=>import("./(components)/QuickTabs"))
+const SectionHeader = dynamic(()=>import("@/components/SectionHeader"))
+const Form = dynamic(()=>import("./(components)/Form"))
 import contactbg from "@/assets/images/contact-bg.jpg";
-import Form from "./(components)/Form";
 
 
 export const metadata: Metadata = {

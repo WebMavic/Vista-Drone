@@ -16,7 +16,7 @@ const ScrollToTop = () => {
   
   return (
     <div
-      className="fixed bottom-5 right-5 z-50  flex  items-center gap-2  p-4"
+      className="fixed bottom-5 right-3 z-50  flex  items-center gap-2  p-4"
     >
       <Button size={"icon"} className="rounded-full" onClick={scrollToTop}>
         <ChevronUp className="size-8 " />

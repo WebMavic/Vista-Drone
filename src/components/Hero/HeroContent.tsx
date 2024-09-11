@@ -49,8 +49,7 @@ const HeroContent = ({
             playsInline
             preload="none"
             loop
-            onLoadedData={(e) => (e.currentTarget.playbackRate = 2)}
-            className="h-full w-full object-cover"
+            className="h-full w-full object-center object-cover"
           >
             <source src={background} type="video/mp4" />
             Your browser does not support the video.

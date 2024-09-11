@@ -8,43 +8,16 @@ import vision from "@/assets/icons/vision-icon.svg";
 const SectionLayout = dynamic(()=>import("@/components/ui/SectionLayout"))
 const SectionAbout  = dynamic(()=>import("@/components/SectionAbout")) 
 
-
-
-
-
 function AboutUs() {
   return (
     <>
-     
       <SectionAbout
         chips="our story" className="bg-primary2"
         heading="How it started"
         image={art}
-        para="VISTA Drone Services LLC emerged from a blend of strategic
-              foresight and extensive industrial experience. With over two
-              decades of expertise in various sectors, our founders identified a
-              significant opportunity in the rapidly growing Unmanned Aerial
-              Vehicle (UAV) market in the UAE. The Middle East UAV market,
-              valued at USD 2.84 billion in 2023 and projected to reach USD 5.88
-              billion by 2033, presented a promising landscape for innovative
-              drone solutions. Guided by this insight, we made the strategic
-              decision to enter the drone services sector, with a vision to
-              expand throughout the MENA region.
-              Our entry into this market is bolstered by strong
-              collaborations with esteemed institutions like the Indian
-              Institute of Technology and its Abu Dhabi branch, as well as the
-              Lima College of Engineering in Abu Dhabi. These partnerships
-              enhance our ability to innovate and integrate cutting-edge
-              technologies, supported by reputable international drone
-              manufacturers. Our founders, Shatrusudan Srivastava and Shlok
-              Srivastava, bring extensive experience and expertise, from
-              geoscience and engineering to energy optimization and regulatory
-              compliance. Together, they ensure that Bhoomija UAV Drone Services
-              LLC is well-positioned to pioneer advanced UAV solutions and drive
-              growth in the Middle East and beyond."
+        para="Vista Drone UAV LLC was established through a combination of strategic vision and extensive industry experience. Our founder, S. Sudan, with over thirty years of expertise in diverse sectors, saw a key opportunity in the rapidly expanding Unmanned Aerial Vehicle (UAV) market in the UAE. The Middle East UAV market, valued at USD 2.84 billion in 2023 and anticipated to grow to USD 5.88 billion by 2033 with a 12% CAGR, presented an exciting landscape for cutting-edge drone solutions. Additionally, the UAE government's forward-thinking leadership played a crucial role in the decision to enter the drone services sector, with plans to extend services across the MENA region"
       />
-
-<BrandValues />
+      <BrandValues />
     </>
   );
 }

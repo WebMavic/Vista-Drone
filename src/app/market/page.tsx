@@ -35,7 +35,7 @@ function page() {
       />
 
       <SectionLayout className="bg-white">
-        <div className="mt-10 grid lg:grid-cols-2">
+        <div className="mt-10 grid place-content-between gap-10 lg:grid-cols-2">
           <div>
             
             <ApexChart
@@ -65,7 +65,7 @@ function page() {
             />
           </div>
 
-          <div className="right space-y-5 ">
+          <div className="right space-y-5 p-10 ">
             <h1 className="text-4xl font-bold text-heading">Key Challenges</h1>
 
             <ol className="list-disc text-left font-light  *:my-5 ">
@@ -78,8 +78,8 @@ function page() {
       </SectionLayout>
 
       <SectionLayout>
-        <div className="mt-10 grid lg:grid-cols-2 ">
-          <div className="right space-y-5 ">
+        <div className="mt-10 grid lg:grid-cols-2 gap-10 ">
+          <div className="right space-y-5 p-10 ">
             <h1 className="text-4xl font-bold text-heading">Market Trends</h1>
 
             <ol className="list-disc text-left font-light *:my-5">

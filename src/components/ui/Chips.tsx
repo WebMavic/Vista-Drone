@@ -7,9 +7,7 @@ interface ChipsProps {
 }
 function Chips({ title, className }: ChipsProps) {
   return (
-    <span
-      className={cn("text-lg font-semibold uppercase tracking-[3px] text-accent", className)}
-    >
+    <span className={cn("text-xl font-semibold uppercase tracking-[3px] text-accent", className)}>
       {title}
     </span>
   );

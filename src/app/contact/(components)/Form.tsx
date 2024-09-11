@@ -1,8 +1,8 @@
-
+import React from "react";
 import { Button } from "@/components/ui/Button";
 import SectionLayout from "@/components/ui/SectionLayout";
-import React from "react";
-
+import { PhoneNumberInput } from "./PhoneNumberInput";
+import { countries } from "@/constants";
 
 const submitForm = async (formData : FormData)=>{
   "use server"
@@ -17,20 +17,18 @@ async function Form() {
       </h1>
       <form action={submitForm} className="space-y-5 py-10">
         <div className="grid gap-5 lg:grid-cols-2">
-          <input type="text" name="fname"  placeholder="first name" required className="inputs" />
-          <input type="text" name="lname" placeholder="last name" required className="inputs" />
-
-          <input type="email" name="email" placeholder="email" required className="inputs" />
+          <input type="text" name="name"  placeholder="your name" required className="inputs" autoComplete="name" />
+          <input type="text" name="companyName" placeholder="company name" required className="inputs"  autoComplete="company"/>
 
           <select name="country"  id="country" required className="inputs">
-            <option value="UAE">Location</option>
-            <option value="UAE">UAE</option>
-            <option value="USA">USA</option>
-            <option value="UK">UK</option>
-            <option value="India">India</option>
+            {countries.map((country,i) => (
+              <option key={i} value={country}>
+                {country}
+              </option>
+            ))}
           </select>
 
-          <select name="service" id="country" required className="inputs col-span-full">
+          <select name="service" id="country" required className="inputs ">
             <option>Interested service</option>
             {[
               "Oil and gas",
@@ -46,6 +44,10 @@ async function Form() {
               </option>
             ))}
           </select>
+          <input type="email" autoComplete="email" name="email" placeholder="email" required className="inputs" />
+
+         <PhoneNumberInput/>
+
 
           <textarea
             id="message" name="message"

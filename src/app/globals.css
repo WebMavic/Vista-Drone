@@ -21,6 +21,11 @@ body {
   background-color: #fffefe;
 }
 
+.PhoneInputInput:focus{
+  border:none;
+  outline: none;
+}
+
 
 
 #leaf {
@@ -98,7 +103,7 @@ body {
   }
 
   .inputs {
-    @apply w-full rounded-lg border border-gray-300 bg-gray-50 lg:p-4 p-2 text-gray-900;
+    @apply w-full rounded-lg border border-gray-300 bg-gray-50 lg:p-4 p-2 text-gray-900 focus:outline-none;
   }
 }
 
