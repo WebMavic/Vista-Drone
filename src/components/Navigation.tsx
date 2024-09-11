@@ -1,4 +1,3 @@
-// "use client";
 import React from "react";
 import Link from "next/link";
 import { serviceIcons } from "@/utils/images";
@@ -59,7 +58,7 @@ function Navigation() {
         ))}
 
         <NavigationMenuItem>
-          <NavigationMenuTrigger onClick={()=>alert("fuck")} className="hover:text-neutral-300">Industries</NavigationMenuTrigger>
+          <NavigationMenuTrigger className="hover:text-neutral-300">Industries</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[400px] gap-3 p-4 md:grid-cols-2">
               {linksWithChildren.map(({icon,path,name,Icon},index) => (
