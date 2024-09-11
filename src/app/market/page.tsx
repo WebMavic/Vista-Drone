@@ -1,4 +1,5 @@
 import React from "react";
+import { Metadata } from "next";
 import dynamic from "next/dynamic";
 
 import SectionHeader from "@/components/SectionHeader";
@@ -12,6 +13,9 @@ import cnbg from "@/assets/images/cnbg.png";
 
 import { factors, factorsArray } from "@/constants";
 
+export const metadata: Metadata = {
+  title: "Industries | Vista Drone",
+};
 
 
 function page() {

@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <React.Fragment>
       <SectionHero />
-      <SectionAbout />
+      <SectionAbout cta="about" />
       <SectionFeaturedServices />
       <SectionExpertise />
       <SectionContact/>
