@@ -1,6 +1,5 @@
 "use client"
 import React from "react";
-import SectionLayout from "./ui/SectionLayout";
 import Marquee from "./magicui/marquee";
 import Image from "next/image";
 import { clientsLogos } from "@/utils/images";

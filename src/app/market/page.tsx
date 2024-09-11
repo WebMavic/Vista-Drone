@@ -1,11 +1,9 @@
 import React from "react";
 import dynamic from "next/dynamic";
-import { Metadata } from "next";
 
 import SectionHeader from "@/components/SectionHeader";
-
 const MarketInNumbers = dynamic(() => import("@/components/MarketInsight/MarketInNumbers"));
-const Chart = dynamic(() => import("@/components/MarketInsight/Chart"));
+const ApexChart = dynamic(() => import("@/components/MarketInsight/Chart"))
 const SectionLayout = dynamic(() => import("@/components/ui/SectionLayout"));
 const SectionContact = dynamic(() => import("@/components/SectionContact"));
 const SectionAbout = dynamic(() => import("@/components/SectionAbout"));
@@ -14,9 +12,7 @@ import cnbg from "@/assets/images/cnbg.png";
 
 import { factors, factorsArray } from "@/constants";
 
-export const metadata: Metadata = {
-  title: "Market Trends | Vista Drone",
-};
+
 
 function page() {
   return (
@@ -41,7 +37,8 @@ function page() {
       <SectionLayout className="bg-white">
         <div className="mt-10 grid lg:grid-cols-2">
           <div>
-            <Chart
+            
+            <ApexChart
               type="donut"
               width={500}
               height={500}
@@ -68,7 +65,7 @@ function page() {
             />
           </div>
 
-          <div className="right space-y-5">
+          <div className="right space-y-5 ">
             <h1 className="text-4xl font-bold text-heading">Key Challenges</h1>
 
             <ol className="list-disc text-left font-light  *:my-5 ">
@@ -82,7 +79,7 @@ function page() {
 
       <SectionLayout>
         <div className="mt-10 grid lg:grid-cols-2 ">
-          <div className="right space-y-5">
+          <div className="right space-y-5 ">
             <h1 className="text-4xl font-bold text-heading">Market Trends</h1>
 
             <ol className="list-disc text-left font-light *:my-5">
@@ -92,7 +89,7 @@ function page() {
             </ol>
           </div>
           <div>
-            <Chart
+            <ApexChart
               type="area"
               height={500}
               options={{
@@ -100,11 +97,7 @@ function page() {
                   categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998],
                 },
               }}
-              series={[
-                {
-                  data: [30, 40, 45, 50, 49, 60, 70, 91],
-                },
-              ]}
+              series={[{data: [30, 40, 45, 50, 49, 60, 70, 91]}]}
             />
           </div>
         </div>

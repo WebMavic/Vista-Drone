@@ -17,20 +17,20 @@ const Services = ({ services }: Props) => {
       </div>
 
       <div className="mt-10 grid gap-5 lg:grid-cols-3 w-full">
-        {services.map((service, index) => (
+        {services.map(({image:Icon,content,title}, index) => (
           <div 
             key={index} 
             className={`flex min-h-[300px] flex-col items-center justify-center gap-5 rounded-xl border-b-4 border-primary bg-white p-5 shadow`}
           >
             <span className="rounded-full bg-accent/20 p-2.5">
-              {<service.image className="size-10 text-accent" />}
+              {<Icon className="size-10 text-accent" />}
             </span>
             <div>
               <h2 className="text-center text-lg font-bold capitalize">
-                {service.title}
+                {title}
               </h2>
               <p className="mt-2 text-center text-sm text-subheading">
-                {service.content}
+                {content}
               </p>
             </div>
           </div>

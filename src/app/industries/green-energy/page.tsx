@@ -13,7 +13,14 @@ const SectionFaq = dynamic(()=>import("../(components)/SectionFaq"))
 const Deliveries = dynamic(()=>import("../(components)/Deliveries"))
 const SectionContact = dynamic(()=>import("@/components/SectionContact"))
 
+
+
+import solar2 from '@/assets/images/greenenergy/solar2.jpeg'
+import windimg from "@/assets/images/green energy/wind-2.jpg"
+
 const service = services[5];
+
+
 
 const page = () => {
   return (
@@ -22,10 +29,10 @@ const page = () => {
       <SectionLayout>
         <div className="grid lg:grid-rows-2 gap-6">
           {service.service_description.map(
-            ({ content, image, title }, index) => (
+            ({ content, title }, index) => (
               <TeamItem
                 key={index}
-                avatar={image}
+                avatar={index % 2 === 0 ? solar2 : windimg }
                 bio={content}
                 direction={index % 2 === 0 ? "left" : "right"}
                 name={title}

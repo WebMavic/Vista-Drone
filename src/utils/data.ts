@@ -1,12 +1,10 @@
 import { ForwardRefExoticComponent, RefAttributes } from "react";
 import { StaticImageData, StaticImport } from "next/dist/shared/lib/get-img-props";
-import windimg from "@/assets/images/green energy/wind-2.jpg"
 import mine from "@/assets/images/mining/mine1.jpeg";
 import agriculture from "@/assets/images/agriculture/agriculture2.jpeg";
 import construction from "@/assets/images/construction&realestate/construction1.jpeg";
 import oil from "@/assets/images/oil&gas/oil1.jpeg";
 import solar1 from '@/assets/images/greenenergy/solar1.jpeg'
-import solar2 from '@/assets/images/greenenergy/solar2.jpeg'
 import solar3 from '@/assets/images/greenenergy/solar3.jpeg'
 import steel from '@/assets/images/steel/steel1.jpeg'
 import marine from "@/assets//images/marinefish/marine1.jpeg"
@@ -56,7 +54,7 @@ export type benefits = {
 export type description = {
   title: string;
   content: string;
-  image: ForwardRefExoticComponent<Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>> | IconType | StaticImport;
+  image: ForwardRefExoticComponent<Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>> | IconType ;
   color  : string
 };
 
@@ -708,14 +706,14 @@ export const services: Service[] = [
     service_description: [
       {
         title: "Solar Panel inspection & monitoring",
-          image: solar2,
+          image: GiCrackedGlass,
           content: "Drones are used for inspecting and maintaining solar panels, identifying issues quickly, and optimizing energy production.",
           color : "rose"
       },
       {
         title: "Wind Turbine inspection & monitoring",
         content:"Wind turbine inspections are of crucial importance as wind turbines need continuous monitoring and maintenance to ensure they are operating at the optimum efficiency. Critical components have to be carefully monitored by means of a systematic maintenance program and regular inspections.",
-          image:windimg,
+          image:GiCrackedGlass,
           color : "rose"
       },
       
