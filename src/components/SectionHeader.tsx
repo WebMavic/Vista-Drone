@@ -6,7 +6,7 @@ import { StaticImport } from "next/dist/shared/lib/get-img-props";
 
 interface SectionHeaderProps {
   title: string;
-  image?: string | StaticImport | any;
+  image: string | StaticImport | any;
 }
 
 function SectionHeader({ title, image }: SectionHeaderProps) {
@@ -16,7 +16,7 @@ function SectionHeader({ title, image }: SectionHeaderProps) {
         <div className="div absolute top-0 z-[1] h-full w-full  bg-black/40 bg-blend-overlay " />
         <Image
           className="size-full object-cover lg:h-screen"
-          src={image ? image : lines.src}
+          src={image}
           alt="header-image"
           placeholder="blur"
         />

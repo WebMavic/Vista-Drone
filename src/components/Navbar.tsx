@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, Fragment } from "react";
 import Navigation from "./Navigation";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { Bars3Icon} from "@heroicons/react/24/outline";
 import MobileNavigation from "./MobileNavigation";
 import {
   Dialog,
@@ -34,7 +34,7 @@ function Navbar() {
   });
 
   return (
-    <>
+    <Fragment>
       <header className="absolute top-0 z-[99] w-full  px-5  sm:px-28">
         <div className="flex min-h-20 items-center justify-between ">
           <Link href="/">
@@ -107,7 +107,7 @@ function Navbar() {
           </span>
         </button>
       </motion.div>
-    </>
+    </Fragment>
   );
 }
 
