@@ -1,7 +1,7 @@
 
 import Image from "next/image";
 import React from 'react'
-import solar1 from "@/assets/images/greenenergy/solar3.jpeg";
+import realestate from "@/assets/images/about-us-banner.jpg";
 
 
 
@@ -54,7 +54,7 @@ export default function SectionContent() {
           
           <Image
           className="size-full object-cover rounded-xl lg:h-[80vh]"
-          src={solar1}
+          src={realestate}
           alt="header-image"
           placeholder="blur"
         />

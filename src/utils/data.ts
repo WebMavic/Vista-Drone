@@ -21,10 +21,10 @@ import { VscColorMode } from "react-icons/vsc";
 
 import { PiWall,PiPlantLight } from "react-icons/pi";
 import { VscLightbulbSparkle } from "react-icons/vsc";
-import { TbReport } from "react-icons/tb";
-import { SiSpond,SiExoscale,SiDrone,SiSubversion  } from "react-icons/si";
+
+import { SiSpond,SiExoscale,SiSubversion  } from "react-icons/si";
 import { MdHealthAndSafety,MdSos,MdOutlinePestControl,MdLandscape } from "react-icons/md";
-import { TbPlant2 } from "react-icons/tb";
+
 import { FaNoteSticky,FaHelmetSafety,FaMoneyBillTrendUp,FaHotjar,FaClockRotateLeft } from "react-icons/fa6";
 import { FaDatabase,FaMapMarkedAlt,FaCheck,FaPlusCircle,FaEye,FaCalendarCheck,FaChartLine,FaTools,FaSortAmountDown    } from "react-icons/fa";
 import { GrResources } from "react-icons/gr";
