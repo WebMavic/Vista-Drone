@@ -2,7 +2,7 @@ import React from "react";
 import { Metadata } from "next";
 import dynamic from "next/dynamic";
 import SectionHeader from "@/components/SectionHeader";
-import aboutbg from "@/assets/images/image (6).png";
+import aboutbg from "@/assets/images/about1.jpeg";
 
 
 const AboutUs = dynamic(()=>import('./(componets)/AboutUs'));
