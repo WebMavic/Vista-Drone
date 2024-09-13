@@ -41,7 +41,7 @@ function Navbar() {
             <Image
               src={logo}
               alt="Logo" priority 
-              className="lg:size-16 size-12 object-cover mix-blend-screen"
+              className="lg:size-20 size-12 object-cover mix-blend-screen"
             />
             
           </Link>
@@ -69,7 +69,7 @@ function Navbar() {
                  leaveTo="translate-x-full opacity-0"
               >
                 <div className="fixed inset-0 right-0 top-0 ">
-                  <DialogPanel className=" absolute right-0 h-screen w-1/2 space-y-4  border bg-white ">
+                  <DialogPanel className=" absolute right-0 h-screen w-2/3 space-y-4  border bg-white ">
                     <MobileNavigation
                       setOpen={setIsMobileNavVisible}
                       open={isMobileNavVisible}

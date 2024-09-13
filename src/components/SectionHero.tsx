@@ -1,52 +1,54 @@
-"use client";
-import React, { useState } from "react";
-import { Button} from "@/components/ui/Button";
+import React from "react";
+import { HeroCarousal } from "./Hero/HeroCarousal";
+import { HeroImages } from "@/utils/images";
+import { Button, buttonVariants } from "@/components/ui/Button";
 import { ArrowLeft, ArrowRight } from "lucide-react";
-import HeroContent from "./Hero/HeroContent";
-import { heroOptions } from "@/constants";
-
-
-
+import Reveal from "./Reveal";
+import Link from "next/link";
 function SectionHero() {
-  const [hero, setHero] = useState(0);
   return (
-    <section className="relative w-full overflow-hidden px-5 lg:h-screen h-[70vh] lg:px-28">
-      {hero === 0 && <HeroContent data={heroOptions[0]} />}
-      {hero === 1 && <HeroContent data={heroOptions[1]} />}
-      {hero === 2 && <HeroContent data={heroOptions[2]} />}
+    <section className="relative h-[70vh] w-full overflow-hidden px-5 lg:h-screen lg:px-28">
+      <div className="absolute inset-0 left-0 top-0 z-[5] h-full w-full">
+        <HeroCarousal items={HeroImages} />
+      </div>
 
-      <div className="navigations absolute bottom-5 right-5 z-10">
-        <div className="flex w-full items-center gap-5 p-5">
-          <Button
-            variant="outline"
-            size="icon"
-            onClick={() =>
-              setHero((prev) => {
-                if (prev === 0) {
-                  return prev;
-                }
-                return prev - 1;
-              })
-            }
-            className="rounded-full"
-            disabled={hero === 0}
+      <div
+        className={
+          "relative z-10 flex h-full lg:w-3/4 flex-col items-start justify-center py-24"
+        }
+      >
+        <Reveal>
+          <div className="text-center lg:text-left">
+            <h1
+              className={
+                "relative z-10 text-3xl font-medium text-white md:text-4xl lg:text-7xl"
+              }
+            >
+              Elevate Your Vision Cutting Edge UAV Solutions Await
+            </h1>
+
+            <p className={"mt-10 lg:text-2xl  text-body lg:w-2/3"}>
+            Vista Drone captures and maps aerial data in a smart, cost-effective
+            manner, empowering businesses to make informed decisions. We help
+            you unlock the limitless possibilities of the open sky with our
+            top-tier UAV services.
+          </p>
+          </div>
+          <Link
+            href="/industries"
+            className={buttonVariants({ className: "mt-6", size: "lg" })}
           >
+            Explore
+          </Link>
+        </Reveal>
+      </div>
+
+      <div className="navigations absolute bottom-5 lg:left-24 z-10">
+        <div className="flex w-full items-center gap-5 lg:p-5">
+          <Button variant="outline" size="icon" className="prev rounded-full">
             <ArrowLeft className="h-4 w-4 text-white" />
           </Button>
-          <Button
-            variant="outline"
-            size="icon"
-            onClick={() =>
-              setHero((prev) => {
-                if (prev !== heroOptions.length) {
-                  return prev + 1;
-                }
-                return prev;
-              })
-            }
-            className="rounded-full"
-            disabled={hero === heroOptions.length - 1}
-          >
+          <Button variant="outline" size="icon" className="next rounded-full">
             <ArrowRight className="h-4 w-4 text-white" />
             <span className="sr-only">Next slide</span>
           </Button>
@@ -57,4 +59,3 @@ function SectionHero() {
 }
 
 export default SectionHero;
-

@@ -77,7 +77,7 @@ function MobileNavigation({
   setOpen: (value: boolean) => void;
   open: boolean;
 }) {
-  const [hidden, setHidden] = useState<boolean>(true);
+  const [hidden, setHidden] = useState<boolean>(false);
 
   const pathname = usePathname();
 
@@ -89,7 +89,10 @@ function MobileNavigation({
         }}
         className="absolute left-0 top-0 p-2 "
       >
-        <ArrowRightIcon className="size-7" />
+        <span className="bg-accent/50 block p-1.5 rounded-md">
+        <ArrowRightIcon className="size-5" />
+
+        </span>
       </button>
 
       <motion.ul
@@ -136,7 +139,7 @@ function MobileNavigation({
               <div
                 className={`transition-all duration-500 ${hidden ? "h-0 overflow-hidden opacity-0" : "h-max opacity-100"} `}
               >
-                <ul className="flex flex-col  items-start justify-between text-neutral-900 transition-all duration-500  ease-in-out dark:text-white">
+                <ul className="flex flex-col  items-start justify-between text-neutral-900 transition-all duration-500 ms-2  ease-in-out dark:text-white">
                   {link.children.map((child, index) => (
                     <li
                       key={index}

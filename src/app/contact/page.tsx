@@ -8,7 +8,7 @@ import contactbg from "@/assets/images/contact-bg.jpg";
 
 
 export const metadata: Metadata = {
-  title: "Contact Us | Vista Drone",
+  title: "Contact Us | Vista Drone: Innovate and Improve",
   description: "Contact Vista Drone for all your drone needs.",
 };
 

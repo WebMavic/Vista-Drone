@@ -14,7 +14,7 @@ import cnbg from "@/assets/images/cnbg.png";
 import { factors, factorsArray } from "@/constants";
 
 export const metadata: Metadata = {
-  title: "Industries | Vista Drone",
+  title: "Market | Vista Drone : Innovate and Improve",
 };
 
 

@@ -3,6 +3,7 @@ import dynamic from "next/dynamic";
 import { services } from "../../../utils/data";
 import { TeamItem } from "@/app/about/(componets)/Team";
 import { solarProjects } from "@/constants";
+import { Metadata } from "next";
 
 const SectionContent =  dynamic(()=>import("./(components)/SectionContent"));
 const SectionContent2 =  dynamic(()=>import("./(components)/SectionContent2"));
@@ -20,6 +21,9 @@ import windimg from "@/assets/images/green energy/wind-2.jpg"
 
 const service = services[5];
 
+export const metadata: Metadata = {
+  title: "Green energy | Vista Drone : Innovate and Improve",
+};
 
 
 const page = () => {

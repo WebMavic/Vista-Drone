@@ -1,3 +1,5 @@
+import { StaticImport } from "next/dist/shared/lib/get-img-props";
+
 export const clientsLogos = [
   require("../assets/images/clients-logo/client1.png"),
   require("../assets/images/clients-logo/client2.png"),
@@ -82,4 +84,20 @@ export const bentoImages = [
   require("@/assets/images/bento/bento4.webp"),
   require("@/assets/images/bento/bento2.jpg"),
   require("@/assets/images/bento/bento5.jpg"),
+]
+
+
+
+
+
+export const HeroImages:StaticImport[] = [
+  require("@/assets/images/agriculture/agriculture3.jpeg"),
+  require("@/assets/images/cnbg.png"),
+  require("@/assets/images/Drone-Solution.jpg"),
+  require("@/assets/images/oil&gas/oil3.jpeg"),
+  require("@/assets/images/mining/mine4.jpeg"),
+  require("@/assets/images/greenenergy/solar2.jpeg"),
+  require("@/assets/images/green energy/wind-2.jpg"),
+  require("@/assets/images/marinefish/marine2.jpeg"), 
+  require("@/assets/images/construction&realestate/construction4.jpeg")
 ]

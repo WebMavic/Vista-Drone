@@ -102,6 +102,10 @@ body {
     scrollbar-width: none; /* Firefox */
   }
 
+  .overlay { 
+    @apply bg-black/75 bg-blend-overlay
+  }
+
   .inputs {
     @apply w-full rounded-lg border border-gray-300 bg-gray-50 lg:p-4 p-2 text-gray-900 focus:outline-none;
   }

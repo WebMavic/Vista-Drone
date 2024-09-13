@@ -3,7 +3,7 @@ import dynamic from "next/dynamic";
 import { services } from "../../../utils/data";
 
 
-
+import { Metadata } from "next";
 const SectionContent =  dynamic(()=>import("./(components)/SectionContent"));
 const SectionHeader =  dynamic(()=>import("@/components/SectionHeader"));
 const Benifits = dynamic(()=>import("../(components)/Benifits"));
@@ -16,6 +16,10 @@ const SectionAbout = dynamic(()=>import("@/components/SectionAbout"))
 import bg from '@/assets/images/construction&realestate/construction4.jpeg'
 
 const service = services[3]
+
+export const metadata: Metadata = {
+  title: "Construction | Vista Drone : Innovate and Improve",
+};
 
 const page = () => {
   return (

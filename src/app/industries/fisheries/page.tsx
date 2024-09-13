@@ -1,5 +1,6 @@
 import dynamic from "next/dynamic";
 import React from "react";
+import { Metadata } from "next";
 import { services } from "../../../utils/data";
 import bg from "@/assets/images/marinefish/marine2.jpeg";
 
@@ -9,6 +10,10 @@ const Services = dynamic(() => import("../(components)/Services"));
 const SectionAbout = dynamic(() => import("@/components/SectionAbout"));
 
 const service = services[6];
+
+export const metadata: Metadata = {
+  title: "Fisheries | Vista Drone : Innovate and Improve",
+};
 
 const page = () => {
   return (

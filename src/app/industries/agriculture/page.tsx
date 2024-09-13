@@ -2,7 +2,7 @@ import React from "react";
 import { services } from "../../../utils/data";
 import dynamic from "next/dynamic";
 import bg from "@/assets/images/agriculture/agriculture3.jpeg";
-
+import { Metadata } from "next";
 const SectionHeader = dynamic(() => import("@/components/SectionHeader"));
 const Benifits = dynamic(() => import("../(components)/Benifits"));
 const SectionFaq = dynamic(() => import("../(components)/SectionFaq"));
@@ -11,6 +11,10 @@ const SectionContact = dynamic(() => import("@/components/SectionContact"));
 const SectionAbout = dynamic(() => import("@/components/SectionAbout"));
 
 const service = services[2];
+
+export const metadata: Metadata = {
+  title: "Agriculture | Vista Drone : Innovate and Improve",
+};
 
 const page = () => {
   return (

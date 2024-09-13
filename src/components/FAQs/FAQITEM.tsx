@@ -17,7 +17,7 @@ function FAQITEM({ question, answer, ans, id }: FAQITEMProps) {
   return (
     <Accordion type="single" collapsible>
       <AccordionItem value={"item" + id}>
-        <AccordionTrigger className="hover:no-underline">{question}</AccordionTrigger>
+        <AccordionTrigger className="hover:no-underline text-left">{question}</AccordionTrigger>
         <AccordionContent>
           {ans && <p>{ans}</p>}
           {answer?.content}

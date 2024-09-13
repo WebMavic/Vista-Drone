@@ -11,14 +11,14 @@ const Certification = dynamic(()=>import('./(componets)/Certification'))
 const SectionContact = dynamic(()=>import('@/components/SectionContact'))
 
 export const metadata: Metadata = {
-  title: "About Us | Vista Drone",
+  title: "About Us | Vista Drone : Innovate and Improve",
 };
 
 
 function page() {
   return (
     <>
-      <SectionHeader title="About Vista" image={aboutbg} />
+      <SectionHeader title="Vista Drone" image={aboutbg} />
       <AboutUs/>
       <Team/>
       <SectionContact/>

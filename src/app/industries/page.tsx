@@ -14,7 +14,7 @@ const SectionContact = dynamic(()=>import("@/components/SectionContact"));
 
 import bg from "@/assets/images/Drone-Solution.jpg";
 export const metadata: Metadata = {
-  title: "Industries | Vista Drone",
+  title: "Steel | Vista Drone : Innovate and Improve",
 };
 
 function page() {

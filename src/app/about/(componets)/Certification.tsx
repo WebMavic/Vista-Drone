@@ -10,9 +10,9 @@ const Certification = () => {
   return (
     <SectionLayout className='bg-white'>
         <div className="space-y-4">
-          <Chips title="Certification & Accreditation" />
+          <Chips title="" />
           <h2 className="text-4xl font-bold capitalize text-heading ">
-            Let our certification speak behalf of us
+          Our Certification & Accreditation
           </h2>
         </div>
 

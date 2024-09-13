@@ -3,7 +3,7 @@ import dynamic from "next/dynamic";
 import { services } from "@/utils/data";
 import oil from "@/assets/images/oil&gas/oil3.jpeg";
 import { oilProjects } from "@/constants";
-
+import { Metadata } from "next";
 
 const SectionHeader =  dynamic(()=>import("@/components/SectionHeader"));
 const Benifits = dynamic(()=>import("../(components)/Benifits"));
@@ -15,6 +15,10 @@ const SectionAbout = dynamic(()=>import("@/components/SectionAbout"))
 
 
 const service = services[4];
+
+export const metadata: Metadata = {
+  title: "Oil & Gas | Vista Drone : Innovate and Improve",
+};
 
 const page = () => {
   return (
