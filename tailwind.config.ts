@@ -94,12 +94,23 @@ const config = {
   					height: '0'
   				}
   			},
+			'stagger' : {
+				from : {
+					opacity : '0',
+					transform : 'translateY(50px)'
+				},
+				to : {
+					opacity : '1',
+					transform : 'translateY(0px)'
+				},
+			}
 			
   		},
   		animation: {
   			spinText: 'spinText 30s linear infinite',
   			rotateLeftandRight: 'rotateLeftandRight 0.2s  infinite',
   			wobble: 'wobble 3s infinite',
+			stagger : 'stagger 0.5s ease-in-out 1s forwards',
 			"fade" : 'fade 1s ease-in-out 0.5s forwards',
   			'accordion-down': 'accordion-down 0.2s ease-out',
   			'accordion-up': 'accordion-up 0.2s ease-out',

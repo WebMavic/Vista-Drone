@@ -20,7 +20,7 @@ const Services = ({ services }: Props) => {
         {services.map(({image:Icon,content,title}, index) => (
           <div 
             key={index} 
-            className={`flex animate-fade min-h-[300px] flex-col items-center justify-center gap-5 rounded-xl border-b-4 border-primary bg-white p-5 shadow`}
+            className={`flex animate-stagger min-h-[300px] flex-col items-center justify-center gap-5 rounded-xl border-b-4 border-primary bg-white p-5 shadow`}
           >
             <span className="rounded-full bg-accent/20 p-2.5">
               {<Icon className="size-10 text-accent animate-wobble" />}

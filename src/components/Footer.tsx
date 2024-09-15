@@ -8,7 +8,7 @@ import { navlinks, socials } from "@/constants";
 
 const Footer = () => {
   return (
-    <footer className="bg-neutral-100">
+    <footer >
       <div className="w-full bg-accent py-3">
         <Marquee className="[--duration:20s]">
           <h1 className="text-xl text-body opacity-35">
@@ -17,7 +17,7 @@ const Footer = () => {
         </Marquee>
       </div>
      
-      <div className="bg-gray-100 text-gray-600">
+      <div className="bg-white text-gray-600">
       <div className="max-w-6xl mx-auto px-4 py-8">
         <div className="flex flex-col gap-10 justify-between items-center">
           <div className="mb-6 md:mb-0">

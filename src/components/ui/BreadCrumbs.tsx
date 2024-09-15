@@ -10,9 +10,9 @@ const BreadCrumbs = () => {
     const cuurentPath = usePathname()
   return (
     <div className='w-full '>
-        <div className='inline-flex gap-2  text-xl'>
-        <span className='text-white capitalize'>{cuurentPath.split('/')[1]+" "}/</span>
-        <div> <Link className='text-primary font-medium' href={'/'}>Home</Link></div>
+        <div className='inline-flex gap-2 lg:text-xl'>
+        <span className='text-white  capitalize'>{cuurentPath.split('/')[1]+" "}/</span>
+        <div> <Link className='text-neutral-100 font-medium' href={'/'}>Home</Link></div>
         </div>
         
     </div>

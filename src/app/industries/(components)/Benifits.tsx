@@ -1,3 +1,4 @@
+
 import React from "react";
 import SectionLayout from "@/components/ui/SectionLayout";
 import { benefits } from "@/utils/data";
@@ -8,9 +9,6 @@ interface Benefit {
   content: benefits[];
 }
 
-
-
-
 function Benifits({ content }: Benefit) {
   return (
     <SectionLayout className="lg:space-y-10 space-y-5" >
@@ -20,7 +18,7 @@ function Benifits({ content }: Benefit) {
 
       <ul  className={cn("grid gap-10 lg:grid-cols-2")}>
         {content.map(({ content, icon: Icon, title }, index) => (
-          <li key={index} className="animate-animate-fade">
+          <li key={index} className="animate-stagger">
             <div className="flex items-start gap-5">
               <span>
               <Icon className="size-8 " />
