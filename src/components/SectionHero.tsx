@@ -14,16 +14,12 @@ function SectionHero() {
 
       <div
         className={
-          "relative z-10 flex h-full lg:w-3/4 flex-col items-start justify-center py-24"
+          "relative z-10 h-full py-24"
         }
       >
         <Reveal>
-          <div className="text-center lg:text-left">
-            <h1
-              className={
-                "relative z-10 text-3xl font-medium text-white md:text-4xl lg:text-7xl"
-              }
-            >
+          <div className="text-center flex h-full lg:text-left lg:w-3/4 flex-col lg:items-start items-center justify-center">
+            <h1 className={"relative z-10 text-3xl font-medium text-white md:text-4xl lg:text-7xl"}>
               Elevate Your Vision Cutting Edge UAV Solutions Await
             </h1>
 
@@ -33,13 +29,13 @@ function SectionHero() {
             you unlock the limitless possibilities of the open sky with our
             top-tier UAV services.
           </p>
-          </div>
           <Link
             href="/industries"
             className={buttonVariants({ className: "mt-6", size: "lg" })}
           >
             Explore
           </Link>
+          </div>
         </Reveal>
       </div>
 

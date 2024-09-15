@@ -10,6 +10,7 @@ import {
 } from "next/dist/shared/lib/get-img-props";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
+import Reveal from "./Reveal";
 
 interface Props {
   image?: StaticImport | StaticImageData | any;
@@ -42,7 +43,8 @@ function SectionAbout({
           mirror && "lg:flex-row-reverse",
         )}
       >
-        <div className="h-full lg:w-1/2 ">
+        <div className="h-full lg:w-1/2 overflow-hidden">
+        <Reveal slide="left" >
           <Image
             src={image ? image : about1}
             placeholder="blur"
@@ -52,20 +54,17 @@ function SectionAbout({
               imageStyle,
             )}
           />
+          </Reveal>
         </div>
 
-        <div className="lg:w-1/2  lg:p-20">
-          {/* <Reveal width="100%"> */}
+        <div className="lg:w-1/2  lg:p-20 overflow-hidden">
+          <Reveal slide="right">
           <div>
             <Chips
               title={chips ? chips : "About us"}
               className="hidden text-heading lg:block"
             />
             <h1
-              // initial={{ opacity: 0, x: -50 }}
-              // whileInView={{ opacity: 1, x: 0 }}
-              // viewport={{ once: true }}
-              // transition={{ duration: 1 }}
               className="mt-2 text-center text-4xl font-medium capitalize text-primary dark:text-white lg:text-left"
             >
               {heading
@@ -74,12 +73,7 @@ function SectionAbout({
             </h1>
           </div>
 
-          <p
-            // initial={{ opacity: 0, y: 20 }}
-            // whileInView={{ opacity: 1, y: 0 }}
-            // transition={{ duration: 0.5 }}
-            className="mt-6 text-left  text-subheading"
-          >
+          <p className="mt-6 text-left  text-subheading">
             {para
               ? para
               : "Vista Drone UAV LLC is a registered company with the Department of Economic Development, Government of UAE, under commercial license number CN-5384149. We offer professional drone services(end to end solutions, like aerial data/picture acquisition to the processing and report submission) across multiple sectors, including Agriculture & Livestock, Green Energy, Oil & Gas fields, Civil Constructions, Mining, Safety and Surveillance etc. Our team comprises trained and certified drone pilots with experience of over 5 to 6 years in the respective field."}
@@ -93,7 +87,7 @@ function SectionAbout({
             </Link>
           )}
 
-          {/* </Reveal> */}
+          </Reveal>
         </div>
       </div>
     </SectionLayout>

@@ -9,6 +9,7 @@ const SectionLayout = dynamic(()=>import("@/components/ui/SectionLayout"))
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/Button";
 import { teams } from "@/constants";
+import Reveal from "@/components/Reveal";
 
 function Team() {
   return (
@@ -22,8 +23,11 @@ function Team() {
 
       <div className="mt-10 space-y-10 ">
         {teams.map((team,index) => (
-          <TeamItem key={index} {...team} direction={index === 0 ? 'left' : 'right'} />
-        ))
+          <Reveal slide={index === 0 ? 'left' : 'right'} once={false}>
+            <TeamItem key={index} {...team} direction={index === 0 ? 'left' : 'right'} />
+          </Reveal>
+        )
+      )
         }
       
        

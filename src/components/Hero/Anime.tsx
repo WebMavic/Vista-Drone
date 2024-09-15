@@ -3,20 +3,27 @@
 
 import React, { PropsWithChildren } from 'react'
 import {motion} from 'framer-motion'
+import { cn } from '@/lib/utils'
 
 interface Props extends PropsWithChildren {
 className ?: string,
+slide ?: 'left' | 'right' | 'top' | 'bottom'
 }
-const Anime = ({className,children}:Props) => {
+const Anime = ({className,children,slide = 'left'}:Props) => {
   return (
     <motion.div 
        variants={{
-        hidden : {x : 999,z:99,y:-450},
-        visible : {x : 0, z: 0 , y:0}
+        hidden : {x : -999,opacity:0},
+        visible : {x : 0,opacity : 1 },
+        
        }}
+       className={cn('w-full',className)}
        initial="hidden"
-       animate = "visible"
-       transition={{duration : 2,type:'spring'}}
+       animate="visible"
+      //  whileInView="visible"
+       viewport={{once: true}}
+       transition= {{duration : 0.5}}
+       
        
     
     >{children}</motion.div>

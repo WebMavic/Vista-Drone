@@ -14,7 +14,7 @@ function AboutUs() {
       <SectionAbout
         chips="our story" className="bg-primary2"
         heading="How it started"
-        image={art}
+        image={art} 
         para="Vista Drone UAV LLC was established through a combination of strategic vision and extensive industry experience. Our founder, S. Sudan, with over thirty years of expertise in diverse sectors, saw a key opportunity in the rapidly expanding Unmanned Aerial Vehicle (UAV) market in the UAE. The Middle East UAV market, valued at USD 2.84 billion in 2023 and anticipated to grow to USD 5.88 billion by 2033 with a 12% CAGR, presented an exciting landscape for cutting-edge drone solutions. Additionally, the UAE government's forward-thinking leadership played a crucial role in the decision to enter the drone services sector, with plans to extend services across the MENA region"
       />
       <BrandValues />

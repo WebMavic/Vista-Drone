@@ -4,10 +4,12 @@ import { benefits } from "@/utils/data";
 import { cn } from "@/lib/utils";
 
 
-
 interface Benefit {
   content: benefits[];
 }
+
+
+
 
 function Benifits({ content }: Benefit) {
   return (
@@ -16,9 +18,9 @@ function Benifits({ content }: Benefit) {
         Benifits you get
       </h3>
 
-      <div className={cn("grid gap-10 lg:grid-cols-2")}>
+      <ul  className={cn("grid gap-10 lg:grid-cols-2")}>
         {content.map(({ content, icon: Icon, title }, index) => (
-          <div key={index}>
+          <li key={index} className="animate-animate-fade">
             <div className="flex items-start gap-5">
               <span>
               <Icon className="size-8 " />
@@ -28,9 +30,9 @@ function Benifits({ content }: Benefit) {
                 <p className="text-sm text-subheading mt-2 ">{content}</p>
               </div>
             </div>
-          </div>
+          </li>
         ))}
-      </div>
+      </ul>
     </SectionLayout>
   );
 }

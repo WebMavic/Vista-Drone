@@ -3,6 +3,7 @@ import { ChevronDownIcon } from "@heroicons/react/24/outline";
 
 import Image from "next/image";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
+import BreadCrumbs from "./ui/BreadCrumbs";
 
 interface SectionHeaderProps {
   title: string;
@@ -10,6 +11,7 @@ interface SectionHeaderProps {
 }
 
 function SectionHeader({ title, image }: SectionHeaderProps) {
+  
   return (
     <header className="h-lg relative grid  w-full px-5 lg:h-[60vh] h-64 lg:px-32 ">
       <div className="hero-video absolute inset-0 left-0 top-0 z-[5] w-full overflow-hidden lg:h-[60vh]">
@@ -26,8 +28,9 @@ function SectionHeader({ title, image }: SectionHeaderProps) {
         <h1 className="text-center text-2xl uppercase leading-relaxed tracking-wider text-white lg:text-[2.5rem]">
           {title}
         </h1>
-        <div className="inline-flex animate-pulse items-center rounded-full bg-white p-1">
-          <ChevronDownIcon className="size-5  dark:text-heading" />
+        <div className="inline-flex  items-center">
+          {/* <ChevronDownIcon className="size-5  dark:text-heading" /> */}
+          <BreadCrumbs />
         </div>
       </div>
     </header>
