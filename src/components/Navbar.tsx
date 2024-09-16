@@ -38,11 +38,11 @@ function Navbar() {
       <header className="absolute top-0 z-[99] w-full  px-5  sm:px-28">
         <div className="flex min-h-20 items-center justify-between ">
           <Link href="/">
-            <Image
+            {/* <Image
               src={logo}
               alt="Logo" priority 
               className="lg:size-20 size-12 object-cover mix-blend-screen"
-            />
+            /> */}
             
           </Link>
 

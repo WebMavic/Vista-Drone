@@ -2,7 +2,7 @@ import dynamic from "next/dynamic";
 import React from "react";
 import { Metadata } from "next";
 import { services } from "../../../utils/data";
-import bg from "@/assets/images/marinefish/marine2.jpeg";
+import bg from "@/assets/images/marinefish/maine1.jpeg";
 
 const SectionHeader = dynamic(() => import("@/components/SectionHeader"));
 const SectionFaq = dynamic(() => import("../(components)/SectionFaq"));

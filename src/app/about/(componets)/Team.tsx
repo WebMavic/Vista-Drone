@@ -23,8 +23,8 @@ function Team() {
 
       <div className="mt-10 space-y-10 ">
         {teams.map((team,index) => (
-          <Reveal slide={index === 0 ? 'left' : 'right'} once={false}>
-            <TeamItem key={index} {...team} direction={index === 0 ? 'left' : 'right'} />
+          <Reveal key={index} slide={index === 0 ? 'left' : 'right'} once={false}>
+            <TeamItem {...team} direction={index === 0 ? 'left' : 'right'} />
           </Reveal>
         )
       )

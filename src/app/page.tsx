@@ -14,7 +14,7 @@ import Anime from "@/components/Hero/Anime";
 import Reveal from "@/components/Reveal";
 
 export const metadata = {
-  title: "Vista Drone",
+  title: "Vista Drone : Innovate and Improve",
 };
 
 export default function Home() {
