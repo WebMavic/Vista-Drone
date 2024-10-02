@@ -19,11 +19,11 @@ function SectionHero() {
       >
         <Reveal>
           <div className="text-center flex h-full lg:text-left lg:w-3/4 flex-col lg:items-start items-center justify-center">
-            <h1 className={"relative z-10 text-3xl font-medium text-white md:text-4xl lg:text-7xl"}>
+            <h1 className={"relative z-10 text-2xl font-medium text-white md:text-4xl lg:text-7xl"}>
               Elevate Your Vision Cutting Edge UAV Solutions Await
             </h1>
 
-            <p className={"mt-10 lg:text-2xl  text-body lg:w-2/3"}>
+            <p className={"mt-10 lg:text-xl  text-body lg:w-2/3"}>
             Vista Drone captures and maps aerial data in a smart, cost-effective
             manner, empowering businesses to make informed decisions. We help
             you unlock the limitless possibilities of the open sky with our

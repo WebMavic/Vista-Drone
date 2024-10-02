@@ -91,16 +91,19 @@ export const bentoImages = [
 
 
 export const HeroImages:StaticImport[] = [
-  require("@/assets/images/draft.jpg"),
-  require("@/assets/images/oil&gas/oil3.jpeg"),
-  require("@/assets/images/Drone-Solution.jpg"),
-  require("@/assets/images/agriculture/agriculture3.jpeg"),
-  require("@/assets/images/cnbg.png"),
+  require("@/assets/images/h1.jpg"),
+  require("@/assets/images/h2.png"),
+  require("@/assets/images/h3.png"),
+  require("@/assets/images/h4.jpeg"),
+  require("@/assets/images/h5.jpg"),
+  require("@/assets/images/h6.jpg"),
+  require("@/assets/images/h7.png"),
+  require("@/assets/images/h8.png"),
   
   
-  require("@/assets/images/mining/mine4.jpeg"),
-  require("@/assets/images/greenenergy/solar2.jpeg"),
-  require("@/assets/images/green energy/wind-2.jpg"),
-  require("@/assets/images/marinefish/maine1.jpeg"), 
-  require("@/assets/images/construction&realestate/construction4.jpeg")
+  // require("@/assets/images/mining/mine4.jpeg"),
+  // require("@/assets/images/greenenergy/solar2.jpeg"),
+  // require("@/assets/images/green energy/wind-2.jpg"),
+  // require("@/assets/images/marinefish/maine1.jpeg"), 
+  // require("@/assets/images/construction&realestate/construction4.jpeg")
 ]
