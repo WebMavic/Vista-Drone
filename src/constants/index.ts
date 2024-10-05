@@ -424,7 +424,7 @@ export const navlinks = [
   { name: "Industries", path: "/industries" },
   { name: "About", path: "/about" },
   { name: "Contact", path: "/contact" },
-  { name: "Market", path: "/market" },
+  { name: "Career", path: "/career" },
 ];
 
 export const socials = [

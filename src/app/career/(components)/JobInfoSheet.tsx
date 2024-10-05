@@ -107,7 +107,7 @@ const JobInfoSheet = () => {
                   <MapPinIcon className="mr-2 h-4 w-4" />
                   <div>Location</div>
                 </div>
-                <div>San Francisco, CA (Remote)</div>
+                <div>Abu Dhabi, UAE</div>
               </div>
               <div>
                 <div className="flex items-center  font-semibold text-subheading">
@@ -190,7 +190,7 @@ export const careerOptions = [
     description:
       "The ideal candidate will process and analyze drone data using ArcGIS, AGSoft, Pix4Dmapper, and DroneDeploy. Responsibilities include generating high-quality maps and 3D models, collaborating with drone operations, ensuring data accuracy, and improving workflows.",
     qualification: "Bachelor's degree in GIS, remote sensing, or related field",
-    location: "Remote",
+    location: "Abu Dhabi, UAE (Hybrid working model)",
     experience: "1 year",
     date: "October 2, 2024",
     sheetContent: {
@@ -201,17 +201,21 @@ export const careerOptions = [
       qualification: "Graduate in any discipline",
       applyBy: "October 10, 2024",
       rolesAndResponsibilities: [
-        "Identify and evaluate new business opportunities through market research and analysis for Drone Services.",
-        "Develop and implement marketing strategies to enhance brand awareness and drive business growth.",
-        "Build and maintain relationships with key clients and stakeholders.",
-        "Prepare and deliver presentations, proposals and negotiation to potential clients.",
+        "Process and analyze geospatial data using ArcGIS, AGSoft, Pix4Dmapper, and DroneDeploy.",
+    "Prepare high-quality maps, 3D models, and visual representations for client presentations and reports.",
+    "Collaborate with drone operation teams to ensure data collection meets project specifications and quality standards.",
+    "Assist in developing data processing workflows and best practices to enhance efficiency and accuracy.",
+    "Maintain up-to-date knowledge of industry trends and advancements in drone data processing technologies.",
+    "Contribute to project documentation and technical reports as required."
       ],
       desiredCandidateProfile: [
-        "Bachelor's degree in marketing, business administration, or a related field.",
-        "Excellent communication and interpersonal skills.",
-        "Experience of working in UAE with company providing professional Drone / Unmanned Aerial Vehicles services in industrial sector of UAE like oil & gas, green energy, mining, agriculture etc.",
-        "Ability to work in a fast-paced and deadline-driven environment.",
-        "Proven track record of successfully implementing marketing strategies and driving business growth.",
+        "Bachelor's degree in Geography, Environmental Science, Data Science, or a related field.",
+    "Proficiency in ArcGIS, AGSoft, Pix4Dmapper, and DroneDeploy.",
+    "Strong analytical skills and attention to detail.",
+    "Experience in UAE’s oil and gas, green energy, or similar industrial sectors is preferred.",
+    "Excellent communication and teamwork skills.",
+    "Ability to work in a fast-paced, deadline-driven environment.",
+    
       ],
       from: {
         title: "Head- Talent Acquisition Vista Drone UAV LLC",
@@ -224,30 +228,34 @@ export const careerOptions = [
     job_id: 2,
     title: "Marketing And Business Development Executive",
     description:
-      "The ideal candidate will process and analyze drone data using ArcGIS, AGSoft, Pix4Dmapper, and DroneDeploy. Responsibilities include generating high-quality maps and 3D models, collaborating with drone operations, ensuring data accuracy, and improving workflows.",
+      "Vista Drone is seeking a Marketing and Business Development Executive to drive business growth by identifying new opportunities, developing marketing strategies, and building strong relationships with key clients. The role involves market research, preparing proposals, and representing the company at industry events.",
     qualification: "Graduate in any discipline",
-    location: "Abu Dhabi, UAE ",
+    location: "Abu Dhabi, UAE (Hybrid working model) ",
     experience: "2 year",
     date: "July 21, 2024",
     sheetContent: {
       title: "Marketing And Business Development Executive",
-      location: "Abu Dhabi, UAE",
+      location: "Abu Dhabi, UAE (Hybrid working model)",
       joining: "Immediately",
       jobPosted: "February 2, 2024",
       qualification: "Graduate in any discipline",
       applyBy: "October 10, 2024",
       rolesAndResponsibilities: [
-        "Identify and evaluate new business opportunities through market research and analysis for Drone Services.",
+        "Identify and evaluate new business opportunities through market research and analysis for drone services.",
         "Develop and implement marketing strategies to enhance brand awareness and drive business growth.",
         "Build and maintain relationships with key clients and stakeholders.",
-        "Prepare and deliver presentations, proposals and negotiation to potential clients.",
+        "Prepare and deliver presentations, proposals, and negotiations to potential clients.",
+        "Stay updated on industry trends and best practices to ensure competitiveness.",
+        "Participate in networking events, conferences, and trade shows to promote the company and generate leads."
       ],
       desiredCandidateProfile: [
         "Bachelor's degree in marketing, business administration, or a related field.",
-        "Excellent communication and interpersonal skills.",
-        "Experience of working in UAE with company providing professional Drone / Unmanned Aerial Vehicles services in industrial sector of UAE like oil & gas, green energy, mining, agriculture etc.",
-        "Ability to work in a fast-paced and deadline-driven environment.",
-        "Proven track record of successfully implementing marketing strategies and driving business growth.",
+    "Excellent communication and interpersonal skills.",
+    "Experience working in the UAE with a company providing professional drone/UAV services in sectors like oil & gas, green energy, mining, and agriculture.",
+    "Ability to work in a fast-paced, deadline-driven environment.",
+    "Proven track record of implementing marketing strategies and driving business growth.",
+    "Immediate availability with valid UAE Driving License and working/dependent visa.",
+    "Arabic language skills are an advantage."
       ],
       from: {
         title: "Head- Talent Acquisition Vista Drone UAV LLC",
@@ -272,19 +280,27 @@ export const careerOptions = [
       jobPosted: "July 10, 2024",
       qualification: "Graduate in any discipline",
       applyBy: "July 20, 2024",
-      rolesAndResponsibilities: [
-        "Identify and evaluate new business opportunities through market research and analysis for Drone Services.",
-        "Develop and implement marketing strategies to enhance brand awareness and drive business growth.",
-        "Build and maintain relationships with key clients and stakeholders.",
-        "Prepare and deliver presentations, proposals and negotiation to potential clients.",
-      ],
+      rolesAndResponsibilities:[
+        "Operate enterprise-class drones for commercial and industrial use.",
+        "Conduct pre-flight inspections and flight planning per project needs.",
+        "Ensure compliance with UAE drone regulations and obtain GCAA permissions.",
+        "Capture aerial data (images, videos, LiDAR) and deliver to the data team.",
+        "Coordinate with teams to meet project objectives.",
+        "Provide insights based on aerial data.",
+        
+    ],
+    
       desiredCandidateProfile: [
-        "Bachelor's degree in marketing, business administration, or a related field.",
-        "Excellent communication and interpersonal skills.",
-        "Experience of working in UAE with company providing professional Drone / Unmanned Aerial Vehicles services in industrial sector of UAE like oil & gas, green energy, mining, agriculture etc.",
-        "Ability to work in a fast-paced and deadline-driven environment.",
-        "Proven track record of successfully implementing marketing strategies and driving business growth.",
-      ],
+        "GCAA Drone Pilot Certification is mandatory.",
+    "UAE Driving License preferred.",
+    
+    "Knowledge of UAE drone regulations and GCAA permissions process.",
+    "Ability to work independently and in hybrid office/on-site model.",
+    "Experience with oil & gas, construction, or environmental sectors is a plus.",
+    "Strong problem-solving skills in fast-paced environments.",
+    "Flexibility to work on-site across UAE.",
+    "Arabic language skills are a plus."
+    ],
       from: {
         title: "Head- Talent Acquisition Vista Drone UAV LLC",
         address:
