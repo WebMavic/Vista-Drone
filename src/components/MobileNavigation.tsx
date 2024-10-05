@@ -33,7 +33,7 @@ const navlinks: NavLinks[] = [
   { name: "About", path: "/about" },
   {name : "Career", path: "/career"},
   { name: "Contact", path: "/contact" },
-  { name: "Market", path: "/market" },
+  // { name: "Market", path: "/market" },
 ];
 
 const linkItemVariants = {

@@ -26,7 +26,7 @@ function Navigation() {
     { name: "Home", path: "/" ,active : pathname === "/"},
     { name: "About", path: "/about" , active : pathname === '/about' },
     { name: "Career", path: "/career" , active : pathname === '/career' },
-    { name: "Market", path: "/market" , active : pathname === '/market' },
+    // { name: "Market", path: "/market" , active : pathname === '/market' },
   ];
 
 

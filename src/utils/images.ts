@@ -92,13 +92,13 @@ export const bentoImages = [
 
 export const HeroImages:StaticImport[] = [
   require("@/assets/images/h1.jpg"),
-  require("@/assets/images/h2.png"),
-  require("@/assets/images/h3.png"),
-  require("@/assets/images/h4.jpeg"),
+  require("@/assets/images/h2.jpg"),
+  require("@/assets/images/h3.jpg"),
+  require("@/assets/images/h4.jpg"),
   require("@/assets/images/h5.jpg"),
   require("@/assets/images/h6.jpg"),
-  require("@/assets/images/h7.png"),
-  require("@/assets/images/h8.png"),
+  require("@/assets/images/h7.jpg"),
+  require("@/assets/images/h8.jpg"),
   
   
   // require("@/assets/images/mining/mine4.jpeg"),
