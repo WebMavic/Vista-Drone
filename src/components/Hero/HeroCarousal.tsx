@@ -15,7 +15,7 @@ interface Props {
   className?: string;
 }
 
-export const HeroCarousal = ({ items: Images, className }: Props) => {
+const HeroCarousal = ({ items: Images, className }: Props) => {
 
   return (
     <div className={cn("h-full w-full bg-black select-none ", className)}>
@@ -58,3 +58,5 @@ export const HeroCarousal = ({ items: Images, className }: Props) => {
     </div>
   );
 };
+
+export default HeroCarousal;

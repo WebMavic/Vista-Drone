@@ -18,7 +18,7 @@ const ScrollToTop = () => {
     <div
       className="fixed bottom-5 right-3 z-50  flex  items-center gap-2  p-4"
     >
-      <Button size={"icon"} className="rounded-full" onClick={scrollToTop}>
+      <Button size={"icon"} className="rounded-full bg-primary" onClick={scrollToTop}>
         <ChevronUp className="size-8 " />
         <span className="sr-only">scroll to top</span>
       </Button>

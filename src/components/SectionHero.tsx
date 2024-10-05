@@ -1,5 +1,5 @@
 import React from "react";
-import { HeroCarousal } from "./Hero/HeroCarousal";
+import  HeroCarousal  from "./Hero/HeroCarousal";
 import { HeroImages } from "@/utils/images";
 import { Button, buttonVariants } from "@/components/ui/Button";
 import { ArrowLeft, ArrowRight } from "lucide-react";

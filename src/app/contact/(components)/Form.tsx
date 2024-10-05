@@ -7,9 +7,7 @@ import emailjs from '@emailjs/browser'
 import { toast } from "sonner"
 
 
-
-
- function Form() {
+function Form() {
   const ref = useRef<HTMLFormElement>(null)
   const [isPending, setIsPending] = React.useState(false);
   const submitForm = (e:React.FormEvent)=>{

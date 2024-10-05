@@ -1,14 +1,19 @@
 import SectionHeader from "@/components/SectionHeader";
 import React from "react";
-import { services } from "../../../utils/data";
-import SectionInfo from "../(components)/SectionInfo";
-import Benifits from "../(components)/Benifits";
-import SectionFaq from "../(components)/SectionFaq";
-import Services from "../(components)/Services";
-import SectionAbout from "@/components/SectionAbout";
+import dynamic from "next/dynamic";
+import { services } from "@/utils/data";
+import { Metadata } from "next";
+const Benifits = dynamic(() => import("../(components)/Benifits"));
+const SectionFaq = dynamic(() => import("../(components)/SectionFaq"));
+const Services = dynamic(() => import("../(components)/Services"));
+const SectionAbout = dynamic(() => import("@/components/SectionAbout"));
+const SectionContact = dynamic(() => import("@/components/SectionContact"));
 import  bg from '@/assets/images/steel/steel2.jpeg'
-import SectionContact from "@/components/SectionContact";
 const service = services[1]
+
+export const metadata: Metadata = {
+  title: "Steel Industry | Vista Drone : Innovate and Improve",
+};
 
 const page = () => {
   return (

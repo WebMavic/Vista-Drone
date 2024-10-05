@@ -4,19 +4,18 @@ import { Metadata } from "next";
 import dynamic from "next/dynamic";
 
 import SectionHeader from "@/components/SectionHeader";
-const MarketInNumbers = dynamic(
-  () => import("@/components/MarketInsight/MarketInNumbers"),
-);
-const ApexChart = dynamic(() => import("@/components/MarketInsight/Chart"));
-const SectionLayout = dynamic(() => import("@/components/ui/SectionLayout"));
-const SectionContact = dynamic(() => import("@/components/SectionContact"));
-const SectionAbout = dynamic(() => import("@/components/SectionAbout"));
+const MarketInNumbers = dynamic(() => import("@/components/MarketInsight/MarketInNumbers"))
+const ApexChart = dynamic(() => import("@/components/MarketInsight/Chart"))
+const SectionLayout = dynamic(() => import("@/components/ui/SectionLayout"))
+const SectionContact = dynamic(() => import("@/components/SectionContact"))
+const SectionAbout = dynamic(() => import("@/components/SectionAbout"))
+const DrivingFactors = dynamic(()=>import('@/components/MarketInsight/DrivingFactors'))
 
 import cnbg from "@/assets/images/cnbg.png";
 
 import { factors, factorsArray } from "@/constants";
 import Reveal from "@/components/Reveal";
-import DrivingFactors from "@/components/MarketInsight/DrivingFactors";
+
 
 export const metadata: Metadata = {
   title: "Market | Vista Drone : Innovate and Improve",

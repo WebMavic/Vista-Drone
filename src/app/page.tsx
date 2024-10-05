@@ -1,16 +1,17 @@
 import React from "react";
+import dynamic from "next/dynamic";
 import Image from "next/image";
-import about1 from "@/assets/images/image (2).png";
-import SectionExpertise from "@/components/SectionExpertise";
-import SectionFeaturedServices from "@/components/SectionFeaturedServices";
-import SectionHero from "@/components/SectionHero";
-import Certification from "./about/(componets)/Certification";
-import SectionContact from "@/components/SectionContact";
-import DroneApplication from "@/app/industries/(components)/DroneApplication";
-import SectionLayout from "@/components/ui/SectionLayout";
 import Link from "next/link";
+import about1 from "@/assets/images/image (2).png";
+import SectionHero from "@/components/SectionHero";
+
+const SectionFeaturedServices = dynamic(() => import("@/components/SectionFeaturedServices"));
+const SectionExpertise = dynamic(() => import("@/components/SectionExpertise"));
+const SectionContact = dynamic(() => import("@/components/SectionContact"));
+const Certification = dynamic(() => import("@/app/about/(componets)/Certification"));
+const DroneApplication = dynamic(() => import("@/app/industries/(components)/DroneApplication"));
+const SectionLayout = dynamic(() => import("@/components/ui/SectionLayout"));
 import { buttonVariants } from "@/components/ui/Button";
-import Anime from "@/components/Hero/Anime";
 import Reveal from "@/components/Reveal";
 
 export const metadata = {
