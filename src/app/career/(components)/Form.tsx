@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { Button } from "@/components/ui/Button";
+import { Button, buttonVariants } from "@/components/ui/Button";
 import SectionLayout from "@/components/ui/SectionLayout";
 import { countries } from "@/constants";
 import { useSearchParams } from "next/navigation";
@@ -8,6 +8,7 @@ import Image from "next/image";
 import logo from "@/assets/images/vista.png";
 import emailjs from "@emailjs/browser";
 import { toast } from "sonner";
+import Link from "next/link";
 
 function Form() {
   const ref = React.useRef<HTMLFormElement>(null);
@@ -113,7 +114,15 @@ function Form() {
             </div>
           </div>
 
-          <Button disabled={isPending} type="submit" size="lg" className="col-span-full rounded-md">
+          <Link href="/career" className={buttonVariants({
+            variant : "outline",
+            size: "lg",
+            className: "col-span-full rounded-md"
+          })}>
+          Cancel
+          </Link>
+
+          <Button disabled={isPending} type="submit" size="lg" className="col-span-full rounded-md ms-3">
             {isPending ? "Sending..." : "Submit"}
           </Button>
       </form>

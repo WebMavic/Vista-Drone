@@ -58,17 +58,10 @@ const JobInfoSheet = () => {
                 key={job_id}
                 className="job-1 rounded-md border bg-white p-5 hover:shadow"
               >
-                <div className="mb-2 inline-flex w-full items-center justify-between">
                   <h2 className="font-medium text-heading lg:text-center lg:text-lg">
                     {title}
                   </h2>
-                  <SheetTrigger asChild>
-                    <Button onClick={() => setActiveSheet(sheetContent)}>
-                      Apply
-                    </Button>
-                  </SheetTrigger>
-                </div>
-                <p className="max-w-3xl text-sm text-subheading">
+                <p className="lg:max-w-3xl mt-5  text-sm text-subheading">
                   {description}
                 </p>
                 <div className="my-3 grid gap-4  lg:grid-cols-3  ">
@@ -85,10 +78,16 @@ const JobInfoSheet = () => {
                     <span className="text-xs font-medium">{experience}</span>
                   </div>
                 </div>
-
-                <div className="flex w-max items-center rounded-full bg-accent/20 px-3  py-1.5  text-sm">
-                  <IoTimeOutline className="mr-2" />
-                  <span className="text-xs font-medium ">{date}</span>
+                <div className="mb-2 inline-flex w-full items-center justify-between">
+                  <div className="flex w-max items-center rounded-full bg-accent/20 px-3  py-1.5  text-sm">
+                    <IoTimeOutline className="mr-2" />
+                    <span className="text-xs font-medium ">{date}</span>
+                  </div>
+                  <SheetTrigger asChild>
+                    <Button onClick={() => setActiveSheet(sheetContent)}>
+                      Apply
+                    </Button>
+                  </SheetTrigger>
                 </div>
               </div>
             ),
@@ -101,78 +100,81 @@ const JobInfoSheet = () => {
           <SheetHeader>
             <SheetTitle>{activeSheet.title}</SheetTitle>
           </SheetHeader>
-          <div className="p-5 h-[70vh] lg:h-auto overflow-auto no-scrollbar ">
-           
-            <div className="mt-4 flex justify-between items-center flex-wrap gap-4">
-              <div >
-                <div className="inline-flex items-center text-subheading font-semibold">
+          <div className="no-scrollbar h-[70vh] overflow-auto p-5 lg:h-auto ">
+            <div className="mt-4 flex flex-wrap items-center justify-between gap-4">
+              <div>
+                <div className="inline-flex items-center font-semibold text-subheading">
                   <MapPinIcon className="mr-2 h-4 w-4" />
                   <div>Location</div>
                 </div>
                 <div>San Francisco, CA (Remote)</div>
               </div>
-              <div >
-                <div className="flex items-center  text-subheading font-semibold">
+              <div>
+                <div className="flex items-center  font-semibold text-subheading">
                   <CalendarIcon className="mr-2 h-4 w-4" />
                   <div>Join by</div>
                 </div>
                 <div>August 1, 2024</div>
               </div>
-              <div >
-                <div className="flex items-center  text-subheading font-semibold">
+              <div>
+                <div className="flex items-center  font-semibold text-subheading">
                   <ClockIcon className="mr-2 h-4 w-4" />
                   <div>Posted On</div>
                 </div>
                 <div>May 15, 2024</div>
               </div>
-              
+
               <div>
-                <div className="flex items-center  text-subheading font-semibold">
+                <div className="flex items-center  font-semibold text-subheading">
                   <CalendarIcon className="mr-2 h-4 w-4" />
                   <div>Apply by</div>
                 </div>
                 <div>July 1, 2024</div>
               </div>
             </div>
-            <div className="space-y-5 mt-4">
-                <section>
+            <div className="mt-4 space-y-5">
+              <section>
                 <h2 className="text-lg font-semibold text-heading">
-                Roles and Responsibilities
-              </h2>
-              <ul className="list-inside list-disc">
-                {activeSheet.rolesAndResponsibilities.map((role, index) => (
-                  <li key={index} className="text-subheading">
-                    {role}
-                  </li>
-                ))}
-              </ul>
-                </section>
-                <section>
-            <h2 className="text-lg font-semibold text-heading">Desired Candidate Profile</h2>
-            <ul className="list-disc list-inside">
-              {activeSheet.desiredCandidateProfile.map((role, index) => (
-                <li key={index} className="text-subheading">
-                  {role}
-                </li>
-                ))}
-            </ul>
-          </section>
+                  Roles and Responsibilities
+                </h2>
+                <ul className="list-inside list-disc">
+                  {activeSheet.rolesAndResponsibilities.map((role, index) => (
+                    <li key={index} className="text-subheading">
+                      {role}
+                    </li>
+                  ))}
+                </ul>
+              </section>
+              <section>
+                <h2 className="text-lg font-semibold text-heading">
+                  Desired Candidate Profile
+                </h2>
+                <ul className="list-inside list-disc">
+                  {activeSheet.desiredCandidateProfile.map((role, index) => (
+                    <li key={index} className="text-subheading">
+                      {role}
+                    </li>
+                  ))}
+                </ul>
+              </section>
             </div>
-            
-            <div className="w-full mt-4 bg-accent/10 rounded-md border border-zinc-300" >
-            <div className="flex flex-wrap justify-between items-center  w-full p-3">
-                <div>
-              <h3 className="text-lg font-semibold text-heading">From</h3>
-              <p className="text-subheading">{activeSheet.from.title}</p>
-              <p className="text-subheading">{activeSheet.from.address}</p>
 
+            <div className="mt-4 w-full rounded-md border border-zinc-300 bg-accent/10">
+              <div className="flex w-full flex-wrap items-center  justify-between p-3">
+                <div>
+                  <h3 className="text-lg font-semibold text-heading">From</h3>
+                  <p className="text-subheading">{activeSheet.from.title}</p>
+                  <p className="text-subheading">{activeSheet.from.address}</p>
                 </div>
-              <Link href={`/career/apply?job=`+activeSheet.title} className={buttonVariants()}>Apply Now</Link>
+                <Link
+                  href={`/career/apply?job=` + activeSheet.title}
+                  className={buttonVariants()}
+                >
+                  Apply Now
+                </Link>
+              </div>
             </div>
           </div>
-            
-          </div>
-       
         </SheetContent>
       )}
     </Sheet>

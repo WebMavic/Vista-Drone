@@ -43,6 +43,7 @@ import { toast } from "sonner"
           <input type="text" name="companyName" placeholder="company name" required className="inputs"  autoComplete="company"/>
 
           <select name="country"  id="country" required className="inputs">
+            <option>Country</option>
             {countries.map((country,i) => (
               <option key={i} value={country}>
                 {country}

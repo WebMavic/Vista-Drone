@@ -9,7 +9,7 @@ import { navlinks, socials } from "@/constants";
 const Footer = () => {
   return (
     <footer >
-      <div className="w-full bg-accent py-3">
+      <div className="w-full bg-accent py-2">
         <Marquee className="[--duration:20s]">
           <h1 className="text-xl text-body opacity-35">
             Certified Training for drone pilots .....Coming Soon
