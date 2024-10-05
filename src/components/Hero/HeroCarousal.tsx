@@ -18,7 +18,7 @@ interface Props {
 export const HeroCarousal = ({ items: Images, className }: Props) => {
 
   return (
-    <div className={cn("h-full w-full bg-black ", className)}>
+    <div className={cn("h-full w-full bg-black select-none ", className)}>
       <Swiper
         className="h-full w-full"
         modules={[Autoplay,Navigation,EffectFade]}
@@ -42,7 +42,7 @@ export const HeroCarousal = ({ items: Images, className }: Props) => {
         {Images.map((image, i) => (
           <SwiperSlide key={i}>
             <div className="relative h-full w-full">
-           <div className = "absolute top-0  z-[1] h-full w-full  bg-blend-overlay"/>
+           <div className = "absolute top-0 bg-black/50  z-[1] h-full w-full  bg-blend-overlay"/>
             <Image
               src={image}
               placeholder="blur"

@@ -31,6 +31,7 @@ const navlinks: NavLinks[] = [
     ],
   },
   { name: "About", path: "/about" },
+  {name : "Career", path: "/career"},
   { name: "Contact", path: "/contact" },
   { name: "Market", path: "/market" },
 ];
@@ -100,7 +101,7 @@ function MobileNavigation({
         initial="hidden"
         animate="visible"
         exit="exit"
-        className="relative mt-[50%] flex flex-col items-center justify-center px-5  text-neutral-900 *:py-2 *:dark:text-white "
+        className="relative mt-[40%] flex flex-col items-center justify-center px-5  text-neutral-900 *:py-2 *:dark:text-white "
       >
         {navlinks.map((link, index) => (
           <motion.li

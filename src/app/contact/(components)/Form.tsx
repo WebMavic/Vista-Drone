@@ -1,23 +1,45 @@
-import React from "react";
+"use client"
+import React,{useRef} from "react";
 import { Button } from "@/components/ui/Button";
 import SectionLayout from "@/components/ui/SectionLayout";
-import { PhoneNumberInput } from "./PhoneNumberInput";
 import { countries } from "@/constants";
+import emailjs from '@emailjs/browser'
+import { toast } from "sonner"
 
-const submitForm = async (formData : FormData)=>{
-  "use server"
-  console.log(formData);
-}
 
-async function Form() {
+
+
+ function Form() {
+  const ref = useRef<HTMLFormElement>(null)
+  const [isPending, setIsPending] = React.useState(false);
+  const submitForm = (e:React.FormEvent)=>{
+    e.preventDefault();
+    setIsPending(true);
+    emailjs.sendForm(process.env.NEXT_PUBLIC_SERVICE_ID!, 
+      process.env.NEXT_PUBLIC_TEMPLATE_ID!, 
+      ref.current!,{
+        publicKey : process.env.NEXT_PUBLIC_PUBLIC_KEY
+      }).then((result) => {
+        toast.success('Message sent successfully')
+        ref.current?.reset()
+        setIsPending(false)
+      }
+      , (error) => {
+        toast.error('Something went wrong')
+        ref.current?.reset()
+        setIsPending(false)
+    });
+
+  
+  }
   return (
     <SectionLayout className="bg-white">
       <h1 className="py-2 text-4xl font-semibold uppercase tracking-wide text-heading">
         Contact Form
       </h1>
-      <form action={submitForm} className="space-y-5 py-10">
+      <form ref={ref} onSubmit={submitForm}  className="space-y-5 py-10">
         <div className="grid gap-5 lg:grid-cols-2">
-          <input type="text" name="name"  placeholder="your name" required className="inputs" autoComplete="name" />
+          <input type="text" name="from_name"  placeholder="your name" required className="inputs" autoComplete="name" />
           <input type="text" name="companyName" placeholder="company name" required className="inputs"  autoComplete="company"/>
 
           <select name="country"  id="country" required className="inputs">
@@ -28,7 +50,7 @@ async function Form() {
             ))}
           </select>
 
-          <select name="service" id="country" required className="inputs ">
+          <select name="service" required className="inputs ">
             <option>Interested service</option>
             {[
               "Oil and gas",
@@ -45,8 +67,7 @@ async function Form() {
             ))}
           </select>
           <input type="email" autoComplete="email" name="email" placeholder="email" required className="inputs" />
-
-         <PhoneNumberInput/>
+          <input type="text" autoComplete="phone" maxLength={10} name="phone" placeholder="phone" required className="inputs" />
 
 
           <textarea
@@ -58,10 +79,10 @@ async function Form() {
           <Button
             variant="default"
             type="submit"
-            size="lg"
+            size="lg" disabled={isPending} 
             className="col-span-full rounded-md"
           >
-            Submit
+            {isPending ? "Sending..." : "Submit"}
           </Button>
         </div>
       </form>

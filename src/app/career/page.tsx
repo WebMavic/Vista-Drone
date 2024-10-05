@@ -1,11 +1,10 @@
 import React from "react";
 import type { Metadata } from "next";
 import dynamic from "next/dynamic";
-import Form from "./components/Form";
-const SectionHeader = dynamic(()=>import("@/components/SectionHeader"))
-
 import contactbg from "@/assets/images/contact-bg.jpg";
+import JobInfoSheet from "./(components)/JobInfoSheet";
 
+const SectionHeader = dynamic(() => import("@/components/SectionHeader"));
 
 export const metadata: Metadata = {
   title: "Career | Vista Drone: Innovate and Improve",
@@ -15,24 +14,15 @@ export const metadata: Metadata = {
 function page() {
   return (
     <>
-      <SectionHeader title="Lets Talk" image={contactbg} />
-     <Form/>
-      <div>
-
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d29079.386008751448!2d54.49215!3d24.349166!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e40e7483d11d5%3A0x7672bbc1a32c03c2!2sMusaffah%20-%20Abu%20Dhabi%20-%20United%20Arab%20Emirates!5e0!3m2!1sen!2sus!4v1725385238732!5m2!1sen!2sus"
-         
-          className="w-full h-[500px] border-0"
-          allowFullScreen
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-        ></iframe>
-      </div>
-
-     
+      <SectionHeader title="Careers" image={contactbg} />
+     <JobInfoSheet/>
 
     </>
   );
 }
 
 export default page;
+
+
+
+

@@ -43,6 +43,7 @@ function Navbar() {
               alt="Logo" priority 
               className="lg:size-20 size-12 object-cover mix-blend-screen"
             /> */}
+            <h1 className="lg:text-2xl text-xl text-white  font-medium tracking-widest">VISTA DRONE</h1>
             
           </Link>
 

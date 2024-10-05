@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ui/ScrollToTop";
 import NextTopLoader from 'nextjs-toploader'
+import { Toaster } from "@/components/ui/sonner";
 const font = Inter({
   weight: ["200","300", "400", "500", "600", "700","800","900"],
   subsets: ["latin"],
@@ -28,6 +29,7 @@ export default function RootLayout({
         <main>{children}</main>
         <Footer />
         <ScrollToTop/>
+        <Toaster />
       </body>
     </html>
   );
