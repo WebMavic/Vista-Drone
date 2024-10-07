@@ -110,26 +110,26 @@ const JobInfoSheet = () => {
                 <div>Abu Dhabi, UAE</div>
               </div>
               <div>
-                <div className="flex items-center  font-semibold text-subheading">
+                {/* <div className="flex items-center  font-semibold text-subheading">
                   <CalendarIcon className="mr-2 h-4 w-4" />
                   <div>Join by</div>
                 </div>
-                <div>August 1, 2024</div>
+                <div>August 1, 2024</div> */}
               </div>
               <div>
-                <div className="flex items-center  font-semibold text-subheading">
+                {/* <div className="flex items-center  font-semibold text-subheading">
                   <ClockIcon className="mr-2 h-4 w-4" />
                   <div>Posted On</div>
                 </div>
-                <div>May 15, 2024</div>
+                <div>July 26, 2024</div> */}
               </div>
 
               <div>
-                <div className="flex items-center  font-semibold text-subheading">
+                {/* <div className="flex items-center  font-semibold text-subheading">
                   <CalendarIcon className="mr-2 h-4 w-4" />
                   <div>Apply by</div>
                 </div>
-                <div>July 1, 2024</div>
+                <div>July 1, 2024</div> */}
               </div>
             </div>
             <div className="mt-4 space-y-5">
@@ -199,7 +199,7 @@ export const careerOptions = [
       joining: "Immediately",
       jobPosted: "October 2, 2024",
       qualification: "Graduate in any discipline",
-      applyBy: "October 10, 2024",
+      applyBy: "October 2, 2024",
       rolesAndResponsibilities: [
         "Process and analyze geospatial data using ArcGIS, AGSoft, Pix4Dmapper, and DroneDeploy.",
     "Prepare high-quality maps, 3D models, and visual representations for client presentations and reports.",
@@ -232,7 +232,7 @@ export const careerOptions = [
     qualification: "Graduate in any discipline",
     location: "Abu Dhabi, UAE (Hybrid working model) ",
     experience: "2 year",
-    date: "July 21, 2024",
+    date: "July 26, 2024",
     sheetContent: {
       title: "Marketing And Business Development Executive",
       location: "Abu Dhabi, UAE (Hybrid working model)",
