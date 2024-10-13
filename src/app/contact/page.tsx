@@ -19,7 +19,7 @@ function page() {
       <QuickTabs />
       <div>
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d29079.386008751448!2d54.49215!3d24.349166!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e40e7483d11d5%3A0x7672bbc1a32c03c2!2sMusaffah%20-%20Abu%20Dhabi%20-%20United%20Arab%20Emirates!5e0!3m2!1sen!2sus!4v1725385238732!5m2!1sen!2sus"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3634.2325516577143!2d54.53543277524262!3d24.373212278250534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e4724773662f7%3A0xc3e57ade689f9c02!2sMazyad%20Mall!5e0!3m2!1sen!2sin!4v1728283039381!5m2!1sen!2sin"
          
           className="w-full h-[500px] border-0"
           allowFullScreen
