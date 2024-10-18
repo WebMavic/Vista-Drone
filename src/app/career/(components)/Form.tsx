@@ -9,6 +9,7 @@ import logo from "@/assets/images/vista.png";
 import emailjs from "@emailjs/browser";
 import { toast } from "sonner";
 import Link from "next/link";
+import { countryCodes } from "@/app/contact/(components)/Form";
 
 function Form() {
   const ref = React.useRef<HTMLFormElement>(null);
@@ -61,7 +62,7 @@ function Form() {
             className="inputs"
             autoComplete="first name"
           />
-          
+
           <input
             type="email"
             autoComplete="email"
@@ -71,16 +72,31 @@ function Form() {
             className="inputs"
           />
 
-          <input
-            type="text"
-            autoComplete="phone"
-            name="phone"
-            placeholder="phone"
-            required
-            className="inputs"
-          />
+          <div className="relative rounded-md ">
+            <div className="absolute inset-y-0 left-0 flex items-center">
+              <select
+                name="countryCode"
+                autoComplete="country-code"
+                className="h-full rounded-md border-0 bg-transparent py-0 pl-3 text-gray-500  focus:outline-none focus:ring-inset lg:text-sm"
+              >
+                {countryCodes.map((code, i) => (
+                  <option key={i} value={code}>{`+${code}`}</option>
+                ))}
+              </select>
+            </div>
+            <input
+              name="phone"
+              autoComplete="phone"
+              type="text"
+              required
+              placeholder="phone"
+              className="block w-full rounded-md border-0 py-1.5 pl-24 pr-7 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:outline-none lg:text-sm lg:leading-6"
+            />
+          </div>
 
-          <select name="country"  required className="inputs">
+          
+
+          <select name="country" required className="inputs">
             <option value="">Select your country</option>
             {countries.map((country, i) => (
               <option key={i} value={country}>
@@ -89,7 +105,7 @@ function Form() {
             ))}
           </select>
 
-          <select name="job"  required className="inputs col-span-full">
+          <select name="job" required className="inputs col-span-full">
             <option value="">Select job profile</option>
             {[
               "Drone Pilot",
@@ -102,29 +118,42 @@ function Form() {
             ))}
           </select>
 
-            <div className="col-span-full">
-            <input type="text" name="bio" required placeholder="link to your resume,linkedIn or portfolio" className="inputs "/>
+          <div className="col-span-full">
+            <input
+              type="text"
+              name="bio"
+              required
+              placeholder="link to your resume,linkedIn or portfolio"
+              className="inputs "
+            />
             <p
-              className="text-sm mt-1 text-gray-500 dark:text-gray-300"
+              className="mt-1 text-sm text-gray-500 dark:text-gray-300"
               id="file_input_help"
             >
               Upload your resume in google drive and paste the link.
             </p>
-
-            </div>
           </div>
+        </div>
 
-          <Link href="/career" className={buttonVariants({
-            variant : "outline",
+        <Link
+          href="/career"
+          className={buttonVariants({
+            variant: "outline",
             size: "lg",
-            className: "col-span-full rounded-md"
-          })}>
+            className: "col-span-full rounded-md",
+          })}
+        >
           Cancel
-          </Link>
+        </Link>
 
-          <Button disabled={isPending} type="submit" size="lg" className="col-span-full rounded-md ms-3">
-            {isPending ? "Sending..." : "Submit"}
-          </Button>
+        <Button
+          disabled={isPending}
+          type="submit"
+          size="lg"
+          className="col-span-full ms-3 rounded-md"
+        >
+          {isPending ? "Sending..." : "Submit"}
+        </Button>
       </form>
     </SectionLayout>
   );

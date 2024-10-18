@@ -107,7 +107,7 @@ body {
   }
 
   .inputs {
-    @apply w-full text-sm rounded-sm border border-gray-300 bg-gray-50 px-2 py-1.5 text-gray-900 focus:outline-none;
+    @apply w-full rounded-sm border-0 ring-1 ring-gray-300 placeholder:text-gray-400 px-2 py-1.5 text-gray-900 focus:outline-none lg:text-sm lg:leading-6  bg-transparent;
   }
 }
 
