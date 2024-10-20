@@ -699,7 +699,7 @@ export const services: Service[] = [
   },
   
   {
-    title: "Green Energy",
+    title: "Renewable energy",
     description:
       "Commercial Drone Services in the Oil & Gas , Civil Infrastructure, Mining, Surveillance, Agriculture & Farming, Green Energy | Skill development through Training program of Drone Operator | Testing, Service and Maintenance of the Drone.",
     image:solar1,

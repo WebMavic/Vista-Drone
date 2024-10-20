@@ -22,7 +22,7 @@ const navlinks: NavLinks[] = [
     path: "/industries",
     children: [
       { name: "Oil & Gas", path: "/industries/oil-and-gas" },
-      { name: "Green Energy", path: "/industries/green-energy" },
+      { name: "Renewable Energy", path: "/industries/renewable-energy" },
       { name: "Mining", path: "/industries/mining" },
       { name: "Construction & Real Estate", path: "/industries/construction" },
       { name: "Agriculture", path: "/industries/agriculture" },

@@ -23,7 +23,7 @@ function SectionHero() {
               Elevate Your Vision Cutting Edge UAV Solutions Await
             </h1>
 
-            <p className={"mt-10 lg:text-xl  text-body lg:w-2/3"}>
+            <p className={"mt-10 lg:text-l  text-body lg:w-2/3"}>
             Vista Drone captures and maps aerial data in a smart, cost-effective
             manner, empowering businesses to make informed decisions. We help
             you unlock the limitless possibilities of the open sky with our

@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 function page() {
   return (
     <>
-      <SectionHeader title="Revolutionizing Industries with Advanced UAV Solutions" image={bg}/>
+      <SectionHeader title="Revolutionizing Industries with Advanced UAV Solutions" image={bg} className="h-[60vh]"/>
       <ServiceCards />
       <WorkFlow />
       <DataSharing/>

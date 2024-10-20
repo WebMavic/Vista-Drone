@@ -1,19 +1,20 @@
 import React from "react";
-import { ChevronDownIcon } from "@heroicons/react/24/outline";
 
 import Image from "next/image";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import BreadCrumbs from "./ui/BreadCrumbs";
+import { cn } from "@/lib/utils";
 
 interface SectionHeaderProps {
   title: string;
   image: string | StaticImport | any;
+  className?:string;
 }
 
-function SectionHeader({ title, image }: SectionHeaderProps) {
+function SectionHeader({ title, image ,className}: SectionHeaderProps) {
   
   return (
-    <header className="h-lg relative grid  w-full px-5 lg:h-[60vh] h-64 lg:px-32 ">
+    <header className={cn("h-lg relative grid  w-full px-5 lg:h-[60vh] h-64 lg:px-32 ",className)}>
       <div className="hero-video absolute inset-0 left-0 top-0 z-[5] w-full overflow-hidden lg:h-[60vh]">
         <div className="div absolute top-0 z-[1] h-full w-full  bg-black/40 bg-blend-overlay " />
         <Image
@@ -29,7 +30,6 @@ function SectionHeader({ title, image }: SectionHeaderProps) {
           {title}
         </h1>
         <div className="inline-flex  items-center">
-          {/* <ChevronDownIcon className="size-5  dark:text-heading" /> */}
           <BreadCrumbs />
         </div>
       </div>

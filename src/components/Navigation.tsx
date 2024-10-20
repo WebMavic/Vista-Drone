@@ -38,7 +38,7 @@ function Navigation() {
   }
   const linksWithChildren:LinkWithChildren[]   = [
     { name: "Oil & Gas", path: "/industries/oil-and-gas",Icon: MdOilBarrel },
-    { name: "Renewable Energy", path: "/industries/green-energy",Icon:MdOutlineWindPower },
+    { name: "Renewable Energy", path: "/industries/renewable-energy",Icon:MdOutlineWindPower },
     { name: "Mining", path: "/industries/mining",Icon:GiGoldMine },
     { name: "Construction & Real Estate",path: "/industries/construction",icon:serviceIcons[1]},
     { name: "Agriculture", path: "/industries/agriculture",icon:serviceIcons[0] },

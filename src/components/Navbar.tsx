@@ -1,76 +1,93 @@
 "use client";
-import React, { useState, Fragment } from "react";
+import React, { useState, useEffect, Fragment } from "react"; // Ensure useState and useEffect are imported
 import Navigation from "./Navigation";
-import { Bars3Icon} from "@heroicons/react/24/outline";
+import { Bars3Icon } from "@heroicons/react/24/outline";
 import MobileNavigation from "./MobileNavigation";
-import {
-  Dialog,
-  DialogPanel,
-  TransitionChild,
-  Transition,
-} from "@headlessui/react";
+import { Dialog, DialogPanel, TransitionChild, Transition } from "@headlessui/react";
 import Link from "next/link";
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import Image from "next/image";
-import logo from "@/assets/images/vista.png"
-import {buttonVariants} from "./ui/Button";
-
-
-
+import logo from "@/assets/images/vista.png";
+import { buttonVariants } from "./ui/Button";
+import { cn } from "@/lib/utils";
 
 function Navbar() {
   const [isMobileNavVisible, setIsMobileNavVisible] = useState(false);
-  const [hidden, setHidden] = useState<boolean>(false);
+  const [hidden, setHidden] = useState(false);
+  const [navbarBackground, setNavbarBackground] = useState("bg-transparent"); // State for background color
 
   const { scrollY } = useScroll();
 
+  // Handle scroll event using framer-motion's `useMotionValueEvent`
   useMotionValueEvent(scrollY, "change", (latest) => {
-    const previous = scrollY.getPrevious();
-    if (latest > previous! && latest > 200) {
+    const previous = scrollY.getPrevious() ?? 0; // Use 0 as a fallback if previous is undefined
+    if (latest > previous && latest > 500) {
       setHidden(true);
     } else {
       setHidden(false);
     }
   });
+  
+
+  // Change the background color of the navbar on scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 300) {
+        setNavbarBackground("bg-[rgba(123,69,33,.7)] shadow-md fixed"); // Opaque background with shadow
+      }else{
+        setNavbarBackground("bg-transparent");
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <Fragment>
-      <header className="absolute top-0 z-[99] w-full  px-5  sm:px-28">
-        <div className="flex min-h-20 items-center justify-between ">
+      {/* Navbar with dynamic background color */}
+      <header className={cn("top-0 bg-transparent absolute z-[99] w-full px-5 sm:px-28 transition-all duration-300",navbarBackground)}>
+        <div className="flex min-h-20 items-center justify-between">
           <Link href="/">
-            {/* <Image
-              src={logo}
-              alt="Logo" priority 
-              className="lg:size-20 size-12 object-cover mix-blend-screen"
-            /> */}
-            <h1 className="lg:text-2xl text-xl text-white  font-medium tracking-widest">VISTA DRONE</h1>
-            
+            <h1 className="lg:text-2xl text-xl text-white font-medium tracking-widest">
+              VISTA DRONE
+            </h1>
           </Link>
 
-          <div className="hidden flex-1 flex-shrink-0 items-center justify-end gap-3 md:flex lg:flex-none">
+          {/* Desktop Navigation */}
+          <div className="hidden flex-1 flex-shrink-0 items-center justify-end gap-3 lg:flex lg:flex-none">
             <Navigation />
             <Link href="/contact" className={buttonVariants()}>Contact</Link>
-              
           </div>
 
-        
+          <div className="lg:hidden">
+        <button onClick={() => setIsMobileNavVisible((prev) => !prev)}>
+          <span>
+            <Bars3Icon className="h-7 text-white" />
+          </span>
+        </button>
+      </div>
+
+          {/* Mobile Navigation */}
           <Transition appear show={isMobileNavVisible}>
             <Dialog
               open={isMobileNavVisible}
               onClose={() => setIsMobileNavVisible(false)}
               className="relative z-[9999]"
             >
-              <div className="fixed inset-0 bg-black/50"/>
+              <div className="fixed inset-0 bg-black/50" />
               <TransitionChild
-                 enter="transform transition ease-in-out duration-500"
-                 enterFrom="translate-x-full"
-                 enterTo="translate-x-0"
-                 leave="transform transition ease-in-out duration-500"
-                 leaveFrom="translate-x-0"
-                 leaveTo="translate-x-full opacity-0"
+                enter="transform transition ease-in-out duration-500"
+                enterFrom="translate-x-full"
+                enterTo="translate-x-0"
+                leave="transform transition ease-in-out duration-500"
+                leaveFrom="translate-x-0"
+                leaveTo="translate-x-full opacity-0"
               >
-                <div className="fixed inset-0 right-0 top-0 ">
-                  <DialogPanel className=" absolute right-0 h-screen w-2/3 space-y-4  border bg-white ">
+                <div className="fixed inset-0 right-0 top-0">
+                  <DialogPanel className="absolute right-0 h-screen w-2/3 space-y-4 border bg-white">
                     <MobileNavigation
                       setOpen={setIsMobileNavVisible}
                       open={isMobileNavVisible}
@@ -80,34 +97,11 @@ function Navbar() {
               </TransitionChild>
             </Dialog>
           </Transition>
-          {/* {isMobileNavVisible && (
-              <MobileNavigation
-                setOpen={setIsMobileNavVisible}
-                open={isMobileNavVisible}
-              />
-            )} */}
         </div>
       </header>
 
-      <motion.div
-        className="fixed right-5 top-5  z-[99] lg:hidden"
-        variants={{
-          visible: { y: 0 },
-          hidden: { y: "-200%" },
-        }}
-        animate={hidden ? "hidden" : "visible"}
-      >
-        <button
-          onClick={() => {
-            setIsMobileNavVisible((prev) => !prev);
-          }}
-          className="rounded-full border bg-white p-2 shadow-md"
-        >
-          <span>
-            <Bars3Icon className="size-6 text-black " />
-          </span>
-        </button>
-      </motion.div>
+      {/* Mobile menu button */}
+     
     </Fragment>
   );
 }

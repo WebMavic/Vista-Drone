@@ -124,13 +124,15 @@ export const teams = [
     name: "S. Sudan",
     role: "Founder and CEO",
     avatar: member1,
-    bio: "An entrepreneur and experienced Geo scientist with experience of over 30 years, spanning two decades in key roles in the Middle East, is marked by expertise in various sectors including mining, geology, oil and gas, ferrous and non-ferrous metal production, trading, export-import, and business development. He holds a Master's degree in Earth Science from IIT(ISM) Dhanbad, India, an MBA and Trained Drone Pilot.",
+    bio1: "S. Sudan is a seasoned geoscientist and entrepreneur with over 30 years of experience in industries such as oil and gas, mining, and metals. He holds a Master’s degree in Earth Science from IIT (ISM) Dhanbad, India, and an MBA in Marketing. His extensive leadership roles have taken him across the Middle and India, where he has successfully led multi-million-dollar projects, including a $100 million contract with Petroleum Development Oman (PDO).",
+    bio2: "An entrepreneur and experienced Geo scientist with experience of over 30 years, spanning two decades in key roles in the Middle East, is marked by expertise in various sectors including mining, geology, oil and gas, ferrous and non-ferrous metal production, trading, export-import, and business development. He holds a Master's degree in Earth Science from IIT(ISM) Dhanbad, India, an MBA and Trained Drone Pilot.",
   },
   {
     name: "Shlok Srivastava",
     role: "Co-Founder & CTO",
     avatar: member2,
-    bio: "A Canadian Citizen & Govt. Certified Petroleum Engineer of Alberta, Canada with a career dedicated to optimizing energy resources. Over eight years, he has excelled in bridging the gap between industry, government, and regulatory bodies to tackle pressing issues of food and energy security. Notably, his contributions include identifying key methane emission reduction opportunities in Canada’s LNG production system, spearheading Canada’s first oil well-to-geothermal conversion project, and developing a geospatial heatmap for CO2 emissions from large-scale energy processes for a feasible CCUS application.",
+    bio1: "Shlok Srivastava is an accomplished petroleum engineer with over eight years of experience in operations management, engineering design, and sustainability. A graduate of the University of Alberta with a Bachelor of Science in Petroleum Engineering, Shlok is also a licensed Professional Engineer (P.Eng) in Alberta, Canada. His career has spanned critical sectors, including oil and gas, energy management, and technology development, making him a key figure in driving innovation in energy optimization.",
+    bio2: "As the Co-Founder and Chief Technology Officer at Vista Drone UAV LLC, Shlok leverages his expertise to lead the company's technological advancements, particularly in the integration of cutting-edge UAV technologies for asset monitoring and inspection in the oil and gas industry. His extensive experience includes developing IoT sensors for remote monitoring of gas leaks, leading product commercialization efforts, and designing energy-efficient systems. Shlok’s work has directly contributed to reducing methane emissions in Canada’s LNG sector and pioneering geothermal energy projects, demonstrating his commitment to sustainability and innovation.",
   },
 ];
 

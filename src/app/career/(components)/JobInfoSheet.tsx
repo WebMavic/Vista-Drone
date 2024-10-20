@@ -67,7 +67,7 @@ const JobInfoSheet = () => {
                 <div className="my-3 grid gap-4  lg:grid-cols-3  ">
                   <div className="flex  w-max  items-center text-sm text-gray-500">
                     <GrCertificate className="mr-2" />
-                    <span className="text-xs font-medium">{qualification}</span>
+                    <p className="text-xs font-medium w-3/4 lg:w-auto">{qualification}</p>
                   </div>
                   <div className="flex items-center  text-sm text-gray-500 ">
                     <IoLocationSharp className="mr-2" />{" "}
