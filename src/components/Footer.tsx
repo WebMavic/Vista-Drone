@@ -48,7 +48,7 @@ const Footer = () => {
           <div className="flex items-center justify-between">
           <p>&copy; {new Date().getFullYear()} Vista Drone. All rights reserved.</p>
           <Link
-              href={"https://web-mavic-com.vercel.app/"} target="_blank"
+              href={"https://webmavic.com"} target="_blank"
               className="text-sm lg:mt-3 text-gray-500 dark:text-gray-400 sm:text-center"
             >
               Developed By Web Mavic
