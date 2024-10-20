@@ -19,7 +19,7 @@ function SectionHero() {
       >
         <Reveal>
           <div className="text-center flex h-full lg:text-left lg:w-3/4 flex-col lg:items-start items-center justify-center">
-            <h1 className={"relative z-10 text-2xl font-medium text-white md:text-4xl lg:text-7xl"}>
+            <h1 className={"relative z-10 text-2xl font-medium text-white md:text-4xl lg:text-5xl"}>
               Elevate Your Vision Cutting Edge UAV Solutions Await
             </h1>
 

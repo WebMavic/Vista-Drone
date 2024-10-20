@@ -45,7 +45,7 @@ export const industries: Industry[] = [
       "Mapping and surveying of the topography of the brownfield and greenfield O/C Mining projects.",
   },
   {
-    title: "Green Energy",
+    title: "Renewable Energy",
     Icon: MdOutlineWindPower,
     href: "/industries/green-energy",
     background:bentoImages[2],
@@ -80,7 +80,7 @@ export const industries: Industry[] = [
     className: "lg:col-span-2",
     background:bentoImages[4],
       description:
-      "Enhancing Efficiency, Safety, and Precision in Civil Construction Projects.",
+      "Optimizing Efficiency, Safety, and Precision in Oil and Gas Exploration and Production.",
   },
   {
     title: "Agriculture",
