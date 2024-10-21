@@ -44,7 +44,7 @@ export const TeamItem = ({bio1,bio2,className,avatar,name,role,direction,cta,ema
   name :  string
   role? : string
   bio1 : string
-  bio2 : string
+  bio2 ?: string
   cta? : string
   email ?: string
   direction : 'right' | 'left'
@@ -62,7 +62,7 @@ export const TeamItem = ({bio1,bio2,className,avatar,name,role,direction,cta,ema
     <h3 className="text-2xl font-bold text-heading">{name}</h3>
     {role && <span className="text-sm">{role}</span>}
     <p className="my-3 text-subheading">{bio1}</p>
-    <p className="my-3 text-subheading">{bio2}</p>
+    {bio2 && <p className="my-3 text-subheading">{bio2}</p> }
     
     <div className="flex flex-col items-center lg:items-start">
     {cta && <Link href={"/"+cta} className={buttonVariants()}>{cta.toUpperCase()}</Link>}

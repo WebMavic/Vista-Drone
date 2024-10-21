@@ -16,7 +16,7 @@ interface NavLinks {
 }
 
 const navlinks: NavLinks[] = [
-  { name: "Home", path: "/" },
+  //{ name: "Home", path: "/" },
   {
     name: "Industries",
     path: "/industries",

@@ -39,7 +39,7 @@ const page = async () => {
               <TeamItem
                 
                 avatar={index % 2 === 0 ? solar2 : windimg }
-                bio={content}
+                bio1={content}
                 direction={index % 2 === 0 ? "left" : "right"}
                 name={title}
                 className="lg:items-center"
