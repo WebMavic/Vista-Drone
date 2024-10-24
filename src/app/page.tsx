@@ -9,7 +9,7 @@ const SectionFeaturedServices = dynamic(() => import("@/components/SectionFeatur
 const SectionExpertise = dynamic(() => import("@/components/SectionExpertise"));
 const SectionContact = dynamic(() => import("@/components/SectionContact"));
 const Certification = dynamic(() => import("@/app/about/(componets)/Certification"));
-const DroneApplication = dynamic(() => import("@/app/industries/(components)/DroneApplication"));
+const DroneApplication = dynamic(() => import("@/app/applications/(components)/DroneApplication"));
 const SectionLayout = dynamic(() => import("@/components/ui/SectionLayout"));
 import { buttonVariants } from "@/components/ui/Button";
 import Reveal from "@/components/Reveal";

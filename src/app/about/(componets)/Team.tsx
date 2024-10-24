@@ -13,7 +13,7 @@ import Reveal from "@/components/Reveal";
 
 function Team() {
   return (
-    <SectionLayout className="w-full bg-primary2">
+    <SectionLayout className="w-full bg-primary2 ">
       <div className="space-y-4">
         <Chips title="Behind Vista" />
         <h2 className="text-4xl font-bold capitalize text-heading ">
@@ -21,9 +21,9 @@ function Team() {
         </h2>
       </div>
 
-      <div className="mt-10 space-y-10 ">
+      <div className="mt-10 space-y-10 overflow-x-hidden ">
         {teams.map((team,index) => (
-          <Reveal key={index} slide={index === 0 ? 'left' : 'right'} once={false}>
+          <Reveal key={index} slide={index === 0 ? 'left' : 'right'} once={true}>
             <TeamItem {...team} direction={index === 0 ? 'left' : 'right'} />
           </Reveal>
         )

@@ -1,108 +1,82 @@
 "use client";
-import React, { useState, useEffect, Fragment } from "react"; // Ensure useState and useEffect are imported
+import React, { useEffect, useState } from "react";
 import Navigation from "./Navigation";
-import { Bars3Icon } from "@heroicons/react/24/outline";
-import MobileNavigation from "./MobileNavigation";
-import { Dialog, DialogPanel, TransitionChild, Transition } from "@headlessui/react";
 import Link from "next/link";
-import { motion, useScroll, useMotionValueEvent } from "framer-motion";
-import Image from "next/image";
-import logo from "@/assets/images/vista.png";
 import { buttonVariants } from "./ui/Button";
 import { cn } from "@/lib/utils";
 
 function Navbar() {
-  const [isMobileNavVisible, setIsMobileNavVisible] = useState(false);
-  const [hidden, setHidden] = useState(false);
-  const [navbarBackground, setNavbarBackground] = useState("bg-transparent"); // State for background color
+  const [isMobileMenuHidden, setIsMobileMenuHidden] = useState(true); // Track mobile menu visibility
 
-  const { scrollY } = useScroll();
-
-  // Handle scroll event using framer-motion's `useMotionValueEvent`
-  useMotionValueEvent(scrollY, "change", (latest) => {
-    const previous = scrollY.getPrevious() ?? 0; // Use 0 as a fallback if previous is undefined
-    if (latest > previous && latest > 500) {
-      setHidden(true);
-    } else {
-      setHidden(false);
-    }
-  });
-  
-
-  // Change the background color of the navbar on scroll
   useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 300) {
-        setNavbarBackground("bg-[rgba(123,69,33,.7)] shadow-md fixed"); // Opaque background with shadow
-      }else{
-        setNavbarBackground("bg-transparent");
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    // Ensure the mobile menu is hidden on page load or reload
+    setIsMobileMenuHidden(true);
   }, []);
 
   return (
-    <Fragment>
-      {/* Navbar with dynamic background color */}
-      <header className={cn("top-0 bg-transparent absolute z-[99] w-full px-5 sm:px-28 transition-all duration-300",navbarBackground)}>
-        <div className="flex min-h-20 items-center justify-between">
-          <Link href="/">
-            <h1 className="lg:text-2xl text-xl text-white font-medium tracking-widest">
-              VISTA DRONE
-            </h1>
+    <nav className="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
+      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <Link href="/" onClick={() => setIsMobileMenuHidden(true)}>
+          <h1 className="text-xl font-medium lg:text-2xl">
+            VISTA DRONE
+          </h1>
+        </Link>
+        <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+        <div className="ms-4 md:hidden block" >
+        <Link href="/contact" className={buttonVariants()}>
+            Contact
           </Link>
-
-          {/* Desktop Navigation */}
-          <div className="hidden flex-1 flex-shrink-0 items-center justify-end gap-3 lg:flex lg:flex-none">
-            <Navigation />
-            <Link href="/contact" className={buttonVariants()}>Contact</Link>
-          </div>
-
-          <div className="lg:hidden">
-        <button onClick={() => setIsMobileNavVisible((prev) => !prev)}>
-          <span>
-            <Bars3Icon className="h-7 text-white" />
-          </span>
-        </button>
-      </div>
-
-          {/* Mobile Navigation */}
-          <Transition appear show={isMobileNavVisible}>
-            <Dialog
-              open={isMobileNavVisible}
-              onClose={() => setIsMobileNavVisible(false)}
-              className="relative z-[9999]"
+          </div> 
+      
+          
+       
+          {/* Button to toggle mobile menu */}
+          <button
+            data-collapse-toggle="navbar-sticky"
+            onClick={() => setIsMobileMenuHidden((prev) => !prev)}
+            type="button"
+            className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            aria-controls="navbar-sticky"
+            aria-expanded="false"
+          >
+            <span className="sr-only">Open main menu</span>
+            <svg
+              className="w-5 h-5"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 17 14"
             >
-              <div className="fixed inset-0 bg-black/50" />
-              <TransitionChild
-                enter="transform transition ease-in-out duration-500"
-                enterFrom="translate-x-full"
-                enterTo="translate-x-0"
-                leave="transform transition ease-in-out duration-500"
-                leaveFrom="translate-x-0"
-                leaveTo="translate-x-full opacity-0"
-              >
-                <div className="fixed inset-0 right-0 top-0">
-                  <DialogPanel className="absolute right-0 h-screen w-2/3 space-y-4 border bg-white">
-                    <MobileNavigation
-                      setOpen={setIsMobileNavVisible}
-                      open={isMobileNavVisible}
-                    />
-                  </DialogPanel>
-                </div>
-              </TransitionChild>
-            </Dialog>
-          </Transition>
+              <path
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M1 1h15M1 7h15M1 13h15"
+              />
+            </svg>
+          </button>
         </div>
-      </header>
 
-      {/* Mobile menu button */}
-     
-    </Fragment>
+        {/* Menu for desktop and mobile */}
+        <div
+          className={cn(
+            "items-center justify-between w-full md:flex md:w-auto md:order-2", // Always visible on desktop (md:flex)
+            isMobileMenuHidden ? "hidden" : "flex" // Conditionally hidden on mobile
+          )}
+        >
+          <Navigation hideNavBar={setIsMobileMenuHidden} />
+          <div className="ms-4 md:block hidden" >
+          <Link href="/contact" className={buttonVariants()}>
+            Contact
+          </Link>
+          </div>
+         
+        </div>
+       
+       
+      </div>
+    </nav>
   );
 }
 

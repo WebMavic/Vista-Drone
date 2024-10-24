@@ -14,7 +14,7 @@ function SectionContact() {
 
       <div className="z-10 flex flex-wrap items-center lg:h-[20vh] h-auto justify-center gap-10">
         <div className="space-y-4  text-center ">
-          <h3 className="text-2xl text-neutral-50 lg:text-4xl  ">
+          <h3 className="text-2xl text-white lg:text-4xl  ">
           Would you like to collaborate with us?
           </h3>
           <p className="text-sm text-body lg:text-lg ">

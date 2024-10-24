@@ -30,7 +30,7 @@ const NavigationMenuList = React.forwardRef<
   <NavigationMenuPrimitive.List
     ref={ref}
     className={cn(
-      "group flex flex-1 list-none items-center justify-center space-x-5",
+      "group flex flex-1 list-none items-start justify-start",
       className
     )}
     {...props}
@@ -41,7 +41,7 @@ NavigationMenuList.displayName = NavigationMenuPrimitive.List.displayName
 const NavigationMenuItem = NavigationMenuPrimitive.Item
 
 const navigationMenuTriggerStyle = cva(
-  "group inline-flex  w-max items-center justify-center rounded-md font-medium  hover:text-neutral-900  focus:text-neutral-100 focus:outline-none disabled:pointer-events-none disabled:opacity-50 "
+  "group inline-flex  w-max items-center justify-center rounded-md font-medium  hover:text-neutral-900  focus:text-accent focus:outline-none disabled:pointer-events-none disabled:opacity-50 "
 )
 
 const NavigationMenuTrigger = React.forwardRef<
@@ -69,7 +69,7 @@ const NavigationMenuContent = React.forwardRef<
   <NavigationMenuPrimitive.Content
     ref={ref}
     className={cn(
-      "left-0 top-0 w-full data-[motion^=from-]:animate-in data-[motion^=to-]:animate-out data-[motion^=from-]:fade-in data-[motion^=to-]:fade-out data-[motion=from-end]:slide-in-from-right-52 data-[motion=from-start]:slide-in-from-left-52 data-[motion=to-end]:slide-out-to-right-52 data-[motion=to-start]:slide-out-to-left-52 md:absolute md:w-auto",
+      "left-0 top-0 w-full data-[motion^=from-]:animate-in data-[motion^=to-]:animate-out data-[motion^=from-]:fade-in data-[motion^=to-]:fade-out data-[motion=from-end]:slide-in-from-right-80 data-[motion=from-start]:slide-in-from-left-52 data-[motion=to-end]:slide-out-to-right-80 data-[motion=to-start]:slide-out-to-left-52 md:absolute md:w-auto",
       className
     )}
     {...props}

@@ -25,7 +25,7 @@ type Industry = {
 export const industries: Industry[] = [
   {
     title: "Elevating Industries with Next Gen UAV Solutions",
-    href: "/industries",
+    href: "/applications",
     background:bentoImages[0],
     className: "lg:col-span-2 lg:row-span-1 ",
     description:
@@ -36,8 +36,8 @@ export const industries: Industry[] = [
 
   
   {
-    title: "Mining",
-    href: "/industries/mining",
+    title: "Mining & Geology",
+    href: "/applications/mining",
     Icon: GiGoldMine,
     background:bentoImages[1],
     className: "lg:row-span-1",
@@ -47,7 +47,7 @@ export const industries: Industry[] = [
   {
     title: "Renewable Energy",
     Icon: MdOutlineWindPower,
-    href: "/industries/green-energy",
+    href: "/applications/green-energy",
     background:bentoImages[2],
     className: "lg:row-span-1",
     description:
@@ -67,7 +67,7 @@ export const industries: Industry[] = [
   {
     title: "Construction",
     icon: serviceIcons[1],
-    href: "/industries/construction",
+    href: "/applications/construction",
     background: bentoImages[3],
 
     description:
@@ -75,7 +75,7 @@ export const industries: Industry[] = [
   },
   {
     title: "Oil and Gas",
-    href: "/industries/oil-and-gas",
+    href: "/applications/oil-and-gas",
     Icon: MdOilBarrel,
     className: "lg:col-span-2",
     background:bentoImages[4],
@@ -85,7 +85,7 @@ export const industries: Industry[] = [
   {
     title: "Agriculture",
     icon: serviceIcons[0],
-    href: "/industries/agriculture",
+    href: "/applications/agriculture",
     background:bentoImages[5],
     description:
       "Advance ability to collect and analyze data on crop health and soil conditions.",

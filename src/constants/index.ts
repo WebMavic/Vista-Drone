@@ -124,8 +124,8 @@ export const teams = [
     name: "S. Sudan",
     role: "Founder and CEO",
     avatar: member1,
-    bio1: "S. Sudan is a seasoned geoscientist and entrepreneur with over 30 years of experience in industries such as oil and gas, mining, and metals. He holds a Master’s degree in Earth Science from IIT (ISM) Dhanbad, India, and an MBA in Marketing. His extensive leadership roles have taken him across the Middle and India, where he has successfully led multi-million-dollar projects, including a $100 million contract with Petroleum Development Oman (PDO).",
-    bio2: "An entrepreneur and experienced Geo scientist with experience of over 30 years, spanning two decades in key roles in the Middle East, is marked by expertise in various sectors including mining, geology, oil and gas, ferrous and non-ferrous metal production, trading, export-import, and business development. He holds a Master's degree in Earth Science from IIT(ISM) Dhanbad, India, an MBA and Trained Drone Pilot.",
+    bio1: "S. Sudan is a seasoned geoscientist and entrepreneur with over 32 years of experience spanning two decades in key roles in the Middle East, is marked by expertise in various sectors including mining, geology, oil and gas, ferrous and non-ferrous metal production, trading, export-import, and business development. He has successfully led multi-million-dollar projects, including a $100 million contract with Petroleum Development Oman (PDO). He holds a Master’s degree in Earth Science from IIT (ISM) Dhanbad, India, an MBA in Marketing and a trained Drone Pilot.",
+    bio2: "",
   },
   {
     name: "Shlok Srivastava",
@@ -185,7 +185,7 @@ export const contacts = [
   {
     icon: EnvelopeIcon,
     title: "Quote",
-    description: "vistadrone11@gmail.com",
+    description: "contact@vistadrone.me ",
   },
   {
     icon: MapPinIcon,
