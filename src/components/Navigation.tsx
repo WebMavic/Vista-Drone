@@ -76,7 +76,7 @@ function Navigation({ hideNavBar }: { hideNavBar: Dispatch<SetStateAction<boolea
         {/* Applications Dropdown */}
         <NavigationMenuItem className="md:block hidden">
           <NavigationMenuTrigger className="hover:text-accent">
-          <Link href="/applications" legacyBehavior passHref>Applications</Link>
+          Applications
           </NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[400px]">
@@ -106,7 +106,7 @@ function Navigation({ hideNavBar }: { hideNavBar: Dispatch<SetStateAction<boolea
                   "block text-sm font-medium w-max text-gray-900 rounded hover:bg-gray-100 hover:text-accent md:p-0"
                 )}
               >
-                <Link href="/applications" legacyBehavior passHref> Applications</Link>
+                 Applications
               </NavigationMenuLink>
             </Link>
             <button onClick={() => setHidden((prev) => !prev)}>
