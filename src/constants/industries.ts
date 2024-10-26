@@ -47,7 +47,7 @@ export const industries: Industry[] = [
   {
     title: "Renewable Energy",
     Icon: MdOutlineWindPower,
-    href: "/applications/green-energy",
+    href: "/applications/renewable-energy",
     background:bentoImages[2],
     className: "lg:row-span-1",
     description:
