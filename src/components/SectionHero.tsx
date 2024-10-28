@@ -7,23 +7,23 @@ import Reveal from "./Reveal";
 import Link from "next/link";
 function SectionHero() {
   return (
-    <section className="relative min-h-[70vh] w-full overflow-hidden px-5 lg:h-screen lg:px-28">
+    <section className="relative min-h-[70vh] w-full overflow-hidden px-5 lg:h-screen lg:px-32">
       <div className="absolute inset-0 left-0 top-0 z-[5] h-full w-full">
         <HeroCarousal items={HeroImages} />
       </div>
 
-      <div className={"relative z-10 h-full py-24"}>
+      <div className={"relative z-10 h-full lg:py-24 py-32 "}>
         <Reveal>
           <div className="flex h-full flex-col items-center justify-center text-center lg:w-3/4 lg:items-start lg:text-left">
             <h1
               className={
-                "relative z-10 text-[30px] font-medium text-white lg:text-[36px]"
+                "relative z-10 text-[30px] font-medium text-white lg:text-[38px]"
               }
             >
               Elevate Your Vision<br/> Cutting-Edge UAV Solutions Are Here !
             </h1>
 
-            <p className={"mt-10 text-[22px] font-light text-body lg:w-2/3"}>
+            <p className={"mt-10 lg:text-[20px] text-lg  font-light text-body lg:w-2/3"}>
               Vista Drone captures and maps aerial data in a smart,
               cost-effective manner, empowering businesses to make informed
               decisions. We help you unlock the limitless possibilities of the

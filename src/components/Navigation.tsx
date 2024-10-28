@@ -15,34 +15,12 @@ import {
 } from "@/components/ui/navigation-menu";
 
 import { cn } from "@/lib/utils";
-import { IconType } from "react-icons/lib";
-import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import Image from "next/image";
 import { ChevronDownIcon } from "lucide-react";
 
 function Navigation({ hideNavBar }: { hideNavBar: Dispatch<SetStateAction<boolean>> }) {
   const pathname = usePathname();
   const [hidden, setHidden] = useState(true);
-
-  const navlinks = [
-    { name: "About", path: "/about", active: pathname === "/about" },
-    {
-      name: "Applications",
-      path: "/applications",
-      active: pathname.startsWith("/applications"), // Active for any application page
-      children: [
-        { name: "Oil & Gas", path: "/applications/oil-and-gas", Icon: MdOilBarrel },
-        { name: "Renewable Energy", path: "/applications/renewable-energy", Icon: MdOutlineWindPower },
-        { name: "Mining", path: "/applications/mining", Icon: GiGoldMine },
-        { name: "Construction & Real Estate", path: "/applications/construction", icon: serviceIcons[1] },
-        { name: "Agriculture", path: "/applications/agriculture", icon: serviceIcons[0] },
-        { name: "Marine Fisheries", path: "/applications/fisheries", Icon: GiFishingBoat },
-        { name: "Steel", path: "/applications/steel", Icon: GiSteelClaws },
-      ],
-    },
-    { name: "Projects", path: "/projects", active: pathname === "/projects" },
-    { name: "Careers", path: "/career", active: pathname === "/career" },
-  ];
 
   const linksWithChildren = [
     { name: "Oil & Gas", path: "/applications/oil-and-gas", Icon: MdOilBarrel },
@@ -61,11 +39,11 @@ function Navigation({ hideNavBar }: { hideNavBar: Dispatch<SetStateAction<boolea
         {/* About Link */}
         <NavigationMenuItem>
           <Link href="/about" legacyBehavior passHref>
-            <NavigationMenuLink
+            <NavigationMenuLink active={true}
               className={cn(
-                `${pathname === '/about' ? 'text-accent' : ''}`, // Active state
-                navigationMenuTriggerStyle(),
-                "hover:text-accent" // Hover effect
+                navigationMenuTriggerStyle(), // Active state
+                "hover:text-accent",
+                pathname == "/about" && "text-accent font-semibold transition-colors" // Hover effect
               )}
             >
               About
@@ -74,9 +52,9 @@ function Navigation({ hideNavBar }: { hideNavBar: Dispatch<SetStateAction<boolea
         </NavigationMenuItem>
 
         {/* Applications Dropdown */}
-        <NavigationMenuItem className="md:block hidden">
-          <NavigationMenuTrigger className="hover:text-accent">
-          Applications
+        <NavigationMenuItem className="md:block hidden" >
+          <NavigationMenuTrigger className={cn("hover:text-accent",pathname == '/applications' && 'text-accent font-semibold')}>
+          <Link href={"/applications"}>Applications</Link>
           </NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[400px]">
@@ -85,7 +63,7 @@ function Navigation({ hideNavBar }: { hideNavBar: Dispatch<SetStateAction<boolea
                   key={index}
                   title={name}
                   href={path}
-                  className={cn(pathname === path ? "bg-accent/50" : "", "hover:bg-accent/60")}
+                  className={cn(pathname === path && "bg-accent/40" , "hover:bg-primary/50")}
                 >
                   {icon && <Image src={icon} alt={"logo"} className="w-6 h-6" />}
                   {Icon && <Icon className="w-6 h-6" />}
@@ -97,13 +75,13 @@ function Navigation({ hideNavBar }: { hideNavBar: Dispatch<SetStateAction<boolea
 
         {/* Mobile Applications Dropdown */}
         <NavigationMenuItem className="md:hidden block">
-          <div className="inline-flex items-center justify-center py-2 px-3">
+          <div className="inline-flex items-center justify-center py-2 px-3 h-10">
             <Link href="/applications" legacyBehavior passHref>
               <NavigationMenuLink
                 onClick={() => hideNavBar(true)}
                 className={cn(
-                  `${pathname.startsWith('/applications') ? 'text-accent' : ''}`, // Active state for mobile
-                  "block text-sm font-medium w-max text-gray-900 rounded hover:bg-gray-100 hover:text-accent md:p-0"
+                  "block text-sm font-medium w-max text-gray-900 rounded hover:bg-gray-100 hover:text-accent md:p-0",
+                  pathname == '/applications' && 'text-accent', // Active state for mobile
                 )}
               >
                  Applications
@@ -123,7 +101,7 @@ function Navigation({ hideNavBar }: { hideNavBar: Dispatch<SetStateAction<boolea
                     <Link
                       onClick={() => hideNavBar(true)}
                       href={child.path}
-                      className={`text-sm ${pathname === child.path ? 'text-accent' : ''}`}
+                      className={cn("text-sm",pathname === child.path && 'text-accent')}
                     >
                       {child.name}
                     </Link>
@@ -138,10 +116,11 @@ function Navigation({ hideNavBar }: { hideNavBar: Dispatch<SetStateAction<boolea
         <NavigationMenuItem>
           <Link href="/projects" legacyBehavior passHref>
             <NavigationMenuLink
-              className={cn(
-                `${pathname === '/projects' ? 'text-accent' : ''}`, // Active state
+              className={cn( // Active state
                 navigationMenuTriggerStyle(),
-                "hover:text-accent" // Hover effect
+                "hover:text-accent",
+                pathname === '/projects' && 'text-accent font-semibold transition-colors',
+                // Hover effect
               )}
             >
               Projects
@@ -154,9 +133,9 @@ function Navigation({ hideNavBar }: { hideNavBar: Dispatch<SetStateAction<boolea
           <Link href="/career" legacyBehavior passHref>
             <NavigationMenuLink
               className={cn(
-                `${pathname === '/career' ? 'text-accent' : ''}`, // Active state
                 navigationMenuTriggerStyle(),
-                "hover:text-accent" // Hover effect
+                "hover:text-accent",
+                pathname === '/career' && 'text-accent font-semibold transition-colors',
               )}
             >
               Careers

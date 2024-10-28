@@ -8,7 +8,7 @@ import { Mail, MapPin, Phone } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#fefefe] dark:bg-gray-900">
+    <footer className="bg-[#fefefe] dark:bg-gray-900 dark:text-white">
       <div className="w-full bg-accent">
         <Marquee className="[--duration:20s]">
           <h1 className="text-xl text-body opacity-35">
@@ -191,7 +191,7 @@ const Footer = () => {
           </div>
         </div>
         <hr className="my-6 border-gray-200 dark:border-gray-700 sm:mx-auto lg:my-8 " />
-        <div className="px-16 sm:flex sm:items-center sm:justify-between">
+        <div className="lg:px-16 sm:flex sm:items-center sm:justify-between text-center ">
           <span className="text-sm text-gray-500 dark:text-gray-400 sm:text-center">
             © {new Date().getFullYear()}{" "}
             <Link href="https://vistadrone.me/" className="hover:underline">

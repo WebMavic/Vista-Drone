@@ -15,7 +15,7 @@ function Navbar() {
 
   return (
     <nav className="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
-      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <div className="flex flex-wrap items-center justify-between  md:px-32 md:py-4 py-5 px-5 ">
         <Link href="/" onClick={() => setIsMobileMenuHidden(true)}>
           <h1 className="text-xl font-medium lg:text-2xl">
             VISTA DRONE

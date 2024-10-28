@@ -98,7 +98,7 @@ export const HeroImages:StaticImport[] = [
   
   require("@/assets/images/h5.jpg"),
   require("@/assets/images/h6.jpg"),
-  require("@/assets/images/h7.jpg"),
+  // require("@/assets/images/h7.jpg"),
   
   
   
