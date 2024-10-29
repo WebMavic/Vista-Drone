@@ -1,31 +1,28 @@
 import type { MetadataRoute } from "next";
 
-export default function sitemap():MetadataRoute.Sitemap {
+export default function sitemap(): MetadataRoute.Sitemap {
     
-    let urls:string[] = [
-        `${process.env.NEXT_PUBLIC_BASE_URL}/`,
-        `${process.env.NEXT_PUBLIC_BASE_URL}/about`,
-        `${process.env.NEXT_PUBLIC_BASE_URL}/contact`,
-        `${process.env.NEXT_PUBLIC_BASE_URL}/projects`,
-        `${process.env.NEXT_PUBLIC_BASE_URL}/career`,
-        `${process.env.NEXT_PUBLIC_BASE_URL}/career/apply`,
-        `${process.env.NEXT_PUBLIC_BASE_URL}/applications`,
-        `${process.env.NEXT_PUBLIC_BASE_URL}/applications/agriculture`,
-        `${process.env.NEXT_PUBLIC_BASE_URL}/applications/construction`,
-        `${process.env.NEXT_PUBLIC_BASE_URL}/applications/fisheries`,
-        `${process.env.NEXT_PUBLIC_BASE_URL}/applications/mining`,
-        `${process.env.NEXT_PUBLIC_BASE_URL}/applications/oil-and-gas`,
-        `${process.env.NEXT_PUBLIC_BASE_URL}/applications/renewable-energy`,
-        `${process.env.NEXT_PUBLIC_BASE_URL}/applications/steel`,
-    ]
+    let urls = [
+        { url: `${process.env.NEXT_PUBLIC_BASE_URL}/`, priority: 1.0 },
+        { url: `${process.env.NEXT_PUBLIC_BASE_URL}/about`, priority: 1.0 },
+        { url: `${process.env.NEXT_PUBLIC_BASE_URL}/contact`, priority: 1.0 },
+        { url: `${process.env.NEXT_PUBLIC_BASE_URL}/projects`, priority: 0.8 },
+        { url: `${process.env.NEXT_PUBLIC_BASE_URL}/career`, priority: 0.7 },
+       
+        { url: `${process.env.NEXT_PUBLIC_BASE_URL}/applications`, priority: 0.8 },
+        { url: `${process.env.NEXT_PUBLIC_BASE_URL}/applications/agriculture`, priority: 0.7 },
+        { url: `${process.env.NEXT_PUBLIC_BASE_URL}/applications/construction`, priority: 0.7 },
+        { url: `${process.env.NEXT_PUBLIC_BASE_URL}/applications/fisheries`, priority: 0.7 },
+        { url: `${process.env.NEXT_PUBLIC_BASE_URL}/applications/mining`, priority: 0.7 },
+        { url: `${process.env.NEXT_PUBLIC_BASE_URL}/applications/oil-and-gas`, priority: 0.7 },
+        { url: `${process.env.NEXT_PUBLIC_BASE_URL}/applications/renewable-energy`, priority: 0.7 },
+        { url: `${process.env.NEXT_PUBLIC_BASE_URL}/applications/steel`, priority: 0.7 },
+    ];
     
-    return urls.map(url => {
-        return {
-            url,
-            lastModified: new Date().toISOString(),
-            priority : 1,
-            changeFrequency: 'yearly'
-        }
-    })
-    
+    return urls.map(({ url, priority }) => ({
+        url,
+        lastModified: new Date().toISOString(),
+        priority,
+        changeFrequency: 'yearly',
+    }));
 }
