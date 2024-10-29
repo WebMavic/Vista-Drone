@@ -37,7 +37,7 @@ function Navigation({ hideNavBar }: { hideNavBar: Dispatch<SetStateAction<boolea
       <NavigationMenuList className="w-full flex flex-col items-start text-gray-900 font-medium md:flex-row md:justify-end">
         
         {/* About Link */}
-        <NavigationMenuItem>
+        <NavigationMenuItem onClick={()=>hideNavBar(true)}>
           <Link href="/about" legacyBehavior passHref>
             <NavigationMenuLink active={true}
               className={cn(
@@ -52,7 +52,7 @@ function Navigation({ hideNavBar }: { hideNavBar: Dispatch<SetStateAction<boolea
         </NavigationMenuItem>
 
         {/* Applications Dropdown */}
-        <NavigationMenuItem className="md:block hidden" >
+        <NavigationMenuItem className="md:block hidden" onClick={()=>hideNavBar(true)} >
           <NavigationMenuTrigger className={cn("hover:text-accent",pathname == '/applications' && 'text-accent font-semibold')}>
           <Link href={"/applications"}>Applications</Link>
           </NavigationMenuTrigger>
@@ -113,7 +113,7 @@ function Navigation({ hideNavBar }: { hideNavBar: Dispatch<SetStateAction<boolea
         </NavigationMenuItem>
 
         {/* Projects Link */}
-        <NavigationMenuItem>
+        <NavigationMenuItem onClick={()=>hideNavBar(true)}>
           <Link href="/projects" legacyBehavior passHref>
             <NavigationMenuLink
               className={cn( // Active state
@@ -129,7 +129,7 @@ function Navigation({ hideNavBar }: { hideNavBar: Dispatch<SetStateAction<boolea
         </NavigationMenuItem>
 
         {/* Careers Link */}
-        <NavigationMenuItem>
+        <NavigationMenuItem onClick={()=>hideNavBar(true)}>
           <Link href="/career" legacyBehavior passHref>
             <NavigationMenuLink
               className={cn(
