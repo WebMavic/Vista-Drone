@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import about1 from "@/assets/images/image (2).png";
 import SectionHero from "@/components/SectionHero";
+import { Analytics } from "@vercel/analytics/react"
 
 const SectionFeaturedServices = dynamic(() => import("@/components/SectionFeaturedServices"));
 const SectionExpertise = dynamic(() => import("@/components/SectionExpertise"));
@@ -23,7 +24,7 @@ export default function Home() {
     <React.Fragment>
       <SectionHero />
       <SectionFeaturedServices />
-
+      <Analytics/>
       <SectionLayout className={"bg-white sm:px-0 sm:py-0 lg:h-screen"}>
         <div
           className={"flex h-full w-full flex-col-reverse  items-center justify-between gap-5 lg:flex-row lg:gap-10"}>
