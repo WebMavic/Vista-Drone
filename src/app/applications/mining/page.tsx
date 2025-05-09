@@ -1,7 +1,7 @@
 import React from "react";
 import dynamic from "next/dynamic";
 import { services } from "@/utils/data"
-import { projects } from "@/constants";
+import { miningProjects } from "@/constants";
 import { Metadata } from "next";
 
 
@@ -27,7 +27,7 @@ const page = () => {
       <SectionHeader title = {service.title} image={bg} />
       <Services services={service.service_description} />
       <SectionAbout  chips="Vista Drone Services" cta="/contact" heading={service.title} para={service.description} image={service.image}/>
-      <Deliveries projects={projects} />
+      <Deliveries projects={miningProjects} />
       <Benifits content={service.benefits} />
       <SectionContact/>
       <SectionFaq faqs={service.faq} />

@@ -17,7 +17,8 @@ interface Props {
   imageStyle?: string;
   chips?: string;
   heading?: string;
-  para?: string;
+  para1?: string;
+  para2?: string;
   cta?: string;
   mirror?: boolean;
   className?: string;
@@ -28,7 +29,8 @@ function SectionAbout({
   cta,
   image,
   heading,
-  para,
+  para1,
+  para2,
   mirror,
   imageStyle,
   className,
@@ -74,9 +76,12 @@ function SectionAbout({
           </div>
 
           <p className="mt-6 text-left  text-subheading">
-            {para
-              ? para
+            {para1
+              ? para1
               : "Vista Drone UAV LLC is a registered company with the Department of Economic Development, Government of UAE, under commercial license number CN-5384149. We offer professional drone services(end to end solutions, like aerial data/picture acquisition to the processing and report submission) across multiple sectors, including Agriculture & Livestock, Green Energy, Oil & Gas fields, Civil Constructions, Mining, Safety and Surveillance etc. Our team comprises trained and certified drone pilots with experience of over 5 to 6 years in the respective field."}
+          </p>
+          <p className="mt-6 text-left  text-subheading">
+            {para2}
           </p>
           {cta && (
             <Link

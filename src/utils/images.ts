@@ -45,7 +45,10 @@ export const miningDeliveryImages = [
     require("@/assets/images/projects/mining/Picture3.png"),
     require("@/assets/images/projects/mining/Picture4.png"),
     require("@/assets/images/projects/mining/Picture5.png"),
+    require("@/assets/images/projects/mining/Picture7.png"),
     require("@/assets/images/projects/mining/Picture6.png"),
+    
+
 ]
 export const oilDeliveryImages = [
     require("@/assets/images/projects/oil/Picture2.png"),

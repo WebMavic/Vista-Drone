@@ -10,7 +10,7 @@ import steel from '@/assets/images/steel/steel1.jpeg'
 import marine from "@/assets//images/marinefish/marine1.jpeg"
 
 import { Aperture, BarChart, Cctv, Diameter, LucideProps } from "lucide-react";
-import { GiEclipseFlare,GiLeadPipe,GiOffshorePlatform,GiMoebiusTrefoil,GiGasMask,GiBarrelLeak,GiMoneyStack,GiBonsaiTree,GiPathDistance,GiProgression,GiCargoCrane,GiReceiveMoney,GiSatelliteCommunication,GiPlantRoots,GiWateringCan,GiSpray,GiHealthPotion,GiCctvCamera,GiCrackedGlass } from "react-icons/gi";
+import { GiArtificialIntelligence,GiEclipseFlare,GiLeadPipe,GiOffshorePlatform,GiMoebiusTrefoil,GiGasMask,GiBarrelLeak,GiMoneyStack,GiBonsaiTree,GiFishBucket,GiPathDistance,GiProgression,GiCargoCrane,GiReceiveMoney,GiSatelliteCommunication,GiPlantRoots,GiWateringCan,GiSpray,GiHealthPotion,GiCctvCamera,GiCrackedGlass } from "react-icons/gi";
 import { BsDatabaseFillCheck,BsFillSignYieldFill } from "react-icons/bs";
 import { TbBrandSnapseed,TbCell } from "react-icons/tb";
 import { PiThermometerHotFill } from "react-icons/pi";
@@ -21,10 +21,10 @@ import { PiWall,PiPlantLight } from "react-icons/pi";
 import { VscLightbulbSparkle } from "react-icons/vsc";
 
 import { SiSpond,SiExoscale,SiSubversion  } from "react-icons/si";
-import { MdHealthAndSafety,MdSos,MdOutlinePestControl,MdLandscape } from "react-icons/md";
+import { MdHealthAndSafety,MdSos,MdOutlinePestControl,MdLandscape,MdMap } from "react-icons/md";
 
-import { FaNoteSticky,FaHelmetSafety,FaMoneyBillTrendUp,FaHotjar,FaClockRotateLeft } from "react-icons/fa6";
-import { FaDatabase,FaMapMarkedAlt,FaCheck,FaPlusCircle,FaEye,FaCalendarCheck,FaChartLine,FaTools,FaSortAmountDown    } from "react-icons/fa";
+import { FaSatelliteDish,FaNoteSticky,FaHelmetSafety,FaMoneyBillTrendUp,FaHotjar,FaClockRotateLeft } from "react-icons/fa6";
+import { FaDatabase,FaMapMarkedAlt,FaCheck,FaPlusCircle,FaEye,FaCalendarCheck,FaChartBar,FaChartLine,FaTools,FaSortAmountDown    } from "react-icons/fa";
 import { GrResources } from "react-icons/gr";
 import { RiHotspotFill } from "react-icons/ri";
 import { AiOutlineSafetyCertificate,AiOutlineSafety,AiFillEnvironment  } from "react-icons/ai";
@@ -38,7 +38,8 @@ import { IconType } from "react-icons/lib";
 
 interface Service {
   title: string;
-  description: string;
+  description1: string;
+  description2: string;
   image: ForwardRefExoticComponent<Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>> | IconType | StaticImport | StaticImageData;
   service_description: description[];
   benefits: benefits[];
@@ -66,48 +67,50 @@ type faq = {
 export const services: Service[] = [
   {
     title: "Mining",
-    description:
-      "Maximize operational efficiency and safety in your mining projects with Vista Drone Services. Our specialized drone solutions provide precise aerial data, helping you streamline exploration, site assessment, and resource management. Utilizing state-of-the-art drones equipped with high-resolution cameras and advanced sensors, we conduct comprehensive aerial surveys that generate detailed maps and 3D models of your site. This allows for accurate identification of mineral deposits and thorough evaluation of terrain conditions. By capturing extensive data quickly and safely from above, we eliminate the need for manual ground surveys, thus minimizing the risk to personnel and reducing operational downtime. ",
+    description1:
+      "Enhance the efficiency, safety, and accuracy of your mining operations with Vista Drone’s specialized aerial solutions. Our advanced drone, equipped with high-resolution cameras and cutting-edge sensors, deliver precise geospatial data to support exploration, site assessment, and resource management.",
+      description2:
+      "We conduct detailed aerial surveys that produce high-resolution maps and 3D models, enabling accurate identification of mineral deposits and comprehensive terrain analysis. By replacing traditional ground surveys with fast, high-coverage aerial data collection, we reduce operational downtime and mitigate risks to on-site personnel.",
     image: mine,
     
     service_description: [
       {
         title: "Aerial Surveys",
         content:
-          " High-resolution drones provide 3D maps, mineral identification, terrain assessment, and georeferenced orthomosaic maps.",
+          "High-resolution drones with AI-enabled sensors and payloads capture real time geo referenced & accurate data, enable deliverables in 2D & 3D maps, DEM/DTM, and ortho-mosaic maps for efficient site planning and decision-making.",
         image: Aperture,
         color : "red"
       },
       {
         title: "Real-time Monitoring",
         content:
-          "Our drones offer real-time monitoring for drilling, pipelines, and environmental impact, aiding safety and decision-making.",
+          "Our drone shoots real-time monitoring and inspection of drilling operations, pipeline, infrastructure, and environmental conditions—enhancing on-site safety and supporting informed, data-driven decisions.",
           image: Cctv ,
           color : "rose"
       },
       {
         title: "Volumetric Measurements",
         content:
-          "Our drones precisely measure stockpile volumes and excavation quantities, aiding inventory management and project planning.",
+          "We derive measurements of stockpiles and excavation volumes, streamlining inventory control and improving project planning and resource allocation through aerial data captured by Drone.",
           image: SiExoscale,
           color : "rose"
       },
       {
         title: "Environmental Impact Assessments",
         content:
-          "We conduct environmental assessments, monitoring damage like soil erosion and water contamination, to ensure compliance and sustainability.",
+          "Drone with suitable payload helps in monitoring of the environmental pollutants, and water contamination, supporting regulatory compliance and promoting sustainable mining practices.",
           image: GiBonsaiTree,
           color : "rose"
       },
       {
         title: "Exploration & Planning",
-        content: "Leasehold area survey, mapping, DTM, DSM, excavation, and environmental impact assessment of the entire site.",
+        content: "Provide comprehensive solution through aerial data captured by Drone in the leasehold area and provide report viz. Digital Terrain Models (DTM), Digital Surface Models (DSM), excavation analysis, and environmental impact assessments—providing a solid foundation for effective exploration and planning.",
           image: FaMapMarkedAlt,
           color : "rose"
       },
       {
         title: "Slope Analysis",
-        content: "Hill slopes can be shown as per the angles in specific colors to get a better understanding for planning of mines.",
+        content: "Software processed maps visually represent hill slopes using color-coded contour at 2-5 meters interval, offering clear insights for safer and more efficient mine planning.",
           image: BarChart,
           color : "rose"
       },
@@ -116,38 +119,38 @@ export const services: Service[] = [
       {
         title: "Enhanced Safety",
         content:
-          "Minimize on-ground risks by utilizing aerial data collection, reducing the need for personnel in hazardous areas.",
+          "Minimize on-ground risks by collecting data remotely via drones, reducing the need for personnel in hazardous or inaccessible areas.",
       icon: AiOutlineSafetyCertificate,
       },
       {
         title: "Cost Efficiency",
         content:
-          "Reduce operational costs with precise data and efficient resource management, avoiding over-extraction and optimizing resource use.",
+          "Lower operational costs through efficient resource management, improved inventory tracking, and streamlining site assessments.",
         icon: GiMoneyStack,
       },
       {
         title: "Accurate Data",
         content:
-          "Obtain high-precision data for better decision-making and project planning, ensuring more accurate forecasting and budgeting.",
+          "Capture accurate geospatial data to support better forecasting, planning, and budgeting—leading to smarter, data-driven decisions.",
         icon:BsDatabaseFillCheck,
       },
       {
-        title: "Distances",
+        title: "Precise Distance Measurement",
         content:
-          "Any specific distance can be measured precisely whether horizontally or vertically.",
+          "Measure horizontal and vertical distances accurately for layout planning, compliance, and construction coordination.",
         icon:GiPathDistance,
       },
       {
-        title: "Boundaries",
+        title: "Clear Boundary Mapping",
         content:
-          "The lease boundary can be geo-tagged and generated to view the limits more accurately and plan suitably.  ",
+          "Generate geo-tagged lease boundaries to clearly define operational zones and plan resource deployment effectively.",
         icon:PiWall,
       },
       {
-        title: "Accurate Data",
+        title: "Comprehensive Site Intelligence",
         content:
-          "Obtain high-precision data for better decision-making and project planning, ensuring more accurate forecasting and budgeting.",
-        icon:FaHelmetSafety,
+          "Access integrated visual data—maps, models, and measurements—that provide a holistic understanding of your site for ongoing decision-making.",
+        icon:GiArtificialIntelligence,
       },
     ],
     faq: [
@@ -189,7 +192,9 @@ export const services: Service[] = [
   
   {
     title: "Steel Industries",
-    description:
+    description1:
+      "Transform your planning and survey processes with our advanced drone technology. Vista Drone Services offers comprehensive solutions to support topographic mapping, land surveying, and infrastructure assessment. Our high-resolution drones capture detailed aerial imagery and data, enabling the creation of accurate topographic maps and 3D models. This detailed data collection aids in precise terrain analysis, essential for planning construction projects, land development, and environmental studies. By leveraging our drone technology, you can efficiently gather the necessary data for site evaluations and project planning, reducing the need for traditional ground surveys and enhancing the accuracy of your assessments. ",
+      description2:
       "Transform your planning and survey processes with our advanced drone technology. Vista Drone Services offers comprehensive solutions to support topographic mapping, land surveying, and infrastructure assessment. Our high-resolution drones capture detailed aerial imagery and data, enabling the creation of accurate topographic maps and 3D models. This detailed data collection aids in precise terrain analysis, essential for planning construction projects, land development, and environmental studies. By leveraging our drone technology, you can efficiently gather the necessary data for site evaluations and project planning, reducing the need for traditional ground surveys and enhancing the accuracy of your assessments. ",
     image:steel,
       
@@ -203,7 +208,7 @@ export const services: Service[] = [
       },
       {
         title: "Thermal Imaging",
-        content:"Detects heat anomalies to prevent failures, ensures maintenance, and identifies overheating and inefficiencies through regular thermal audits.",
+        content:"Drones equipped with thermal sensors quickly detect heat anomalies in furnaces and pipelines identifying overheating, inefficiencies, and potential failures.",
           image: PiThermometerHotFill,
           color : "rose"
       },
@@ -217,13 +222,13 @@ export const services: Service[] = [
       {
         title: "Environmental Monitoring",
         content:
-          "Real-time monitoring of emissions and environmental impact ensures compliance, supports sustainability, and reduces ecological footprint.",
+          "Drones monitor emissions and environmental impact in steel plants, ensuring regulatory compliance and supporting sustainability thus reducing ecological footprints.",
           image: PiPlantLight,
           color : "rose"
       },
       {
         title: "Emergency Response",
-        content:"Rapid deployment provides quick incident assessment, supports disaster management, and offers real-time situational awareness for effective decisions.",
+        content:"Drones enable rapid assessment of incidents in steel plants, providing real-time visuals for quick decision-making, disaster response, and enhanced worker safety during emergencies.",
           image: MdSos,
           color : "rose"
       },
@@ -232,28 +237,28 @@ export const services: Service[] = [
     benefits: [
       {
         title: "Increased Efficiency",
-        content: "Streamlined inspection processes",
+        content: "Accelerate inspections and data collection with fast, automated drone surveys that reduce downtime and improve workflow productivity.",
         icon:FaHelmetSafety,
       },
       {
         title: "Enhanced Safety",
-        content:"Minimized need for manual inspections in hazardous areas",
+        content:"Eliminate the need for personnel in high-risk areas by using drones to access hard-to-reach or hazardous zones safely.",
         icon:MdHealthAndSafety,
       },
       {
         title: "Cost Savings",
         content:
-          "Efficient resource allocation and preventive maintenance.",
+          "Lower operational costs through early issue detection, optimized maintenance schedules, and better resource management.",
         icon:GiReceiveMoney,
       },
       {
         title: "Data-Driven Decisions",
-        content:"Access to accurate, timely data",
+        content:"Gain actionable insights from high-resolution, real-time aerial data to support accurate planning and operational strategies.",
         icon:BsDatabaseFillCheck,
       },
       {
         title: "Regulatory Compliance",
-        content:"Continuous monitoring supports meeting safety and environmental regulations",
+        content:"Ensure consistent monitoring and reporting to meet safety, environmental, and industry compliance standards effortlessly.",
         icon:FaCalendarCheck,
       },
     ],
@@ -297,7 +302,7 @@ export const services: Service[] = [
   {
     title: "Agriculture",
     description:
-      "Optimize your agricultural operations with Vista Drone Services. Our drone solutions provide actionable insights for crop management, irrigation planning, and pest detection, helping you enhance productivity and sustainability. Leveraging advanced drone technology, we conduct comprehensive aerial surveys of your fields, capturing high-resolution imagery and data for detailed crop analysis. This enables us to monitor crop health, identify potential issues such as nutrient deficiencies or pest infestations, and provide timely recommendations for optimized management practices. By integrating our drone solutions into your agricultural operations, you can make informed decisions to maximize yields while minimizing resource usage and environmental impact.",
+      "Optimize agricultural operations with Vista Drone Services. The advanced drone solutions deliver actionable insights for crop management, irrigation planning, and early pest detection—helping you boost productivity and sustainability. By analysing detailed imagery, we monitor plant health, pinpoint nutrient deficiencies, and uncover stress factors in real time. On basis of the reports farm manager can make data-driven decisions to maximize yields, minimize input costs, and reduce environmental impact. ",
     image: agriculture,
     service_description: [
       {
@@ -330,23 +335,23 @@ export const services: Service[] = [
       },
       {
         title : 'Spray Application',
-        content : "Crop spraying drones carry tanks and spray efficiently, enhancing safety and resource conservation in the field.",
+        content : "Equipped with precision tanks, crop-spraying drones efficiently apply fertilizers, nutrients, and herbicides, minimizing waste, resource conservation and yield optimization.",
         image  : GiSpray,
         color : "blue"
         
       },
       {
         title : ' Soil health monitoring',
-        content : "Using microwave sensing, drones are able to capture very accurate soil health information.",
+        content : "Leveraging advanced sensors, drone capture highly accurate data on soil health, enabling precise analysis of moisture levels, and soil composition for taking informed decisions.",
         color :"rose",
         image  : GiHealthPotion 
       }
     ],
     benefits: [
       {
-        title: "Monitoring Plant Health",
+        title: "Field Mapping",
         content:
-          " Drones with NDVI imaging and software analysis adjust values to reflect crop type and growth stage.",
+          "Drones provide high-resolution maps, helping farmers analyze field conditions, optimize land use, and plan efficiently.",
         icon:PiPlantLight,
       },
       {
@@ -362,9 +367,9 @@ export const services: Service[] = [
         icon:TbBrandSnapseed,
       },
       {
-        title: "Spray Application",
+        title: "Fast Disaster Assessment",
         content:
-          "Crop spraying drones with liquid tanks operate safely, spraying water and pesticides efficiently while conserving resources.",
+          "Quick aerial surveys assess crop damage after floods or storms, enabling faster recovery planning and insurance claims support.",
         icon:GiSpray,
       },
       {
@@ -374,9 +379,9 @@ export const services: Service[] = [
         icon:GiCctvCamera,
       },
       {
-        title: " Soil health monitoring ",
+        title: "Smart & Sustainable Agriculture",
         content:
-          "Microwave sensing drones capture highly accurate soil health data for precise analysis.",
+          "Drones enable precise use of water, fertilizers, and pesticides, reducing waste, lowering costs, and supporting long-term eco-friendly practices.",
         icon:MdLandscape,
       },
     ],
@@ -433,11 +438,11 @@ export const services: Service[] = [
   {
     title: "Civil Construction",
     description:
-      "Elevate your construction projects with Vista Drone Services. We offer comprehensive drone solutions for site planning, progress monitoring, and safety inspections, ensuring your projects stay on track and within budget. Our advanced drones are equipped with high-resolution cameras and sophisticated sensors, enabling us to capture detailed aerial imagery and data for precise site analysis and planning. Whether youre in the initial stages of project development or require ongoing monitoring throughout construction, our drone solutions provide valuable insights to optimize your project workflow and streamline operations.",
+      "Elevate your construction projects with Vista Drone Services. We offer comprehensive drone solutions for site planning, progress monitoring, and safety inspections — ensuring your projects stay on track and within budget.Our advanced drones are equipped with high-resolution cameras and sophisticated sensors, allowing us to capture detailed aerial imagery and data for precise site analysis and planning. Whether you're in the initial stages of project development or need ongoing monitoring throughout construction, our drone solutions deliver valuable insights to optimize workflow and streamline operations.",
     image:construction,
     service_description: [
       {
-        title: "Site Planning:",
+        title: "Site Planning",
         content: "Detailed site analysis, 3D modeling, and high-resolution maps for effective planning and design.",
         image: VscLightbulbSparkle,
         color: "rose"
@@ -462,78 +467,56 @@ export const services: Service[] = [
       },
       {
         title: "Earthwork and Volume Measurements",
-        content: "Calculating volumes and monitoring material use and site changes.",
+        content: "Accurate volume calculations and tracking of material usage and site changes.",
         image: GiCargoCrane,
         color: "rose"
       },
       {
         title: "Safety and Security",
-        content: "Surveillance for site safety, unauthorized access monitoring, and theft prevention.",
+        content: "Aerial surveillance to enhance site safety, detect unauthorized access, and deter theft.",
         image: FaPlusCircle,
         color: "rose"
       }
     ],
     benefits: [
       {
-        title: "Enhanced Site Surveying and Mapping",
+        title: "Enhanced Project Oversight",
         content:
-          " Quick Data Collection & High Accuracy",
-        icon:Aperture,
+          "Gain real-time insights into construction progress through visual documentation, facilitating timely decision-making and efficient project management.",
+        icon: Aperture,
       },
       {
-        title: "Improved Safety",
+        title: "Improved Safety and Security",
         content:
-          "Risk Reduction & Safety Monitoring",
-        icon:MdHealthAndSafety,
+          "Mitigate risks by monitoring site safety, detecting unauthorized access, and preventing theft, thereby ensuring a secure construction environment.",
+        icon: MdHealthAndSafety,
       },
       {
-        title: " Environmental Monitoring",
-        content:"Compliance ,Erosion and Drainage Monitoring",
-        icon:GiBonsaiTree,
-      },
-      {
-        title: "Time and Cost Savings",
+        title: "Environmental Compliance and Monitoring",
         content:
-          "Efficient Project Management & Cost-Effective Inspections",
-        icon:GiMoneyStack,
+          "Ensure adherence to environmental regulations by monitoring erosion, drainage, and other ecological factors impacting the construction site.",
+        icon: AiFillEnvironment,
       },
       {
-        title: "Progress Tracking and Reporting",
-        content:"Real-Time Monitoring & Visual Documentation",
-        icon:FaClockRotateLeft,
+        title: "Accurate Volume and Resource Management",
+        content:
+          "Optimize resource utilization through precise calculations of earthworks and material volumes, leading to efficient resource management.",
+        icon: BarChart,
       },
       {
-        title: "Improved Communication and Collaboration",
-        content:"Visual Data Sharing & Remote Accessibility",
-        icon:GiSatelliteCommunication,
-      },
-      
-      {
-        title: "Accurate Volume Measurements and Earthworks Management",
-        content:"Precise Calculations & Efficient Resource Management",
-        icon:BarChart,
+        title: "Cost and Time Efficiency",
+        content:
+          "Reduce project timelines and expenses by leveraging drones for swift inspections and data collection, enhancing overall project efficiency.",
+        icon: GiMoneyStack,
       },
       {
-        title: "Environmental Monitoring",
-        content:"Compliance & Erosion and Drainage Monitoring",
-        icon:AiFillEnvironment ,
-      },
-      {
-        title: "Marketing and Business Development",
-        content:"Visual Marketing Content & Client Engagement",
-        icon:FaChartLine ,
-      },
-      {
-        title: "Enhanced Inspection Capabilities",
-        content:"Detailed Inspections & Thermal and Multispectral Imaging",
-        icon:Cctv,
-      },
-      {
-        title: "Flexibility and Versatility",
-        content:"Adaptability to Various Projects & Operation in Difficult Terrains",
-        icon:SiSubversion,
+        title: "Enhanced Communication and Marketing",
+        content:
+          "Utilize high-quality visual content for stakeholder communication and marketing purposes, improving client engagement and project transparency.",
+        icon: FaChartLine,
       },
     ],
+    
     faq: [
       {
         question: "How do drones benefit civil construction projects?",
@@ -575,7 +558,7 @@ export const services: Service[] = [
   {
     title: "Oil and Gas Industry",
     description:
-      "Maximize operational efficiency and safety in your oil and gas operations with Vista Drone Services. Our specialized drone solutions are tailored to the unique demands of the Middle East's oil and gas sector, providing precise aerial data that enhances exploration, site assessment, and resource management. Equipped with state-of-the-art drones featuring high-resolution cameras and advanced sensors, we conduct comprehensive aerial surveys of your oil fields, pipelines, and offshore platforms. This generates detailed maps and 3D models that facilitate accurate monitoring and management of your assets. By capturing extensive, high-quality data quickly and safely from above, we streamline the inspection process and reduce reliance on traditional ground surveys. This approach not only minimizes risk to personnel but also decreases operational downtime, allowing for timely identification of issues such as leaks, structural damage, and environmental concerns. Our services ensure that you maintain optimal operational efficiency and safety standards, driving the success of your oil and gas projects in the dynamic Middle Eastern market.",
+      "Enhance the efficiency, safety, and accuracy of your oil and gas operations with Vista Drone’s specialized aerial solutions. Our advanced drones, equipped with high-resolution cameras and cutting-edge sensors, deliver precise geospatial data tailored to the unique demands of the Middle East's oil and gas sector.We conduct comprehensive aerial surveys of oil fields, pipelines, and both offshore and onshore platforms, generating detailed maps and 3D models to support exploration, site assessment, and resource management.",
     image: oil,
     service_description: [
       {
@@ -588,7 +571,7 @@ export const services: Service[] = [
       {
         title: "Pipeline inspections",
         content:
-          "Using thermal imaging technology, temperature differences between fluids and the ground can be easily detected and oil and gas leaks can be found.",
+          "Using thermal imaging technology, temperature variations during flowing of crude oil or gas can be easily detected, allowing identification oil and gas leaks at a particular section.",
           image: GiLeadPipe,
           color : "rose"
       },
@@ -607,14 +590,14 @@ export const services: Service[] = [
           color : "rose"
       },
       {
-        title: "Oil spill and oil spill detection",
-        content:"Drones swiftly detect and measure oil spills, providing real-time data on location and spread, enabling faster, targeted response.",
+        title: "Oil Spill Detection and Response",
+        content:"Drones swiftly detect and measure oil spills, providing real-time data on their location and spread, enabling faster, targeted responses.",
           image: GiMoebiusTrefoil,
           color : "rose"
       },
       {
-        title: "Monitor gas emissions",
-        content:"Drones with optical sensors efficiently monitor gas emissions over large areas, reducing costs and enabling safe 3D mapping of critical sites.",
+        title: "Gas Emission Detection and Mapping",
+        content:"Drones equipped with optical sensors and payloads like Sniffer 4D efficiently monitor gas emissions over large areas, reducing costs and enabling safe 3D mapping of critical sites.",
           image: GiGasMask,
           color : "rose"
       },
@@ -625,13 +608,13 @@ export const services: Service[] = [
       {
         title: "Enhanced Safety and Efficiency ",
         content:
-          "Reduce the risk of accidents with regular inspections, ensuring that infrastructure components are in good condition and identifying hazards early.",
+          "Drones enable regular inspections of infrastructure, helping identify potential hazards early and ensuring components are well-maintained, reducing the risk of accidents.",
         icon: MdHealthAndSafety,
       },
       {
-        title: "Better Leak Detection Capabilities",
+        title: "Improved Leak Detection Capabilities",
         content:
-          "Optimize maintenance schedules and resource allocation, reducing downtime and improving the overall performance of infrastructure assets.",
+          "Drones equipped with thermal and RBG Camera can quickly detect leaks in pipelines and storage units, enabling faster response times, optimized maintenance planning, and reduced operational downtime.",
         icon:GiBarrelLeak,
       },
       {
@@ -647,9 +630,9 @@ export const services: Service[] = [
         icon:MdSos,
       },
       {
-        title: "More Accurate Data Collection",
+        title: "Accurate Asset Monitoring",
         content:
-          "Drones capture high-resolution, detailed data for precise monitoring and analysis of oil and petroleum assets.",
+          "Drones capture high-resolution data, enabling precise monitoring and analysis of oil and petroleum assets for to take informed decision-making for maintenance.",
         icon:FaDatabase,
       },
     ],
@@ -789,30 +772,30 @@ export const services: Service[] = [
     
   },
   {
-    title: "Marine Fisheries",
+    title: "Marine & Coastal Ecosystem",
     description:
-      "Enhance operational efficiency and safety in your marine fisheries with Vista Drone Services. Our advanced drone solutions deliver precise aerial data, optimizing fish stock monitoring, habitat mapping, and resource management. Equipped with high-resolution cameras and specialized sensors, our drones conduct comprehensive aerial surveys to generate detailed maps and 3D models of aquatic environments. This enables accurate monitoring of fish populations, habitat conditions, and environmental changes.In addition to initial surveys, our drones offer real-time monitoring of fishing activities and marine ecosystems. This continuous oversight helps ensure safety and regulatory compliance by providing live feeds and high-resolution imagery for immediate detection and response to potential issues. By integrating our state-of-the-art drone technology, Vista Drone Services supports effective fishery management, minimizes environmental impact, and enhances decision-making with up-to-date, actionable data.",
+      "Support coral reef conservation and restoration with Vista Drone’s specialized aerial solutions. Our drones are equipped to conduct detailed, non-intrusive surveys that map reef structures, monitor bleaching events, and assess restoration progress with high-resolution imagery and multispectral data. Through rapid deployment and real-time monitoring, we help environmental teams identify vulnerable coral zones, track ecological changes, and evaluate intervention effectiveness. The aerial insights we provide reduce the need for repeated diving expeditions, minimize environmental disruption, and offer consistent data over time. Vista Drone Services ensures that restoration efforts are guided by accurate, up-to-date information—enabling smarter resource allocation and long-term reef resilience planning.",
     image: marine,
     
     service_description: [
       {
         title: "Overfishing and Depletion Control",
         content:
-          " Vista Drone provides real-time data on fish populations, habitat, and environmental factors for informed fisheries management.",
-        image: Aperture,
+          "Vista Drone delivers real-time insights into fish populations, habitats, and environmental factors—empowering sustainable fisheries management and helping combat overfishing.",
+        image: GiFishBucket,
         color : "red"
       },
       {
-        title: "Illegal,and Unregulated Fishing.",
+        title: "Illegal and Unregulated Fishing",
         content:
-          "Vista Drone enhances enforcement by tracking vessels and capturing evidence of illegal fishing for rapid response.",
+          "We strengthen enforcement efforts by monitoring vessel movements and capturing actionable evidence—enabling swift response to illegal fishing activities.",
           image: Cctv ,
           color : "rose"
       },
       {
         title: "Monitoring & Surveillance Limitations",
         content:
-          "Our drones accurately measure stockpile volumes and excavation quantities, supporting inventory management and project planning.",
+          "Our drones fill key surveillance gaps with real-time data on vessel activity and fish stocks—enabling sustainable catch limits and better fisheries management.",
           image: SiExoscale,
           color : "rose"
       },
@@ -838,42 +821,43 @@ export const services: Service[] = [
     ],
     benefits: [
       {
-        title: "Enhanced Safety",
+        title: "Real-Time Monitoring",
         content:
-          "Minimize on-ground risks by utilizing aerial data collection, reducing the need for personnel in hazardous areas.",
-      icon: AiOutlineSafetyCertificate,
+          "Track fishing activities live to ensure safety, compliance, and quick response to marine changes.",
+        icon: FaSatelliteDish, // represents live tracking and communication
       },
       {
-        title: "Cost Efficiency",
+        title: "Accurate Fish Stock Assessment",
         content:
-          "Reduce operational costs with precise data and efficient resource management, avoiding over-extraction and optimizing resource use.",
-        icon: GiMoneyStack,
+          "Use aerial data to estimate fish populations precisely, aiding sustainable harvesting decisions.",
+        icon: GiFishBucket, // represents fishing and stock
       },
       {
-        title: "Accurate Data",
+        title: "Habitat Mapping",
         content:
-          "Obtain high-precision data for better decision-making and project planning, ensuring more accurate forecasting and budgeting.",
-        icon:BsDatabaseFillCheck,
+          "Generate detailed maps of aquatic ecosystems for better conservation and resource planning.",
+        icon: MdMap, // represents mapping and geographic insights
       },
       {
-        title: "Distances",
+        title: "Cost-Effective Surveys",
         content:
-          "Any specific distance can be measured precisely whether horizontally or vertically.",
-        icon:GiPathDistance,
+          "Replace expensive boat surveys with efficient, high-coverage drone operations in less time.",
+        icon: GiMoneyStack, // represents cost savings
       },
       {
-        title: "Boundaries",
+        title: "Environmental Impact Reduction",
         content:
-          "The lease boundary can be geo-tagged and generated to view the limits more accurately and plan suitably.  ",
-        icon:PiWall,
+          "Minimize disturbances to marine habitats through non-intrusive, high-resolution aerial observations.",
+        icon: AiFillEnvironment, // represents ecological and environmental concern
       },
       {
-        title: "Accurate Data",
+        title: "Data-Driven Decisions",
         content:
-          "Obtain high-precision data for better decision-making and project planning, ensuring more accurate forecasting and budgeting.",
-        icon:FaHelmetSafety,
+          "Access actionable insights with 3D models and analytics for smarter fishery management strategies.",
+        icon: FaChartBar, // represents analytics and data-based insights
       },
-    ],
+    ]
+    ,
     faq: [
       {
         question: "What challenges do marine fisheries face?",

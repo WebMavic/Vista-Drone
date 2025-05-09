@@ -28,7 +28,7 @@ function Navigation({ hideNavBar }: { hideNavBar: Dispatch<SetStateAction<boolea
     { name: "Mining", path: "/applications/mining", Icon: GiGoldMine },
     { name: "Construction & Real Estate", path: "/applications/construction", icon: serviceIcons[1] },
     { name: "Agriculture", path: "/applications/agriculture", icon: serviceIcons[0] },
-    { name: "Marine Fisheries", path: "/applications/fisheries", Icon: GiFishingBoat },
+    { name: "Marine & Coastal Ecosystem", path: "/applications/marine&coastalecosystem", Icon: GiFishingBoat },
     { name: "Steel", path: "/applications/steel", Icon: GiSteelClaws },
   ];
 

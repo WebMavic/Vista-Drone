@@ -13,7 +13,7 @@ function Benifits({ content }: Benefit) {
   return (
     <SectionLayout className="lg:space-y-10 space-y-5" >
       <h3 className="text-2xl font-bold capitalize text-primary lg:text-4xl ">
-        Benifits you get
+      Benefits You Get with Vista Drone Deliverables
       </h3>
 
       <ul  className={cn("grid gap-10 lg:grid-cols-2")}>

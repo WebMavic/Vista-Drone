@@ -24,7 +24,7 @@ type Industry = {
 
 export const industries: Industry[] = [
   {
-    title: "Elevating Industries with Next Gen UAV Solutions",
+    title: "Elevating Industries with Next-Generation UAV Solutions",
     href: "/applications",
     background:bentoImages[0],
     className: "lg:col-span-2 lg:row-span-1 ",
@@ -42,16 +42,16 @@ export const industries: Industry[] = [
     background:bentoImages[1],
     className: "lg:row-span-1",
     description:
-      "Mapping and surveying of the topography of the brownfield and greenfield O/C Mining projects.",
+      "Comprehensive mapping and surveying of topography for both brownfield and greenfield open-cast quarry/mining projects.",
   },
   {
-    title: "Renewable Energy",
+    title: "Green Energy",
     Icon: MdOutlineWindPower,
     href: "/applications/renewable-energy",
     background:bentoImages[2],
     className: "lg:row-span-1",
     description:
-      "Cleaning of solar panel, wind turbine blade inspection. Solar panel/ farm monitoring, defect detection and analysis",
+      "Real time inspection and monitoring of wind turbine blade, solar farm, detection of defects and AI enabled analysis to enhance performance and operational efficiency.",
   },
   
   // {
@@ -71,7 +71,7 @@ export const industries: Industry[] = [
     background: bentoImages[3],
 
     description:
-      "Enhancing Efficiency, Safety, and Precision in Civil Construction Projects.",
+      "Improving efficiency, safety, and precision in civil construction projects.",
   },
   {
     title: "Oil and Gas",
@@ -80,7 +80,7 @@ export const industries: Industry[] = [
     className: "lg:col-span-2",
     background:bentoImages[4],
       description:
-      "Optimizing Efficiency, Safety, and Precision in Oil and Gas Exploration and Production.",
+      "Efficient HSE Management vis-à-vis cost optimization during scheduled inspection of the assets and monitoring of exploration and production facilities.",
   },
   {
     title: "Agriculture",
@@ -88,7 +88,7 @@ export const industries: Industry[] = [
     href: "/applications/agriculture",
     background:bentoImages[5],
     description:
-      "Advance ability to collect and analyze data on crop health and soil conditions.",
+      "Advanced data collection and analysis for crop health, soil conditions and yield optimization.",
   },
 ];
 

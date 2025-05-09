@@ -16,11 +16,7 @@ const DataSharing = () => {
           </h1>
 
           <p className="text-left  text-subheading">
-            Digital drone data, hosted in a secure online cloud environment,
-            simplifies collaboration with stakeholders, making it easier to make
-            decisions that improve operational planning, depletion accounting,
-            monitoring environmental factors, or identifying and agreeing on
-            required maintenance work.
+          Drone-captured point cloud data offers high-precision 3D mapping, making it invaluable for sectors like mining, construction, and infrastructure management. By hosting this data in a secure online cloud, teams can remotely collaborate, track project progress, calculate volumes for depletion accounting, assess structural changes, and identify maintenance needs—all with greater speed and accuracy.
           </p>
 
           <Button variant={"outline"} className="bg-primary2">

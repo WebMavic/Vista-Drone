@@ -20,7 +20,7 @@ function SectionHero() {
                 "relative z-10 text-[30px] font-medium text-white lg:text-[38px]"
               }
             >
-              Elevate Your Vision<br/> Cutting-Edge UAV Solutions Are Here !
+              Elevate Your Vision<br/>Cutting-Edge UAV Solutions Are Here!
             </h1>
 
             <p className={"mt-10 lg:text-[20px] text-lg  font-light text-body lg:w-2/3"}>

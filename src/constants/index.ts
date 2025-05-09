@@ -27,33 +27,33 @@ import { FaHandshake } from "react-icons/fa";
 export const steps: Steps[] = [
     {
       id:"1",
-      title : "preperation",
-      desc : "To understand the requirements in detail the team Vista Drone(VD) do a recon. of the site before starting to prepare for Data Acquisition."
+      title : "Preparation",
+      desc : "To fully understand project requirements, the Vista Drone (VD) team conducts a reconnaissance of the site before initiating preparations for data acquisition."
     },
     {
       id:"2",
       title : "ground control points",
-      desc : "We uses a high-accuracy GPS system to set up visual ground control points for precise geo-referencing and survey-grade data quality."
+      desc : "We use a high-accuracy GPS system to establish visual ground control points, ensuring precise geo-referencing and survey-grade data quality."
     },
     {
       id:"3",
       title : "flight planning",
-      desc : "The survey flight plan is designed to capture UAV data, specifying flight direction, resolution, route, and stereo overlap."
+      desc : "Our survey flight plans are carefully designed to capture UAV data with precision, specifying flight direction, resolution, flight path, and stereo overlap to ensure optimal coverage and data quality."
     },
     {
       id:"4",
       title : "data acquisition",
-      desc : "After uploading the survey schedule, data acquisition is fully automated, the drone follows a pre-programmed waypoints to collect data."
+      desc : "After uploading the survey schedule, data acquisition is fully automated. The drone follows pre-programmed waypoints to systematically collect high-precision data."
     },
     {
       id:"5",
       title : "post flight data processing",
-      desc : "After the flight, we verify the data quality on-site.If it meets our standards, we proceed with data processing back at the office."
+      desc : "After the flight, we verify the data quality on-site. Once it meets our standards, we proceed with detailed data processing at our data lab."
     },
     {
       id:"6",
       title : "final product",
-      desc : "Our software produces CAD-ready ortho-photos, contours, DSM/DTM, point clouds, and 3D models, compatible with CAD and GIS."
+      desc : "Our software generates CAD-ready ortho-photos, contours, DSM/DTM models, point clouds, and 3D models, fully compatible with CAD and GIS platforms."
     },
   ]
 
@@ -97,22 +97,22 @@ export const heroOptions: Hero[] = [
 
   export const expertises = [
     {
-      title: "Successfully projects delevering",
+      title: "DELIVERING PROJECTS SUCCESSFULLY ",
       avatar: ArrowTrendingUpIcon,
       description:
-        "Expertise and proficiency in Civil & Steel, Oil & Gas, Agriculture, Green Energy, Mining & Real Estate.",
+        "Our expertise not limited in the field of Agriculture & Livestock, Renewable Energy, Oil & Gas, Mining and Resource evaluation, Infrastructure Projects but also delivered projects successfully in the conservation of Marine and Coastal Ecosystem, Environmental Monitoring of offshore and onshore fields.",
     },
     {
-      title: "Sound technical expertise in  UAV market",
+      title: "IN-DEPTH UAV MARKET KNOWLEDGE",
       avatar: PresentationChartBarIcon,
       description:
-        "The team is well-versed in the UAE government's long-term UAV policy and market landscape. Consequently",
+        "Our team is highly attuned to the UAE government's UAV policies, utilizing this expertise to navigate and lead in the ever-evolving UAV market in collaboration with the Research Labs and Institutes.",
     },
     {
-      title: "Outstanding team of  professionals",
+      title: "OUTSTANDING TEAM OF PROFESSIONALS",
       avatar: UserIcon,
       description:
-        "Includes experts with decades of experience in academia, complementing operational skills delivering end to end solution.",
+        "We combine decades of academic research experience with operational expertise, ensuring that our end-to-end solutions are both innovative and effectively executed in real-world applications.",
     },
   ];
 
@@ -124,15 +124,16 @@ export const teams = [
     name: "S. Sudan",
     role: "Founder and CEO",
     avatar: member1,
-    bio1: "S. Sudan is a seasoned geoscientist and entrepreneur with over 32 years of experience spanning two decades in key roles in the Middle East, is marked by expertise in various sectors including mining, geology, oil and gas, ferrous and non-ferrous metal production, trading, export-import, and business development. He has successfully led multi-million-dollar projects, including a $100 million contract with Petroleum Development Oman (PDO). He holds a Master’s degree in Earth Science from IIT (ISM) Dhanbad, India, an MBA in Marketing and a trained Drone Pilot.",
-    bio2: "",
+    bio1: "A visionary business leader with over 32 years of cross-sector experience, including 20 years in the Middle East, delivering strategic advisory, commercial execution, and operational leadership in energy, mining, chemicals, and advanced industrial services. Recognized for driving multimillion-dollar projects, establishing market foot-holds in complex regions, and securing strategic contracts.",
+    bio2: "Currently spearheading drone and UAS innovation in the UAE through Vista Drone. Poised to contribute deep regional insight, high-level stakeholder engagement, and serves as a member of the Technical Advisory Board of AD Polytechnic, supporting their proposed Cloud Seeding projects through the use of their in-house designed VTOL.",
+    bio3:"Mr. Sudan holds a Master's degree in Earth Sciences, is a certified Environmental Auditor, has completed an MBA, and is also a qualified Drone Pilot."
   },
   {
     name: "Shlok Srivastava",
     role: "Co-Founder & CTO",
     avatar: member2,
-    bio1: "Shlok Srivastava is an accomplished petroleum engineer with over eight years of experience in operations management, engineering design, and sustainability. A graduate of the University of Alberta with a Bachelor of Science in Petroleum Engineering, Shlok is also a licensed Professional Engineer (P.Eng) in Alberta, Canada. His career has spanned critical sectors, including oil and gas, energy management, and technology development, making him a key figure in driving innovation in energy optimization.",
-    bio2: "As the Co-Founder and Chief Technology Officer at Vista Drone UAV LLC, Shlok leverages his expertise to lead the company's technological advancements, particularly in the integration of cutting-edge UAV technologies for asset monitoring and inspection in the oil and gas industry. His extensive experience includes developing IoT sensors for remote monitoring of gas leaks, leading product commercialization efforts, and designing energy-efficient systems. Shlok’s work has directly contributed to reducing methane emissions in Canada’s LNG sector and pioneering geothermal energy projects, demonstrating his commitment to sustainability and innovation.",
+    bio1: "Shlok Srivastava is a licensed Professional Engineer (P.Eng) with over ten years of experience in petroleum engineering, operations management, and sustainable technology development. A graduate of the University of Alberta, he has led high-impact projects across the oil & gas sector, including the development of IoT sensors for remote gas leak detection, energy-efficient system design, and geothermal energy initiatives, particularly during his tenure in Canada.",
+    bio2: "As Co-Founder and CTO of Vista Drone UAV LLC, based in Abu Dhabi, Shlok leads the company’s technological strategy—advancing UAV integration for asset monitoring, inspection, and emissions reduction across key industries. His work reflects a strong commitment to innovation, sustainability, and cross-sector transformation.",
   },
 ];
 
@@ -223,31 +224,36 @@ export const factors = [
 ];
 
 
-export const projects: Project[] = [
+export const miningProjects: Project[] = [
   {
-    title: "Digital Terrain Model",
+    title: "Digital Terrain Model (DTM)",
     avatar: miningDeliveryImages[0],
-    description: "Digital Terrain model here",
+    description: "Bare-earth models that remove vegetation and structures to reveal accurate elevation data—ideal for slope analysis, drainage, and site planning.",
   },
   {
     title: "Contours",
     avatar: miningDeliveryImages[1],
-    description: "Digital Terrain model here",
+    description: "Visualizes terrain elevation with color-coded contour lines for better understanding of site gradients and excavation requirements.",
   },
   {
-    title: "Digital Surface Model",
+    title: "Digital Surface Model (DSM)",
     avatar: miningDeliveryImages[2],
-    description: "Digital Terrain model here",
+    description: "Detailed elevation model that includes natural and man-made features such as trees, buildings, and equipment—ideal for planning around existing surface structures.",
   },
   {
     title: "Ortho-mosaic",
     avatar: miningDeliveryImages[3],
-    description: "Digital Terrain model here",
+    description: "High-resolution, geo-referenced images composed of multiple aerial photos stitched together—ideal for precise measurements, site documentation, and visual analysis.",
   },
   {
     title: "Volumetric Analysis",
     avatar: miningDeliveryImages[4],
-    description: "Digital Terrain model here",
+    description: "Accurately measures stockpile volumes, cut-and-fill quantities, and excavation progress—supporting inventory management, project planning, and billing validation.",
+  },
+  {
+    title: "Change Detection / Progress Monitoring",
+    avatar: miningDeliveryImages[5],
+    description: "Compare site conditions over time to monitor excavation, material movement, or landform changes—ideal for reporting and compliance tracking.",
   },
 ];
 
@@ -374,7 +380,7 @@ export const oilProjects: Project[] = [
     title: "Pipeline Corridor Monitoring",
     avatar: oilDeliveryImages[4],
     description:
-      "Regular monitoring and analysis of pipeline corridors for early detection of encroachments or integrity issues.",
+      "Regular drone-based monitoring enables early detection of gas leaks, structural anomalies, and monitoring of air quality —helping ensure pipeline integrity and operational safety.",
   },
   {
     title: "Change Detection Reports",

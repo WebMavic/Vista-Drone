@@ -8,7 +8,7 @@ function SectionFeaturedServices() {
     <SectionLayout className="w-full min-h-screen  bg-primary2">
       <div className="space-y-3">
           <Chips title="Applications" />
-          <h2 className="text-4xl font-bold text-heading ">Feautured Applications</h2>
+          <h2 className="text-4xl font-bold text-heading ">Featured Applications</h2>
       </div>
         <FeauturedList />
     </SectionLayout>

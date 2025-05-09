@@ -113,10 +113,10 @@ const Footer = () => {
                 </li>
                 <li className="mb-4">
                   <Link
-                    href="/applications/fisheries"
+                    href="/applications/marine&coastalecosystem"
                     className="hover:underline "
                   >
-                    Marine Fisheries{" "}
+                    Marine & Coastal Ecosystem{" "}
                   </Link>
                 </li>
               </ul>

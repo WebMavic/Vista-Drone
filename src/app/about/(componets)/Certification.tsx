@@ -26,7 +26,7 @@ const Certification = () => {
       <div className="space-y-4">
         <Chips title="" />
         <h2 className="text-4xl font-bold capitalize text-heading">
-          Our Certification & Accreditation
+        Recognitions, Certifications & Accreditations
         </h2>
       </div>
 

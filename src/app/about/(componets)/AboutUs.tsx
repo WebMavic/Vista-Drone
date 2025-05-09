@@ -15,7 +15,7 @@ function AboutUs() {
         chips="our story" className="bg-primary2"
         heading="How it started"
         image={art} 
-        para="Vista Drone UAV LLC was established through a combination of strategic vision and extensive industry experience. Our founder, S. Sudan, with over thirty years of expertise in diverse sectors, saw a key opportunity in the rapidly expanding Unmanned Aerial Vehicle (UAV) market in the UAE. The Middle East UAV market, valued at USD 2.84 billion in 2023 and anticipated to grow to USD 5.88 billion by 2033 with a 12% CAGR, presented an exciting landscape for cutting-edge drone solutions. Additionally, the UAE government's forward-thinking leadership played a crucial role in the decision to enter the drone services sector, with plans to extend services across the MENA region"
+        para="Vista Drone UAV LLC was established through a combination of strategic vision and extensive industry experience. With over thirty-two years of expertise in diverse sectors, our founder, S. Sudan, recognized a key opportunity in the rapidly expanding Unmanned Aerial Vehicle (UAV) market in the GCC Valued at USD 588.2 million in 2024 and projected to grow to USD 2 billion by 2033 at a CAGR of 12%., The UAE leads the GCC drone /UAV market with a share of 40%."
       />
       <BrandValues />
     </>
@@ -40,9 +40,7 @@ const BrandValues = () => (
     <div className="text-center relative z-10">
     <h3 className="text-2xl font-bold uppercase text-red-500">Vision</h3>
         <p className="text-red-950 mt-5 text-lg font-medium max-w-lg mx-auto  ">
-          Pioneer the seamless integration of cutting-edge UAV technology,
-          transforming industries and shaping a future where precision,
-          efficiency, and sustainability harmonize.
+        To pioneer the seamless integration of cutting-edge UAV technology—transforming industries and shaping a future where precision, efficiency, and sustainability work in harmony.
         </p>
       </div>
     </div>
@@ -60,8 +58,7 @@ const BrandValues = () => (
           Mission
         </h3>
         <p className="text-indigo-950 text-lg font-medium  mt-5 max-w-lg mx-auto">
-          Deliver unmatched UAV services, surpassing client expectations through
-          innovation, collaboration, and a devotion to excellence.
+        Shape the future of UAV/Drone in the UAE in the next 5 years through excellence in training and innovative application in various sectors.
         </p>
       </div>
     </div>

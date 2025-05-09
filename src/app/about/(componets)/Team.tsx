@@ -38,13 +38,14 @@ function Team() {
 
 export default Team;
 
-export const TeamItem = ({bio1,bio2,className,avatar,name,role,direction,cta,email}: {
+export const TeamItem = ({bio1,bio2,bio3,className,avatar,name,role,direction,cta,email}: {
   avatar : StaticImport | StaticImageData | any
   className ?: string
   name :  string
   role? : string
   bio1 : string
   bio2 ?: string
+  bio3 ?: string
   cta? : string
   email ?: string
   direction : 'right' | 'left'
@@ -63,7 +64,8 @@ export const TeamItem = ({bio1,bio2,className,avatar,name,role,direction,cta,ema
     {role && <span className="text-sm">{role}</span>}
     <p className="my-3 text-subheading">{bio1}</p>
     {bio2 && <p className="my-3 text-subheading">{bio2}</p> }
-    
+    {bio3 && <p className="my-3 text-subheading">{bio3}</p> }
+
     <div className="flex flex-col items-center lg:items-start">
     {cta && <Link href={"/"+cta} className={buttonVariants()}>{cta.toUpperCase()}</Link>}
       {email && <Link target="_blank" href={`mailto:${email}`} className={buttonVariants()}>Contact</Link>}

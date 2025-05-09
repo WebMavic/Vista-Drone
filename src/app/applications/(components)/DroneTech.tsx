@@ -19,7 +19,7 @@ function DroneTech() {
       <div className="content space-y-4  ">
         <Chips title="Technology" />
         <h2 className="text-4xl font-bold text-heading ">
-        New Technology and Feature Our Drone
+        Cutting-Edge Features of Vista Drones
         </h2>
       </div>
       <div className="container h-full w-full py-10">
@@ -31,7 +31,7 @@ function DroneTech() {
               </span>
               <h4 className="text-xl font-semibold text-heading">RGB</h4>
               <p className="my-2 text-sm  text-subheading">
-                Aerial mapping,Imaging,Plant counting, surveying
+              Aerial mapping, high-resolution imaging, plant counting, and land surveying.
               </p>
             </div>
             <div className="f1 sm:w-52">
@@ -40,8 +40,7 @@ function DroneTech() {
               </span>
               <h4 className="text-xl font-semibold text-heading">THERMAL</h4>
               <p className="my-2 text-sm   text-subheading">
-                Heat signature detection,Livestock detection,Surveillance, Water
-                source detection.
+              Heat signature detection, livestock tracking, surveillance, and water source identification.
               </p>
             </div>
           </div>
@@ -64,8 +63,7 @@ function DroneTech() {
                 MULTISPECTRAL
               </h4>
               <p className="my-2 text-sm   text-subheading">
-                Plant health measurement Water quality assessment Vegetation
-                index calculation Full spectral sensing
+              Plant health monitoring, water quality assessment, vegetation index analysis, and full-spectrum sensing.
               </p>
             </div>
             <div className="f1 sm:w-52">
@@ -76,8 +74,7 @@ function DroneTech() {
                 LiDAR
               </h4>
               <p className="my-2 text-sm  text-subheading">
-                Useful in 3D digital surface modelling in thick
-                forest/vegetation Surface variation detection Flood mapping
+              Advanced 3D surface modelling in dense forest or vegetation, terrain variation detection, and flood mapping.
               </p>
             </div>
           </div>

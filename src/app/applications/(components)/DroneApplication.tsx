@@ -15,10 +15,7 @@ function DroneApplication() {
         <Chips title="workflow" />
         <h2 className="text-4xl font-bold text-heading ">How we do it</h2>
         <p className="text-subheading">
-          Compared to traditional methods of mapping. Aerial 3D mapping is more
-          convenient, faster, economical & accurate. Large areas of land can be
-          mapped in matter of few hours with the data delivered within 24-48
-          hours.
+        Compared to conventional survey and mapping methods, aerial 3D mapping with Drone is faster, more convenient, cost-effective, and highly accurate in terms of geo-referencing. Large areas of land say 5 Sq. km can be mapped in a day, and the processing of data takes about 5 working days.
         </p>
       </div>
 

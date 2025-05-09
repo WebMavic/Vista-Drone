@@ -30,7 +30,8 @@ const page = () => {
         cta="/contact"
         image={service.image}
         heading={service.title} 
-        para={service.description}
+        para1={service.description1}
+        para2={service.description2}
         
       />
       <Deliveries projects={oilProjects} />

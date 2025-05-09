@@ -47,16 +47,7 @@ export default function Home() {
               </div>
 
               <p className="mt-6 text-left leading-relaxed  text-subheading">
-                Vista Drone UAV LLC is a registered company with the Department
-                of Economic Development, Government of UAE, under commercial
-                license number CN-5384149. We offer professional drone
-                services(end to end solutions, like aerial data/picture
-                acquisition to the processing and report submission) across
-                multiple sectors, including Agriculture & Livestock, Green
-                Energy, Oil & Gas fields, Civil Constructions, Mining, Safety
-                and Surveillance etc. Our team comprises trained and certified
-                drone pilots with experience of over 5 to 6 years in the
-                respective field.
+              Vista Drone UAV LLC is a pioneer Drone operating company of the GCAA, Government of the UAE having registered office in Abu Dhabi. We specialize in providing end to end solutions related to drone services in the industrial sectors from capturing of aerial data and image to processing with AI enabled software and report submission. We also provide Certified Drone Pilot training to the candidates under professional and recreational category.
               </p>
 
               <Link

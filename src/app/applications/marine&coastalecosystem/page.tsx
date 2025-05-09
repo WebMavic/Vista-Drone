@@ -8,11 +8,13 @@ const SectionHeader = dynamic(() => import("@/components/SectionHeader"));
 const SectionFaq = dynamic(() => import("../(components)/SectionFaq"));
 const Services = dynamic(() => import("../(components)/Services"));
 const SectionAbout = dynamic(() => import("@/components/SectionAbout"));
+const Benifits = dynamic(()=>import("../(components)/Benifits"));
+
 
 const service = services[6];
 
 export const metadata: Metadata = {
-  title: "Fisheries | Vista Drone : Innovate and Improve",
+  title: "Marine & Coastal Ecosystem | Vista Drone : Innovate and Improve",
 };
 
 const page = () => {
@@ -27,6 +29,7 @@ const page = () => {
         para={service.description}
         image={service.image}
       />
+      <Benifits content={service.benefits} />
       <SectionFaq faqs={service.faq} />
     </>
   );
