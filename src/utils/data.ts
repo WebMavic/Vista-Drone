@@ -40,6 +40,7 @@ interface Service {
   title: string;
   description1: string;
   description2: string;
+  description3: string;
   image: ForwardRefExoticComponent<Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>> | IconType | StaticImport | StaticImageData;
   service_description: description[];
   benefits: benefits[];
@@ -71,6 +72,7 @@ export const services: Service[] = [
       "Enhance the efficiency, safety, and accuracy of your mining operations with Vista Drone’s specialized aerial solutions. Our advanced drone, equipped with high-resolution cameras and cutting-edge sensors, deliver precise geospatial data to support exploration, site assessment, and resource management.",
       description2:
       "We conduct detailed aerial surveys that produce high-resolution maps and 3D models, enabling accurate identification of mineral deposits and comprehensive terrain analysis. By replacing traditional ground surveys with fast, high-coverage aerial data collection, we reduce operational downtime and mitigate risks to on-site personnel.",
+      description3:"",
     image: mine,
     
     service_description: [
@@ -194,8 +196,8 @@ export const services: Service[] = [
     title: "Steel Industries",
     description1:
       "Transform your planning and survey processes with our advanced drone technology. Vista Drone Services offers comprehensive solutions to support topographic mapping, land surveying, and infrastructure assessment. Our high-resolution drones capture detailed aerial imagery and data, enabling the creation of accurate topographic maps and 3D models. This detailed data collection aids in precise terrain analysis, essential for planning construction projects, land development, and environmental studies. By leveraging our drone technology, you can efficiently gather the necessary data for site evaluations and project planning, reducing the need for traditional ground surveys and enhancing the accuracy of your assessments. ",
-      description2:
-      "Transform your planning and survey processes with our advanced drone technology. Vista Drone Services offers comprehensive solutions to support topographic mapping, land surveying, and infrastructure assessment. Our high-resolution drones capture detailed aerial imagery and data, enabling the creation of accurate topographic maps and 3D models. This detailed data collection aids in precise terrain analysis, essential for planning construction projects, land development, and environmental studies. By leveraging our drone technology, you can efficiently gather the necessary data for site evaluations and project planning, reducing the need for traditional ground surveys and enhancing the accuracy of your assessments. ",
+      description2:"",
+      description3:"",
     image:steel,
       
       
@@ -301,8 +303,10 @@ export const services: Service[] = [
  
   {
     title: "Agriculture",
-    description:
+    description1:
       "Optimize agricultural operations with Vista Drone Services. The advanced drone solutions deliver actionable insights for crop management, irrigation planning, and early pest detection—helping you boost productivity and sustainability. By analysing detailed imagery, we monitor plant health, pinpoint nutrient deficiencies, and uncover stress factors in real time. On basis of the reports farm manager can make data-driven decisions to maximize yields, minimize input costs, and reduce environmental impact. ",
+      description2:"",
+      description3:"",
     image: agriculture,
     service_description: [
       {
@@ -437,8 +441,10 @@ export const services: Service[] = [
 
   {
     title: "Civil Construction",
-    description:
-      "Elevate your construction projects with Vista Drone Services. We offer comprehensive drone solutions for site planning, progress monitoring, and safety inspections — ensuring your projects stay on track and within budget.Our advanced drones are equipped with high-resolution cameras and sophisticated sensors, allowing us to capture detailed aerial imagery and data for precise site analysis and planning. Whether you're in the initial stages of project development or need ongoing monitoring throughout construction, our drone solutions deliver valuable insights to optimize workflow and streamline operations.",
+    description1:
+      "Elevate your construction projects with Vista Drone Services. We offer comprehensive drone solutions for site planning, progress monitoring, and safety inspections — ensuring your projects stay on track and within budget.",
+      description2:"Our advanced drones are equipped with high-resolution cameras and sophisticated sensors, allowing us to capture detailed aerial imagery and data for precise site analysis and planning. Whether you're in the initial stages of project development or need ongoing monitoring throughout construction, our drone solutions deliver valuable insights to optimize workflow and streamline operations.",
+      description3:"",
     image:construction,
     service_description: [
       {
@@ -557,8 +563,10 @@ export const services: Service[] = [
 
   {
     title: "Oil and Gas Industry",
-    description:
+    description1:
       "Enhance the efficiency, safety, and accuracy of your oil and gas operations with Vista Drone’s specialized aerial solutions. Our advanced drones, equipped with high-resolution cameras and cutting-edge sensors, deliver precise geospatial data tailored to the unique demands of the Middle East's oil and gas sector.We conduct comprehensive aerial surveys of oil fields, pipelines, and both offshore and onshore platforms, generating detailed maps and 3D models to support exploration, site assessment, and resource management.",
+      description2:"We conduct comprehensive aerial surveys of oil fields, pipelines, and both offshore and onshore platforms, generating detailed maps and 3D models to support exploration, site assessment, and resource management.",
+      description3:"",
     image: oil,
     service_description: [
       {
@@ -683,8 +691,10 @@ export const services: Service[] = [
   
   {
     title: "Renewable energy",
-    description:
+    description1:
       "Commercial Drone Services in the Oil & Gas , Civil Infrastructure, Mining, Surveillance, Agriculture & Farming, Green Energy | Skill development through Training program of Drone Operator | Testing, Service and Maintenance of the Drone.",
+      description2:"",
+      description3:"",
     image:solar1,
     service_description: [
       {
@@ -773,8 +783,10 @@ export const services: Service[] = [
   },
   {
     title: "Marine & Coastal Ecosystem",
-    description:
-      "Support coral reef conservation and restoration with Vista Drone’s specialized aerial solutions. Our drones are equipped to conduct detailed, non-intrusive surveys that map reef structures, monitor bleaching events, and assess restoration progress with high-resolution imagery and multispectral data. Through rapid deployment and real-time monitoring, we help environmental teams identify vulnerable coral zones, track ecological changes, and evaluate intervention effectiveness. The aerial insights we provide reduce the need for repeated diving expeditions, minimize environmental disruption, and offer consistent data over time. Vista Drone Services ensures that restoration efforts are guided by accurate, up-to-date information—enabling smarter resource allocation and long-term reef resilience planning.",
+    description1:
+      "Support coral reef conservation and restoration with Vista Drone’s specialized aerial solutions. Our drones are equipped to conduct detailed, non-intrusive surveys that map reef structures, monitor bleaching events, and assess restoration progress with high-resolution imagery and multispectral data.",
+      description2:"Through rapid deployment and real-time monitoring, we help environmental teams identify vulnerable coral zones, track ecological changes, and evaluate intervention effectiveness. The aerial insights we provide reduce the need for repeated diving expeditions, minimize environmental disruption, and offer consistent data over time.",
+description3:"Vista Drone Services ensures that restoration efforts are guided by accurate, up-to-date information—enabling smarter resource allocation and long-term reef resilience planning.",
     image: marine,
     
     service_description: [
@@ -885,8 +897,10 @@ export const services: Service[] = [
 
   {
     title: "Solar",
-    description:
+    description1:
       "",
+      description2:"",
+      description3:"",
     image: solar3,
     service_description: [
       {

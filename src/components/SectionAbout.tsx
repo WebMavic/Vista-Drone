@@ -19,6 +19,7 @@ interface Props {
   heading?: string;
   para1?: string;
   para2?: string;
+  para3?: string;
   cta?: string;
   mirror?: boolean;
   className?: string;
@@ -31,6 +32,7 @@ function SectionAbout({
   heading,
   para1,
   para2,
+  para3,
   mirror,
   imageStyle,
   className,
@@ -82,6 +84,9 @@ function SectionAbout({
           </p>
           <p className="mt-6 text-left  text-subheading">
             {para2}
+          </p>
+          <p className="mt-6 text-left  text-subheading">
+            {para3}
           </p>
           {cta && (
             <Link
