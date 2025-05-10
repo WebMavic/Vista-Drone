@@ -10,24 +10,24 @@ import steel from '@/assets/images/steel/steel1.jpeg'
 import marine from "@/assets//images/marinefish/marine1.jpeg"
 
 import { Aperture, BarChart, Cctv, Diameter, LucideProps } from "lucide-react";
-import { GiArtificialIntelligence,GiEclipseFlare,GiLeadPipe,GiOffshorePlatform,GiMoebiusTrefoil,GiGasMask,GiBarrelLeak,GiMoneyStack,GiBonsaiTree,GiFishBucket,GiPathDistance,GiProgression,GiCargoCrane,GiReceiveMoney,GiSatelliteCommunication,GiPlantRoots,GiWateringCan,GiSpray,GiHealthPotion,GiCctvCamera,GiCrackedGlass } from "react-icons/gi";
-import { BsDatabaseFillCheck,BsFillSignYieldFill } from "react-icons/bs";
-import { TbBrandSnapseed,TbCell } from "react-icons/tb";
-import { PiThermometerHotFill } from "react-icons/pi";
+import {GiWindTurbine , GiSolarPower ,GiArtificialIntelligence,GiEclipseFlare,GiLeadPipe,GiOffshorePlatform,GiMoebiusTrefoil,GiGasMask,GiBarrelLeak,GiMoneyStack,GiBonsaiTree,GiFishBucket,GiPathDistance,GiProgression,GiCargoCrane,GiReceiveMoney,GiSatelliteCommunication,GiPlantRoots,GiWateringCan,GiSpray,GiHealthPotion,GiCctvCamera,GiCrackedGlass } from "react-icons/gi";
+import { BsClipboardCheck,BsBuildingsFill ,BsDatabaseFillCheck,BsFillSignYieldFill } from "react-icons/bs";
+import { TbClockHour5,TbBrandSnapseed,TbCell } from "react-icons/tb";
+
 import { VscColorMode } from "react-icons/vsc";
 
 
-import { PiWall,PiPlantLight } from "react-icons/pi";
+import { PiWall,PiPlantLight,PiThermometerHotFill } from "react-icons/pi";
 import { VscLightbulbSparkle } from "react-icons/vsc";
 
 import { SiSpond,SiExoscale,SiSubversion  } from "react-icons/si";
-import { MdHealthAndSafety,MdSos,MdOutlinePestControl,MdLandscape,MdMap } from "react-icons/md";
+import {MdHealthAndSafety ,MdReportProblem, MdSavings,MdSos,MdOutlinePestControl,MdLandscape,Md3dRotation ,MdMap } from "react-icons/md";
 
 import { FaSatelliteDish,FaNoteSticky,FaHelmetSafety,FaMoneyBillTrendUp,FaHotjar,FaClockRotateLeft } from "react-icons/fa6";
 import { FaDatabase,FaMapMarkedAlt,FaCheck,FaPlusCircle,FaEye,FaCalendarCheck,FaChartBar,FaChartLine,FaTools,FaSortAmountDown    } from "react-icons/fa";
 import { GrResources } from "react-icons/gr";
 import { RiHotspotFill } from "react-icons/ri";
-import { AiOutlineSafetyCertificate,AiOutlineSafety,AiFillEnvironment  } from "react-icons/ai";
+import { AiFillPicture,AiOutlineAudit ,AiOutlineSafetyCertificate,AiOutlineSafety,AiFillEnvironment  } from "react-icons/ai";
 
 import { ImImage } from "react-icons/im";
 import { IoMdDocument } from "react-icons/io";
@@ -692,59 +692,86 @@ export const services: Service[] = [
   {
     title: "Renewable energy",
     description1:
-      "Commercial Drone Services in the Oil & Gas , Civil Infrastructure, Mining, Surveillance, Agriculture & Farming, Green Energy | Skill development through Training program of Drone Operator | Testing, Service and Maintenance of the Drone.",
-      description2:"",
+      "Optimize your renewable energy operations with Vista Drone’s cutting-edge aerial solutions. Our UAV systems perform rapid and safe inspections of solar farms, wind turbines, and energy installations—delivering accurate insights without interrupting operations.",
+      description2:"We use high-resolution imagery, thermal data, and advanced mapping to detect defects, assess efficiency, and support sustainable practices. This enables energy operators and developers to cut inspection time, minimize risks, and ensure peak performance of renewable assets—all while aligning with environmental and safety standards.",
       description3:"",
     image:solar1,
-    service_description: [
-      {
-        title: "Solar Panel inspection & monitoring",
-          image: GiCrackedGlass,
-          content: "Drones are used for inspecting and maintaining solar panels, identifying issues quickly, and optimizing energy production.",
-          color : "rose"
-      },
-      {
-        title: "Wind Turbine inspection & monitoring",
-        content:"Wind turbine inspections are of crucial importance as wind turbines need continuous monitoring and maintenance to ensure they are operating at the optimum efficiency. Critical components have to be carefully monitored by means of a systematic maintenance program and regular inspections.",
-          image:GiCrackedGlass,
-          color : "rose"
-      },
-      
-
-
-    ],
+    service_description:  [
+  {
+    title: "Solar Panel Inspection",
+    image: GiSolarPower , // Replace with a relevant solar icon
+    content: "Drones equipped with thermal and visual sensors detect faults like hotspots, cracks, and dirt buildup on solar modules, improving maintenance efficiency.",
+    color: "rose",
+  },
+  {
+    title: "Wind Turbine Blade Inspection",
+    image: GiWindTurbine , // Replace with a wind turbine icon
+    content: "High-resolution drone imagery captures damage such as erosion, cracks, or lightning strikes—removing the need for rope-access and reducing inspection risk.",
+    color: "rose",
+  },
+  {
+    title: "Thermal Efficiency Audits",
+    image: AiOutlineAudit , // Replace with a thermal or heatmap icon
+    content: "Identify temperature anomalies in solar farms or substations to assess equipment performance and prevent energy losses.",
+    color: "rose",
+  },
+  {
+    title: "Energy Site Mapping & 3D Modeling",
+    image: Md3dRotation , // Replace with a mapping or 3D icon
+    content: "Generate high-accuracy orthomosaic maps and 3D terrain models to assist in site planning, layout optimization, and expansion tracking.",
+    color: "rose",
+  },
+  {
+    title: "Environmental Impact Monitoring",
+    image: GiBonsaiTree, // Replace with a tree/leaf/sustainability icon
+    content: "Monitor vegetation, land use, and nearby ecosystems using drone imagery to meet sustainability goals and regulatory standards.",
+    color: "rose",
+  },
+  {
+    title: "Infrastructure Integrity Checks",
+    image: BsBuildingsFill , // Replace with a gear/toolbox icon
+    content: "Inspect solar mounts, inverters, and wind power components safely and efficiently—reducing manual effort and identifying faults early.",
+    color: "rose",
+  },
+],
     benefits: [
-      {
-        title: "Cell Mismatch Defect",
-        content:
-          "Cell mismatches in photovoltaic (PV) cells can significantly impact system output and yield,potentially leading to hotspots causing browning, burns, or fire.",
-        icon:TbCell,
-      },
-      {
-        title: "Cracks",
-        content:
-          "Defects in photovoltaic systems, resulting from manufacturing processes, handling, packaging, transport, and reloading, and harsh climates like strong winds, snow, and hail, are common throughout their lifetime.",
-        icon:GiCrackedGlass,
-      },
-      {
-        title: "Discolorations",
-        content:
-          "PV systems can suffer from discoloration due to internal components like low-quality polymers or external factors like high temperatures and humidity, reducing sunlight entry and causing significant losses.",
-        icon:VscColorMode,
-      },
-      {
-        title: "Delamination",
-        content:
-          "Through a PV modules’ lifetime, adhesive bonds between solar cells’ materials can begin to hold moisture, causing severe delamination. These defects can also occur due to improper lamination methods and harsh weather conditions.",
-        icon:FaNoteSticky,
-      },
-      {
-        title: "Hotspots",
-        content:
-          "Overloaded regions on solar panels can cause warm spots due to poorly soldered cell connections or structural flaws, resulting in increased resistance and short-circuits, depreciating the productivity and goodwill of the PV system.",
-        icon:RiHotspotFill,
-      },
-    ],
+  {
+    title: "Faster Inspection Cycles",
+    content:
+      "Complete asset inspections in hours instead of days, minimizing system downtime.",
+    icon: TbClockHour5,
+  },
+  {
+    title: "Improved Safety",
+    content:
+      "Reduce manual inspections at height or over large areas—enhancing worker safety.",
+    icon: MdHealthAndSafety ,
+  },
+  {
+    title: "Cost-Effective Monitoring",
+    content:
+      "Save on manpower and equipment by using drones for scheduled or on-demand inspections.",
+    icon: MdSavings,
+  },
+  {
+    title: "Detailed Visual & Thermal Reports",
+    content:
+      "Receive annotated, high-resolution visual and infrared data for precise fault identification.",
+    icon: AiFillPicture,
+  },
+  {
+    title: "Early Problem Detection",
+    content:
+      "Identify minor issues before they escalate—helping prevent energy loss or equipment failure.",
+    icon: MdReportProblem,
+  },
+  {
+    title: "Sustainability & Compliance Support",
+    content:
+      "Enable better documentation and monitoring to meet environmental goals and regulatory audits.",
+    icon: BsClipboardCheck,
+  },
+],
     faq: [
       {
         question: "What are the common defects observed during solar panel inspections?",
