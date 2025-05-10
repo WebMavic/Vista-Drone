@@ -4,6 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import about1 from "@/assets/images/image (2).png";
 import SectionHero from "@/components/SectionHero";
+import SectionClient from "@/components/SectionClient";
+import Trainings from "@/components/Trainings"
 import { Analytics } from "@vercel/analytics/react"
 
 const SectionFeaturedServices = dynamic(() => import("@/components/SectionFeaturedServices"));
@@ -12,6 +14,8 @@ const SectionContact = dynamic(() => import("@/components/SectionContact"));
 const Certification = dynamic(() => import("@/app/about/(componets)/Certification"));
 const DroneApplication = dynamic(() => import("@/app/applications/(components)/DroneApplication"));
 const SectionLayout = dynamic(() => import("@/components/ui/SectionLayout"));
+
+
 import { buttonVariants } from "@/components/ui/Button";
 import Reveal from "@/components/Reveal";
 
@@ -23,7 +27,9 @@ export default function Home() {
   return (
     <React.Fragment>
       <SectionHero />
+<SectionClient />
       <SectionFeaturedServices />
+      <Trainings />
       <Analytics/>
       <SectionLayout className={"bg-white sm:px-0 sm:py-0 lg:h-screen"}>
         <div

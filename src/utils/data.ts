@@ -906,12 +906,12 @@ description3:"Vista Drone Services ensures that restoration efforts are guided b
       {
         title: "Solar Panel inspection & monitoring",
           image: Diameter,
-          content: "Drones are used for inspecting and maintaining solar panels, identifying issues quickly, and optimizing energy production.",
+          content: "Drones equipped with thermal and visual sensors detect faults like hotspots, cracks, and dirt buildup on solar modules, improving maintenance efficiency.",
           color : "rose"
       },
       {
         title: "Wind Turbine inspection & monitoring",
-        content:"Wind turbine inspections are of crucial importance as wind turbines need continuous monitoring and maintenance to ensure they are operating at the optimum efficiency. Critical components have to be carefully monitored by means of a systematic maintenance program and regular inspections.",
+        content:"High-resolution drone imagery captures damage such as erosion, cracks, or lightning strikes—removing the need for rope-access and reducing inspection risk.",
           image: Diameter,
           color : "rose"
       },

@@ -119,7 +119,7 @@ export const heroOptions: Hero[] = [
 
 
   
-export const teams = [
+export const  teams = [
   {
     name: "S. Sudan",
     role: "Founder and CEO",

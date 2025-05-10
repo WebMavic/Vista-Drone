@@ -6,14 +6,13 @@ export const clientsLogos = [
   require("../assets/images/clients-logo/client3.png"),
   require("../assets/images/clients-logo/client4.png"),
   require("../assets/images/clients-logo/client5.png"),
-  require("../assets/images/clients-logo/img18.jpg"),
-  require("../assets/images/clients-logo/img19.jpg"),
-  require("../assets/images/clients-logo/img20.jpg"),
-  require("../assets/images/clients-logo/img21.jpg"),
-  require("../assets/images/clients-logo/img23.jpg"),
-  require("../assets/images/clients-logo/img24.jpg"),
-  require("../assets/images/clients-logo/img25.jpg"),
-  require("../assets/images/clients-logo/img26.jpg"),
+  require("../assets/images/clients-logo/client6.png"),
+  require("../assets/images/clients-logo/client7.png"),
+  require("../assets/images/clients-logo/client8.png"),
+  require("../assets/images/clients-logo/client9.png"),
+  require("../assets/images/clients-logo/client10.png"),
+  require("../assets/images/clients-logo/client11.png"),
+  require("../assets/images/clients-logo/client12.png"),
 ];
 
 
