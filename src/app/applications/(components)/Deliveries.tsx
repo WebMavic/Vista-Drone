@@ -14,7 +14,7 @@ import Image from 'next/image';
 
 interface Props {
   projects : Project[]
-  heading: string
+  heading?: string
   chipHeading?: string
 }
 
@@ -24,7 +24,7 @@ const Deliveries = ({projects,heading,chipHeading}:Props) => {
     <SectionLayout className='bg-white'>
     <div className="space-y-4">
       <Chips title={chipHeading || "Vista Projects"} />
-      <h2 className="text-4xl font-bold text-heading">{heading}</h2>
+      <h2 className="text-4xl font-bold text-heading">{heading || "Default Heading"}</h2>
     </div>
     <Carousel className="mt-10" autoSlideMobile>
       <CarouselContent>

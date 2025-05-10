@@ -1,25 +1,18 @@
 import React from "react";
 import dynamic from "next/dynamic";
 import { services } from "../../../utils/data";
-import { TeamItem } from "@/app/about/(componets)/Team";
 import { solarProjects } from "@/constants";
 import { Metadata } from "next";
 
 const SectionContent =  dynamic(()=>import("./(components)/SectionContent"));
 const SectionContent2 =  dynamic(()=>import("./(components)/SectionContent2"));
-const SectionLayout =  dynamic(()=>import("@/components/ui/SectionLayout"));
 const SectionHeader =  dynamic(()=>import("@/components/SectionHeader"));
 const Benifits = dynamic(()=>import("../(components)/Benifits"));
 const SectionFaq = dynamic(()=>import("../(components)/SectionFaq"))
 const Deliveries = dynamic(()=>import("../(components)/Deliveries"))
 const SectionContact = dynamic(()=>import("@/components/SectionContact"))
-
-
-
-import solar2 from '@/assets/images/greenenergy/solar2.jpeg'
-import windimg from "@/assets/images/green energy/wind-2.jpg"
-import Reveal from "@/components/Reveal";
-
+const Services = dynamic(()=>import("../(components)/Services"))
+const SectionAbout = dynamic(()=>import("@/components/SectionAbout"))
 const service = services[5];
 
 export const metadata: Metadata = {
@@ -31,27 +24,20 @@ const page = async () => {
   return (
     <>
       <SectionHeader title={service.title} image={service.image} />
-      <SectionLayout>
-        <div className="grid lg:grid-rows-2 gap-6">
-          {service.service_description.map(
-            ({ content, title }, index) => (
-              <Reveal key={index} slide={index === 0 ? 'left' : 'right'}>
-              <TeamItem
-                
-                avatar={index % 2 === 0 ? solar2 : windimg }
-                bio1={content}
-                direction={index % 2 === 0 ? "left" : "right"}
-                name={title}
-                className="lg:items-center"
-              />
-              </Reveal>
-            ),
-          )}
-        </div>
-      </SectionLayout>
+      <Services services={service.service_description}/>
+      <SectionAbout 
+        chips="vista drone service"
+        cta="/contact"
+        image={service.image}
+        heading={service.title} 
+        para1={service.description1}
+        para2={service.description2}
+        para3={service.description3}
+      />
+
       <SectionContent />
-      <Benifits content={service.benefits} />
       <Deliveries projects={solarProjects} />
+      <Benifits content={service.benefits} />
       <SectionContent2 />
       <SectionContact />
       <SectionFaq faqs={services[5].faq} />

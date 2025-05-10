@@ -70,7 +70,7 @@ export default function Home() {
       <SectionContact />
       <DroneApplication />
       <Certification />
-<Trainings />
+      <Trainings />
     </React.Fragment>
   );
 }

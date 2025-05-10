@@ -9,10 +9,6 @@ import { BsLayersHalf } from "react-icons/bs";
 import { RiHotspotFill } from "react-icons/ri";
 
 
-
-
-
-
 export default function SectionContent() {
   return (
     <div className="relative isolate overflow-hidden bg-white px-6 py-24 sm:py-32 lg:overflow-visible lg:px-0">
