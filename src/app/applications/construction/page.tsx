@@ -1,6 +1,7 @@
 import React from "react";
 import dynamic from "next/dynamic";
 import { services } from "../../../utils/data";
+import { constructionProjects } from "@/constants";
 
 
 import { Metadata } from "next";
@@ -11,6 +12,9 @@ const SectionFaq = dynamic(()=>import("../(components)/SectionFaq"))
 const Services = dynamic(()=>import("../(components)/Services"))
 const SectionContact = dynamic(()=>import("@/components/SectionContact"))
 const SectionAbout = dynamic(()=>import("@/components/SectionAbout"))
+const Deliveries = dynamic(()=>import("../(components)/Deliveries"))
+
+
 
 
 import bg from '@/assets/images/construction&realestate/construction4.jpeg'
@@ -37,7 +41,7 @@ const page = () => {
         
       />
 
-      
+      <Deliveries projects={constructionProjects} heading="Our key deliverables" chipHeading="vista solutions for construction and real estate"/>
       <Benifits content={services[3].benefits} />
       <SectionContent/>
       <SectionContact/>
