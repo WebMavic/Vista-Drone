@@ -1,7 +1,12 @@
+
 import { Hero, Project, Steps } from "@/types/steps";
 import bg from "@/assets/images/draft.jpg";
 import { miningDeliveryImages } from "@/utils/images";
+import { constructionImages } from "@/utils/images";
 import { solarimages } from "@/utils/images";
+import { agricultureImages } from "@/utils/images";
+import { marineImages } from "@/utils/images";
+import { steelImages } from "@/utils/images";
 import { oilDeliveryImages } from "@/utils/images";
 import { FaXTwitter,FaFacebook,FaLinkedin } from "react-icons/fa6";
 
@@ -224,39 +229,80 @@ export const factors = [
 ];
 
 
-export const miningProjects: Project[] = [
+export const oilProjects: Project[] = [
   {
-    title: "Digital Terrain Model (DTM)",
-    avatar: miningDeliveryImages[0],
-    description: "Bare-earth models that remove vegetation and structures to reveal accurate elevation data—ideal for slope analysis, drainage, and site planning.",
+    title: "High-Resolution Aerial Imagery",
+    avatar: oilDeliveryImages[0],
+    description:
+      "Crystal-clear images capturing every detail of oil and gas infrastructure for comprehensive analysis",
   },
   {
-    title: "Contours",
-    avatar: miningDeliveryImages[1],
-    description: "Visualizes terrain elevation with color-coded contour lines for better understanding of site gradients and excavation requirements.",
+    title: "Orthophoto Maps",
+    avatar: oilDeliveryImages[1],
+    description:
+      "Precise, distortion-free maps provide an accurate representation of the surveyed area.",
   },
   {
-    title: "Digital Surface Model (DSM)",
-    avatar: miningDeliveryImages[2],
-    description: "Detailed elevation model that includes natural and man-made features such as trees, buildings, and equipment—ideal for planning around existing surface structures.",
+    title: "Thermal Imaging Reports",
+    avatar: oilDeliveryImages[2],
+    description:
+      "Heat maps identifying temperature variations, enabling the detection of potential issues in equipment and infrastructure.",
   },
   {
-    title: "Ortho-mosaic",
-    avatar: miningDeliveryImages[3],
-    description: "High-resolution, geo-referenced images composed of multiple aerial photos stitched together—ideal for precise measurements, site documentation, and visual analysis.",
+    title: "3D Point Clouds",
+    avatar: oilDeliveryImages[3],
+    description:
+      "Detailed three-dimensional representations of the assets, aiding in spatial analysis and visualization.",
   },
   {
-    title: "Volumetric Analysis",
-    avatar: miningDeliveryImages[4],
-    description: "Accurately measures stockpile volumes, cut-and-fill quantities, and excavation progress—supporting inventory management, project planning, and billing validation.",
+    title: "Pipeline Corridor Monitoring",
+    avatar: oilDeliveryImages[4],
+    description:
+      "Regular drone-based monitoring enables early detection of gas leaks, structural anomalies, and monitoring of air quality —helping ensure pipeline integrity and operational safety.",
   },
   {
-    title: "Change Detection / Progress Monitoring",
-    avatar: miningDeliveryImages[5],
-    description: "Compare site conditions over time to monitor excavation, material movement, or landform changes—ideal for reporting and compliance tracking.",
+    title: "Change Detection Reports",
+    avatar: oilDeliveryImages[5],
+    description:
+      "Identifying and documenting changes in the landscape or infrastructure over time, supporting predictive maintenance.",
+  },
+  {
+    title: "Environmental Impact Assessment (EIA) Data",
+    avatar: oilDeliveryImages[1],
+    description:
+      "Comprehensive data for EIAs, helping oil and gas companies adhere to environmental regulations.",
+  },
+  {
+    title: "Asset Condition Reports",
+    avatar: oilDeliveryImages[2],
+    description:
+      "Detailed assessments of the condition of oil and gas assets, including potential areas of concern and recommendations for maintenance.",
+  },
+  {
+    title: "Emergency Response Maps",
+    avatar: oilDeliveryImages[3],
+    description:
+      "Maps highlighting emergency response routes and access points for quick and efficient crisis management.",
+  },
+  {
+    title: "Data Integration",
+    avatar: oilDeliveryImages[4],
+    description:
+      "Seamless integration of drone-captured data into existing Geographic Information Systems for enhanced data management.",
+  },
+  {
+    title: "Interactive 3D Models",
+    avatar: oilDeliveryImages[5],
+    description:
+      "Engaging 3D models of oil and gas assets, providing a dynamic and interactive way to explore the infrastructure.",
+  },
+  {
+    title: "Regular Monitoring Schedules",
+    avatar: oilDeliveryImages[1],
+    description:
+      "A proposed schedule for routine drone inspections, ensuring consistent data collection and timely maintenance.",
   },
 ];
-
 
 export const solarProjects: Project[] = [
   {
@@ -351,80 +397,190 @@ export const solarProjects: Project[] = [
   },
 ];
 
-export const oilProjects: Project[] = [
+
+export const miningProjects: Project[] = [
   {
-    title: "High-Resolution Aerial Imagery",
-    avatar: oilDeliveryImages[0],
-    description:
-      "Crystal-clear images capturing every detail of oil and gas infrastructure for comprehensive analysis",
+    title: "Digital Terrain Model (DTM)",
+    avatar: miningDeliveryImages[0],
+    description: "Bare-earth models that remove vegetation and structures to reveal accurate elevation data—ideal for slope analysis, drainage, and site planning.",
   },
   {
-    title: "Orthophoto Maps",
-    avatar: oilDeliveryImages[1],
-    description:
-      "Precise, distortion-free maps provide an accurate representation of the surveyed area.",
+    title: "Contours",
+    avatar: miningDeliveryImages[1],
+    description: "Visualizes terrain elevation with color-coded contour lines for better understanding of site gradients and excavation requirements.",
   },
   {
-    title: "Thermal Imaging Reports",
-    avatar: oilDeliveryImages[2],
-    description:
-      "Heat maps identifying temperature variations, enabling the detection of potential issues in equipment and infrastructure.",
+    title: "Digital Surface Model (DSM)",
+    avatar: miningDeliveryImages[2],
+    description: "Detailed elevation model that includes natural and man-made features such as trees, buildings, and equipment—ideal for planning around existing surface structures.",
   },
   {
-    title: "3D Point Clouds",
-    avatar: oilDeliveryImages[3],
-    description:
-      "Detailed three-dimensional representations of the assets, aiding in spatial analysis and visualization.",
+    title: "Ortho-mosaic",
+    avatar: miningDeliveryImages[3],
+    description: "High-resolution, geo-referenced images composed of multiple aerial photos stitched together—ideal for precise measurements, site documentation, and visual analysis.",
   },
   {
-    title: "Pipeline Corridor Monitoring",
-    avatar: oilDeliveryImages[4],
-    description:
-      "Regular drone-based monitoring enables early detection of gas leaks, structural anomalies, and monitoring of air quality —helping ensure pipeline integrity and operational safety.",
+    title: "Volumetric Analysis",
+    avatar: miningDeliveryImages[4],
+    description: "Accurately measures stockpile volumes, cut-and-fill quantities, and excavation progress—supporting inventory management, project planning, and billing validation.",
   },
   {
-    title: "Change Detection Reports",
-    avatar: oilDeliveryImages[5],
-    description:
-      "Identifying and documenting changes in the landscape or infrastructure over time, supporting predictive maintenance.",
-  },
-  {
-    title: "Environmental Impact Assessment (EIA) Data",
-    avatar: oilDeliveryImages[1],
-    description:
-      "Comprehensive data for EIAs, helping oil and gas companies adhere to environmental regulations.",
-  },
-  {
-    title: "Asset Condition Reports",
-    avatar: oilDeliveryImages[2],
-    description:
-      "Detailed assessments of the condition of oil and gas assets, including potential areas of concern and recommendations for maintenance.",
-  },
-  {
-    title: "Emergency Response Maps",
-    avatar: oilDeliveryImages[3],
-    description:
-      "Maps highlighting emergency response routes and access points for quick and efficient crisis management.",
-  },
-  {
-    title: "Data Integration",
-    avatar: oilDeliveryImages[4],
-    description:
-      "Seamless integration of drone-captured data into existing Geographic Information Systems for enhanced data management.",
-  },
-  {
-    title: "Interactive 3D Models",
-    avatar: oilDeliveryImages[5],
-    description:
-      "Engaging 3D models of oil and gas assets, providing a dynamic and interactive way to explore the infrastructure.",
-  },
-  {
-    title: "Regular Monitoring Schedules",
-    avatar: oilDeliveryImages[1],
-    description:
-      "A proposed schedule for routine drone inspections, ensuring consistent data collection and timely maintenance.",
+    title: "Change Detection / Progress Monitoring",
+    avatar: miningDeliveryImages[5],
+    description: "Compare site conditions over time to monitor excavation, material movement, or landform changes—ideal for reporting and compliance tracking.",
   },
 ];
+
+
+export const constructionProjects: Project[] = [
+  {
+    title: "Progress Monitoring & Site Documentation",
+    avatar: constructionImages[0],
+    description: "Track every stage of construction with consistent aerial updates, ensuring transparency and accountability.",
+  },
+  {
+    title: "High-Resolution Mapping & Orthomosaics",
+    avatar: constructionImages[1],
+    description: "Generate detailed 2D maps and orthophotos for accurate site analysis, planning, and communication.",
+  },
+  {
+    title: "3D Modeling & Digital Twin Creation",
+    avatar: constructionImages[2],
+    description: "Produce 3D models of structures for clash detection, planning reviews, and BIM integration.",
+  },
+  {
+    title: "Volume & Stockpile Measurement",
+    avatar: constructionImages[3],
+    description: "Calculate precise material quantities and monitor on-site resources using drone-generated volumetrics.",
+  },
+  {
+    title: "Site Safety & Compliance Monitoring",
+    avatar: constructionImages[4],
+    description: "Identify hazards, check for PPE compliance, and maintain a visual record for audits and safety reports.",
+  },
+  {
+    title: "Survey-Grade Land Mapping",
+    avatar: constructionImages[5],
+    description: "Achieve centimeter-level accuracy for topographic surveys using RTK/PPK-enabled drones.",
+  },
+  {
+    title: "Change Detection & As-Built Comparisons",
+    avatar: constructionImages[6],
+    description: "Compare drone imagery with plans to identify discrepancies and track build-to-plan accuracy.",
+  },
+  {
+    title: "Logistics & Site Layout Planning",
+    avatar: constructionImages[7],
+    description: "Optimize equipment placement, site access, and layout using aerial perspectives.",
+  },
+];
+
+export const agricultureProjects: Project[] = [
+  {
+    title: "Multispectral Crop Health Maps",
+    avatar: agricultureImages[0],
+    description: "Utilize NDVI and other indices to assess plant vigor, detect stress, and guide targeted interventions.",
+  },
+  {
+    title: "Irrigation Efficiency Reports",
+    avatar: agricultureImages[1],
+    description: "Identify over-irrigated or drought-stressed zones to optimize water usage and improve yield.",
+  },
+  {
+    title: "Pest and Disease Detection Alerts",
+    avatar: agricultureImages[2],
+    description: "Early identification of infestations or diseases enables prompt treatment, minimizing crop loss.",
+  },
+  {
+    title: "Soil Health Analysis",
+    avatar: agricultureImages[3],
+    description: "Assess soil composition and fertility to inform planting strategies and fertilization plans.",
+  },
+  {
+    title: "Automated Spraying and Seeding Logs",
+    avatar: agricultureImages[4],
+    description: "Documented records of drone-assisted spraying and seeding operations for compliance and analysis.",
+  },
+  {
+    title: "Yield Prediction Models",
+    avatar: agricultureImages[5],
+    description: "Forecast crop yields based on current growth patterns and historical data, aiding in market planning.",
+  },
+  
+  {
+    title: "Change Detection Reports",
+    avatar: agricultureImages[6],
+    description: "Monitor temporal changes in crop development, land use, and environmental conditions.",
+  },
+  
+];
+
+export const marineProjects: Project[] = [
+  {
+    title: "Fish Stock Monitoring & Behavior Tracking",
+    avatar: marineImages[0],
+    description: "Monitor fish schools, migration patterns, and behavior in open marine environments using aerial and thermal drone imaging.",
+  },
+  {
+    title: "Marine Water Quality Surveillance",
+    avatar: marineImages[1],
+    description: "Deploy drones with sensors to monitor temperature gradients, salinity levels, algal blooms, and oxygen-depleted zones in real-time.",
+  },
+  {
+    title: "Detection of Illegal, Unreported & Unregulated (IUU) Fishing",
+    avatar: marineImages[2],
+    description: "Patrol marine protected areas (MPAs) and exclusive economic zones (EEZs) to detect unauthorized vessels or fishing activity.",
+  },
+  {
+    title: "Coastal & Marine Habitat Mapping",
+    avatar: marineImages[3],
+    description: "Map coral reefs, seagrass beds, mangroves, and shoreline erosion to support habitat conservation and ecosystem assessments.",
+  },
+  {
+    title: "Marine Disaster & Spill Response",
+    avatar: marineImages[4],
+    description: "Rapidly assess and document oil spills, vessel accidents, and storm damage to marine farms or coastal zones using drone surveys.",
+  },
+  {
+    title: "Marine Production Planning & Site Feasibility",
+    avatar: marineImages[5],
+    description: "Use bathymetric overlays, wave action data, and current modeling to evaluate new aquaculture site suitability and layout optimization.",
+  },
+];
+
+export const steelProjects: Project[] = [
+  {
+    title: "High-Resolution Structural Imaging",
+    avatar: steelImages[0],
+    description: "Capture detailed visuals of steel structures, identifying cracks, corrosion, and other defects without the need for scaffolding.",
+  },
+  {
+    title: "Thermal Anomaly Detection",
+    avatar: steelImages[1],
+    description: "Utilize thermal imaging to detect overheating components, insulation failures, and energy losses in real-time.",
+  },
+  {
+    title: "3D Modeling and Digital Twin Creation",
+    avatar: steelImages[2],
+    description: "Generate accurate 3D models of steel facilities for planning, maintenance, and simulation purposes.",
+  },
+  {
+    title: "Corrosion and Rust Assessment",
+    avatar: steelImages[3],
+    description: "Identify and monitor corrosion levels on steel surfaces to plan timely maintenance and prevent structural failures.",
+  },
+  {
+    title: "Environmental Monitoring",
+    avatar: steelImages[4],
+    description: "Monitor emissions and environmental impact to ensure adherence to environmental regulations.",
+  },
+];
+
+
+
+
+
+
 
 
 export const navlinks = [

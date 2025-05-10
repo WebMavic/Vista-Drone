@@ -3,12 +3,16 @@ import { services } from "../../../utils/data";
 import dynamic from "next/dynamic";
 import bg from "@/assets/images/agriculture/agriculture3.jpeg";
 import { Metadata } from "next";
+import { agricultureProjects } from "@/constants";
+
+const Deliveries = dynamic(()=>import("../(components)/Deliveries"))
 const SectionHeader = dynamic(() => import("@/components/SectionHeader"));
 const Benifits = dynamic(() => import("../(components)/Benifits"));
 const SectionFaq = dynamic(() => import("../(components)/SectionFaq"));
 const Services = dynamic(() => import("../(components)/Services"));
 const SectionContact = dynamic(() => import("@/components/SectionContact"));
 const SectionAbout = dynamic(() => import("@/components/SectionAbout"));
+
 
 const service = services[2];
 
@@ -32,6 +36,7 @@ const page = () => {
         para3={service.description3}
         
       />
+      <Deliveries projects={agricultureProjects} heading="Our key deliverables" chipHeading="vista solutions for construction and real estate"/>
 
       <Benifits content={services[2].benefits} />
       <SectionContact />

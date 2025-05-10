@@ -1,3 +1,5 @@
+
+
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 
 export const clientsLogos = [
@@ -79,6 +81,50 @@ export const solarimages = [
   require("@/assets/images/projects/greenenergy/solar/Picture16.png"),
   require("@/assets/images/projects/greenenergy/solar/Picture17.png"),
   require("@/assets/images/projects/greenenergy/solar/Picture18.png"),
+]
+
+
+
+export const constructionImages = [
+  require("@/assets/images/projects/construction/Picture1.png"),
+  require("@/assets/images/projects/construction/Picture2.png"),
+  require("@/assets/images/projects/construction/Picture3.png"),
+  require("@/assets/images/projects/construction/Picture4.png"),
+  require("@/assets/images/projects/construction/Picture5.png"),
+  require("@/assets/images/projects/construction/Picture6.png"),
+  
+]
+
+export const agricultureImages = [
+  require("@/assets/images/projects/agriculture/Picture1.png"),
+  require("@/assets/images/projects/agriculture/Picture2.png"),
+  require("@/assets/images/projects/agriculture/Picture3.png"),
+  require("@/assets/images/projects/agriculture/Picture4.png"),
+  require("@/assets/images/projects/agriculture/Picture5.png"),
+  require("@/assets/images/projects/agriculture/Picture6.png"),
+  require("@/assets/images/projects/agriculture/Picture7.png"),
+ 
+  
+]
+
+
+export const marineImages = [
+  require("@/assets/images/projects/marine/Picture1.png"),
+  require("@/assets/images/projects/marine/Picture2.png"),
+  require("@/assets/images/projects/marine/Picture3.png"),
+  require("@/assets/images/projects/marine/Picture4.png"),
+  require("@/assets/images/projects/marine/Picture5.png"),
+  require("@/assets/images/projects/marine/Picture6.png"),
+  
+]
+
+export const steelImages = [
+  require("@/assets/images/projects/steel/Picture1.png"),
+  require("@/assets/images/projects/steel/Picture2.png"),
+  require("@/assets/images/projects/steel/Picture3.png"),
+  require("@/assets/images/projects/steel/Picture4.png"),
+  require("@/assets/images/projects/steel/Picture5.png"),
+  
 ]
 
 

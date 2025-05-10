@@ -35,7 +35,7 @@ const page = () => {
         para2={service.description2}
         para3={service.description3}
       />      
-      <Deliveries projects={miningProjects} heading="Our fucking bitch" chipHeading="vista solutions for mining"/>
+      <Deliveries projects={miningProjects} heading="Our Key Deliverables" chipHeading="vista solutions for mining"/>
       <Benifits content={service.benefits} />
       <SectionContact/>
       <SectionFaq faqs={service.faq} />
