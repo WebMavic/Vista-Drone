@@ -190,12 +190,13 @@ export default function RPASTrainingPage() {
                   <CardContent>
                     <Form {...form}>
                       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                        <div className="grid lg:grid-cols-2 gap-6 ">
                         <FormField
                           control={form.control}
                           name="category"
                           render={({ field }) => (
                             <FormItem className="space-y-3">
-                              <FormLabel>1. Apply for Category</FormLabel>
+                              <FormLabel>Apply for Category</FormLabel>
                               <FormControl>
                                 <RadioGroup
                                   onValueChange={field.onChange}
@@ -224,13 +225,12 @@ export default function RPASTrainingPage() {
                             </FormItem>
                           )}
                         />
-                          <div className="grid lg:grid-cols-2 gap-6 ">
                         <FormField
                           control={form.control}
                           name="fullName"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel>2. Name as in EID/Passport</FormLabel>
+                              <FormLabel>Name as in EID/Passport</FormLabel>
                               <FormControl>
                                 <Input placeholder="Enter your full name" {...field} />
                               </FormControl>
@@ -238,20 +238,20 @@ export default function RPASTrainingPage() {
                             </FormItem>
                           )}
                         />
-{/* 
+
                         <FormField
                           control={form.control}
                           name="dateOfBirth"
                           render={({ field }) => (
                             <FormItem className="flex flex-col">
-                              <FormLabel>3. Date of Birth</FormLabel>
-                              <Popover>
+                              <FormLabel>Date of Birth</FormLabel>
+                              {/* <Popover >
                                 <PopoverTrigger asChild>
                                   <FormControl>
                                     <Button
                                       variant={"outline"}
                                       className={cn(
-                                        "w-full pl-3 text-left font-normal",
+                                        "w-full pl-3 text-left font-normal rounded-md",
                                         !field.value && "text-muted-foreground",
                                       )}
                                     >
@@ -261,27 +261,36 @@ export default function RPASTrainingPage() {
                                   </FormControl>
                                 </PopoverTrigger>
                                 <PopoverContent className="w-auto p-0" align="start">
+                                  <div>
+
+                                 
                                   <Calendar
-                                    mode="single"
                                     selected={field.value}
                                     onSelect={field.onChange}
                                     disabled={(date) => date > new Date() || date < new Date("1900-01-01")}
-                                    initialFocus
                                   />
+                                   </div>
                                 </PopoverContent>
-                              </Popover>
+                              </Popover> */}
+                              <Input 
+                              type="date"
+                              min="2008-01-01"
+                              max="2018-12-31" 
+                              
+                              onChange={(e) => field.onChange(e)} 
+                              />
                               <FormDescription>You must be at least 18 years old to apply.</FormDescription>
                               <FormMessage />
                             </FormItem>
                           )}
-                        /> */}
+                        />
 
                         <FormField
                           control={form.control}
                           name="emiratesId"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel>4. Emirates ID Number</FormLabel>
+                              <FormLabel>Emirates ID Number</FormLabel>
                               <FormControl>
                                 <Input placeholder="Enter your Emirates ID number" {...field} />
                               </FormControl>
@@ -295,7 +304,7 @@ export default function RPASTrainingPage() {
                           name="address"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel>5. Address in UAE</FormLabel>
+                              <FormLabel>Address in UAE</FormLabel>
                               <FormControl>
                                 <Textarea
                                   placeholder="Enter your complete address in UAE"
@@ -313,7 +322,7 @@ export default function RPASTrainingPage() {
                           name="qualification"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel>6. Qualification</FormLabel>
+                              <FormLabel>Qualification</FormLabel>
                               <FormControl>
                                 <Input placeholder="Enter your highest qualification" {...field} />
                               </FormControl>
@@ -327,7 +336,7 @@ export default function RPASTrainingPage() {
                           name="email"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel>7. Email Address</FormLabel>
+                              <FormLabel>Email Address</FormLabel>
                               <FormControl>
                                 <Input type="email" placeholder="Enter your email address" {...field} />
                               </FormControl>
@@ -341,7 +350,7 @@ export default function RPASTrainingPage() {
                           name="mobile"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel>8. Mobile Number</FormLabel>
+                              <FormLabel>Mobile Number</FormLabel>
                               <FormControl>
                                 <Input placeholder="Enter your mobile number" {...field} />
                               </FormControl>

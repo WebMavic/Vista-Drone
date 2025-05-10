@@ -14,19 +14,19 @@ import Image from 'next/image';
 
 interface Props {
   projects : Project[]
+  heading: string
+  chipHeading?: string
 }
 
 
-const Deliveries = ({projects}:Props) => {
+const Deliveries = ({projects,heading,chipHeading}:Props) => {
   return (
     <SectionLayout className='bg-white'>
     <div className="space-y-4">
-      <Chips title="Vista Projects" />
-      <h2 className="text-4xl font-bold text-heading">
-        Our Deliverables in the Asset Inspection
-      </h2>
+      <Chips title={chipHeading || "Vista Projects"} />
+      <h2 className="text-4xl font-bold text-heading">{heading}</h2>
     </div>
-    <Carousel className="mt-10">
+    <Carousel className="mt-10" autoSlideMobile>
       <CarouselContent>
         {projects.map((project, i) => (
           <CarouselItem className="lg:basis-1/4" key={i}>

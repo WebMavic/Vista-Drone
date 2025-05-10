@@ -1,6 +1,8 @@
 'use client';  // This tells Next.js that this is a Client Component
 
-import { Carousel, CarouselContent, CarouselItem } from '@/components/ui/carousel'
+import { Button } from '@/components/ui/button';
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel'
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
 import { certification } from '@/utils/images'
 import dynamic from 'next/dynamic'
 import Image from 'next/image'
@@ -10,68 +12,56 @@ const Chips = dynamic(() => import('@/components/ui/Chips'))
 const SectionLayout = dynamic(() => import('@/components/ui/SectionLayout'))
 
 const Certification = () => {
-  const [activeIndex, setActiveIndex] = useState(0)
-
-  // Auto-slide logic
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveIndex((prevIndex) => (prevIndex + 1) % certification.length)
-    }, 3000) // 3 seconds interval
-
-    return () => clearInterval(interval) // Clear interval on component unmount
-  }, [])
+ const [activeSheet, setActiveSheet] = useState<null | any>();
 
   return (
-    <SectionLayout className="bg-white">
+    <SectionLayout className="bg-white relative">
       <div className="space-y-4">
-        <Chips title="" />
+        <Chips title="RCA" />
         <h2 className="text-3xl font-bold capitalize text-heading">
         Recognitions, Certifications & Accreditations
         </h2>
       </div>
 
-      <div className="mt-20">
-        {/* Desktop View */}
-        <div className="lg:grid lg:grid-cols-3 gap-10 hidden">
-          {certification.map((cert, index) => (
-            <div
-              key={index}
-              className="cursor-pointer overflow-hidden hover:border rounded-lg transition duration-300 hover:scale-105 hover:-translate-y-5 ease-in-out"
-            >
-              <Image
-                src={cert}
-                alt="certification"
-                className="object-contain lg:object-cover h-[35rem]"
-              />
-            </div>
-          ))}
-        </div>
+      {activeSheet && (
+         <div className="absolute inset-0 h-screen w-full">
+         <div>
+           <Image
+             src={activeSheet}
+             alt="Certification Image"
+             className="h-96 w-full object-contain"
+           />
+           <Button onClick={() => setActiveSheet(null)} className="mt-4">Close</Button>
+         </div>
+       </div>
+      )}
 
-        {/* Mobile View */}
-        <div className="block lg:hidden">
-          <Carousel
-            opts={{
-              align: "center",
-              loop: true,
-            }}
-            autoSlideMobile // Enable auto-slide for mobile
-          >
-            <CarouselContent>
-              {certification.map((cert, index) => (
-                <CarouselItem key={index}>
-                  <div className="cursor-pointer overflow-hidden rounded-lg">
-                    <Image
-                      src={cert}
-                      alt="certification"
-                      className="object-contain lg:object-cover"
-                    />
-                  </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-          </Carousel>
-        </div>
+
+     
+
+    
+      
+      <div className="mt-20">
+        <Carousel className="mt-10" autoSlideMobile opts={{ loop: true ,align:"center"}}>
+              <CarouselContent>
+                {certification.map((cert, i) => (
+                  <CarouselItem className="lg:basis-1/4" key={i} onClick={()=>setActiveSheet(cert)} >
+                    <div className="relative lg:h-96 overflow-hidden rounded-2xl">
+                      <Image
+                        src={cert}
+                        alt="cert"
+                        className="h-full w-full object-contain"
+                      />
+
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselNext />
+              <CarouselPrevious />
+            </Carousel>
       </div>
+
     </SectionLayout>
   )
 }
