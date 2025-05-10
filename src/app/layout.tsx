@@ -26,7 +26,6 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={`${font.className}`}>
         <NextTopLoader showSpinner={false} height={4} color="#74512D"/>
-        {/* <Navbar /> */}
         <Navbar/>
         <main>{children}</main>
         <Footer />

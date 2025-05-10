@@ -25,7 +25,7 @@ const Certification = () => {
     <SectionLayout className="bg-white">
       <div className="space-y-4">
         <Chips title="" />
-        <h2 className="text-4xl font-bold capitalize text-heading">
+        <h2 className="text-3xl font-bold capitalize text-heading">
         Recognitions, Certifications & Accreditations
         </h2>
       </div>

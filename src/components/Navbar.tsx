@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import Navigation from "./Navigation";
 import Link from "next/link";
-import { buttonVariants } from "./ui/Button";
+import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 function Navbar() {

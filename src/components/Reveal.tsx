@@ -1,6 +1,6 @@
 "use client";
 import React, { PropsWithChildren } from "react";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 interface RevealProps extends PropsWithChildren {
   width ?: "fit-content" | "100%"

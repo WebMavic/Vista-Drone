@@ -1,5 +1,5 @@
 import React from "react";
-import { buttonVariants } from "./ui/Button";
+import { buttonVariants } from "./ui/button";
 import SectionLayout from "./ui/SectionLayout";
 import Image from "next/image";
 import about1 from "@/assets/images/image (2).png";

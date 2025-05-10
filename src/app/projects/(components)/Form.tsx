@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { Button, buttonVariants } from "@/components/ui/Button";
+import { Button, buttonVariants } from "@/components/ui/button";
 import SectionLayout from "@/components/ui/SectionLayout";
 import { countries } from "@/constants";
 import { useSearchParams } from "next/navigation";

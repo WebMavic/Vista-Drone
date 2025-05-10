@@ -1,6 +1,6 @@
 import React from "react";
 import SectionLayout from "@/components/ui/SectionLayout";
-import { Button } from "@/components/ui/Button";
+import { Button } from "@/components/ui/button";
 import dataSharingImg from "@/assets/images/Cloud-Computing.webp"
 import Image from "next/image";
 

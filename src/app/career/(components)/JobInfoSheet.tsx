@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { Button, buttonVariants } from "@/components/ui/Button";
+import { Button, buttonVariants } from "@/components/ui/button";
 import {
   Sheet,
   SheetContent,

@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import art from "@/assets/images/home_inner_04.png";
-import { buttonVariants } from "./ui/Button";
+import { buttonVariants } from "./ui/button";
 
 function SectionContact() {
   return (

@@ -1,7 +1,7 @@
 "use client";
 import { ChevronUp } from "lucide-react";
 import React from "react";
-import { Button } from "./Button";
+import { Button } from "./button";
 
 function scrollToTop() {
   if (typeof window !== "undefined") {

@@ -1,6 +1,6 @@
 "use client"
 import React,{useRef} from "react";
-import { Button } from "@/components/ui/Button";
+import { Button } from "@/components/ui/button";
 import SectionLayout from "@/components/ui/SectionLayout";
 import { countries } from "@/constants";
 import emailjs from '@emailjs/browser'

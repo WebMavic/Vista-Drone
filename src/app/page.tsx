@@ -16,7 +16,7 @@ const DroneApplication = dynamic(() => import("@/app/applications/(components)/D
 const SectionLayout = dynamic(() => import("@/components/ui/SectionLayout"));
 
 
-import { buttonVariants } from "@/components/ui/Button";
+import { buttonVariants } from "@/components/ui/button";
 import Reveal from "@/components/Reveal";
 
 export const metadata = {
@@ -27,9 +27,8 @@ export default function Home() {
   return (
     <React.Fragment>
       <SectionHero />
-<SectionClient />
+      <SectionClient />
       <SectionFeaturedServices />
-      <Trainings />
       <Analytics/>
       <SectionLayout className={"bg-white sm:px-0 sm:py-0 lg:h-screen"}>
         <div
@@ -71,6 +70,7 @@ export default function Home() {
       <SectionContact />
       <DroneApplication />
       <Certification />
+<Trainings />
     </React.Fragment>
   );
 }

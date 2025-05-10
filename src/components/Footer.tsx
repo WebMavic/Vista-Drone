@@ -9,13 +9,13 @@ import { Mail, MapPin, Phone } from "lucide-react";
 const Footer = () => {
   return (
     <footer className="bg-[#fefefe] dark:bg-gray-900 dark:text-white">
-      <div className="w-full bg-accent">
+      {/* <div className="w-full bg-accent">
         <Marquee className="[--duration:20s]">
           <h1 className="text-xl text-body opacity-35">
             Certified Training for drone pilots .....Coming Soon
           </h1>
         </Marquee>
-      </div>
+      </div> */}
       <div className="mx-auto w-full max-w-screen-2xl px-5 py-4 lg:py-8">
         <div className="items-start md:flex md:justify-between">
           <div className="mb-6 flex flex-col items-center justify-center gap-8 px-10 md:mb-0">

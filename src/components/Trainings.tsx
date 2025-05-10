@@ -15,7 +15,7 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/Button"
+import { Button } from "@/components/ui/button"
 import {
   Form,
   FormControl,
@@ -36,6 +36,7 @@ import { Calendar } from "@/components/ui/calendar"
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
 import { cn } from "@/lib/utils"
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
+import SectionLayout from "./ui/SectionLayout"
 
 const formSchema = z.object({
   category: z.enum(["I", "II"], {
@@ -105,17 +106,8 @@ export default function RPASTrainingPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <header className="bg-white shadow-sm">
-        <div className="container mx-auto px-4 py-6">
-          <h1 className="text-2xl md:text-3xl font-bold text-center text-gray-900">
-            Certified RPAS Training Program
-          </h1>
-        </div>
-      </header>
-
-      <main className="container mx-auto px-4 py-8">
-        <div className="max-w-4xl mx-auto space-y-8">
+      <SectionLayout className="">
+        <div className="space-y-8">
           {/* Program Info Section */}
           <Card>
             <CardHeader>
@@ -232,7 +224,7 @@ export default function RPASTrainingPage() {
                             </FormItem>
                           )}
                         />
-
+                          <div className="grid lg:grid-cols-2 gap-6 ">
                         <FormField
                           control={form.control}
                           name="fullName"
@@ -246,7 +238,7 @@ export default function RPASTrainingPage() {
                             </FormItem>
                           )}
                         />
-
+{/* 
                         <FormField
                           control={form.control}
                           name="dateOfBirth"
@@ -282,7 +274,7 @@ export default function RPASTrainingPage() {
                               <FormMessage />
                             </FormItem>
                           )}
-                        />
+                        /> */}
 
                         <FormField
                           control={form.control}
@@ -357,6 +349,7 @@ export default function RPASTrainingPage() {
                             </FormItem>
                           )}
                         />
+                        </div>
 
                         <Button type="submit" className="w-full" disabled={isSubmitting}>
                           {isSubmitting ? (
@@ -406,7 +399,17 @@ export default function RPASTrainingPage() {
             </Card>
           )}
         </div>
-      </main>
-    </div>
+      </SectionLayout>
   )
 }
+
+
+
+
+{/* <header className="bg-white shadow-sm">
+        <div className="container mx-auto px-4 py-6">
+          <h1 className="text-2xl md:text-3xl font-bold text-center text-gray-900">
+            Certified RPAS Training Program
+          </h1>
+        </div>
+      </header> */}

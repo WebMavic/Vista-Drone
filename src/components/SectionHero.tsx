@@ -1,7 +1,7 @@
 import React from "react";
 import HeroCarousal from "./Hero/HeroCarousal";
 import { HeroImages } from "@/utils/images";
-import { Button, buttonVariants } from "@/components/ui/Button";
+import { Button, buttonVariants } from "@/components/ui/button";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import Reveal from "./Reveal";
 import Link from "next/link";

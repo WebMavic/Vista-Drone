@@ -2,7 +2,7 @@ import Image from "next/image";
 import React from "react";
 import Reveal from "../Reveal";
 import Link from "next/link";
-import { buttonVariants } from "../ui/Button";
+import { buttonVariants } from "../ui/button";
 import { Hero } from "@/types/steps";
 import { cn } from "@/utils/cn";
 import Anime from "./Anime";

@@ -2,7 +2,7 @@
 
 import React from "react";
 import { steps } from "@/constants";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 const StepsCards = () => {
   return (

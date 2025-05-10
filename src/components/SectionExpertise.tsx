@@ -2,7 +2,7 @@
 import React from "react";
 import Chips from "./ui/Chips";
 import SectionLayout from "./ui/SectionLayout";
-import { motion} from "framer-motion";
+import { motion} from "motion/react";
 import Image from "next/image";
 
 import inner from "@/assets/images/home_inner_05.png";
