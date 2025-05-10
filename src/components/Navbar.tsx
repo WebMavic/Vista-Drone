@@ -7,32 +7,40 @@ import { cn } from "@/lib/utils";
 import {motion} from "motion/react";
 
 function Navbar() {
-  const [isMobileMenuHidden, setIsMobileMenuHidden] = useState(true); // Track mobile menu visibility
+  const [isMobileMenuHidden, setIsMobileMenuHidden] = useState(true); 
   const [isScrolled, setIsScrolled] = useState(false);
 
+  const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
+
   useEffect(() => {
-    // Ensure the mobile menu is hidden on page load or reload
     setIsMobileMenuHidden(true);
   }, []);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > window.innerHeight);
+        setIsScrolled(window.scrollY > window.innerHeight);
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [isMobile]);
+
+  useEffect(()=>{
+    if(isMobile){
+      setIsMobileMenuHidden(true);
+    }
+  },[isScrolled]);
+
+  
   
 
   return (
     <motion.nav 
     className={cn("absolute transition-all w-full z-20 top-0 start-0 ease-in-out duration-300",
-      isScrolled ? 'bg-white shadow-sm fixed' : 'bg-transparent'
+      isScrolled  ?  'bg-white shadow-sm fixed' : 'bg-transparent',
+      
     )}
-    initial={{ y: -100 }}
-    animate={{ y: 0 }}
-    
+   
     >
       <div className="flex flex-wrap items-center justify-between  md:px-32 md:py-4 py-5 px-5 ">
         <Link href="/" onClick={() => setIsMobileMenuHidden(true)}>
@@ -52,6 +60,7 @@ function Navbar() {
           
        
           {/* Button to toggle mobile menu */}
+          {isScrolled && (
           <button
             data-collapse-toggle="navbar-sticky"
             onClick={() => setIsMobileMenuHidden((prev) => !prev)}
@@ -77,6 +86,7 @@ function Navbar() {
               />
             </svg>
           </button>
+          )}
         </div>
 
         {/* Menu for desktop and mobile */}

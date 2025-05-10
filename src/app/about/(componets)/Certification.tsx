@@ -1,8 +1,6 @@
 'use client';  // This tells Next.js that this is a Client Component
 
-import { Button } from '@/components/ui/button';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel'
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
 import { certification } from '@/utils/images'
 import { X } from 'lucide-react';
 import { AnimatePresence, motion } from 'motion/react';
@@ -16,6 +14,8 @@ const SectionLayout = dynamic(() => import('@/components/ui/SectionLayout'))
 const Certification = () => {
  const [previewImage, setPreviewImage] = useState<any | null>(null);
 
+ const isMobile = ()=> window.innerWidth < 768;
+
   return (
     <SectionLayout className="bg-white relative">
       <div className="space-y-4">
@@ -25,13 +25,8 @@ const Certification = () => {
         </h2>
       </div>
 
-      {previewImage && <PreviewModal onClose={() => setPreviewImage(null)} image={previewImage} isOpen={!!previewImage} />}
-
-
-     
-
-    
-      
+      {previewImage && !isMobile() && <PreviewModal onClose={() => setPreviewImage(null)} image={previewImage} isOpen={!!previewImage} />}
+  
       <div className="mt-20">
         <Carousel className="mt-10" autoSlideMobile opts={{ loop: true ,align:"center"}}>
               <CarouselContent>
@@ -100,18 +95,19 @@ export const PreviewModal = ({ image, onClose , isOpen }:{image : any, onClose: 
     <AnimatePresence>
 
       {isOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm">
+        <div className="fixed flex inset-0 z-50 items-center justify-center p-4 bg-black/50 backdrop-blur-sm">
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
             className="absolute inset-0"
-            onClick={onClose}
+            // onClick={onClose}
+            ref={modalRef}
           />
           
           <motion.div
-            ref={modalRef}
+            
             initial={{ opacity: 0, scale: 0.95, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
@@ -134,7 +130,7 @@ export const PreviewModal = ({ image, onClose , isOpen }:{image : any, onClose: 
 
             <button 
               onClick={onClose}
-              className="absolute -top-8 right-1/2 bg-white bg-opacity-80 rounded-full p-1 z-10 hover:bg-gray-100 transition-colors"
+              className="absolute lg:-top-8 top-0 right-1/2 bg-white bg-opacity-80 rounded-full p-1 z-10 hover:bg-gray-100 transition-colors"
             >
               <X className="w-5 h-5 text-gray-600" />
             </button> 

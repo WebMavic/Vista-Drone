@@ -5,7 +5,7 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import * as z from "zod"
 import { format } from "date-fns"
-
+import emailjs from "@emailjs/browser";
 import {
   Card,
   CardContent,
@@ -92,21 +92,38 @@ export default function RPASTrainingPage() {
   ]
 
   function onSubmit(values: z.infer<typeof formSchema>) {
-    setIsSubmitting(true)
+    const formattedValues = {
+      ...values,
+      category : values.category === "I" ?  categoryOptions[0].label : categoryOptions[1].label,
+      dateOfBirth: format(values.dateOfBirth, "dd/MM/yyyy"),
+    }
 
-    setTimeout(() => {
-      const formattedValues = {
-        ...values,
-        category : values.category === "I" ?  categoryOptions[0].label : categoryOptions[1].label,
-        dateOfBirth: format(values.dateOfBirth, "yyyy-MM-dd"),
-      }
-      console.log(formattedValues)
-      setIsSubmitting(false)
-      setIsSubmitted(true)
-      toast.success("Application submitted successfully")
-     
-    }, 1500)
-  }
+      setIsSubmitting(true) 
+
+       
+      emailjs
+        .send(
+          process.env.NEXT_PUBLIC_SERVICE_ID2!,
+          process.env.NEXT_PUBLIC_TEMPLATE_ID3!,
+          formattedValues,
+          {
+            publicKey: process.env.NEXT_PUBLIC_PUBLIC_KEY2,
+          },
+        )
+        .then(
+          () => {
+            setIsSubmitting(false)
+            setIsSubmitted(true)
+            toast.success("Application submitted successfully")
+          },
+          () => {
+            toast.error("Something went wrong");
+            form.reset()
+            setIsSubmitting(false)  
+          },
+        );     
+    }
+  
 
   return (
       <SectionLayout className="">
@@ -169,7 +186,7 @@ export default function RPASTrainingPage() {
             <Card>
               <CardHeader className="pb-3">
                 <div className="flex items-center justify-between">
-                  <div>
+                  <div className="space-y-5">
                     <CardTitle>Application Form</CardTitle>
                     <CardDescription>Submit your application for the RPAS Training Program</CardDescription>
                   </div>
