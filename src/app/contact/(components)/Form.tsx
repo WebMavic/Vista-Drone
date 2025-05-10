@@ -173,7 +173,7 @@ function Form() {
               rows={4}
               placeholder="Leave a message..."
               required
-              className="inputs"
+              className="inputs max-h-40"
             ></textarea>
           </div>
 

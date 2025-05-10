@@ -8,7 +8,7 @@ import { Mail, MapPin, Phone } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#fefefe] dark:bg-gray-900 dark:text-white">
+    <footer className="bg-neutral-50 border-t dark:bg-gray-900 dark:text-white">
       {/* <div className="w-full bg-accent">
         <Marquee className="[--duration:20s]">
           <h1 className="text-xl text-body opacity-35">

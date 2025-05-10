@@ -4,22 +4,43 @@ import Navigation from "./Navigation";
 import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import {motion} from "motion/react";
 
 function Navbar() {
   const [isMobileMenuHidden, setIsMobileMenuHidden] = useState(true); // Track mobile menu visibility
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     // Ensure the mobile menu is hidden on page load or reload
     setIsMobileMenuHidden(true);
   }, []);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > window.innerHeight);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+  
+
   return (
-    <nav className="bg-white  fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
+    <motion.nav 
+    className={cn("absolute transition-all w-full z-20 top-0 start-0 ease-in-out duration-300",
+      isScrolled ? 'bg-white shadow-sm fixed' : 'bg-transparent'
+    )}
+    initial={{ y: -100 }}
+    animate={{ y: 0 }}
+    
+    >
       <div className="flex flex-wrap items-center justify-between  md:px-32 md:py-4 py-5 px-5 ">
         <Link href="/" onClick={() => setIsMobileMenuHidden(true)}>
-          <h1 className="text-xl font-medium lg:text-2xl">
-            VISTA DRONE
-          </h1>
+          <span className={cn("text-lg font-medium tracking-wide uppercase lg:text-xl",
+            isScrolled ? "text-primary dark:text-white" : "text-white"
+          )}>
+            Vista Drone
+          </span>
         </Link>
         <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
         <div className="ms-4 md:hidden block" >
@@ -65,7 +86,7 @@ function Navbar() {
             isMobileMenuHidden ? "hidden" : "flex" // Conditionally hidden on mobile
           )}
         >
-          <Navigation hideNavBar={setIsMobileMenuHidden} />
+          <Navigation hideNavBar={setIsMobileMenuHidden} isScrolled={isScrolled} />
           <div className="ms-4 md:block hidden" >
           <Link href="/contact" className={buttonVariants()}>
             Contact
@@ -76,7 +97,7 @@ function Navbar() {
        
        
       </div>
-    </nav>
+    </motion.nav>
   );
 }
 

@@ -63,7 +63,7 @@ export default Certification;
 
 
 
-const PreviewModal = ({ image, onClose , isOpen }:{image : any, onClose: () => void, isOpen: boolean}) => {
+export const PreviewModal = ({ image, onClose , isOpen }:{image : any, onClose: () => void, isOpen: boolean}) => {
   const modalRef = useRef<HTMLDivElement | null>(null);
 
   

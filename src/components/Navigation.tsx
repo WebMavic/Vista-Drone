@@ -18,7 +18,7 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { ChevronDownIcon } from "lucide-react";
 
-function Navigation({ hideNavBar }: { hideNavBar: Dispatch<SetStateAction<boolean>> }) {
+function Navigation({ hideNavBar,isScrolled }: { hideNavBar: Dispatch<SetStateAction<boolean>>, isScrolled: boolean }) {
   const pathname = usePathname();
   const [hidden, setHidden] = useState(true);
 
@@ -34,16 +34,18 @@ function Navigation({ hideNavBar }: { hideNavBar: Dispatch<SetStateAction<boolea
 
   return (
     <NavigationMenu className="w-full">
-      <NavigationMenuList className="w-full flex flex-col items-start text-gray-900 font-medium md:flex-row md:justify-end">
+      <NavigationMenuList className={cn("w-full flex flex-col items-start font-medium md:flex-row md:justify-end",
+        isScrolled ? "text-gray-900" : "text-white"
+      )}>
         
         {/* About Link */}
         <NavigationMenuItem onClick={()=>hideNavBar(true)}>
           <Link href="/about" legacyBehavior passHref>
-            <NavigationMenuLink active={true}
+            <NavigationMenuLink 
               className={cn(
-                navigationMenuTriggerStyle(), // Active state
-                "hover:text-accent",
-                pathname == "/about" && "text-accent font-semibold transition-colors" // Hover effect
+                navigationMenuTriggerStyle(), 
+                "hover:text-accent font-normal",
+                pathname == "/about" && "text-accent underline underline-offset-8 font-semibold transition-colors" // Hover effect
               )}
             >
               About
@@ -53,7 +55,7 @@ function Navigation({ hideNavBar }: { hideNavBar: Dispatch<SetStateAction<boolea
 
         {/* Applications Dropdown */}
         <NavigationMenuItem className="md:block hidden" onClick={()=>hideNavBar(true)} >
-          <NavigationMenuTrigger className={cn("hover:text-accent",pathname == '/applications' && 'text-accent font-semibold')}>
+          <NavigationMenuTrigger className={cn("hover:text-accent font-normal",pathname == '/applications' && 'text-accent font-semibold underline underline-offset-8')}>
           <Link href={"/applications"}>Applications</Link>
           </NavigationMenuTrigger>
           <NavigationMenuContent>
@@ -118,8 +120,8 @@ function Navigation({ hideNavBar }: { hideNavBar: Dispatch<SetStateAction<boolea
             <NavigationMenuLink
               className={cn( // Active state
                 navigationMenuTriggerStyle(),
-                "hover:text-accent",
-                pathname === '/projects' && 'text-accent font-semibold transition-colors',
+                "hover:text-accent font-normal",
+                pathname === '/projects' && 'text-accent underline underline-offset-8 font-semibold transition-colors',
                 // Hover effect
               )}
             >
@@ -134,8 +136,8 @@ function Navigation({ hideNavBar }: { hideNavBar: Dispatch<SetStateAction<boolea
             <NavigationMenuLink
               className={cn(
                 navigationMenuTriggerStyle(),
-                "hover:text-accent",
-                pathname === '/career' && 'text-accent font-semibold transition-colors',
+                "hover:text-accent font-normal",
+                pathname === '/career' && 'text-accent underline underline-offset-8 font-semibold transition-colors',
               )}
             >
               Careers

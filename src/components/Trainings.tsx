@@ -28,15 +28,11 @@ import {
 import { Input } from "@/components/ui/input"
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { Textarea } from "@/components/ui/textarea"
-import { Toast } from "@/components/ui/toast"
-import { ToastDescription } from "@/components/ui/toast"
-import { Toaster } from "@/components/ui/toaster"
-import { CalendarIcon, CheckCircle2, ChevronDown, ChevronUp, Loader2 } from "lucide-react"
-import { Calendar } from "@/components/ui/calendar"
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
-import { cn } from "@/lib/utils"
+import { CheckCircle2, ChevronDown, ChevronUp, Loader2 } from "lucide-react"
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
 import SectionLayout from "./ui/SectionLayout"
+import { toast } from "sonner"
+import { useMemo } from "react";
 
 const formSchema = z.object({
   category: z.enum(["I", "II"], {
@@ -84,30 +80,43 @@ export default function RPASTrainingPage() {
     },
   })
 
+  const minDate = useMemo(() => {
+    const today = new Date();
+    today.setFullYear(today.getFullYear() - 18);
+    return today.toISOString().split("T")[0];
+  }, []);
+
+  const categoryOptions = [
+    { value: "I", label: "Category I: Professional / Commercial (5 days)" },
+    { value: "II", label: "Category II: Recreational / Hobby (2 days)" },
+  ]
+
   function onSubmit(values: z.infer<typeof formSchema>) {
     setIsSubmitting(true)
 
     setTimeout(() => {
-      console.log(values)
+      const formattedValues = {
+        ...values,
+        category : values.category === "I" ?  categoryOptions[0].label : categoryOptions[1].label,
+        dateOfBirth: format(values.dateOfBirth, "yyyy-MM-dd"),
+      }
+      console.log(formattedValues)
       setIsSubmitting(false)
       setIsSubmitted(true)
-      // Trigger toast notification for success
-      Toast({
-        children: (
-          <div>
-            <div className="font-semibold">Application Submitted</div>
-            <div className="text-sm opacity-90">
-              Your application has been successfully submitted. We will contact you shortly.
-            </div>
-          </div>
-        ),
-      })
+      toast.success("Application submitted successfully")
+     
     }, 1500)
   }
 
   return (
       <SectionLayout className="">
         <div className="space-y-8">
+          
+        <div className="container mx-auto px-4 py-6">
+          <h1 className="text-2xl md:text-3xl font-bold text-center text-gray-900">
+            Certified RPAS Training Program
+          </h1>
+        </div>
           {/* Program Info Section */}
           <Card>
             <CardHeader>
@@ -167,8 +176,8 @@ export default function RPASTrainingPage() {
                 </div>
               </CardHeader>
 
-              <Collapsible open={isOpen} onOpenChange={setIsOpen}>
-                <CollapsibleTrigger asChild>
+              <Collapsible open={isOpen} onOpenChange={setIsOpen} >
+                <CollapsibleTrigger asChild >
                   <div className="px-6 pb-4">
                     <Button variant={isOpen ? "ghost" : "outline"} className="w-full" onClick={() => setIsOpen(!isOpen)}>
                       {isOpen ? (
@@ -186,7 +195,7 @@ export default function RPASTrainingPage() {
                   </div>
                 </CollapsibleTrigger>
 
-                <CollapsibleContent className="transition-all duration-300 ease-in-out">
+                <CollapsibleContent className="CollapsibleContent">
                   <CardContent>
                     <Form {...form}>
                       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
@@ -272,13 +281,17 @@ export default function RPASTrainingPage() {
                                    </div>
                                 </PopoverContent>
                               </Popover> */}
+                              <FormControl>
                               <Input 
-                              type="date"
-                              min="2008-01-01"
-                              max="2018-12-31" 
-                              
-                              onChange={(e) => field.onChange(e)} 
+                                type="date"
+                                min="1900-01-01"
+                                max={minDate}
+                                {...field}
+                                onChange={(e) => field.onChange(new Date(e.target.value))} 
+                                value={field.value ? format(field.value, "yyyy-MM-dd") : ""}
+                                placeholder="Select your date of birth"
                               />
+                              </FormControl>
                               <FormDescription>You must be at least 18 years old to apply.</FormDescription>
                               <FormMessage />
                             </FormItem>
@@ -381,7 +394,6 @@ export default function RPASTrainingPage() {
                   </CardFooter>
                 </CollapsibleContent>
               </Collapsible>
-              <Toaster />
             </Card>
           ) : (
             <Card>
@@ -415,10 +427,28 @@ export default function RPASTrainingPage() {
 
 
 
-{/* <header className="bg-white shadow-sm">
-        <div className="container mx-auto px-4 py-6">
-          <h1 className="text-2xl md:text-3xl font-bold text-center text-gray-900">
-            Certified RPAS Training Program
-          </h1>
-        </div>
-      </header> */}
+
+
+
+
+
+
+interface DateInputProps extends React.InputHTMLAttributes<HTMLInputElement> {}
+
+const DateInput: React.FC<DateInputProps> = ({ ...props }) => {
+  const minDate = useMemo(() => {
+    const today = new Date();
+    today.setFullYear(today.getFullYear() - 18);
+    return today.toISOString().split("T")[0];
+  }, []);
+
+  return (
+    <input
+      type="date"
+      max={minDate}
+      {...props}
+      className="border rounded-md p-2 w-full"
+    />
+  );
+};
+

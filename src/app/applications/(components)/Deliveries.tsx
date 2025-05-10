@@ -1,6 +1,7 @@
+"use client";
 import Chips from '@/components/ui/Chips'
 import SectionLayout from '@/components/ui/SectionLayout'
-import React from 'react'
+import React, { useState } from 'react'
 import {
   Carousel,
   CarouselContent,
@@ -10,6 +11,7 @@ import {
 } from "@/components/ui/carousel";
 import { Project } from '@/types/steps';
 import Image from 'next/image';
+import { PreviewModal } from '@/app/about/(componets)/Certification';
 
 
 interface Props {
@@ -20,16 +22,17 @@ interface Props {
 
 
 const Deliveries = ({projects,heading,chipHeading}:Props) => {
+   const [previewImage, setPreviewImage] = useState<any | null>(null);
   return (
     <SectionLayout className='bg-white'>
     <div className="space-y-4">
       <Chips title={chipHeading || "Vista Projects"} />
       <h2 className="text-4xl font-bold text-heading">{heading || "Default Heading"}</h2>
     </div>
-    <Carousel className="mt-10" autoSlideMobile>
+    <Carousel className="mt-10" autoSlideMobile opts={{ loop: true ,align:"center"}} >
       <CarouselContent>
         {projects.map((project, i) => (
-          <CarouselItem className="lg:basis-1/4" key={i}>
+          <CarouselItem className="lg:basis-1/4" key={i} onClick={() => setPreviewImage(project.avatar)} >
             <div className="relative h-96 overflow-hidden rounded-2xl">
               <div className="absolute h-full w-full  bg-black/60 opacity-0 transition-all duration-150 ease-in-out hover:opacity-100">
                 <div className="p-5 text-left">
@@ -53,6 +56,8 @@ const Deliveries = ({projects,heading,chipHeading}:Props) => {
       <CarouselNext />
       <CarouselPrevious />
     </Carousel>
+
+    {previewImage && <PreviewModal onClose={() => setPreviewImage(null)} image={previewImage} isOpen={!!previewImage} />}
   </SectionLayout>
   )
 }

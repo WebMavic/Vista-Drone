@@ -30,7 +30,7 @@ function SectionExpertise() {
           </p>
         </div>
 
-        <div className="relative  my-16 grid lg:grid-cols-3 ">
+        <div className="relative  my-16 grid lg:grid-cols-3  ">
           {expertises.map((expertise, index) => (
             <motion.div
               initial={{ opacity: 0 }}
