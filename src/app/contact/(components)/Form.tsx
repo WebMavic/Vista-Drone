@@ -1,11 +1,6 @@
 "use client"
-<<<<<<< Updated upstream
 import React,{useRef} from "react";
 import { Button } from "@/components/ui/button";
-=======
-import React, { useRef } from "react";
-import { Button } from "@/components/ui/Button";
->>>>>>> Stashed changes
 import SectionLayout from "@/components/ui/SectionLayout";
 import { countries } from "@/constants";
 import emailjs from "@emailjs/browser";
