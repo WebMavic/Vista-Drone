@@ -3,6 +3,10 @@ import React, { useState } from "react";
 import SectionLayout from "@/components/ui/SectionLayout";
 import { Button } from "@/components/ui/button";
 import dataSharingImg from "@/assets/images/Cloud-Computing.webp"
+import { MdMiscellaneousServices ,MdOutlineAutoGraph } from "react-icons/md";
+import { TbHeartRateMonitor } from "react-icons/tb";
+import { DiVisualstudio } from "react-icons/di";
+
 import Image from "next/image";
 import { motion,AnimatePresence } from "motion/react"
 import { FaTableCellsLarge } from "react-icons/fa6";
@@ -40,10 +44,10 @@ const DataSharing = () => {
                     <div className="max-w-xl text-base leading-7 text-gray-700 lg:max-w-lg">
                                 
                                 <ul role="list" className="mt-8 space-y-8 text-gray-600">
-                                 {data.map((item, index) => (
+                                 {data.map(({title,icon:Icon}, index) => (
                                    <li className="flex gap-x-3" key={index}>
-                                   <FaTableCellsLarge  aria-hidden="true" className="mt-1 h-5 w-5 flex-none text-accent" />
-                                   <span className="font-semibold text-gray-900">{item.title}</span>
+                                    {Icon}
+                                   <span className="font-semibold text-gray-900">{title}</span>
                                  </li>
                                  ))}
                                  
@@ -62,7 +66,7 @@ const DataSharing = () => {
               className="mt-2"
               variant={"outline"}
             >
-              {isHidden ? "Learn More" : "Show Less"}
+              {!isHidden ? "Learn More" : "Show Less"}
             </Button>
           </div>
 
@@ -92,18 +96,18 @@ export default DataSharing;
 const data = [
   {
     title: "Track material volumes (ideal for mining, stockpiles, and earthworks)",
-    icon: <FaTableCellsLarge aria-hidden="true" className="mt-1 h-5 w-5 flex-none text-accent" />,
+    icon: <MdOutlineAutoGraph  aria-hidden="true" className="mt-1 h-5 w-5 flex-none text-accent" />,
   },
   {
     title: "Monitor site changes over time",
-    icon: <FaTableCellsLarge aria-hidden="true" className="mt-1 h-5 w-5 flex-none text-accent" />,
+    icon: <TbHeartRateMonitor  aria-hidden="true" className="mt-1 h-5 w-5 flex-none text-accent" />,
   },
   {
     title: "Identify areas needing maintenance before problems grow",
-    icon: <FaTableCellsLarge aria-hidden="true" className="mt-1 h-5 w-5 flex-none text-accent" />,
+    icon: <MdMiscellaneousServices  aria-hidden="true" className="mt-1 h-5 w-5 flex-none text-accent" />,
   },
   {
     title: "Share accurate visuals with your team, anytime, anywhere",
-    icon: <FaTableCellsLarge aria-hidden="true" className="mt-1 h-5 w-5 flex-none text-accent" />,
+    icon: <DiVisualstudio  aria-hidden="true" className="mt-1 h-5 w-5 flex-none text-accent" />,
   },
 ];

@@ -145,6 +145,8 @@ export const HeroImages:StaticImport[] = [
   require("@/assets/images/h9.jpg"),
   
   require("@/assets/images/h2.jpg"),
+  require("@/assets/images/h12.jpg"),
+  //require("@/assets/images/h13.jpg"),
   require("@/assets/images/h3.jpg"),
   
   require("@/assets/images/h5.jpg"),
@@ -155,9 +157,9 @@ export const HeroImages:StaticImport[] = [
   
    //require("@/assets/images/h10.jpg"),
    require("@/assets/images/h11.jpg"),
-   require("@/assets/images/h1.jpg"),
-   require("@/assets/images/h8.jpg"),
-   require("@/assets/images/h4.jpg"),
+  // require("@/assets/images/h1.jpg"),
+  // require("@/assets/images/h8.jpg"),
+   //require("@/assets/images/h4.jpg"),
   
   
   // require("@/assets/images/mining/mine4.jpeg"),
