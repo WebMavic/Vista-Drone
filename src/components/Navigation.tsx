@@ -82,7 +82,7 @@ function Navigation({ hideNavBar,isScrolled }: { hideNavBar: Dispatch<SetStateAc
               <NavigationMenuLink
                 onClick={() => hideNavBar(true)}
                 className={cn(
-                  "block text-sm font-medium w-max text-gray-900 rounded hover:bg-gray-100 hover:text-accent md:p-0",
+                  "block text-lg font-medium w-max text-gray-900 rounded hover:bg-gray-100 hover:text-accent md:p-0",
                   pathname == '/applications' && 'text-accent', // Active state for mobile
                 )}
               >

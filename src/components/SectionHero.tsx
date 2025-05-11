@@ -1,10 +1,14 @@
 import React from "react";
-import HeroCarousal from "./Hero/HeroCarousal";
+import Link from "next/link";
+import dynamic from "next/dynamic";
+
 import { HeroImages } from "@/utils/images";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { ArrowLeft, ArrowRight } from "lucide-react";
-import Reveal from "./Reveal";
-import Link from "next/link";
+
+const HeroCarousal = dynamic(()=>import("./Hero/HeroCarousal"))
+const Reveal = dynamic(() => import("./Reveal"));
+
 function SectionHero() {
   return (
     <section className="relative min-h-[70vh] w-full overflow-hidden px-5 lg:h-screen lg:px-32">

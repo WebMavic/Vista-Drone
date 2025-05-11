@@ -6,9 +6,6 @@ import SectionClient from "@/components/SectionClient";
 const SectionLayout = dynamic(()=>import("@/components/ui/SectionLayout"))
 
 function ClientCaurosal() {
-
-
-  5;
   return (
     <>
       <SectionLayout className="bg-white">

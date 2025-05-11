@@ -92,8 +92,8 @@ function Navbar() {
         {/* Menu for desktop and mobile */}
         <div
           className={cn(
-            "items-center justify-between w-full md:flex md:w-auto md:order-2", // Always visible on desktop (md:flex)
-            isMobileMenuHidden ? "hidden" : "flex" // Conditionally hidden on mobile
+            "items-center justify-between w-full lg:flex lg:w-auto lg:order-2 ", 
+            isMobileMenuHidden ? "hidden" : "flex" 
           )}
         >
           <Navigation hideNavBar={setIsMobileMenuHidden} isScrolled={isScrolled} />
@@ -104,6 +104,8 @@ function Navbar() {
           </div>
          
         </div>
+        
+       
        
        
       </div>

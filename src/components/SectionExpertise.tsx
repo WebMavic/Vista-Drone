@@ -37,7 +37,7 @@ function SectionExpertise() {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true, }}
               transition={{ delay: index * 0.25, ease: "linear" }}
-              className="group flex cursor-pointer  flex-col items-start justify-center gap-5 rounded-md p-6 lg:h-96 "
+              className="group flex cursor-pointer  flex-col items-start  gap-5 rounded-md p-6 lg:h-96 "
               key={index}
             >
               <expertise.avatar className="size-16 rounded-full  p-2 text-darksubheading group-hover:bg-accent/80 group-hover:text-white transition duration-300 ease-in" />

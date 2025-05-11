@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { Button, buttonVariants } from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 import {
   Sheet,
   SheetContent,
@@ -11,37 +11,14 @@ import {
 
 import SectionLayout from "@/components/ui/SectionLayout";
 
-import { GrCertificate } from "react-icons/gr";
-import { IoLocationSharp, IoTimeOutline } from "react-icons/io5";
-import { PiBagSimpleLight } from "react-icons/pi";
+import { IoTimeOutline } from "react-icons/io5";
 import { MdOutlinePeople } from "react-icons/md";
 import { GiDeliveryDrone } from "react-icons/gi";
 import { SiDrone } from "react-icons/si";
+import { MapPinIcon} from "lucide-react";
+import { Job } from "@/types/steps";
 
 
-
-import {
-  CalendarIcon,
-  MapPinIcon,
-  GraduationCapIcon,
-  ClockIcon,
-} from "lucide-react";
-import Link from "next/link";
-
-type Job = {
-  title: string;
-  location: string;
-  joining: string;
-  jobPosted: string;
-  qualification: string;
-  applyBy: string;
-  rolesAndResponsibilities: string[];
-  desiredCandidateProfile: string[];
-  from: {
-    title: string;
-    address: string;
-  };
-};
 
 const JobInfoSheet = () => {
   const [activeSheet, setActiveSheet] = useState<Job>();

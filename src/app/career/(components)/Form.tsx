@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { Button, buttonVariants } from "@/components/ui/button";
 import SectionLayout from "@/components/ui/SectionLayout";
 import { countries } from "@/constants";
@@ -10,177 +10,314 @@ import { toast } from "sonner";
 import Link from "next/link";
 import { countryCodes } from "@/app/contact/(components)/Form";
 
+import { z } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+
+import {
+  Form as FormComponent,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form";
+
+import { Input } from "@/components/ui/input";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { useSearchParams } from "next/navigation";
+
+const formSchema = z.object({
+  name: z.string().min(1, {
+    message: "Name is required",
+  }),
+  email: z.string().email({
+    message: "Invalid email address",
+  }),
+  phone: z.string().min(1, {
+    message: "Phone number is required",
+  }),
+  countryCode: z.string().min(1, {
+    message: "Country code is required",
+  }),
+  country: z.string().min(1, {
+    message: "Country is required",
+  }),
+  job: z.string().min(1, {
+    message: "Job profile is required",
+  }),
+  bio: z.string().min(1, {
+    message: "Link to resume/LinkedIn/portfolio is required",
+  }),
+});
+
 function Form() {
-  const ref = React.useRef<HTMLFormElement>(null);
-  const [isPending, setIsPending] = React.useState(false);
-  const submitForm = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsPending(true);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const searchParam = useSearchParams();
+  const job = searchParam.get("job");
+
+  const form = useForm<z.infer<typeof formSchema>>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      name: "",
+      email: "",
+      phone: "",
+      countryCode: "971",
+      country: "",
+      job: job || "",
+      bio: "",
+    },
+  });
+
+  const submitForm = async (values: z.infer<typeof formSchema>) => {
+    setIsSubmitting(true);
+
     emailjs
-      .sendForm(
+      .send(
         process.env.NEXT_PUBLIC_SERVICE_ID!,
         process.env.NEXT_PUBLIC_TEMPLATE_ID2!,
-        ref.current!,
+        values,
         {
           publicKey: process.env.NEXT_PUBLIC_PUBLIC_KEY,
         },
       )
       .then(
         () => {
-          toast.success("Application sent successfully");
-          ref.current?.reset();
-          setIsPending(false);
+          setIsSubmitting(false);
+          setIsSubmitted(true);
+          form.reset();
+          toast.success("Application Sent Successfully");
         },
-        () => {
-          toast.error("Something went wrong");
-          ref.current?.reset();
-          setIsPending(false);
+        (error) => {
+          setIsSubmitting(false);
+          console.log(error);
+          toast.error("Something went wrong", {
+            description: "Please try again later",
+          });
         },
       );
   };
 
   return (
     <SectionLayout className="mt-16 rounded-md border-zinc-600 bg-white px-5 lg:mt-5 lg:px-16">
-      <div className="flex items-center divide-x">
-        <Image
-          src={logo}
-          alt="logo"
-          className="h-16 w-fit object-contain pr-2"
-        />
-        <h1 className="ps-3 font-semibold tracking-wide text-heading lg:text-2xl">
-          Apply now
-        </h1>
-      </div>
-      <form ref={ref} onSubmit={submitForm} className="space-y-5 py-10">
-        <div className="grid gap-6 lg:grid-cols-2">
-          <div>
-            <label htmlFor="name" className="block mb-1 text-sm font-medium text-gray-700">
-              Name
-            </label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              placeholder="Name"
-              required
-              className="inputs"
-              autoComplete="first name"
+      {!isSubmitted ? (
+        <React.Fragment>
+          <div className="flex items-center divide-x">
+            <Image
+              src={logo}
+              alt="logo"
+              className="h-16 w-fit object-contain pr-2"
             />
+            <h1 className="ps-3 font-semibold tracking-wide text-heading lg:text-2xl">
+              Apply now
+            </h1>
           </div>
 
-          <div>
-            <label htmlFor="email" className="block mb-1 text-sm font-medium text-gray-700">
-              Email
-            </label>
-            <input
-              type="email"
-              id="email"
-              autoComplete="email"
-              name="email"
-              placeholder="Email"
-              required
-              className="inputs"
-            />
-          </div>
+          <FormComponent {...form}>
+            <form
+              onSubmit={form.handleSubmit(submitForm)}
+              className="space-y-5 py-10"
+            >
+              <div className="grid gap-6 lg:grid-cols-2">
+                <FormField
+                  control={form.control}
+                  name="name"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Your name</FormLabel>
+                      <FormControl>
+                        <Input placeholder="Enter your full name" {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
 
-          <div>
-            <label htmlFor="phone" className="block mb-1 text-sm font-medium text-gray-700">
-              Phone
-            </label>
-            <div className="relative rounded-md">
-              <div className="absolute inset-y-0 left-0 flex items-center">
-                <select
-                  name="countryCode"
-                  autoComplete="country-code"
-                  className="h-full rounded-md border-0 bg-transparent py-0 pl-3 text-gray-500 focus:outline-none focus:ring-inset lg:text-sm"
-                >
-                  {countryCodes.map((code, i) => (
-                    <option key={i} value={code}>{`+${code}`}</option>
-                  ))}
-                </select>
+                <FormField
+                  control={form.control}
+                  name="email"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Email</FormLabel>
+                      <FormControl>
+                        <Input placeholder="Enter your email" {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+
+                <div className="relative col-span-1 inline-flex w-full gap-2">
+                  <FormField
+                    control={form.control}
+                    name="countryCode"
+                    render={({ field }) => (
+                      <FormItem className="">
+                        <FormLabel>Country Code</FormLabel>
+                        <Select
+                          onValueChange={field.onChange}
+                          defaultValue={field.value}
+                        >
+                          <FormControl>
+                            <SelectTrigger className="w-full">
+                              <SelectValue placeholder="country code" />
+                            </SelectTrigger>
+                          </FormControl>
+                          <SelectContent>
+                            {countryCodes.map((code, i) => (
+                              <SelectItem key={i} value={code}>
+                                {`+${code}`}
+                              </SelectItem>
+                            ))}
+                          </SelectContent>
+                        </Select>
+
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+
+                  <FormField
+                    control={form.control}
+                    name="phone"
+                    render={({ field }) => (
+                      <FormItem className="flex-1">
+                        <FormLabel>Phone</FormLabel>
+                        <FormControl>
+                          <Input
+                            placeholder="Enter your phone number"
+                            {...field}
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                </div>
+
+                <FormField
+                  control={form.control}
+                  name="country"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Country</FormLabel>
+                      <Select
+                        onValueChange={field.onChange}
+                        defaultValue={field.value}
+                      >
+                        <FormControl>
+                          <SelectTrigger className="w-full">
+                            <SelectValue placeholder="Select your country" />
+                          </SelectTrigger>
+                        </FormControl>
+                        <SelectContent>
+                          {countries.map((country, i) => (
+                            <SelectItem key={country + i} value={country}>
+                              {country}
+                            </SelectItem>
+                          ))}
+                        </SelectContent>
+                      </Select>
+
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+
+                <FormField
+                  control={form.control}
+                  name="job"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Job Profile</FormLabel>
+                      <Select
+                        onValueChange={field.onChange}
+                        defaultValue={field.value}
+                      >
+                        <FormControl>
+                          <SelectTrigger className="w-full">
+                            <SelectValue placeholder="Select your job profile" />
+                          </SelectTrigger>
+                        </FormControl>
+                        <SelectContent>
+                          {[
+                            "Drone Pilot",
+                            "Marketing And Business Development Executive",
+                            "Drone Image Data Processing Specialist",
+                          ].map((job, i) => (
+                            <SelectItem key={job + i} value={job}>
+                              {job}
+                            </SelectItem>
+                          ))}
+                        </SelectContent>
+                      </Select>
+
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+
+                <FormField
+                  control={form.control}
+                  name="bio"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Resume / LinkedIn / Portfolio Link</FormLabel>
+                      <FormControl>
+                        <Input
+                          placeholder="Link to your resume, LinkedIn, or portfolio"
+                          {...field}
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
               </div>
-              <input
-                name="phone"
-                id="phone"
-                autoComplete="phone"
-                type="text"
-                required
-                placeholder="Phone number"
-                className="block w-full rounded-md border-0 py-1.5 pl-24 pr-7 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:outline-none lg:text-sm lg:leading-6"
-              />
-            </div>
-          </div>
 
-          <div>
-            <label htmlFor="country" className="block mb-1 text-sm font-medium text-gray-700">
-              Country
-            </label>
-            <select name="country" id="country" required className="inputs">
-              <option value="">Select your country</option>
-              {countries.map((country, i) => (
-                <option key={i} value={country}>
-                  {country}
-                </option>
-              ))}
-            </select>
-          </div>
+              <Link
+                href="/career"
+                className={buttonVariants({
+                  variant: "outline",
+                  size: "lg",
+                  className: "col-span-full rounded-md",
+                })}
+              >
+                Cancel
+              </Link>
 
-          <div className="col-span-full">
-            <label htmlFor="job" className="block mb-1 text-sm font-medium text-gray-700">
-              Job Profile
-            </label>
-            <select name="job" id="job" required className="inputs">
-              <option value="">Select job profile</option>
-              {[
-                "Drone Pilot",
-                "Marketing And Business Development Executive",
-                "Drone Image Data Processing Specialist",
-              ].map((value, index) => (
-                <option key={index} value={value.toLowerCase()}>
-                  {value}
-                </option>
-              ))}
-            </select>
-          </div>
-
-          <div className="col-span-full">
-            <label htmlFor="bio" className="block mb-1 text-sm font-medium text-gray-700">
-              Resume / LinkedIn / Portfolio Link
-            </label>
-            <input
-              type="text"
-              name="bio"
-              id="bio"
-              required
-              placeholder="Link to your resume, LinkedIn, or portfolio"
-              className="inputs"
-            />
-            <p className="mt-1 text-sm text-gray-500 dark:text-gray-300" id="file_input_help">
-              Upload your resume to Google Drive and paste the link.
-            </p>
-          </div>
+              <Button
+                disabled={isSubmitting}
+                type="submit"
+                size="lg"
+                className="col-span-full ms-3 rounded-md"
+              >
+                {isSubmitting ? "Sending..." : "Submit"}
+              </Button>
+            </form>
+          </FormComponent>
+        </React.Fragment>
+      ) : (
+        <div className="flex flex-col items-center justify-center py-10">
+          <h1 className="text-2xl font-semibold text-heading">
+            Thank you for applying!
+          </h1>
+          <p className="mt-2 text-center text-gray-500">
+            We appreciate your interest in joining our team. Our HR team will
+            review your application and get back to you soon.
+          </p>
+          <Link href="/career" className="mt-4 text-blue-500 hover:underline">
+            Back to Careers
+          </Link>
         </div>
-
-        <Link
-          href="/career"
-          className={buttonVariants({
-            variant: "outline",
-            size: "lg",
-            className: "col-span-full rounded-md",
-          })}
-        >
-          Cancel
-        </Link>
-
-        <Button
-          disabled={isPending}
-          type="submit"
-          size="lg"
-          className="col-span-full ms-3 rounded-md"
-        >
-          {isPending ? "Sending..." : "Submit"}
-        </Button>
-      </form>
+      )}
     </SectionLayout>
   );
 }

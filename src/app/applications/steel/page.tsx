@@ -25,7 +25,7 @@ const page = () => {
     <>
       <SectionHeader title={service.title} image={bg}  />
       <Services services={service.service_description}/>
-      <SectionAbout  chips="Vista Drone Services" cta="/contact" heading={service.title} para1={service.description1}  para2={service.description2} image={service.image}/>
+      <SectionAbout  chips="Vista Drone Services" cta="/contact" heading={service.title} para1={service.description1} image={service.image}/>
       <Deliveries projects={steelProjects} heading="Our Key Deliverables" chipHeading="vista solutions in steel industry"/>
       <Benifits content={service.benefits} />
       <SectionContact/>

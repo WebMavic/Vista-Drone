@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/carousel";
 import { Project } from '@/types/steps';
 import Image from 'next/image';
-import { PreviewModal } from '@/app/about/(componets)/Certification';
+import { PreviewModal } from '@/app/about/(components)/Certification';
 
 
 interface Props {
@@ -32,7 +32,7 @@ const Deliveries = ({projects,heading,chipHeading}:Props) => {
     <Carousel className="mt-10" autoSlideMobile opts={{ loop: true ,align:"center"}} >
       <CarouselContent>
         {projects.map((project, i) => (
-          <CarouselItem className="lg:basis-1/4" key={i} onClick={() => setPreviewImage(project.avatar)} >
+          <CarouselItem className="lg:basis-1/4 cursor-pointer" key={i} onClick={() => setPreviewImage(project.avatar)} >
             <div className="relative h-96 overflow-hidden rounded-2xl">
               <div className="absolute h-full w-full  bg-black/60 opacity-0 transition-all duration-150 ease-in-out hover:opacity-100">
                 <div className="p-5 text-left">

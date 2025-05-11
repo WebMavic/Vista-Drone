@@ -1,197 +1,539 @@
-"use client"
-import React,{useRef} from "react";
+"use client";
+import React, { useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import SectionLayout from "@/components/ui/SectionLayout";
 import { countries } from "@/constants";
 import emailjs from "@emailjs/browser";
 import { toast } from "sonner";
+import {
+  Form as FormComponent,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form";
+import { z } from "zod";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { Input } from "@/components/ui/input";
+import { CheckCircle2, Loader2 } from "lucide-react";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { Textarea } from "@/components/ui/textarea";
+import { Card, CardHeader ,CardContent,CardDescription,CardTitle} from "@/components/ui/card";
 
-
+const formSchema = z.object({
+  from_name: z.string().min(1, {
+    message: "Name is required",
+  }),
+  companyName: z.string().min(1, {
+    message: "Company name is required",
+  }),
+  country: z.string().min(1, {
+    message: "Country is required",
+  }),
+  service: z.string().min(1, {
+    message: "Service is required",
+  }),
+  email: z.string().email({
+    message: "Invalid email address",
+  }),
+  phone: z.string().min(1, {
+    message: "Phone number is required",
+  }),
+  countryCode: z.string().min(1, {
+    message: "Country code is required",
+  }),
+  message: z.string().min(1, {
+    message: "Message is required",
+  }),
+});
 
 function Form() {
-  const ref = useRef<HTMLFormElement>(null);
-  const [isPending, setIsPending] = React.useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const submitForm = (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsPending(true);
+  const form = useForm<z.infer<typeof formSchema>>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      from_name: "",
+      companyName: "",
+      country: "",
+      service: "",
+      email: "",
+      phone: "",
+      countryCode: "971",
+      message: "",
+    },
+  });
+
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    setIsSubmitting(true);
     emailjs
-      .sendForm(
+      .send(
         process.env.NEXT_PUBLIC_SERVICE_ID!,
         process.env.NEXT_PUBLIC_TEMPLATE_ID!,
-        ref.current!,
+        values,
         {
           publicKey: process.env.NEXT_PUBLIC_PUBLIC_KEY,
         }
       )
       .then(
         () => {
+          setIsSubmitting(false)
+          setIsSubmitted(true)
+          form.reset(); 
           toast.success("Message sent successfully");
-          ref.current?.reset();
-          setIsPending(false);
         },
         (error) => {
-          toast.error("Something went wrong");
-          ref.current?.reset();
+          setIsSubmitting(false);
           console.log(error);
-          setIsPending(false);
+          toast.error("Something went wrong",{
+            description: "Please try again later",
+          });
         }
       );
-  };
+  }
 
   return (
     <SectionLayout className="bg-white">
       <h1 className="py-2 text-4xl font-semibold uppercase tracking-wide text-heading">
         Contact Form
       </h1>
-      <form ref={ref} onSubmit={submitForm} className="space-y-5 py-10">
-        <div className="grid gap-6 lg:grid-cols-2">
-
-          {/* Name */}
-          <div>
-            <label htmlFor="from_name" className="block text-sm font-medium pb-2 text-gray-700">
-              Your Name
-            </label>
-            <input
-              id="from_name"
-              name="from_name"
-              type="text"
-              placeholder="Your name"
-              required
-              autoComplete="name"
-              className="inputs"
-            />
-          </div>
-
-          {/* Company Name */}
-          <div>
-            <label htmlFor="companyName" className="block text-sm pb-2 font-medium text-gray-700">
-              Company Name
-            </label>
-            <input
-              id="companyName"
-              name="companyName"
-              type="text"
-              placeholder="Company name"
-              required
-              autoComplete="company"
-              className="inputs"
-            />
-          </div>
-
-          {/* Country */}
-          <div>
-            <label htmlFor="country" className="block text-sm pb-2 font-medium text-gray-700">
-              Country
-            </label>
-            <select name="country" id="country" required className="inputs">
-              <option value="">Select your country</option>
-              {countries.map((country, i) => (
-                <option key={i} value={country}>
-                  {country}
-                </option>
-              ))}
-            </select>
-          </div>
-
-          {/* Interested Service */}
-          <div>
-            <label htmlFor="service" className="block pb-2 text-sm font-medium text-gray-700">
-              Interested Service
-            </label>
-            <select name="service" id="service" required className="inputs">
-              <option value="">Select service</option>
-              {[
-                "Oil and gas",
-                "Mining",
-                "Green Energy",
-                "Agriculture",
-                "Steel",
-                "Construction and real estate",
-                "Marine Fisheries",
-              ].map((value, index) => (
-                <option key={index} value={value.toLowerCase()}>
-                  {value}
-                </option>
-              ))}
-            </select>
-          </div>
-
-          {/* Email */}
-          <div>
-            <label htmlFor="email" className="block pb-2 text-sm font-medium text-gray-700">
-              Email
-            </label>
-            <input
-              id="email"
-              type="email"
-              name="email"
-              autoComplete="email"
-              placeholder="email"
-              required
-              className="inputs"
-            />
-          </div>
-
-          {/* Phone with Country Code */}
-          <div>
-            <label htmlFor="phone" className="block pb-2 text-sm font-medium text-gray-700">
-              Phone Number
-            </label>
-            <div className="relative rounded-md">
-              <div className="absolute inset-y-0 left-0 flex items-center">
-                <select
-                  name="countryCode"
-                  autoComplete="country-code"
-                  className="h-full rounded-md border-0 bg-transparent py-0 pl-3 text-gray-500 focus:outline-none focus:ring-inset text-sm"
-                >
-                  {countryCodes.map((code, i) => (
-                    <option key={i} value={code}>{`+${code}`}</option>
-                  ))}
-                </select>
-              </div>
-              <input
-                name="phone"
-                id="phone"
-                type="text"
-                placeholder="Phone number"
-                autoComplete="phone"
-                required
-                className="block w-full rounded-md border-0 py-1.5 pl-24 pr-3 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 lg:text-sm focus:outline-none"
-              />
-            </div>
-          </div>
-
-          {/* Message */}
-          <div className="col-span-full">
-            <label htmlFor="message" className="block pb-2 text-sm font-medium text-gray-700">
-              Message
-            </label>
-            <textarea
-              id="message"
-              name="message"
-              rows={4}
-              placeholder="Leave a message..."
-              required
-              className="inputs max-h-40"
-            ></textarea>
-          </div>
-
-          {/* Submit Button */}
-          <Button
-            variant="default"
-            type="submit"
-            size="lg"
-            disabled={isPending}
-            className="col-span-full rounded-md"
-          >
-            {isPending ? "Sending..." : "Submit"}
-          </Button>
-        </div>
-      </form>
+      {!isSubmitted ? (
+         <FormComponent {...form}>
+         <form
+           onSubmit={form.handleSubmit(onSubmit)}
+           className="space-y-5 py-10"
+         >
+           <div className="grid gap-6 lg:grid-cols-2">
+             {/* Name */}
+             <FormField
+               control={form.control}
+               name="from_name"
+               render={({ field }) => (
+                 <FormItem>
+                   <FormLabel>Your name</FormLabel>
+                   <FormControl>
+                     <Input placeholder="Enter your full name" {...field} />
+                   </FormControl>
+                   <FormMessage />
+                 </FormItem>
+               )}
+             />
+             <FormField
+               control={form.control}
+               name="companyName"
+               render={({ field }) => (
+                 <FormItem>
+                   <FormLabel>Company name</FormLabel>
+                   <FormControl>
+                     <Input placeholder="Enter your company name" {...field} />
+                   </FormControl>
+                   <FormMessage />
+                 </FormItem>
+               )}
+             />
+             <FormField
+               control={form.control}
+               name="country"
+               render={({ field }) => (
+                 <FormItem>
+                   <FormLabel>Country</FormLabel>
+                   <Select
+                     onValueChange={field.onChange}
+                     defaultValue={field.value}
+                   >
+                     <FormControl>
+                       <SelectTrigger className="w-full">
+                         <SelectValue placeholder="Select your country" />
+                       </SelectTrigger>
+                     </FormControl>
+                     <SelectContent>
+                       {countries.map((country, i) => (
+                         <SelectItem key={country + i} value={country}>
+                           {country}
+                         </SelectItem>
+                       ))}
+                     </SelectContent>
+                   </Select>
+ 
+                   <FormMessage />
+                 </FormItem>
+               )}
+             />
+ 
+             <FormField
+               control={form.control}
+               name="service"
+               render={({ field }) => (
+                 <FormItem>
+                   <FormLabel>Interested Service</FormLabel>
+                   <Select
+                     onValueChange={field.onChange}
+                     defaultValue={field.value}
+                   >
+                     <FormControl>
+                       <SelectTrigger className="w-full">
+                         <SelectValue placeholder="Select your service" />
+                       </SelectTrigger>
+                     </FormControl>
+                     <SelectContent>
+                       {[
+                         "Oil and gas",
+                         "Mining",
+                         "Green Energy",
+                         "Agriculture",
+                         "Steel",
+                         "Construction and real estate",
+                         "Marine Fisheries",
+                       ].map((value, index) => (
+                         <SelectItem
+                           key={index + Math.random()}
+                           value={value.toLowerCase()}
+                         >
+                           {value}
+                         </SelectItem>
+                       ))}
+                     </SelectContent>
+                   </Select>
+ 
+                   <FormMessage />
+                 </FormItem>
+               )}
+             />
+ 
+             <FormField
+               control={form.control}
+               name="email"
+               render={({ field }) => (
+                 <FormItem>
+                   <FormLabel>Email</FormLabel>
+                   <FormControl>
+                     <Input placeholder="Enter your email" {...field} />
+                   </FormControl>
+                   <FormMessage />
+                 </FormItem>
+               )}
+             />
+ 
+             <div className="inline-flex col-span-1 gap-2 w-full relative">
+               <FormField
+                 control={form.control}
+                 name="countryCode"
+                 render={({ field }) => (
+                   <FormItem className="">
+                     <FormLabel>Country Code</FormLabel>
+                     <Select
+                       onValueChange={field.onChange}
+                       defaultValue={field.value}
+                     >
+                       <FormControl>
+                         <SelectTrigger className="w-full">
+                           <SelectValue placeholder="country code" />
+                         </SelectTrigger>
+                       </FormControl>
+                       <SelectContent>
+                         {countryCodes.map((code, i) => (
+                           <SelectItem key={i} value={code}>
+                             {`+${code}`}
+                           </SelectItem>
+                         ))}
+                       </SelectContent>
+                     </Select>
+ 
+                     <FormMessage />
+                   </FormItem>
+                 )}
+               />
+ 
+               <FormField
+                 control={form.control}
+                 name="phone"
+                 render={({ field }) => (
+                   <FormItem className="flex-1">
+                     <FormLabel>Phone</FormLabel>
+                     <FormControl>
+                       <Input placeholder="Enter your phone number" {...field} />
+                     </FormControl>
+                     <FormMessage />
+                   </FormItem>
+                 )}
+               />
+             </div>
+ 
+             <FormField
+               control={form.control}
+               name="message"
+               render={({ field }) => (
+                 <FormItem className="lg:col-span-2">
+                   <FormLabel>Message</FormLabel>
+                   <FormControl>
+                     <Textarea placeholder="Leave a message..." {...field} />
+                   </FormControl>
+                   <FormMessage />
+                 </FormItem>
+               )}
+             />
+ 
+           
+ 
+             {/* Submit Button */}
+           </div>
+           <Button type="submit" className="w-full" disabled={isSubmitting}>
+             {isSubmitting ? (
+               <>
+                 <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                 Submitting...
+               </>
+             ) : (
+               "Submit"
+             )}
+           </Button>
+         </form>
+       </FormComponent>
+      ):(
+        <Card className="mt-10 bg-primary2"> 
+          <CardHeader>
+            <CardTitle className="text-center">
+              Thank you for your message!
+            </CardTitle>
+            <CardDescription className="text-center">
+              We will get back to you as soon as possible.
+            </CardDescription>
+          </CardHeader>
+          <CardContent className="flex flex-col items-center justify-center py-10">
+            <CheckCircle2 className="h-12 w-12 text-accent animate-wobble" />
+            <Button
+              className="mt-6"
+              onClick={() => {
+                setIsSubmitted(false);
+                form.reset();
+              }}
+            >
+              Send another message
+            </Button>
+          </CardContent>
+          
+            
+           
+        </Card>
+      )}
+     
     </SectionLayout>
   );
 }
 
 export default Form;
-export const countryCodes = ['91','213','376','244','1264','1268','54','374','297','61','43','994','1242','973','880','1246','375','32','501','229','1441','975','591','387','267','55','673','359','226','257','855','237','1','238','1345','236','56','86','57','269','242','682','506','385','53','90392','357','42','45','253','1809','1809','593','20','503','240','291','372','251','500','298','679','358','33','594','689','241','220','7880','49','233','350','30','299','1473','590','671','502','224','245','592','509','504','852','36','354','62','98','964','353','972','39','1876','81','962','7','254','686','850','82','965','996','856','371','961','266','231','218','417','370','352','853','389','261','265','60','960','223','356','692','596','222','269','52','691','373','377','976','1664','212','258','95','264','674','977','31','687','64','505','227','234','683','672','670','47','968','680','507','675','595','51','63','48','351','1787','974','262','40','7','250','378','239','966','221','381','248','232','65','421','386','677','252','27','34','94','290','1869','1758','249','597','268','46','41','963','886','7','66','228','676','1868','216','90','7','993','1649','688','256','44','380','971','598','1','7','678','379','58','84','84','84','681','969','967','260','263']
+export const countryCodes = [
+  "91",
+  "213",
+  "376",
+  "244",
+  "1264",
+  "1268",
+  "54",
+  "374",
+  "297",
+  "61",
+  "43",
+  "994",
+  "1242",
+  "973",
+  "880",
+  "1246",
+  "375",
+  "32",
+  "501",
+  "229",
+  "1441",
+  "975",
+  "591",
+  "387",
+  "267",
+  "55",
+  "673",
+  "359",
+  "226",
+  "257",
+  "855",
+  "237",
+  "1",
+  "238",
+  "1345",
+  "236",
+  "56",
+  "86",
+  "57",
+  "269",
+  "242",
+  "682",
+  "506",
+  "385",
+  "53",
+  "90392",
+  "357",
+  "42",
+  "45",
+  "253",
+  "1809",
+  "593",
+  "20",
+  "503",
+  "240",
+  "291",
+  "372",
+  "251",
+  "500",
+  "298",
+  "679",
+  "358",
+  "33",
+  "594",
+  "689",
+  "241",
+  "220",
+  "7880",
+  "49",
+  "233",
+  "350",
+  "30",
+  "299",
+  "1473",
+  "590",
+  "671",
+  "502",
+  "224",
+  "245",
+  "592",
+  "509",
+  "504",
+  "852",
+  "36",
+  "354",
+  "62",
+  "98",
+  "964",
+  "353",
+  "972",
+  "39",
+  "1876",
+  "81",
+  "962",
+  "254",
+  "686",
+  "850",
+  "82",
+  "965",
+  "996",
+  "856",
+  "371",
+  "961",
+  "266",
+  "231",
+  "218",
+  "417",
+  "370",
+  "352",
+  "853",
+  "389",
+  "261",
+  "265",
+  "60",
+  "960",
+  "223",
+  "356",
+  "692",
+  "596",
+  "222",
+  "52",
+  "373",
+  "377",
+  "976",
+  "1664",
+  "212",
+  "258",
+  "95",
+  "264",
+  "674",
+  "977",
+  "31",
+  "687",
+  "64",
+  "505",
+  "227",
+  "234",
+  "683",
+  "672",
+  "670",
+  "47",
+  "968",
+  "680",
+  "507",
+  "675",
+  "595",
+  "51",
+  "63",
+  "48",
+  "351",
+  "1787",
+  "974",
+  "262",
+  "40",
+  "250",
+  "378",
+  "239",
+  "966",
+  "221",
+  "381",
+  "248",
+  "232",
+  "65",
+  "421",
+  "386",
+  "677",
+  "252",
+  "27",
+  "34",
+  "94",
+  "290",
+  "1869",
+  "1758",
+  "249",
+  "597",
+  "268",
+  "46",
+  "41",
+  "963",
+  "886",
+  "66",
+  "228",
+  "676",
+  "1868",
+  "216",
+  "90",
+  "993",
+  "1649",
+  "688",
+  "256",
+  "44",
+  "380",
+  "971",
+  "598",
+  "7",
+  "678",
+  "379",
+  "58",
+  "84",
+  "681",
+  "969",
+  "967",
+  "260",
+  "263",
+];

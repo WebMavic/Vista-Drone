@@ -3,21 +3,21 @@ import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
 import about1 from "@/assets/images/image (2).png";
-import SectionHero from "@/components/SectionHero";
-import SectionClient from "@/components/SectionClient";
-import Trainings from "@/components/Trainings"
 import { Analytics } from "@vercel/analytics/react"
 
+const SectionHero = dynamic(() => import("@/components/SectionHero"));
+const SectionClient = dynamic(() => import("@/components/SectionClient"));
 const SectionFeaturedServices = dynamic(() => import("@/components/SectionFeaturedServices"));
 const SectionExpertise = dynamic(() => import("@/components/SectionExpertise"));
 const SectionContact = dynamic(() => import("@/components/SectionContact"));
-const Certification = dynamic(() => import("@/app/about/(componets)/Certification"));
+const Certification = dynamic(() => import("@/app/about/(components)/Certification"));
 const DroneApplication = dynamic(() => import("@/app/applications/(components)/DroneApplication"));
 const SectionLayout = dynamic(() => import("@/components/ui/SectionLayout"));
+const Trainings = dynamic(() => import("@/components/Trainings"));
+const Reveal = dynamic(() => import("@/components/Reveal"));
 
 
 import { buttonVariants } from "@/components/ui/button";
-import Reveal from "@/components/Reveal";
 
 export const metadata = {
   title: "Vista Drone : Innovate and Improve",
@@ -26,10 +26,10 @@ export const metadata = {
 export default function Home() {
   return (
     <React.Fragment>
+      <Analytics/>
       <SectionHero />
       <SectionClient />
       <SectionFeaturedServices />
-      <Analytics/>
       <SectionLayout className={"bg-white sm:px-0 sm:py-0 lg:h-screen"}>
         <div
           className={"flex h-full w-full flex-col-reverse  items-center justify-between gap-5 lg:flex-row lg:gap-10"}>

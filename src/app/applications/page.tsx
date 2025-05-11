@@ -2,9 +2,7 @@ import React from "react";
 import { Metadata } from "next";
 import dynamic from "next/dynamic";
 
-import SectionHeader from "@/components/SectionHeader";
-
-
+const SectionHeader =  dynamic(()=>import("@/components/SectionHeader"))
 const ServiceCards = dynamic(()=>import("./(components)/ServiceCards"))
 const WorkFlow = dynamic(()=>import("./(components)/DroneApplication"))
 const DroneTech = dynamic(()=>import("./(components)/DroneTech"))

@@ -10,23 +10,21 @@ import steel from '@/assets/images/steel/steel1.jpeg'
 import marine from "@/assets//images/marinefish/marine1.jpeg"
 
 import { Aperture, BarChart, Cctv, Diameter, LucideProps } from "lucide-react";
-import {GiWindTurbine , GiSolarPower ,GiArtificialIntelligence,GiEclipseFlare,GiLeadPipe,GiOffshorePlatform,GiMoebiusTrefoil,GiGasMask,GiBarrelLeak,GiMoneyStack,GiBonsaiTree,GiFishBucket,GiPathDistance,GiProgression,GiCargoCrane,GiReceiveMoney,GiSatelliteCommunication,GiPlantRoots,GiWateringCan,GiSpray,GiHealthPotion,GiCctvCamera,GiCrackedGlass } from "react-icons/gi";
+import {GiWindTurbine , GiSolarPower ,GiArtificialIntelligence,GiEclipseFlare,GiLeadPipe,GiOffshorePlatform,GiMoebiusTrefoil,GiGasMask,GiBarrelLeak,GiMoneyStack,GiBonsaiTree,GiFishBucket,GiPathDistance,GiProgression,GiCargoCrane,GiReceiveMoney,GiPlantRoots,GiWateringCan,GiSpray,GiHealthPotion,GiCctvCamera } from "react-icons/gi";
 import { BsClipboardCheck,BsBuildingsFill ,BsDatabaseFillCheck,BsFillSignYieldFill } from "react-icons/bs";
-import { TbClockHour5,TbBrandSnapseed,TbCell } from "react-icons/tb";
+import { TbClockHour5,TbBrandSnapseed } from "react-icons/tb";
 
-import { VscColorMode } from "react-icons/vsc";
 
 
 import { PiWall,PiPlantLight,PiThermometerHotFill } from "react-icons/pi";
 import { VscLightbulbSparkle } from "react-icons/vsc";
 
-import { SiSpond,SiExoscale,SiSubversion  } from "react-icons/si";
+import { SiSpond,SiExoscale } from "react-icons/si";
 import {MdHealthAndSafety ,MdReportProblem, MdSavings,MdSos,MdOutlinePestControl,MdLandscape,Md3dRotation ,MdMap } from "react-icons/md";
 
-import { FaSatelliteDish,FaNoteSticky,FaHelmetSafety,FaMoneyBillTrendUp,FaHotjar,FaClockRotateLeft } from "react-icons/fa6";
+import { FaSatelliteDish,FaHelmetSafety,FaMoneyBillTrendUp,FaHotjar,FaClockRotateLeft } from "react-icons/fa6";
 import { FaDatabase,FaMapMarkedAlt,FaCheck,FaPlusCircle,FaEye,FaCalendarCheck,FaChartBar,FaChartLine,FaTools,FaSortAmountDown    } from "react-icons/fa";
 import { GrResources } from "react-icons/gr";
-import { RiHotspotFill } from "react-icons/ri";
 import { AiFillPicture,AiOutlineAudit ,AiOutlineSafetyCertificate,AiOutlineSafety,AiFillEnvironment  } from "react-icons/ai";
 
 import { ImImage } from "react-icons/im";
@@ -39,8 +37,8 @@ import { IconType } from "react-icons/lib";
 interface Service {
   title: string;
   description1: string;
-  description2: string;
-  description3: string;
+  description2?: string;
+  description3?: string;
   image: ForwardRefExoticComponent<Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>> | IconType | StaticImport | StaticImageData;
   service_description: description[];
   benefits: benefits[];
@@ -72,7 +70,6 @@ export const services: Service[] = [
       "Enhance the efficiency, safety, and accuracy of your mining operations with Vista Drone’s specialized aerial solutions. Our advanced drone, equipped with high-resolution cameras and cutting-edge sensors, deliver precise geospatial data to support exploration, site assessment, and resource management.",
       description2:
       "We conduct detailed aerial surveys that produce high-resolution maps and 3D models, enabling accurate identification of mineral deposits and comprehensive terrain analysis. By replacing traditional ground surveys with fast, high-coverage aerial data collection, we reduce operational downtime and mitigate risks to on-site personnel.",
-      description3:"",
     image: mine,
     
     service_description: [
@@ -196,8 +193,6 @@ export const services: Service[] = [
     title: "Steel Industries",
     description1:
       "Transform your planning and survey processes with our advanced drone technology. Vista Drone Services offers comprehensive solutions to support topographic mapping, land surveying, and infrastructure assessment. Our high-resolution drones capture detailed aerial imagery and data, enabling the creation of accurate topographic maps and 3D models. This detailed data collection aids in precise terrain analysis, essential for planning construction projects, land development, and environmental studies. By leveraging our drone technology, you can efficiently gather the necessary data for site evaluations and project planning, reducing the need for traditional ground surveys and enhancing the accuracy of your assessments. ",
-      description2:"",
-      description3:"",
     image:steel,
       
       
@@ -305,8 +300,6 @@ export const services: Service[] = [
     title: "Agriculture",
     description1:
       "Optimize agricultural operations with Vista Drone Services. The advanced drone solutions deliver actionable insights for crop management, irrigation planning, and early pest detection—helping you boost productivity and sustainability. By analysing detailed imagery, we monitor plant health, pinpoint nutrient deficiencies, and uncover stress factors in real time. On basis of the reports farm manager can make data-driven decisions to maximize yields, minimize input costs, and reduce environmental impact. ",
-      description2:"",
-      description3:"",
     image: agriculture,
     service_description: [
       {
@@ -444,7 +437,6 @@ export const services: Service[] = [
     description1:
       "Elevate your construction projects with Vista Drone Services. We offer comprehensive drone solutions for site planning, progress monitoring, and safety inspections — ensuring your projects stay on track and within budget.",
       description2:"Our advanced drones are equipped with high-resolution cameras and sophisticated sensors, allowing us to capture detailed aerial imagery and data for precise site analysis and planning. Whether you're in the initial stages of project development or need ongoing monitoring throughout construction, our drone solutions deliver valuable insights to optimize workflow and streamline operations.",
-      description3:"",
     image:construction,
     service_description: [
       {
@@ -566,7 +558,6 @@ export const services: Service[] = [
     description1:
       "Enhance the efficiency, safety, and accuracy of your oil and gas operations with Vista Drone’s specialized aerial solutions. Our advanced drones, equipped with high-resolution cameras and cutting-edge sensors, deliver precise geospatial data tailored to the unique demands of the Middle East's oil and gas sector.We conduct comprehensive aerial surveys of oil fields, pipelines, and both offshore and onshore platforms, generating detailed maps and 3D models to support exploration, site assessment, and resource management.",
       description2:"We conduct comprehensive aerial surveys of oil fields, pipelines, and both offshore and onshore platforms, generating detailed maps and 3D models to support exploration, site assessment, and resource management.",
-      description3:"",
     image: oil,
     service_description: [
       {
@@ -694,7 +685,6 @@ export const services: Service[] = [
     description1:
       "Optimize your renewable energy operations with Vista Drone’s cutting-edge aerial solutions. Our UAV systems perform rapid and safe inspections of solar farms, wind turbines, and energy installations—delivering accurate insights without interrupting operations.",
       description2:"We use high-resolution imagery, thermal data, and advanced mapping to detect defects, assess efficiency, and support sustainable practices. This enables energy operators and developers to cut inspection time, minimize risks, and ensure peak performance of renewable assets—all while aligning with environmental and safety standards.",
-      description3:"",
     image:solar1,
     service_description:  [
   {
@@ -924,10 +914,7 @@ description3:"Vista Drone Services ensures that restoration efforts are guided b
 
   {
     title: "Solar",
-    description1:
-      "",
-      description2:"",
-      description3:"",
+    description1:"",
     image: solar3,
     service_description: [
       {

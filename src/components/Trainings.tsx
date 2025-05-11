@@ -46,7 +46,7 @@ const formSchema = z.object({
   }),
   emiratesId: z.string().min(15, {
     message: "Emirates ID must be at least 15 characters.",
-  }),
+  }).max(15),
   address: z.string().min(5, {
     message: "Address must be at least 5 characters.",
   }),
@@ -91,7 +91,7 @@ export default function RPASTrainingPage() {
     { value: "II", label: "Category II: Recreational / Hobby (2 days)" },
   ]
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
+  async function onSubmit(values: z.infer<typeof formSchema>) {
     const formattedValues = {
       ...values,
       category : values.category === "I" ?  categoryOptions[0].label : categoryOptions[1].label,
@@ -118,7 +118,6 @@ export default function RPASTrainingPage() {
           },
           () => {
             toast.error("Something went wrong");
-            form.reset()
             setIsSubmitting(false)  
           },
         );     
@@ -126,7 +125,7 @@ export default function RPASTrainingPage() {
   
 
   return (
-      <SectionLayout className="">
+      <SectionLayout>
         <div className="space-y-8">
           
         <div className="container mx-auto px-4 py-6">
@@ -271,33 +270,7 @@ export default function RPASTrainingPage() {
                           render={({ field }) => (
                             <FormItem className="flex flex-col">
                               <FormLabel>Date of Birth</FormLabel>
-                              {/* <Popover >
-                                <PopoverTrigger asChild>
-                                  <FormControl>
-                                    <Button
-                                      variant={"outline"}
-                                      className={cn(
-                                        "w-full pl-3 text-left font-normal rounded-md",
-                                        !field.value && "text-muted-foreground",
-                                      )}
-                                    >
-                                      {field.value ? format(field.value, "PPP") : <span>Select your date of birth</span>}
-                                      <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />
-                                    </Button>
-                                  </FormControl>
-                                </PopoverTrigger>
-                                <PopoverContent className="w-auto p-0" align="start">
-                                  <div>
-
-                                 
-                                  <Calendar
-                                    selected={field.value}
-                                    onSelect={field.onChange}
-                                    disabled={(date) => date > new Date() || date < new Date("1900-01-01")}
-                                  />
-                                   </div>
-                                </PopoverContent>
-                              </Popover> */}
+                           
                               <FormControl>
                               <Input 
                                 type="date"

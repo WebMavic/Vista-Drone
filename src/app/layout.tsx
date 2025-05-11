@@ -8,7 +8,7 @@ import NextTopLoader from 'nextjs-toploader'
 import { Toaster } from "@/components/ui/sonner";
 
 const font = Inter({
-  weight: ["200","300", "400", "500", "600", "700","800","900"],
+  weight: ["200","300", "400", "500", "600", "700","800","900","100"],
   subsets: ["latin"],
   display: "swap",
 });
@@ -16,7 +16,8 @@ const font = Inter({
 export const metadata: Metadata = {
   title: "Vista Drone Services",
   description: "Innovate and Improve",
-  
+  keywords: "drone, services, innovation",
+  category : "Drone Services",
 };
 
 export default function RootLayout({

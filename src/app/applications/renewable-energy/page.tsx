@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 };
 
 
-const page = async () => {
+const page = () => {
   return (
     <>
       <SectionHeader title={service.title} image={service.image} />
@@ -32,7 +32,6 @@ const page = async () => {
         heading={service.title} 
         para1={service.description1}
         para2={service.description2}
-        para3={service.description3}
       />
 
       <SectionContent />
