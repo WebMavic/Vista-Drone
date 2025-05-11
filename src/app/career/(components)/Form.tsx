@@ -31,7 +31,6 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { useSearchParams } from "next/navigation";
 
 const formSchema = z.object({
   name: z.string().min(1, {
@@ -60,8 +59,10 @@ const formSchema = z.object({
 function Form() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const searchParam = useSearchParams();
-  const job = searchParam.get("job");
+ 
+  
+
+
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -71,7 +72,7 @@ function Form() {
       phone: "",
       countryCode: "971",
       country: "",
-      job: job || "",
+      job: "",
       bio: "",
     },
   });

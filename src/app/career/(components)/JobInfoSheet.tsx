@@ -150,7 +150,7 @@ const JobInfoSheet = () => {
                   <p className="text-subheading">{activeSheet.from.address}</p>
                 </div>
                 <Link
-                  href={`/career/apply?job=` + activeSheet.title}
+                  href={"/career/apply"}
                   className={buttonVariants()}
                 >
                   Apply Now
