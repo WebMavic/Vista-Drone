@@ -23,13 +23,13 @@ function Navbar() {
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [isMobile]);
+  }, []);
 
   useEffect(()=>{
     if(isMobile){
       setIsMobileMenuHidden(true);
     }
-  },[isScrolled]);
+  },[isScrolled,isMobile]);
 
   
   

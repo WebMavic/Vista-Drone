@@ -1,7 +1,6 @@
 "use client";
 import React, { useState } from "react";
 import SectionLayout from "@/components/ui/SectionLayout";
-import { Button } from "@/components/ui/button";
 import dataSharingImg from "@/assets/images/Cloud-Computing.webp"
 import { MdMiscellaneousServices ,MdOutlineAutoGraph } from "react-icons/md";
 import { TbHeartRateMonitor } from "react-icons/tb";
@@ -9,7 +8,7 @@ import { DiVisualstudio } from "react-icons/di";
 
 import Image from "next/image";
 import { motion,AnimatePresence } from "motion/react"
-import { FaTableCellsLarge } from "react-icons/fa6";
+import { Button } from "@/components/ui/button";
 
 
 const DataSharing = () => {

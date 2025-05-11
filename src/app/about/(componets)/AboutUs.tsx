@@ -15,7 +15,7 @@ function AboutUs() {
         chips="our story" className="bg-primary2"
         heading="How it started"
         image={art} 
-        para="Vista Drone UAV LLC was established through a combination of strategic vision and extensive industry experience. With over thirty-two years of expertise in diverse sectors, our founder, S. Sudan, recognized a key opportunity in the rapidly expanding Unmanned Aerial Vehicle (UAV) market in the GCC Valued at USD 588.2 million in 2024 and projected to grow to USD 2 billion by 2033 at a CAGR of 12%., The UAE leads the GCC drone /UAV market with a share of 40%."
+        para1="Vista Drone UAV LLC was established through a combination of strategic vision and extensive industry experience. With over thirty-two years of expertise in diverse sectors, our founder, S. Sudan, recognized a key opportunity in the rapidly expanding Unmanned Aerial Vehicle (UAV) market in the GCC Valued at USD 588.2 million in 2024 and projected to grow to USD 2 billion by 2033 at a CAGR of 12%., The UAE leads the GCC drone /UAV market with a share of 40%."
       />
       <BrandValues />
     </>

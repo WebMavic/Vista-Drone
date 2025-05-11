@@ -47,56 +47,55 @@ function SectionAbout({
           mirror && "lg:flex-row-reverse",
         )}
       >
-        <div className="h-full lg:w-1/2 overflow-hidden">
-        <Reveal slide="left" >
-          <Image
-            src={image ? image : about1}
-            placeholder="blur"
-            alt="image"
-            className={cn(
-              "h-full w-full rounded-md object-cover lg:rounded-r-[2%]",
-              imageStyle,
-            )}
-          />
+        <div className="h-full overflow-hidden lg:w-1/2">
+          <Reveal slide="left">
+            <Image
+              src={image ? image : about1}
+              placeholder="blur"
+              alt="image"
+              className={cn(
+                "h-full w-full rounded-md object-cover lg:rounded-r-[2%]",
+                imageStyle,
+              )}
+            />
           </Reveal>
         </div>
 
-        <div className="lg:w-1/2  lg:p-20 overflow-hidden">
+        <div className="overflow-hidden  lg:w-1/2 lg:p-20">
           <Reveal slide="right">
-          <div>
-            <Chips
-              title={chips ? chips : "About us"}
-              className="hidden text-heading lg:block"
-            />
-            <h1
-              className="mt-2 text-center text-4xl font-medium capitalize text-primary dark:text-white lg:text-left"
-            >
-              {heading
-                ? heading
-                : "Navigating New Heights with Expert UAV Solutions for Every Industry"}
-            </h1>
-          </div>
+            <div>
+              <Chips
+                title={chips ? chips : "About us"}
+                className="hidden text-heading lg:block"
+              />
+              <h1 className="mt-2 text-center text-4xl font-medium capitalize text-primary dark:text-white lg:text-left">
+                {heading
+                  ? heading
+                  : "Navigating New Heights with Expert UAV Solutions for Every Industry"}
+              </h1>
+            </div>
 
-          <p className="mt-6 text-left  text-subheading">
-            {para1
-              ? para1
-              : "Vista Drone UAV LLC is a registered company with the Department of Economic Development, Government of UAE, under commercial license number CN-5384149. We offer professional drone services(end to end solutions, like aerial data/picture acquisition to the processing and report submission) across multiple sectors, including Agriculture & Livestock, Green Energy, Oil & Gas fields, Civil Constructions, Mining, Safety and Surveillance etc. Our team comprises trained and certified drone pilots with experience of over 5 to 6 years in the respective field."}
-          </p>
-          <p className="mt-6 text-left  text-subheading">
-            {para2}
-          </p>
-          <p className="mt-6 text-left  text-subheading">
-            {para3}
-          </p>
-          {cta && (
-            <Link
-              href={cta}
-              className={buttonVariants({ className: "mt-5" })}
-            >
-              Learn More
-            </Link>
-          )}
+            <p className="mt-6 text-left  text-subheading">
+              {para1
+                ? para1
+                : "Vista Drone UAV LLC is a registered company with the Department of Economic Development, Government of UAE, under commercial license number CN-5384149. We offer professional drone services(end to end solutions, like aerial data/picture acquisition to the processing and report submission) across multiple sectors, including Agriculture & Livestock, Green Energy, Oil & Gas fields, Civil Constructions, Mining, Safety and Surveillance etc. Our team comprises trained and certified drone pilots with experience of over 5 to 6 years in the respective field."}
+            </p>
+            {para2 ? (
+              <p className="mt-6 text-left  text-subheading">{para2}</p>
+            ) : null}
 
+            {para3 ? (
+              <p className="mt-6 text-left  text-subheading">{para3}</p>
+            ) : null}
+
+            {cta && (
+              <Link
+                href={cta}
+                className={buttonVariants({ className: "mt-5" })}
+              >
+                Learn More
+              </Link>
+            )}
           </Reveal>
         </div>
       </div>
