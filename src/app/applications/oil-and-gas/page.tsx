@@ -35,7 +35,7 @@ const page = () => {
         para3={service.description3}
         
       />
-      <Deliveries projects={oilProjects} />
+      <Deliveries projects={oilProjects} heading="Our key deliverables" chipHeading="vista solutions for Oil and Gas Indsutry"/>
       <Benifits content={service.benefits} />
       <SectionContact/>
       <SectionFaq faqs={service.faq} />

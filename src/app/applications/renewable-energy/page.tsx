@@ -36,7 +36,7 @@ const page = async () => {
       />
 
       <SectionContent />
-      <Deliveries projects={solarProjects} />
+      <Deliveries projects={solarProjects} heading="Our key deliverables" chipHeading="vista solutions for Renewable Energy Sector"/>
       <Benifits content={service.benefits} />
       <SectionContent2 />
       <SectionContact />

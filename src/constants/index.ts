@@ -463,16 +463,16 @@ export const constructionProjects: Project[] = [
     avatar: constructionImages[5],
     description: "Achieve centimeter-level accuracy for topographic surveys using RTK/PPK-enabled drones.",
   },
-  {
-    title: "Change Detection & As-Built Comparisons",
-    avatar: constructionImages[6],
-    description: "Compare drone imagery with plans to identify discrepancies and track build-to-plan accuracy.",
-  },
-  {
-    title: "Logistics & Site Layout Planning",
-    avatar: constructionImages[7],
-    description: "Optimize equipment placement, site access, and layout using aerial perspectives.",
-  },
+  // {
+  //   title: "Change Detection & As-Built Comparisons",
+  //   avatar: constructionImages[6],
+  //   description: "Compare drone imagery with plans to identify discrepancies and track build-to-plan accuracy.",
+  // },
+  // {
+  //   title: "Logistics & Site Layout Planning",
+  //   avatar: constructionImages[7],
+  //   description: "Optimize equipment placement, site access, and layout using aerial perspectives.",
+  // },
 ];
 
 export const agricultureProjects: Project[] = [
