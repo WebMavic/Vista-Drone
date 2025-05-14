@@ -9,6 +9,8 @@ const AboutUs = dynamic(()=>import('./(components)/AboutUs'));
 const Team = dynamic(()=>import('./(components)/Team'))
 const Certification = dynamic(()=>import('./(components)/Certification'))
 const SectionContact = dynamic(()=>import('@/components/SectionContact'))
+const Gallery = dynamic(()=>import('./(components)/Gallery'))
+
 
 export const metadata: Metadata = {
   title: "About Us | Vista Drone : Innovate and Improve",
@@ -21,8 +23,6 @@ function page() {
       <SectionHeader title="Vista Drone" image={aboutbg} />
       <AboutUs/>
       <section className="lg:p-16 p-5">
-       
-
         <div className="grid lg:grid-cols-2 gap-5">
           <div className="aspect-video shadow-md border-[5px] border-primary mx-auto rounded-md overflow-hidden">
             <video
@@ -54,6 +54,7 @@ function page() {
           </div>
         </div>
         </section>
+      <Gallery/>  
       <Team/>
       <SectionContact/>
       <Certification/>
