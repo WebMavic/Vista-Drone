@@ -26,8 +26,8 @@ function Navigation({ hideNavBar,isScrolled }: { hideNavBar: Dispatch<SetStateAc
     { name: "Oil & Gas", path: "/applications/oil-and-gas", Icon: MdOilBarrel },
     { name: "Renewable Energy", path: "/applications/renewable-energy", Icon: MdOutlineWindPower },
     { name: "Mining", path: "/applications/mining", Icon: GiGoldMine },
-    { name: "Construction & Real Estate", path: "/applications/construction", icon: serviceIcons[1] },
-    { name: "Agriculture", path: "/applications/agriculture", icon: serviceIcons[0] },
+    { name: "Civil Infrastructure", path: "/applications/construction", icon: serviceIcons[1] },
+    { name: "Agriculture & Livestock", path: "/applications/agriculture", icon: serviceIcons[0] },
     { name: "Marine & Coastal Ecosystem", path: "/applications/marine&coastalecosystem", Icon: GiFishingBoat },
     { name: "Steel", path: "/applications/steel", Icon: GiSteelClaws },
   ];

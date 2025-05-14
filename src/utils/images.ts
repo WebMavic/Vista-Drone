@@ -43,6 +43,24 @@ export const certification = [
   require("@/assets/images/certification/c3.jpg"),
 ];
 
+
+export const gallery = [
+  require("@/assets/images/Image gallery/g1.png"),
+  require("@/assets/images/Image gallery/g2.png"),
+  require("@/assets/images/Image gallery/g3.png"),
+  require("@/assets/images/Image gallery/g4.png"),
+  require("@/assets/images/Image gallery/g5.png"),
+  require("@/assets/images/Image gallery/g6.png"),
+  require("@/assets/images/Image gallery/g7.png"),
+  require("@/assets/images/Image gallery/g8.png"),
+  require("@/assets/images/Image gallery/g9.png"),
+  require("@/assets/images/Image gallery/g10.png"),
+  require("@/assets/images/Image gallery/g11.png"),
+  require("@/assets/images/Image gallery/g12.png"),
+  
+];
+
+
 export const miningDeliveryImages = [
     require("@/assets/images/projects/mining/Picture1.png"),
     require("@/assets/images/projects/mining/Picture2.png"),

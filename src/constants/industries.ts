@@ -47,7 +47,7 @@ export const industries: Industry[] = [
 
   
   {
-    title: "Green Energy",
+    title: "Renewable Energy",
     Icon: MdOutlineWindPower,
     href: "/applications/renewable-energy",
     background:bentoImages[2],
@@ -67,7 +67,7 @@ export const industries: Industry[] = [
   // },
 
   {
-    title: "Construction",
+    title: "Civil Infrastructure",
     icon: serviceIcons[1],
     href: "/applications/construction",
     background: bentoImages[3],
@@ -85,7 +85,7 @@ export const industries: Industry[] = [
       "Efficient HSE Management vis-à-vis cost optimization during scheduled inspection of the assets and monitoring of exploration and production facilities.",
   },
   {
-    title: "Agriculture",
+    title: "Agriculture & Livestock",
     icon: serviceIcons[0],
     href: "/applications/agriculture",
     background:bentoImages[5],

@@ -105,13 +105,13 @@ export const heroOptions: Hero[] = [
       title: "DELIVERING PROJECTS SUCCESSFULLY ",
       avatar: ArrowTrendingUpIcon,
       description:
-        "Our expertise not limited in the field of Agriculture & Livestock, Renewable Energy, Oil & Gas, Mining and Resource evaluation, Infrastructure Projects but also delivered projects successfully in the conservation of Marine and Coastal Ecosystem, Environmental Monitoring of offshore and onshore fields.",
+        "Our expertise spans Agriculture, Energy, Mining, and Infrastructure, along with successful projects in Marine Conservation and Environmental Monitoring of offshore and onshore fields.",
     },
     {
       title: "IN-DEPTH UAV MARKET KNOWLEDGE",
       avatar: PresentationChartBarIcon,
       description:
-        "Our team is highly attuned to the UAE government's UAV policies, utilizing this expertise to navigate and lead in the ever-evolving UAV market in collaboration with the Research Labs and Institutes.",
+        "Our team is highly attuned to the UAE government's UAV policies, leveraging this expertise to navigate and lead the evolving UAV market in collaboration with research labs and institutes.",
     },
     {
       title: "OUTSTANDING TEAM OF PROFESSIONALS",
@@ -129,9 +129,9 @@ export const  teams = [
     name: "S. Sudan",
     role: "Founder and CEO",
     avatar: member1,
-    bio1: "A visionary business leader with over 32 years of cross-sector experience, including 20 years in the Middle East, delivering strategic advisory, commercial execution, and operational leadership in energy, mining, chemicals, and advanced industrial services. Recognized for driving multimillion-dollar projects, establishing market foot-holds in complex regions, and securing strategic contracts.",
-    bio2: "Currently spearheading drone and UAS innovation in the UAE through Vista Drone. Poised to contribute deep regional insight, high-level stakeholder engagement, and serves as a member of the Technical Advisory Board of AD Polytechnic, supporting their proposed Cloud Seeding projects through the use of their in-house designed VTOL.",
-    bio3:"Mr. Sudan holds a Master's degree in Earth Sciences, is a certified Environmental Auditor, has completed an MBA, and is also a qualified Drone Pilot."
+    bio1: "Mr. Sudan is a visionary business leader with over 32 years of experience across energy, mining, chemicals, and advanced industrial services. With 20 years in the Middle East, he has led strategic advisory, commercial execution, and operational leadership. He is recognized for driving multimillion-dollar projects, establishing market footholds in complex regions, and securing strategic contracts.",
+    bio2: "Currently spearheading drone and UAS innovation in the UAE through Vista Drone, Mr. Sudan brings deep regional insight and high-level stakeholder engagement. He serves on the Technical Advisory Board of AD Polytechnic, supporting their proposed cloud seeding projects utilizing their in-house designed VTOL.",
+    bio3:"Mr. Sudan holds a Master’s degree in Earth Sciences, is a certified Environmental Auditor, has completed an MBA, and is also a qualified Drone Pilot."
   },
   {
     name: "Shlok Srivastava",

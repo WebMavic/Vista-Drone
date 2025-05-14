@@ -76,40 +76,40 @@ export const services: Service[] = [
       {
         title: "Aerial Surveys",
         content:
-          "High-resolution drones with AI-enabled sensors and payloads capture real time geo referenced & accurate data, enable deliverables in 2D & 3D maps, DEM/DTM, and ortho-mosaic maps for efficient site planning and decision-making.",
+          "AI-powered drones capture high-resolution, geo-referenced data to generate 2D/3D maps, DEMs, DTMs, and ortho-mosaics for accurate planning.",
         image: Aperture,
         color : "red"
       },
       {
         title: "Real-time Monitoring",
         content:
-          "Our drone shoots real-time monitoring and inspection of drilling operations, pipeline, infrastructure, and environmental conditions—enhancing on-site safety and supporting informed, data-driven decisions.",
+          "Drones enable live monitoring of drilling, pipelines, and infrastructure, enhancing on-site safety and operational efficiency.",
           image: Cctv ,
           color : "rose"
       },
       {
         title: "Volumetric Measurements",
         content:
-          "We derive measurements of stockpiles and excavation volumes, streamlining inventory control and improving project planning and resource allocation through aerial data captured by Drone.",
+          "Drone data provides precise measurements of stockpiles and excavations, streamlining inventory control and resource planning.",
           image: SiExoscale,
           color : "rose"
       },
       {
         title: "Environmental Impact Assessments",
         content:
-          "Drone with suitable payload helps in monitoring of the environmental pollutants, and water contamination, supporting regulatory compliance and promoting sustainable mining practices.",
+          "Equipped with the right payloads, drones track pollutants and water quality, ensuring compliance and sustainability.",
           image: GiBonsaiTree,
           color : "rose"
       },
       {
         title: "Exploration & Planning",
-        content: "Provide comprehensive solution through aerial data captured by Drone in the leasehold area and provide report viz. Digital Terrain Models (DTM), Digital Surface Models (DSM), excavation analysis, and environmental impact assessments—providing a solid foundation for effective exploration and planning.",
+        content: "Aerial mapping of leasehold areas delivers DTMs, DSMs, and excavation reports for better exploration and project planning",
           image: FaMapMarkedAlt,
           color : "rose"
       },
       {
         title: "Slope Analysis",
-        content: "Software processed maps visually represent hill slopes using color-coded contour at 2-5 meters interval, offering clear insights for safer and more efficient mine planning.",
+        content: "Contour maps with 2–5m intervals reveal slope gradients, aiding safer and more efficient mine layout design.",
           image: BarChart,
           color : "rose"
       },
@@ -556,7 +556,7 @@ export const services: Service[] = [
   {
     title: "Oil and Gas Industry",
     description1:
-      "Enhance the efficiency, safety, and accuracy of your oil and gas operations with Vista Drone’s specialized aerial solutions. Our advanced drones, equipped with high-resolution cameras and cutting-edge sensors, deliver precise geospatial data tailored to the unique demands of the Middle East's oil and gas sector.We conduct comprehensive aerial surveys of oil fields, pipelines, and both offshore and onshore platforms, generating detailed maps and 3D models to support exploration, site assessment, and resource management.",
+      "Enhance the efficiency, safety, and accuracy of your oil and gas operations with Vista Drone’s specialized aerial solutions. Our advanced drones, equipped with high-resolution cameras and cutting-edge sensors, deliver precise geospatial data tailored to the unique demands of the Middle East's oil and gas sector.",
       description2:"We conduct comprehensive aerial surveys of oil fields, pipelines, and both offshore and onshore platforms, generating detailed maps and 3D models to support exploration, site assessment, and resource management.",
     image: oil,
     service_description: [

@@ -36,7 +36,7 @@ const page = () => {
         
       />
 
-      <Deliveries projects={marineProjects} heading="Our key deliverables" chipHeading="vista solutions for marine and coastal ecosystems."/>
+      <Deliveries projects={marineProjects} heading="Our key deliverables" chipHeading="VISTA SOLUTIONS FOR MARINE AND COASTAL ECOSYSTEMS."/>
       
       <Benifits content={service.benefits} />
       <SectionFaq faqs={service.faq} />

@@ -12,10 +12,10 @@ function DroneApplication() {
   return (
     <SectionLayout className="bg-primary2 h-auto">
       <div className="space-y-4 lg:w-1/2 ">
-        <Chips title="workflow" />
+        <Chips title="WORKFLOW" />
         <h2 className="text-4xl font-bold text-heading ">How we do it</h2>
         <p className="text-subheading">
-        Compared to conventional survey and mapping methods, aerial 3D mapping with Drone is faster, more convenient, cost-effective, and highly accurate in terms of geo-referencing. Large areas of land say 5 Sq. km can be mapped in a day, and the processing of data takes about 5 working days.
+        Compared to conventional survey methods, aerial 3D mapping with drones is faster, more convenient, cost-effective, and highly accurate in geo-referencing. Large areas—up to 5 sq. km—can be mapped in a day, with data processing completed in about five working days.
         </p>
       </div>
 

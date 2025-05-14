@@ -145,7 +145,7 @@ const Footer = () => {
                     href="/applications/agriculture"
                     className="hover:underline "
                   >
-                    Agriculture{" "}
+                    Agriculture & Livestock{" "}
                   </Link>
                 </li>
               </ul>

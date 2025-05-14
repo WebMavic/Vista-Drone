@@ -40,7 +40,7 @@ const page = () => {
         
       />
 
-      <Deliveries projects={constructionProjects} heading="Our key deliverables" chipHeading="vista solutions for construction and real estate"/>
+      <Deliveries projects={constructionProjects} heading="Our key deliverables" chipHeading="VISTA SOLUTIONS FOR CONSTRUCTION AND REAL ESTATE"/>
       <Benifits content={services[3].benefits} />
       <SectionContent/>
       <SectionContact/>

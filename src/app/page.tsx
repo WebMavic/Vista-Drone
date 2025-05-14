@@ -53,7 +53,11 @@ export default function Home() {
               </div>
 
               <p className="mt-6 text-left leading-relaxed  text-subheading">
-              Vista Drone UAV LLC is a pioneer Drone operating company of the GCAA, Government of the UAE having registered office in Abu Dhabi. We specialize in providing end to end solutions related to drone services in the industrial sectors from capturing of aerial data and image to processing with AI enabled software and report submission. We also provide Certified Drone Pilot training to the candidates under professional and recreational category.
+              Vista Drone UAV LLC was founded through a combination of strategic vision and deep industry expertise. With over thirty-two years of cross-sector experience, our founder, Mr. S. Sudan, identified a transformative opportunity in the rapidly expanding Unmanned Aerial Vehicle (UAV) market across the GCC.</p>
+              <p className="mt-6 text-left leading-relaxed  text-subheading">
+Valued at USD 588.2 million in 2024 and projected to grow to USD 2 billion by 2033 at a CAGR of 12%, the UAV sector is reshaping how industries approach data, inspection, and operational efficiency. The UAE leads the GCC UAV market with a commanding 40% share, driven by forward-thinking government policies and national strategies for innovation and digital transformation.</p>
+ <p className="mt-6 text-left leading-relaxed  text-subheading">
+Vista Drone is strategically positioned at the forefront of this growth. Our mission is to deliver cutting-edge drone and UAS solutions tailored to the unique demands of the region—spanning agriculture, infrastructure, energy, and environmental monitoring—while also playing a key role in talent development through certified training programs.
               </p>
 
               <Link
