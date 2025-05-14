@@ -15,7 +15,7 @@ function Team() {
   return (
     <SectionLayout className="w-full bg-primary2 ">
       <div className="space-y-4">
-        <Chips title="Behind Vista" />
+        <Chips title="BEHIND VISTA" />
         <h2 className="text-4xl font-bold capitalize text-heading ">
           Meet our team
         </h2>

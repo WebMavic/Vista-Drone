@@ -297,7 +297,7 @@ export const services: Service[] = [
   },
  
   {
-    title: "Agriculture",
+    title: "Agriculture and Livestock",
     description1:
       "Optimize agricultural operations with Vista Drone Services. The advanced drone solutions deliver actionable insights for crop management, irrigation planning, and early pest detection—helping you boost productivity and sustainability. By analysing detailed imagery, we monitor plant health, pinpoint nutrient deficiencies, and uncover stress factors in real time. On basis of the reports farm manager can make data-driven decisions to maximize yields, minimize input costs, and reduce environmental impact. ",
     image: agriculture,
@@ -433,7 +433,7 @@ export const services: Service[] = [
 
 
   {
-    title: "Civil Construction",
+    title: "Civil Infrastructure",
     description1:
       "Elevate your construction projects with Vista Drone Services. We offer comprehensive drone solutions for site planning, progress monitoring, and safety inspections — ensuring your projects stay on track and within budget.",
       description2:"Our advanced drones are equipped with high-resolution cameras and sophisticated sensors, allowing us to capture detailed aerial imagery and data for precise site analysis and planning. Whether you're in the initial stages of project development or need ongoing monitoring throughout construction, our drone solutions deliver valuable insights to optimize workflow and streamline operations.",

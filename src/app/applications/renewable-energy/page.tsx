@@ -35,7 +35,7 @@ const page = () => {
       />
 
       <SectionContent />
-      <Deliveries projects={solarProjects} heading="Our key deliverables" chipHeading="VISTA SOLUTIONS FOR RENEWABLE ENERGY SECTOR"/>
+      <Deliveries projects={solarProjects} heading="Our Key Deliverables" chipHeading="VISTA SOLUTIONS FOR RENEWABLE ENERGY SECTOR"/>
       <Benifits content={service.benefits} />
       <SectionContent2 />
       <SectionContact />

@@ -12,7 +12,7 @@ const Services = ({ services }: Props) => {
   return (
     <SectionLayout>
       <div className="space-y-4">
-        <Chips title="Services" />
+        <Chips title="SERVICES" />
         <h2 className="text-4xl font-bold text-heading">What we offer</h2>
       </div>
 

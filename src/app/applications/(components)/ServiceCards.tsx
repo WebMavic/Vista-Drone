@@ -10,7 +10,7 @@ function ServiceCards() {
   return (
     <SectionLayout className="bg-white">
       <div className="space-y-2 text-center ">
-        <Chips title="Applications" />
+        <Chips title="APPLICATIONS" />
         <h2 className="mx-auto text-2xl font-bold capitalize text-heading lg:w-3/4 lg:text-4xl ">
           Elevating Industries with Next Gen UAV Solutions
         </h2>

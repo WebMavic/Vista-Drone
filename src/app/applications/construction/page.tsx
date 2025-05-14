@@ -22,7 +22,7 @@ import bg from '@/assets/images/construction&realestate/construction4.jpeg'
 const service = services[3]
 
 export const metadata: Metadata = {
-  title: "Construction | Vista Drone : Innovate and Improve",
+  title: "Civil Infrastructure | Vista Drone : Innovate and Improve",
 };
 
 const page = () => {
@@ -40,9 +40,9 @@ const page = () => {
         
       />
 
-      <Deliveries projects={constructionProjects} heading="Our key deliverables" chipHeading="VISTA SOLUTIONS FOR CONSTRUCTION AND REAL ESTATE"/>
+      <Deliveries projects={constructionProjects} heading="Our Key Deliverables" chipHeading="VISTA SOLUTIONS FOR CONSTRUCTION AND REAL ESTATE"/>
       <Benifits content={services[3].benefits} />
-      <SectionContent/>
+      {/* <SectionContent/> */}
       <SectionContact/>
       <SectionFaq faqs={services[3].faq} />
      

@@ -17,7 +17,7 @@ const Gallery = () => {
   return (
     <SectionLayout>
       <div className="space-y-4">
-        <Chips title="moments" />
+        <Chips title="" />
         <h2 className="text-4xl font-bold capitalize text-heading ">
           Our Gallery
         </h2>

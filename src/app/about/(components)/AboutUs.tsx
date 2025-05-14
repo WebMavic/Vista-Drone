@@ -12,7 +12,7 @@ function AboutUs() {
   return (
     <>
       <SectionAbout
-        chips="our story" className="bg-primary2"
+        chips="OUR STORY" className="bg-primary2"
         heading="How it started"
         image={art} 
         para1="Vista Drone UAV LLC was founded through a combination of strategic vision and deep industry expertise. With over thirty-two years of cross-sector experience, our founder, Mr. S. Sudan, identified a transformative opportunity in the rapidly expanding Unmanned Aerial Vehicle (UAV) market across the GCC."
