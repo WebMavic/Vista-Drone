@@ -157,9 +157,15 @@ const Footer = () => {
               <ul className="font-medium text-gray-500 dark:text-gray-400 grid lg:grid-cols-1">
                 <li className="mb-4 inline-flex items-center">
                   <Phone className="inline-block size-4" />
-                  <a href="tel:+971564401460" className="ms-2 hover:underline">
-                    +971 56 440 1460
+                  <a href="tel:+97126675651" className="ms-2 hover:underline">
+                    +971 2 667 5651
                   </a>
+                </li>
+                <li className="mb-4 inline-flex items-center">
+                  <Phone className="inline-block size-4" />
+                  <a href="tel:0564401460" className="ms-2 hover:underline">
+                      056 440 1460
+  </a>
                 </li>
 
                 <li className="mb-4 inline-flex items-center">
@@ -181,8 +187,7 @@ const Footer = () => {
                       target="_blank"
                       href="https://www.google.com/maps/dir//Mazyad+Mall+28th+Street,+Near+Mussaffah+Musaffah+-+Abu+Dhabi+United+Arab+Emirates/@24.3732123,54.5380077,16z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3e5e4724773662f7:0xc3e57ade689f9c02!2m2!1d54.5380077!2d24.3732123?entry=ttu&g_ep=EgoyMDI0MTAxNi4wIKXMDSoASAFQAw%3D%3D"
                     >
-                      Office No 403,Tower 1,Mazyad Mall,MBZ City,Street
-                      28,Musaffah,Abu Dhabi(UAE)
+                      Building No. 216, Office No. 104, M-37, Musaffah, Abu Dhabi (UAE)
                     </a>
                   </p>
                 </li>
@@ -208,7 +213,7 @@ const Footer = () => {
                 target="_blank"
                 className="hover:underline"
               >
-                Webmavic
+                WebMavic
               </Link>
             </h4>
           </div>

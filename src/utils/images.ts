@@ -57,6 +57,10 @@ export const gallery = [
   require("@/assets/images/Image gallery/g10.png"),
   require("@/assets/images/Image gallery/g11.png"),
   require("@/assets/images/Image gallery/g12.png"),
+require("@/assets/images/Image gallery/g13.png"),
+  require("@/assets/images/Image gallery/g14.png"),
+
+
   
 ];
 

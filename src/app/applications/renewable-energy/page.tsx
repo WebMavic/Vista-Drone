@@ -16,7 +16,7 @@ const SectionAbout = dynamic(()=>import("@/components/SectionAbout"))
 const service = services[5];
 
 export const metadata: Metadata = {
-  title: "Green energy | Vista Drone : Innovate and Improve",
+  title: "Renewable energy | Vista Drone : Innovate and Improve",
 };
 
 
@@ -34,10 +34,10 @@ const page = () => {
         para2={service.description2}
       />
 
-      <SectionContent />
+      {/* <SectionContent /> */}
       <Deliveries projects={solarProjects} heading="Our Key Deliverables" chipHeading="VISTA SOLUTIONS FOR RENEWABLE ENERGY SECTOR"/>
       <Benifits content={service.benefits} />
-      <SectionContent2 />
+      {/* <SectionContent2 /> */}
       <SectionContact />
       <SectionFaq faqs={services[5].faq} />
     </>

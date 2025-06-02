@@ -23,8 +23,8 @@ function page() {
       <SectionHeader title="Vista Drone" image={aboutbg} />
       <AboutUs/>
       <section className="lg:p-16 p-5">
-        <div className="grid lg:grid-cols-2 gap-5">
-          <div className="aspect-video shadow-md border-[5px] border-primary mx-auto rounded-md overflow-hidden">
+        <div className="grid lg:grid-cols-1 gap-5">
+          {/* <div className="aspect-video shadow-md border-[5px] border-primary mx-auto rounded-md overflow-hidden">
             <video
               autoPlay
               muted
@@ -37,7 +37,7 @@ function page() {
               <source src={'/hero-video.mp4'} type="video/mp4" />
               Your browser does not support the video.
             </video>
-          </div>
+          </div> */}
           <div className="aspect-video shadow-md border-[5px] border-primary mx-auto rounded-md overflow-hidden">
             <video
               autoPlay

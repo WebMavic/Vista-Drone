@@ -21,8 +21,11 @@ function QuickTabs() {
   Call Us
 </h3>
 <p className="max-w-44 text-gray-500 dark:text-gray-400">
-  <a href="tel:+971564401460" className="hover:underline">
-    +971 56 440 1460
+  <a href="tel:+97126675651" className="hover:underline">
+  +971 2 667 5651
+  </a><br></br>
+  <a href="tel:0564401460" className="hover:underline">
+  056 440 1460
   </a>
 </p>
 
@@ -57,11 +60,11 @@ function QuickTabs() {
               Address
             </h3>
             <p className="max-w-44 text-gray-500 dark:text-gray-400">
-  <a className="hover:underline"
+  {/* <a className="hover:underline"
     target="_blank" href="https://www.google.com/maps/dir//Mazyad+Mall+28th+Street,+Near+Mussaffah+Musaffah+-+Abu+Dhabi+United+Arab+Emirates/@24.3732123,54.5380077,16z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3e5e4724773662f7:0xc3e57ade689f9c02!2m2!1d54.5380077!2d24.3732123?entry=ttu&g_ep=EgoyMDI0MTAxNi4wIKXMDSoASAFQAw%3D%3D" 
-  >
-    Vista Drone UAV LLC | Office No 403, Tower 1 | Mazyad Mall | MBZ City | Street 28, Musaffah | Abu Dhabi (UAE)
-  </a>
+  > */}
+    Vista Drone UAV LLC | Building No. 216, Office No. 104, M-37, Musaffah, Abu Dhabi (UAE)
+  {/* /</a> */}
 </p>
 
           </div>
