@@ -41,6 +41,7 @@ export const certification = [
   require("@/assets/images/certification/c1.jpg"),
   require("@/assets/images/certification/c2.jpg"),
   require("@/assets/images/certification/c3.jpg"),
+  require("@/assets/images/certification/c4.jpg"),
 ];
 
 
