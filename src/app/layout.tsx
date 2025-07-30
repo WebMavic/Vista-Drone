@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ui/ScrollToTop";
 import NextTopLoader from 'nextjs-toploader'
 import { Toaster } from "@/components/ui/sonner";
+
 
 const font = Inter({
   weight: ["200","300", "400", "500", "600", "700","800","900","100"],
@@ -27,6 +29,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={`${font.className}`}>
         <NextTopLoader showSpinner={false} height={4} color="#74512D"/>
+  {/* <TopNavbar /> */}
         <Navbar/>
         <main>{children}</main>
         <Footer />

@@ -13,7 +13,7 @@ const SectionContact = dynamic(() => import("@/components/SectionContact"));
 const Certification = dynamic(() => import("@/app/about/(components)/Certification"));
 const DroneApplication = dynamic(() => import("@/app/applications/(components)/DroneApplication"));
 const SectionLayout = dynamic(() => import("@/components/ui/SectionLayout"));
-const Trainings = dynamic(() => import("@/components/Trainings"));
+
 const Reveal = dynamic(() => import("@/components/Reveal"));
 
 
@@ -74,7 +74,7 @@ Vista Drone is strategically positioned at the forefront of this growth. Our mis
       <SectionContact />
       <DroneApplication />
       <Certification />
-      <Trainings />
+     
     </React.Fragment>
   );
 }
