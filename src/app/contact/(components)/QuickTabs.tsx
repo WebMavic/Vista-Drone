@@ -39,7 +39,7 @@ function QuickTabs() {
           </div>
           <div className="text-center space-y-5">
             <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
-              Quote
+              Enquiry
             </h3>
             <p className="max-w-44 text-gray-500 dark:text-gray-400">
   <a href="mailto:contact@vistadrone.me" className="hover:underline">
@@ -63,8 +63,8 @@ function QuickTabs() {
   <a className="hover:underline"
     target="_blank" href="https://maps.app.goo.gl/dqV7q9Km8eyLyTUN8" 
   >
-    Vista Drone UAV LLC | Building No. 216, Office No. 104, M-37, Musaffah, Abu Dhabi (UAE)
-  /</a> 
+    Vista Drone UAV LLC  Building No. 216, Office No. 104, M-37, Musaffah, Abu Dhabi (UAE)
+  </a> 
 </p>
 
           </div>

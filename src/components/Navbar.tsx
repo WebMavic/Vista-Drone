@@ -7,6 +7,8 @@ import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { FaPhoneAlt } from "react-icons/fa";
 import Marquee from "./magicui/marquee";
+import { Button } from "@/components/ui/button";
+
 
 function Navbar() {
   const [isMobileMenuHidden, setIsMobileMenuHidden] = useState(true);
@@ -36,32 +38,43 @@ function Navbar() {
   return (
     <motion.nav
       className={cn(
-        "absolute transition-all w-full z-20 top-0 start-0 ease-in-out duration-300",
+        "absolute transition-all w-full  top-0 start-0 ease-in-out z-50 duration-300",
         isScrolled ? "bg-white shadow-sm fixed" : "bg-transparent"
       )}
     >
     {/* ✅ Top Announcement - only when NOT scrolled */}
 {!isScrolled && (
-  <Link
-    href="/trainings"
-    className="relative w-full block text-white bg-accent hover:opacity-90 transition py-.6 overflow-hidden group"
-  >
-    <div className="w-full bg-accent">
-        <Marquee className="[--duration:35s]">
-          <h1 className="text-xl text-primary2 ">
-             📢 Vista Drone now in the Certified Drone Pilot Training (Online – Offline) • 
-        Register Now* • Build Your Career in the Sky • Fly Smart. Fly Safe • 
-        *Special Discount for a limited Period — Female Candidates: 15%, Government Employees: 10%, 
-        Group of 5–10: 10%, Pay in Easy Instalments
-          </h1>
-        </Marquee>
-      </div> 
-  </Link>
+  <div className="w-full bg-accent text-white z-50">
+    <div className="flex items-center justify-between gap-4 px-4 py-4">
+      {/* Scrolling Text */}
+      <div className="flex-1 overflow-hidden">
+        <Link href="/trainings" className="block">
+          <Marquee className="[--duration:35s]" pauseOnHover>
+            <h1 className="whitespace-nowrap text-sm sm:text-base md:text-lg text-primary2 font-medium">
+              Vista Drone now in the Certified Drone Pilot Training (Online – Offline) • Click Here To Register Now* • Build Your Career in the Sky • Fly Smart. Fly Safe • *Special Discount — Female: 15%, Govt Employees: 10%, Groups: 10%
+            </h1>
+          </Marquee>
+        </Link>
+      </div>
+
+      {/* Button */}
+      <div className="shrink-0">
+        <Link href="/enroll">
+          <Button variant="borderedLight" className="text-xs sm:text-sm md:text-base">
+            Register Now
+          </Button>
+        </Link>
+      </div>
+    </div>
+  </div>
 )}
 
 
+
+
+
       {/* Main Navbar */}
-      <div className="flex flex-wrap items-center justify-between md:px-32 md:py-4 py-5 px-5">
+      <div className="flex flex-wrap items-center justify-between md:px-32 md:py-4 py-5 px-5 z-100">
         <Link href="/" onClick={() => setIsMobileMenuHidden(true)}>
           <span
             className={cn(
@@ -75,10 +88,11 @@ function Navbar() {
 
         <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
           <div className="ms-4 md:hidden block">
-            <Link href="/contact" className={buttonVariants()}>
-              Contact
-            </Link>
-          </div>
+  <Link href="/contact" className={cn(buttonVariants(), "uppercase")}>
+    CONTACT
+  </Link>
+</div>
+
 
           {/* Button to toggle mobile menu */}
           {isScrolled && (
@@ -123,7 +137,7 @@ function Navbar() {
           />
           <div className="ms-4 md:block hidden">
             <Link href="/contact" className={buttonVariants()}>
-              Contact
+              CONTACT
             </Link>
           </div>
         </div>

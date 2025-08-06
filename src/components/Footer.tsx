@@ -49,33 +49,39 @@ const Footer = () => {
                 Quick Links
               </h2>
               <ul className="font-medium text-gray-500 dark:text-gray-400">
-                <li className="mb-4">
+                <li className="mb-2">
                   <Link href="/" className="hover:underline">
                     Home
                   </Link>
                 </li>
-                <li className="mb-4">
+                <li className="mb-2">
                   <Link href="/applications" className="hover:underline">
                     Applications
                   </Link>
                 </li>
-                <li className="mb-4">
+                <li className="mb-2">
+                  <Link href="/trainings" className="hover:underline">
+                    Trainings
+                  </Link>
+                </li>
+                <li className="mb-2">
                   <Link href="/about" className="hover:underline">
                     About
                   </Link>
                 </li>
-                <li className="mb-4">
+                
+                <li className="mb-2">
                   <Link href="/projects" className="hover:underline">
                     Projects
                   </Link>
                 </li>
-                <li className="mb-4">
+                <li className="mb-2">
                   <Link href="/career" className="hover:underline">
                     Careers
                   </Link>
                 </li>
                 
-                <li className="mb-4">
+                <li className="mb-2">
                   <Link href="/contact" className="hover:underline">
                     Contact Us
                   </Link>
@@ -87,7 +93,7 @@ const Footer = () => {
                 Applications
               </h2>
               <ul className="font-medium text-gray-500 dark:text-gray-400 ">
-                <li className="mb-4">
+                <li className="mb-2">
                   <Link
                     href="/applications/oil-and-gas"
                     className="hover:underline "
@@ -95,7 +101,7 @@ const Footer = () => {
                     Oil & Gas{" "}
                   </Link>
                 </li>
-                <li className="mb-4">
+                <li className="mb-2">
                   <Link
                     href="/applications/renewable-energy"
                     className="hover:underline "
@@ -103,7 +109,7 @@ const Footer = () => {
                     Renewable Energy
                   </Link>
                 </li>
-                <li className="mb-4">
+                <li className="mb-2">
                   <Link
                     href="/applications/mining"
                     className="hover:underline "
@@ -111,7 +117,7 @@ const Footer = () => {
                     Mining{" "}
                   </Link>
                 </li>
-                <li className="mb-4">
+                <li className="mb-2">
                   <Link
                     href="/applications/marine&coastalecosystem"
                     className="hover:underline "
@@ -126,13 +132,13 @@ const Footer = () => {
                 Applications
               </h2>
               <ul className="font-medium text-gray-500 dark:text-gray-400 ">
-                <li className="mb-4">
+                <li className="mb-2">
                   <Link href="/applications/steel" className="hover:underline ">
                     Steel{" "}
                   </Link>
                 </li>
 
-                <li className="mb-4">
+                <li className="mb-2">
                   <Link
                     href="/applications/construction"
                     className="hover:underline "
@@ -140,7 +146,7 @@ const Footer = () => {
                     Construction and Real Estate
                   </Link>
                 </li>
-                <li className="mb-4">
+                <li className="mb-2">
                   <Link
                     href="/applications/agriculture"
                     className="hover:underline "
@@ -155,20 +161,20 @@ const Footer = () => {
                 Get In Touch
               </h2>
               <ul className="font-medium text-gray-500 dark:text-gray-400 grid lg:grid-cols-1">
-                <li className="mb-4 inline-flex items-center">
+                <li className="mb-2 inline-flex items-center">
                   <Phone className="inline-block size-4" />
                   <a href="tel:+97126675651" className="ms-2 hover:underline">
                     +971 2 667 5651
                   </a>
                 </li>
-                <li className="mb-4 inline-flex items-center">
+                <li className="mb-2 inline-flex items-center">
                   <Phone className="inline-block size-4" />
                   <a href="tel:0564401460" className="ms-2 hover:underline">
                       056 440 1460
   </a>
                 </li>
 
-                <li className="mb-4 inline-flex items-center">
+                <li className="mb-2 inline-flex items-center">
                   <Mail className="mr-2 inline-block size-4" />
                   <a
                     className="hover:underline"

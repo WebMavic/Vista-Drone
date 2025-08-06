@@ -14,7 +14,7 @@ interface SectionHeaderProps {
 function SectionHeader({ title, image ,className}: SectionHeaderProps) {
   
   return (
-    <header className={cn("h-lg relative grid  w-full px-5 lg:h-[60vh] h-80 lg:px-32 ",className)}>
+<header className={cn("relative grid w-full px-5 min-h-[50vh] lg:h-[60vh] h-80 lg:px-32", className)}>
       <div className="hero-video absolute inset-0 left-0 top-0 z-[5] w-full overflow-hidden lg:h-[60vh]">
         <div className="div absolute top-0 z-[1] h-full w-full  bg-black/40 bg-blend-overlay " />
         <Image

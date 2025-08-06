@@ -4,7 +4,7 @@ import dynamic from "next/dynamic";
 const QuickTabs = dynamic(()=>import("./(components)/QuickTabs"))
 const SectionHeader = dynamic(()=>import("@/components/SectionHeader"))
 const Form = dynamic(()=>import("./(components)/Form"))
-import contactbg from "@/assets/images/contact-bg.jpg";
+import contactbg from "@/assets/images/Image gallery/g1 (8).jpeg";
 
 
 export const metadata: Metadata = {
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 function page() {
   return (
     <>
-      <SectionHeader title="Lets Talk" image={contactbg} />
+      <SectionHeader title="Lets Connect" image={contactbg} />
       <QuickTabs />
       * <div>
         <iframe

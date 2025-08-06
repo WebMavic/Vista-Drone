@@ -13,7 +13,6 @@ const SectionContact = dynamic(() => import("@/components/SectionContact"));
 const Certification = dynamic(() => import("@/app/about/(components)/Certification"));
 const DroneApplication = dynamic(() => import("@/app/applications/(components)/DroneApplication"));
 const SectionLayout = dynamic(() => import("@/components/ui/SectionLayout"));
-
 const Reveal = dynamic(() => import("@/components/Reveal"));
 
 

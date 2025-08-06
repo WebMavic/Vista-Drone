@@ -2,12 +2,22 @@ import React from "react";
 import type { Metadata } from "next";
 import dynamic from "next/dynamic";
 import Image from "next/image";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 const ImpactSection = dynamic(()=>import("./(components)/ImpactSection"))
-
 const SectionHeader = dynamic(()=>import("@/components/SectionHeader"))
+const Lenscard = dynamic(()=>import("./(components)/Lenscard"))
+import SectionLayout from "@/components/ui/SectionLayout";
+import Chips from "@/components/ui/Chips";
+import Contact from "@/app/trainings/(components)/Contact";
+import FAQ from "@/app/trainings/(components)/FAQ"
+
+
 
 import hero from "@/assets/images/trainings/trainingsbg.png";
 import about from "@/assets/images/trainings/heroimg.png";
+import Expertise from "@/app/trainings/(components)/Expertise"
+import Eligibility from "@/app/trainings/(components)/Eligibility"
 
 export const metadata: Metadata = {
   title: "Trainings | Drone Pilot Training in Abu Dhabi – Vista Drone",
@@ -17,17 +27,20 @@ export const metadata: Metadata = {
 function page() {
   return (
     <>
-      <SectionHeader title="Lets Talk" image={hero} />
+      <SectionHeader title="Fly with vista drone" image={hero} />
      
      <div className="overflow-hidden bg-white py-24 sm:py-32">
   <div className="mx-auto max-w-7xl px-6 lg:px-8">
     <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
       <div className="lg:pt-4 lg:pr-8">
         <div className="lg:max-w-lg">
-          <h2 className="text-base/7 font-semibold text-accent">Lorem </h2>
+          {/* <h2 className="text-base/7 font-semibold text-accent">Lorem </h2> */}
           <p className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">Learn to Fly with Confidence</p>
-          <p className="mt-6 text-lg/8 text-gray-700">Master the skies with our GCAA-aligned drone training programs designed for beginners and professionals too. Hands-on simulations, lab sessions, and expert-led field training in Abu Dhabi.</p>
-          <dl className="mt-10 max-w-xl space-y-8 text-base/7 text-gray-600 lg:max-w-none">
+          <p className="mt-6 text-lg/8 text-gray-700">Vista Drone offers GCAA-certified drone pilot training programs (Online/Offline).
+Whether you’re flying for fun or shaping a professional career, our expert-led
+training equips you with the skills and certifications to operate drones safely,
+smartly and with confidence.</p>
+          {/* <dl className="mt-10 max-w-xl space-y-8 text-base/7 text-gray-600 lg:max-w-none">
             <div className="relative pl-9">
               <dt className="inline font-semibold text-gray-900">
                 <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" className="absolute top-1 left-1 size-5 text-accent">
@@ -56,8 +69,15 @@ function page() {
               </dt>
               <dd className="inline">Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.</dd>
             </div>
-          </dl>
+          </dl> */}
         </div>
+       <div className="mt-12 flex justify-left">
+        <Link href="/enroll">
+          <Button  className="w-48">
+            Register Now
+          </Button>
+        </Link>
+      </div> 
       </div>
 
      <Image
@@ -70,9 +90,54 @@ className="hover:animate-wobble"
 />
     </div>
   </div>
-</div>
-<ImpactSection/>
-  
+      </div>
+
+
+
+  <SectionLayout className="w-full min-h-screen text-center bg-primary2">
+      <div className="space-y-3">
+          <Chips title="  Special Offers – Enroll Now & Save" />
+          <h2 className="text-4xl font-bold text-heading ">Vista Drone Offers RPSA Training</h2>
+      </div>
+      <Lenscard/>
+ </SectionLayout>
+
+
+         
+      <Eligibility/>
+    
+
+
+   
+      <Contact/>
+ 
+
+<SectionLayout className="w-full min-h-screen text-center bg-primary2">
+      <div className="space-y-3">
+          {/* <Chips title="  Lorem" /> */}
+          <h2 className="text-4xl font-bold text-heading ">Drone Training Designed for All Learners</h2>
+      </div>
+      <ImpactSection/>
+    </SectionLayout>
+<Expertise/>
+
+
+ 
+<SectionLayout className="relative bg-white">
+      <div className="mb-5 space-y-4">
+        <Chips title="FAQs" />
+        <h2 className="text-4xl font-bold capitalize dark:text-primary ">
+          Frequently Asked Questions
+        </h2>
+      </div>
+
+      <div className="">
+        
+          <FAQ/>
+        
+      </div>
+    </SectionLayout>
+ 
 
     </>
   );

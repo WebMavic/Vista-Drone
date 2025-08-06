@@ -48,15 +48,29 @@ function Navigation({ hideNavBar,isScrolled }: { hideNavBar: Dispatch<SetStateAc
                 pathname == "/about" && "text-accent underline underline-offset-8 font-semibold transition-colors" // Hover effect
               )}
             >
-              About
+            ABOUT
+            </NavigationMenuLink>
+          </Link>
+
+        </NavigationMenuItem>
+ <NavigationMenuItem onClick={()=>hideNavBar(true)}>
+          <Link href="/trainings" legacyBehavior passHref>
+            <NavigationMenuLink
+              className={cn( // Active state
+                navigationMenuTriggerStyle(),
+                "hover:text-accent font-normal",
+                pathname === '/trainings' && 'text-accent underline underline-offset-8 font-semibold transition-colors',
+                // Hover effect
+              )}
+            >
+             TRAININGS
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
-
         {/* Applications Dropdown */}
         <NavigationMenuItem className="md:block hidden" onClick={()=>hideNavBar(true)} >
           <NavigationMenuTrigger className={cn("hover:text-accent font-normal",pathname == '/applications' && 'text-accent font-semibold underline underline-offset-8')}>
-          <Link href={"/applications"}>Applications</Link>
+          <Link href={"/applications"}>APPLICATIONS</Link>
           </NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[400px]">
@@ -86,7 +100,7 @@ function Navigation({ hideNavBar,isScrolled }: { hideNavBar: Dispatch<SetStateAc
                   pathname == '/applications' && 'text-accent', // Active state for mobile
                 )}
               >
-                 Applications
+                  APPLICATIONS
               </NavigationMenuLink>
             </Link>
             <button onClick={() => setHidden((prev) => !prev)}>
@@ -125,7 +139,7 @@ function Navigation({ hideNavBar,isScrolled }: { hideNavBar: Dispatch<SetStateAc
                 // Hover effect
               )}
             >
-              Projects
+              PROJECTS
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
@@ -140,7 +154,7 @@ function Navigation({ hideNavBar,isScrolled }: { hideNavBar: Dispatch<SetStateAc
                 pathname === '/career' && 'text-accent underline underline-offset-8 font-semibold transition-colors',
               )}
             >
-              Careers
+             CAREERS
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>

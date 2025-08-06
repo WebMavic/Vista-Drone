@@ -311,7 +311,7 @@ function Form() {
           <CardContent className="flex flex-col items-center justify-center py-10">
             <CheckCircle2 className="h-12 w-12 text-accent animate-wobble" />
             <Button
-              className="mt-6"
+              className="mt-6 w-20" 
               onClick={() => {
                 setIsSubmitted(false);
                 form.reset();

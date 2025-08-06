@@ -36,15 +36,15 @@ const ScrollToTop = () => {
       <div
         className={cn(
           "fixed right-3 z-50 transition-all duration-300",
-          isScrolled ? "bottom-[92px]" : "bottom-5"
+          isScrolled ? "bottom-[100px]" : "bottom-6"
         )}
       >
         <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
           <Button
             size="icon"
-            className="rounded-full bg-green-500 hover:bg-green-600 text-white shadow-md"
+            className="w-16 h-16 rounded-full bg-green-500 hover:bg-green-600 text-white shadow-lg"
           >
-            <FaWhatsapp className="size-6" />
+            <FaWhatsapp className="w-12 h-12" />
             <span className="sr-only">Chat on WhatsApp</span>
           </Button>
         </a>
@@ -52,13 +52,13 @@ const ScrollToTop = () => {
 
       {/* Scroll to Top Button (only when scrolled) */}
       {isScrolled && (
-        <div className="fixed bottom-5 right-3 z-40">
+        <div className="fixed bottom-6 right-3 z-40">
           <Button
             size="icon"
-            className="rounded-full bg-primary shadow-md"
+            className="w-16 h-16 rounded-full bg-primary text-white shadow-lg"
             onClick={scrollToTop}
           >
-            <ChevronUp className="size-8" />
+            <ChevronUp className="w-12 h-12" />
             <span className="sr-only">Scroll to top</span>
           </Button>
         </div>
