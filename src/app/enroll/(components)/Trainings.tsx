@@ -6,6 +6,7 @@ import { useForm } from "react-hook-form"
 import * as z from "zod"
 import { format } from "date-fns"
 import emailjs from "@emailjs/browser";
+import { Analytics } from "@vercel/analytics/react"
 
 import Chips from "@/components/ui/Chips"
 import {
@@ -128,6 +129,7 @@ export default function RPASTrainingPage() {
 
   return (
       <SectionLayout>
+        <Analytics/>
         <div className="space-y-8">
           
         <div className="container mx-auto px-4 text-center py-6">

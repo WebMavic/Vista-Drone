@@ -24,8 +24,8 @@ function SectionExpertise() {
           />
         </div>
         <div className="space-y-3 text-center">
-          <Chips className="text-primary" title="OUR EXPERTISE" />
-          <h2 className="text-4xl font-bold text-heading ">Why Choose Us</h2>
+          <Chips className="text-primary" title="Why Choose Us" />
+          <h2 className="text-4xl font-bold text-heading ">OUR EXPERTISE</h2>
           <p className="mx-auto  text-subheading sm:w-2/6 ">
             Cultivating Excellence: Our Areas of Mastery
           </p>

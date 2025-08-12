@@ -2,7 +2,7 @@ import React from "react";
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
-import about1 from "@/assets/images/image (2).png";
+import about1 from "@/assets/images/About Vista Drone .jpg";
 import { Analytics } from "@vercel/analytics/react"
 
 const SectionHero = dynamic(() => import("@/components/SectionHero"));
@@ -47,7 +47,7 @@ export default function Home() {
             <Reveal slide="right" >
               <div>
                 <h1 className="mt-2 text-center text-4xl font-medium capitalize text-primary dark:text-white lg:text-left">
-                  About Vista
+                  About Vista Drone
                 </h1>
               </div>
 

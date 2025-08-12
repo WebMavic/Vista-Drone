@@ -2,7 +2,7 @@ import React from "react";
 import type { Metadata } from "next";
 import dynamic from "next/dynamic";
 import Trainings from "@/app/enroll/(components)/Trainings"
-
+import { Analytics } from "@vercel/analytics/react"
 const SectionHeader = dynamic(()=>import("@/components/SectionHeader"))
 
 

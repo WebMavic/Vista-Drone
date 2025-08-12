@@ -11,7 +11,7 @@ import SectionLayout from "@/components/ui/SectionLayout";
 import Chips from "@/components/ui/Chips";
 import Contact from "@/app/trainings/(components)/Contact";
 import FAQ from "@/app/trainings/(components)/FAQ"
-
+import { Analytics } from "@vercel/analytics/react"
 
 
 import hero from "@/assets/images/trainings/trainingsbg.png";
@@ -28,14 +28,14 @@ function page() {
   return (
     <>
       <SectionHeader title="Fly with vista drone" image={hero} />
-     
+     <Analytics/>
      <div className="overflow-hidden bg-white py-24 sm:py-32">
   <div className="mx-auto max-w-7xl px-6 lg:px-8">
     <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
       <div className="lg:pt-4 lg:pr-8">
         <div className="lg:max-w-lg">
           {/* <h2 className="text-base/7 font-semibold text-accent">Lorem </h2> */}
-          <p className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">Learn to Fly with Confidence</p>
+          <p className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">Build Your Career In The Sky</p>
           <p className="mt-6 text-lg/8 text-gray-700">Vista Drone offers GCAA-certified drone pilot training programs (Online/Offline).
 Whether you’re flying for fun or shaping a professional career, our expert-led
 training equips you with the skills and certifications to operate drones safely,
@@ -98,6 +98,9 @@ className="hover:animate-wobble"
       <div className="space-y-3">
           <Chips title="  Special Offers – Enroll Now & Save" />
           <h2 className="text-4xl font-bold text-heading ">Vista Drone Offers RPSA Training</h2>
+          <p className="mx-auto  text-subheading sm:w-2/6 ">
+            Online / Offline
+          </p>
       </div>
       <Lenscard/>
  </SectionLayout>

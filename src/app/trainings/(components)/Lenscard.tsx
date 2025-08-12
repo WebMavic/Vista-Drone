@@ -36,59 +36,73 @@ export default function CourseCards() {
             
           </CardDescription>
         </CardHeader>
-        <CardContent className="mt-1 ">
-          <h4 className="font-semibold text-heading mb-2">Core Topics:</h4>
-         <ul className="flex flex-col items-center text-subheading text-sm text-center space-y-4">
-  <li className="flex flex-col items-center">
-    <div className="flex items-center gap-2">
+      <CardContent className="mt-1">
+  <h4 className="font-semibold text-heading mb-2">Core Topics:</h4>
+
+  {/* Intro Text */}
+  <p className="text-subheading text-sm text-center mb-4">
+    Suitable for enthusiasts in{" "}
+    <span className="text-accent font-medium">vlogging</span> &{" "}
+    <span className="text-accent font-medium">event coverage</span>. The training will further help them in:
+  </p>
+
+  {/* Bullet Points in 2 Columns */}
+  <ul className="grid grid-cols-2 gap-y-4 gap-x-6 text-subheading text-sm">
+    <li className="flex items-center gap-2 justify-center">
       <FiCheck className="text-green-600 mt-1" />
-      <span>UAE drone market overview</span>
-    </div>
-    <div className="mt-2 h-px w-48 bg-subheading/30" />
-  </li>
+      <span>Drone Light Shows</span>
+    </li>
 
-  <li className="flex flex-col items-center">
-    <div className="flex items-center gap-2">
+    <li className="flex items-center gap-2 justify-center">
       <FiCheck className="text-green-600 mt-1" />
-      <span>Drone types & payloads</span>
-    </div>
-    <div className="mt-2 h-px w-48 bg-subheading/30" />
-  </li>
+      <span>Travel Vlogging</span>
+    </li>
 
-  <li className="flex flex-col items-center">
-    <div className="flex items-center gap-2">
+    <li className="flex items-center gap-2 justify-center">
       <FiCheck className="text-green-600 mt-1" />
-      <span>Basics of drone software and hardware</span>
-    </div>
-    <div className="mt-2 h-px w-48 bg-subheading/30" />
-  </li>
+      <span>Camel Race Filming</span>
+    </li>
 
-  <li className="flex flex-col items-center">
-    <div className="flex items-center gap-2">
+    <li className="flex items-center gap-2 justify-center">
       <FiCheck className="text-green-600 mt-1" />
-      <span>Applications in personal & recreational use</span>
-    </div>
-    <div className="mt-2 h-px w-48 bg-subheading/30" />
-  </li>
+      <span>Drone Racing</span>
+    </li>
+    <li
+  className="flex items-center text-white select-none gap-2 justify-center"
+  style={{ WebkitUserSelect: "none", userSelect: "none" }}
+>
+  <FiCheck className="mt-1" style={{ WebkitUserSelect: "none", userSelect: "none" }} />
+  <span
+    className="select-none"
+    style={{ WebkitUserSelect: "none", userSelect: "none" }}
+  >
+    .
+  </span>
+</li>
 
-  <li className="flex flex-col items-center">
-    <div className="flex items-center gap-2">
-      <FiCheck className="text-green-600 mt-1" />
-      <span>Drone flying regulations of GCAA</span>
-    </div>
-    <div className="mt-2 h-px w-48 bg-subheading/30" />
-  </li>
-  <li className="flex flex-col text-white items-center">
-    <div className="flex items-center gap-2">
-      <FiCheck className="text-white mt-1" />
-      <span>Drone flying regulations of GCAA</span>
-    </div>
-    <div className="mt-2 h-px w-48 bg-white" />
-  </li>
-</ul>
+<li
+  className="flex items-center text-white select-none gap-2 justify-center"
+  style={{ WebkitUserSelect: "none", userSelect: "none" }}
+>
+  <FiCheck className="mt-1" style={{ WebkitUserSelect: "none", userSelect: "none" }} />
+  <span
+    className="select-none"
+    style={{ WebkitUserSelect: "none", userSelect: "none" }}
+  >
+    .
+  </span>
+</li>
+
+  </ul>
+
+  {/* Includes Text */}
+  <p className="mt-4 text-subheading text-sm text-center">
+    <span className="font-semibold">Includes:</span> Basics of drone flying, UAE regulations, simulator practice, & hands-on field training.
+  </p>
+</CardContent>
 
 
-        </CardContent>
+
         <CardFooter className="flex justify-center mt-4">
            <Link href="/enroll">
           <Button>Enroll Now</Button>
@@ -118,56 +132,54 @@ export default function CourseCards() {
           </CardDescription>
         </CardHeader>
         <CardContent className="mt-1">
-          <h4 className="font-semibold text-heading mb-2">Key Modules Include:</h4>
-         <ul className="flex flex-col items-center text-subheading text-sm text-center space-y-4">
-  <li className="flex flex-col items-center">
-    <div className="flex items-center gap-2">
-      <FiCheck className="text-green-600 mt-1" />
-      <span>Drone evolution and market trends in the UAE</span>
-    </div>
-    <div className="mt-2 h-px w-48 bg-subheading/30" />
-  </li>
+  <h4 className="font-semibold text-heading mb-2">Key Modules Include:</h4>
 
-  <li className="flex flex-col items-center">
-    <div className="flex items-center gap-2">
-      <FiCheck className="text-green-600 mt-1" />
-      <span>GCAA registration & permissions</span>
-    </div>
-    <div className="mt-2 h-px w-48 bg-subheading/30" />
-  </li>
+  {/* Intro Text */}
+  <p className="text-subheading text-sm text-center mb-4">
+    Trained pilots under the{" "}
+    <span className="text-accent font-medium">commercial category</span> can add value in industries like:
+  </p>
 
-  <li className="flex flex-col items-center">
-    <div className="flex items-center gap-2">
+  {/* Bullet Points in 2 Columns */}
+  <ul className="grid grid-cols-2 gap-y-4 gap-x-6 text-subheading text-sm">
+    <li className="flex items-center gap-2 justify-center">
       <FiCheck className="text-green-600 mt-1" />
-      <span> Components & payloads</span>
-    </div>
-    <div className="mt-2 h-px w-48 bg-subheading/30" />
-  </li>
+      <span>Mining & Geology</span>
+    </li>
 
-  <li className="flex flex-col items-center">
-    <div className="flex items-center gap-2">
+    <li className="flex items-center gap-2 justify-center">
       <FiCheck className="text-green-600 mt-1" />
-      <span>UTM & airspace classification</span>
-    </div>
-    <div className="mt-2 h-px w-48 bg-subheading/30" />
-  </li>
+      <span>Oil & Gas</span>
+    </li>
 
-  <li className="flex flex-col items-center">
-    <div className="flex items-center gap-2">
+    <li className="flex items-center gap-2 justify-center">
       <FiCheck className="text-green-600 mt-1" />
-      <span>Industry use-cases (agriculture, inspection, etc.)</span>
-    </div>
-    <div className="mt-2 h-px w-48 bg-subheading/30" />
-  </li>
-  <li className="flex flex-col items-center">
-    <div className="flex items-center gap-2">
+      <span>Civil Infrastructure</span>
+    </li>
+
+    <li className="flex items-center gap-2 justify-center">
       <FiCheck className="text-green-600 mt-1" />
-      <span>Emergency handling & reporting systems</span>
-    </div>
-    <div className="mt-2 h-px w-48 bg-subheading/30" />
-  </li>
-</ul>
-        </CardContent>
+      <span>Agriculture</span>
+    </li>
+
+    <li className="flex items-center gap-2 justify-center">
+      <FiCheck className="text-green-600 mt-1" />
+      <span>Renewable Energy</span>
+    </li>
+
+    <li className="flex items-center gap-2 justify-center">
+      <FiCheck className="text-green-600 mt-1" />
+      <span>Surveillance & Inspection</span>
+    </li>
+  </ul>
+
+  {/* Includes Text */}
+  <p className="mt-4 text-subheading text-sm text-center">
+    <span className="font-semibold">Includes:</span> Mission planning, data mapping, AI-enabled UAV systems, payload integration (RGB, Thermal, LiDAR).
+  </p>
+</CardContent>
+
+
         <CardFooter className="flex justify-center mt-4">
           <Link href="/enroll">
            <Button>Enroll Now</Button>
