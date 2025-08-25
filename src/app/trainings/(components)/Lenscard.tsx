@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import { FiCheck } from "react-icons/fi";
 import Link from "next/link";
 import commercialimg from "@/assets/images/trainings/commercial.jpg"
-import hobby from "@/assets/images/trainings/hobby.webp"
+import hobby from "@/assets/images/trainings/hobby.png"
 
 export default function CourseCards() {
   return (
@@ -17,7 +17,7 @@ export default function CourseCards() {
       {/* Hobbyist Card */}
       <Card className="shadow-lg ">
         <CardHeader>
-          <div className="w-full h-[250px] overflow-hidden rounded-md">
+          <div className="w-full h-auto overflow-hidden rounded-md">
             <Lens zoomFactor={2} lensSize={150} isStatic={false} ariaLabel="Zoom Area">
               <Image
                 src={hobby}
@@ -113,7 +113,7 @@ export default function CourseCards() {
       {/* Professional Card */}
       <Card className="shadow-lg">
         <CardHeader>
-          <div className="w-full h-[250px] overflow-hidden rounded-md">
+          <div className="w-full h-auto overflow-hidden rounded-md">
             <Lens zoomFactor={2} lensSize={150} isStatic={false} ariaLabel="Zoom Area">
               <Image
                src={commercialimg}
